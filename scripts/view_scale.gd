@@ -49,7 +49,8 @@ static func apply(tree: SceneTree, new_index: int, persist: bool = true, center:
 		return
 	var win := tree.root
 	win.content_scale_size = size()
-	if win.mode == Window.MODE_WINDOWED:
+	# The browser owns the canvas size; desktop window changes desynchronize it.
+	if not OS.has_feature("web") and win.mode == Window.MODE_WINDOWED:
 		var mid := win.position + win.size / 2
 		win.size = size() * best_scale(size())
 		if center:

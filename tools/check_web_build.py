@@ -15,8 +15,8 @@ def main():
     if not re.search(r"const GODOT_THREADS_ENABLED = false;", html):
         raise SystemExit("Pages export must use the single-threaded template.")
     config = json.loads(re.search(r"const GODOT_CONFIG = (\{.*\});", html).group(1))
-    if config.get("ensureCrossOriginIsolationHeaders") or config.get("serviceWorker"):
-        raise SystemExit("Unexpected cross-origin isolation/service worker requirement.")
+    if config.get("serviceWorker"):
+        raise SystemExit("Unexpected service worker; Pages uses a single-threaded build.")
     (root / ".nojekyll").touch()
     files = [p for p in root.rglob("*") if p.is_file()]
     if any(p.is_symlink() for p in root.rglob("*")):

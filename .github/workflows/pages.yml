@@ -1,0 +1,90 @@
+name: Publish playable game
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out game source
+        uses: actions/checkout@v6
+
+      - name: Cache official Godot SDK
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.local/share/poke-journey-godot/4.7
+            ~/.local/share/godot/export_templates/4.7.stable
+          key: godot-linux-4.7-web-sdk-v1
+
+      - name: Install pinned Godot editor and Web template
+        run: |
+          python3 tools/install_ci_godot.py
+          echo "$HOME/.local/share/poke-journey-godot/4.7" >> "$GITHUB_PATH"
+
+      - name: Restore imported assets
+        uses: actions/cache@v4
+        with:
+          path: .godot
+          key: godot-linux-4.7-imports-${{ github.sha }}
+          restore-keys: godot-linux-4.7-imports-
+
+      - name: Import and export the game for browsers
+        run: |
+          mkdir -p build/web
+          godot --version
+          godot --headless --editor --path . --import > build/import.log 2>&1
+          godot --headless --path . --export-release Web build/web/index.html > build/export.log 2>&1
+          cat build/export.log
+          python3 tools/check_web_build.py build/web
+
+      - name: Verify packed raw assets without source-file fallbacks
+        run: |
+          mkdir -p "$RUNNER_TEMP/pack-check"
+          touch "$RUNNER_TEMP/pack-check/project.godot"
+          godot --headless --path "$RUNNER_TEMP/pack-check" --script "$GITHUB_WORKSPACE/tools/check_export_pack.gd" -- "$GITHUB_WORKSPACE/build/web/index.pck"
+
+      - name: Show diagnostics if the build fails
+        if: failure()
+        run: |
+          for log in build/import.log build/export.log; do
+            if [ -f "$log" ]; then tail -n 100 "$log"; fi
+          done
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload playable Web build
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: build/web
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish game
+        id: deployment
+        uses: actions/deploy-pages@v4

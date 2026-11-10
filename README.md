@@ -1,5 +1,9 @@
 # poke-journey
 
+**웹에서 플레이:** https://chili-ddu.github.io/poke-journey/
+
+`main`에 올리면 GitHub Actions가 Godot 4.7로 Web 빌드를 검증하고 Pages를 갱신한다. 첫 실행은 수백 MB의 게임 자료를 내려받아 시간이 걸린다. 키보드·게임패드로 조작하며 소리는 화면과 상호작용한 뒤 재생된다. 브라우저의 저장 데이터는 데스크톱 세이브와 별개이며 브라우저/사이트 데이터 삭제 시 사라질 수 있다. 자동 배포 진행은 [Actions](https://github.com/chili-ddu/poke-journey/actions/workflows/pages.yml)에서 확인한다.
+
 포켓몬 한 마리를 직접 조종하는 탑다운 액션 RPG. UI·글꼴·습득표·기술 데이터의 기준은 플래티넘(pret/pokeplatinum)이다. 지도는 **관동 FRLG 진행·배치 + 성도 HGSS 지리**, 건물·지형 표현은 HGSS를 기준으로 한다. 원작의 타입 상성·능력치·공통 피해 공식을 사용한다. 개인 학습용 프로젝트. 용어는 [docs/glossary.md](docs/glossary.md).
 
 개발 프로젝트명은 `poke-journey`(이전 `poke-arena`, 2026-11-11 변경)이며 정식 게임 제목은 별도로 정한다. 기존 세이브 위치는 유지한다. 프로젝트 폴더는 `poke-journey/`를 사용하며, 이전 절대 경로를 쓰는 열린 작업·검증 기록을 위해 `poke-arena/` 호환 링크를 남긴다. GitHub 저장소는 [chili-ddu/poke-journey](https://github.com/chili-ddu/poke-journey)다.

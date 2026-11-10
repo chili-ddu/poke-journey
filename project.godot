@@ -38,6 +38,10 @@ window/handheld/orientation=6
 
 fonts/dynamic_fonts/use_oversampling=false
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/runtime_assets/plugin.cfg")
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

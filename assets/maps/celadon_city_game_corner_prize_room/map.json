@@ -1,0 +1,82 @@
+{
+  "width": 9,
+  "height": 10,
+  "tile": 16,
+  "pad": 10,
+  "solid": [
+    "111111111",
+    "111111111",
+    "100000001",
+    "111111111",
+    "100000001",
+    "100000001",
+    "110000011",
+    "100000001",
+    "100000001",
+    "111010111"
+  ],
+  "grass": [
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000"
+  ],
+  "ledge": [
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000"
+  ],
+  "start": [
+    72,
+    88
+  ],
+  "areas": [
+    {
+      "id": "celadon_city_game_corner_prize_room",
+      "x": 0,
+      "y": 0,
+      "w": 9,
+      "h": 10
+    }
+  ],
+  "warps": [
+    {
+      "x": 3,
+      "y": 9,
+      "map": "celadon_city_game_corner_prize_room",
+      "index": 0,
+      "to": "celadon_city",
+      "to_warp": 5
+    },
+    {
+      "x": 4,
+      "y": 8,
+      "map": "celadon_city_game_corner_prize_room",
+      "index": 1,
+      "to": "celadon_city",
+      "to_warp": 5
+    },
+    {
+      "x": 5,
+      "y": 9,
+      "map": "celadon_city_game_corner_prize_room",
+      "index": 2,
+      "to": "celadon_city",
+      "to_warp": 5
+    }
+  ],
+  "source": "pret/pokefirered CeladonCity_GameCorner_PrizeRoom(9×10 @0,0)"
+}

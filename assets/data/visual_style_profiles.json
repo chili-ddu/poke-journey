@@ -1,0 +1,13 @@
+{
+  "status": "applied_to_gameplay",
+  "camera": {"elevation": 40.0, "distance": 13.0, "fov": 30.0},
+  "source_units_per_tile": 16,
+  "world_pixels_per_tile": 24,
+  "viewport": [384, 216],
+  "profiles": {
+    "outdoor": {"band_top": 0.20, "band_bottom": 0.12, "blur_px": 3.0, "bloom_strength": 0.18, "saturation": 1.14, "contrast": 1.05, "light_tint": [1.07, 1.01, 0.92]},
+    "forest": {"band_top": 0.16, "band_bottom": 0.10, "blur_px": 2.0, "bloom_strength": 0.10, "saturation": 1.04, "contrast": 1.03, "light_tint": [0.99, 1.02, 0.97]},
+    "cave": {"band_top": 0.10, "band_bottom": 0.07, "blur_px": 1.5, "bloom_strength": 0.06, "saturation": 0.96, "contrast": 1.03, "light_tint": [0.96, 1.00, 1.05]},
+    "indoor": {"band_top": 0.10, "band_bottom": 0.07, "blur_px": 1.5, "bloom_strength": 0.12, "saturation": 1.05, "contrast": 1.02, "light_tint": [1.02, 1.00, 0.98]}
+  }
+}

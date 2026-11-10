@@ -1,0 +1,79 @@
+{
+  "width": 10,
+  "height": 9,
+  "tile": 16,
+  "pad": 10,
+  "solid": [
+    "1111111111",
+    "1111111111",
+    "1000000011",
+    "1000000101",
+    "1000110001",
+    "1000000001",
+    "1000000001",
+    "1000000001",
+    "1110101111"
+  ],
+  "grass": [
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000"
+  ],
+  "ledge": [
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000",
+    "0000000000"
+  ],
+  "start": [
+    88,
+    88
+  ],
+  "areas": [
+    {
+      "id": "celadon_city_condominiums_roof_room",
+      "x": 0,
+      "y": 0,
+      "w": 10,
+      "h": 9
+    }
+  ],
+  "warps": [
+    {
+      "x": 3,
+      "y": 8,
+      "map": "celadon_city_condominiums_roof_room",
+      "index": 0,
+      "to": "celadon_city_condominiums_roof",
+      "to_warp": 2
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "map": "celadon_city_condominiums_roof_room",
+      "index": 1,
+      "to": "celadon_city_condominiums_roof",
+      "to_warp": 2
+    },
+    {
+      "x": 5,
+      "y": 8,
+      "map": "celadon_city_condominiums_roof_room",
+      "index": 2,
+      "to": "celadon_city_condominiums_roof",
+      "to_warp": 2
+    }
+  ],
+  "source": "pret/pokefirered CeladonCity_Condominiums_RoofRoom(10×9 @0,0)"
+}

@@ -1,0 +1,7316 @@
+{
+  "native_tiles_checked": 2880,
+  "repaired_floor_copies": [
+    {
+      "tile": [
+        12,
+        9
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": 20
+    },
+    {
+      "tile": [
+        11,
+        10
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        10,
+        11
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        9,
+        12
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        8,
+        13
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        12,
+        13
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": 20
+    },
+    {
+      "tile": [
+        7,
+        14
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        11,
+        14
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        6,
+        15
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        10,
+        15
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        9,
+        16
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        8,
+        17
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        7,
+        18
+      ],
+      "donor": [
+        14,
+        8
+      ],
+      "source_mid": null
+    },
+    {
+      "tile": [
+        6,
+        19
+      ],
+      "donor": [
+        14,
+        28
+      ],
+      "source_mid": null
+    }
+  ],
+  "remaining_wrong_floor_copies": 0,
+  "tree_floor_repairs": [
+    {
+      "tile": [
+        0,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        0,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        1,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        2,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        3,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        4,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        5,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        6,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        7,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        8,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        9,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        10,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        11,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        12,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        13,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        14,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        14,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        14,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        14,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        15,
+        31
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        15,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        15,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        15,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        15,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        16,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        16,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        16,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        16,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        17,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        17,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        17,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        17,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        18,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        18,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        18,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        19,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        19,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        19,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        20,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        21,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        26,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        26,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        27,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        27,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        28,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        28,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        35
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        29,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        29,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        31
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        30,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        30,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        31
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        31,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        31,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        31
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        32,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        32,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        31
+      ],
+      "reason": "native walkable ground beneath canopy"
+    },
+    {
+      "tile": [
+        33,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        33,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        34,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        40
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        35,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        39
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        36,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        38
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        37,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        38,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        36
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        37
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        39,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        40,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        34
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        35
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        41,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        53
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        54
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        42,
+        55
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        32
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        33
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        53
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        54
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        43,
+        55
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        53
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        54
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        44,
+        55
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        30
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        31
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        53
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        45,
+        54
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        53
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        46,
+        55
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        1
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        2
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        3
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        4
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        5
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        6
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        7
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        8
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        9
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        10
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        11
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        12
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        13
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        14
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        15
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        16
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        17
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        18
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        19
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        20
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        21
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        22
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        23
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        24
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        25
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        26
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        27
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        28
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        29
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        41
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        42
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        43
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        44
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        45
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        46
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        47
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        48
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        49
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        50
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        51
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        52
+      ],
+      "reason": "lawn beneath solid native tree"
+    },
+    {
+      "tile": [
+        47,
+        54
+      ],
+      "reason": "lawn beneath solid native tree"
+    }
+  ],
+  "native_bank_ground_tiles": [
+    [
+      14,
+      7
+    ],
+    [
+      14,
+      11
+    ],
+    [
+      15,
+      7
+    ],
+    [
+      15,
+      11
+    ],
+    [
+      16,
+      7
+    ],
+    [
+      16,
+      11
+    ],
+    [
+      17,
+      11
+    ],
+    [
+      18,
+      7
+    ],
+    [
+      18,
+      11
+    ],
+    [
+      19,
+      7
+    ],
+    [
+      19,
+      11
+    ],
+    [
+      20,
+      7
+    ],
+    [
+      20,
+      11
+    ],
+    [
+      21,
+      7
+    ],
+    [
+      22,
+      11
+    ],
+    [
+      23,
+      11
+    ],
+    [
+      24,
+      11
+    ],
+    [
+      25,
+      11
+    ],
+    [
+      26,
+      11
+    ],
+    [
+      27,
+      11
+    ],
+    [
+      28,
+      7
+    ],
+    [
+      28,
+      11
+    ],
+    [
+      29,
+      7
+    ],
+    [
+      29,
+      11
+    ],
+    [
+      30,
+      7
+    ],
+    [
+      32,
+      7
+    ],
+    [
+      33,
+      7
+    ]
+  ],
+  "native_flag_differences": [
+    {
+      "area": "route6",
+      "tile": [
+        24,
+        5
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "route6",
+      "tile": [
+        25,
+        5
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "route6",
+      "tile": [
+        31,
+        13
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        9,
+        46
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        15,
+        46
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        47,
+        56
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        12,
+        57
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        19,
+        57
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        29,
+        57
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        47,
+        58
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        47,
+        59
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        47,
+        60
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        28,
+        64
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        14,
+        65
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        22,
+        74
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        23,
+        74
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        24,
+        74
+      ],
+      "field": "solid",
+      "native": "1",
+      "actual": "0",
+      "reason": "warp entrance"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        22,
+        79
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    },
+    {
+      "area": "vermilion_city",
+      "tile": [
+        24,
+        79
+      ],
+      "field": "solid",
+      "native": "0",
+      "actual": "1",
+      "reason": "unconnected region boundary"
+    }
+  ],
+  "unexplained_differences": []
+}

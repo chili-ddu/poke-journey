@@ -1,0 +1,833 @@
+{
+  "source": "pret/pokefirered region_map_sections.json, kanto.bin; current baked maps",
+  "locations": [
+    {
+      "id": "pallet_town",
+      "name": "PALLET TOWN",
+      "name_ko": "태초마을",
+      "kind": "town",
+      "region": [
+        64,
+        120,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        71,
+        270
+      ],
+      "area": "pallet_town",
+      "local_tile": [
+        11,
+        10
+      ]
+    },
+    {
+      "id": "viridian_city",
+      "name": "VIRIDIAN CITY",
+      "name_ko": "상록시티",
+      "kind": "city",
+      "region": [
+        64,
+        96,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        74,
+        208
+      ],
+      "area": "viridian_city",
+      "local_tile": [
+        26,
+        28
+      ]
+    },
+    {
+      "id": "pewter_city",
+      "name": "PEWTER CITY",
+      "name_ko": "회색시티",
+      "kind": "city",
+      "region": [
+        64,
+        64,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        65,
+        88
+      ],
+      "area": "pewter_city",
+      "local_tile": [
+        17,
+        28
+      ]
+    },
+    {
+      "id": "cerulean_city",
+      "name": "CERULEAN CITY",
+      "name_ko": "블루시티",
+      "kind": "city",
+      "region": [
+        144,
+        56,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        286,
+        62
+      ],
+      "area": "cerulean_city",
+      "local_tile": [
+        22,
+        22
+      ]
+    },
+    {
+      "id": "vermilion_city",
+      "name": "VERMILION CITY",
+      "name_ko": "갈색시티",
+      "kind": "city",
+      "region": [
+        144,
+        104,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        279,
+        209
+      ],
+      "area": "vermilion_city",
+      "local_tile": [
+        15,
+        9
+      ]
+    },
+    {
+      "id": "lavender_town",
+      "name": "LAVENDER TOWN",
+      "name_ko": "보라타운",
+      "kind": "town",
+      "region": [
+        176,
+        80,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        390,
+        138
+      ],
+      "area": "lavender_town",
+      "local_tile": [
+        6,
+        8
+      ]
+    },
+    {
+      "id": "celadon_city",
+      "name": "CELADON CITY",
+      "name_ko": "무지개시티",
+      "kind": "city",
+      "region": [
+        120,
+        80,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        228,
+        134
+      ],
+      "area": "celadon_city",
+      "local_tile": [
+        48,
+        14
+      ]
+    },
+    {
+      "id": "fuchsia_city",
+      "name": "FUCHSIA CITY",
+      "name_ko": "연분홍시티",
+      "kind": "city",
+      "region": [
+        128,
+        128,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        217,
+        333
+      ],
+      "area": "fuchsia_city",
+      "local_tile": [
+        25,
+        33
+      ]
+    },
+    {
+      "id": "saffron_city",
+      "name": "SAFFRON CITY",
+      "name_ko": "노랑시티",
+      "kind": "city",
+      "region": [
+        144,
+        80,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "saffron_city",
+      "tile": [
+        24,
+        40
+      ],
+      "area": "saffron_city",
+      "local_tile": [
+        24,
+        40
+      ]
+    },
+    {
+      "id": "cinnabar_island",
+      "name": "CINNABAR ISLAND",
+      "name_ko": "홍련섬",
+      "kind": "city",
+      "region": [
+        64,
+        144,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        74,
+        393
+      ],
+      "area": "cinnabar_island",
+      "local_tile": [
+        14,
+        13
+      ]
+    },
+    {
+      "id": "indigo_plateau",
+      "name": "INDIGO PLATEAU",
+      "name_ko": "석영고원",
+      "kind": "city",
+      "region": [
+        48,
+        56,
+        8,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        11,
+        19
+      ],
+      "area": "indigo_plateau_exterior",
+      "local_tile": [
+        11,
+        9
+      ]
+    },
+    {
+      "id": "route1",
+      "name": "ROUTE 1",
+      "name_ko": "1번도로",
+      "kind": "route",
+      "region": [
+        64,
+        104,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        72,
+        238
+      ],
+      "area": "route1",
+      "local_tile": [
+        12,
+        18
+      ]
+    },
+    {
+      "id": "route2",
+      "name": "ROUTE 2",
+      "name_ko": "2번도로",
+      "kind": "route",
+      "region": [
+        64,
+        72,
+        8,
+        24
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        77,
+        139
+      ],
+      "area": "route2",
+      "local_tile": [
+        17,
+        39
+      ]
+    },
+    {
+      "id": "route3",
+      "name": "ROUTE 3",
+      "name_ko": "3번도로",
+      "kind": "route",
+      "region": [
+        72,
+        64,
+        32,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        138,
+        80
+      ],
+      "area": "route3",
+      "local_tile": [
+        42,
+        10
+      ]
+    },
+    {
+      "id": "route4",
+      "name": "ROUTE 4",
+      "name_ko": "4번도로",
+      "kind": "route",
+      "region": [
+        96,
+        56,
+        48,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        168,
+        58
+      ],
+      "area": "route4",
+      "local_tile": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "route5",
+      "name": "ROUTE 5",
+      "name_ko": "5번도로",
+      "kind": "route",
+      "region": [
+        144,
+        64,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        294,
+        100
+      ],
+      "area": "route5",
+      "local_tile": [
+        30,
+        20
+      ]
+    },
+    {
+      "id": "route6",
+      "name": "ROUTE 6",
+      "name_ko": "6번도로",
+      "kind": "route",
+      "region": [
+        144,
+        88,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        288,
+        180
+      ],
+      "area": "route6",
+      "local_tile": [
+        12,
+        20
+      ]
+    },
+    {
+      "id": "route7",
+      "name": "ROUTE 7",
+      "name_ko": "7번도로",
+      "kind": "route",
+      "region": [
+        128,
+        80,
+        16,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        252,
+        140
+      ],
+      "area": "route7",
+      "local_tile": [
+        12,
+        10
+      ]
+    },
+    {
+      "id": "route8",
+      "name": "ROUTE 8",
+      "name_ko": "8번도로",
+      "kind": "route",
+      "region": [
+        152,
+        80,
+        24,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        348,
+        136
+      ],
+      "area": "route8",
+      "local_tile": [
+        36,
+        6
+      ]
+    },
+    {
+      "id": "route9",
+      "name": "ROUTE 9",
+      "name_ko": "9번도로",
+      "kind": "route",
+      "region": [
+        152,
+        56,
+        24,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        346,
+        62
+      ],
+      "area": "route9",
+      "local_tile": [
+        34,
+        12
+      ]
+    },
+    {
+      "id": "route10",
+      "name": "ROUTE 10",
+      "name_ko": "10번도로",
+      "kind": "route",
+      "region": [
+        176,
+        56,
+        8,
+        24
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        397,
+        73
+      ],
+      "area": "route10",
+      "local_tile": [
+        13,
+        23
+      ]
+    },
+    {
+      "id": "route11",
+      "name": "ROUTE 11",
+      "name_ko": "11번도로",
+      "kind": "route",
+      "region": [
+        152,
+        104,
+        24,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        348,
+        221
+      ],
+      "area": "route11",
+      "local_tile": [
+        36,
+        11
+      ]
+    },
+    {
+      "id": "route12",
+      "name": "ROUTE 12",
+      "name_ko": "12번도로",
+      "kind": "route",
+      "region": [
+        176,
+        88,
+        8,
+        40
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        401,
+        208
+      ],
+      "area": "route12",
+      "local_tile": [
+        17,
+        58
+      ]
+    },
+    {
+      "id": "route13",
+      "name": "ROUTE 13",
+      "name_ko": "13번도로",
+      "kind": "route",
+      "region": [
+        160,
+        120,
+        16,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        370,
+        280
+      ],
+      "area": "route13",
+      "local_tile": [
+        34,
+        10
+      ]
+    },
+    {
+      "id": "route14",
+      "name": "ROUTE 14",
+      "name_ko": "14번도로",
+      "kind": "route",
+      "region": [
+        152,
+        120,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        322,
+        300
+      ],
+      "area": "route14",
+      "local_tile": [
+        10,
+        30
+      ]
+    },
+    {
+      "id": "route15",
+      "name": "ROUTE 15",
+      "name_ko": "15번도로",
+      "kind": "route",
+      "region": [
+        136,
+        128,
+        16,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        276,
+        317
+      ],
+      "area": "route15",
+      "local_tile": [
+        36,
+        7
+      ]
+    },
+    {
+      "id": "route16",
+      "name": "ROUTE 16",
+      "name_ko": "16번도로",
+      "kind": "route",
+      "region": [
+        88,
+        80,
+        32,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        160,
+        138
+      ],
+      "area": "route16",
+      "local_tile": [
+        28,
+        8
+      ]
+    },
+    {
+      "id": "route17",
+      "name": "ROUTE 17",
+      "name_ko": "17번도로",
+      "kind": "route",
+      "region": [
+        88,
+        88,
+        8,
+        40
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        143,
+        230
+      ],
+      "area": "route17",
+      "local_tile": [
+        11,
+        80
+      ]
+    },
+    {
+      "id": "route18",
+      "name": "ROUTE 18",
+      "name_ko": "18번도로",
+      "kind": "route",
+      "region": [
+        88,
+        128,
+        40,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        162,
+        319
+      ],
+      "area": "route18",
+      "local_tile": [
+        30,
+        9
+      ]
+    },
+    {
+      "id": "route19",
+      "name": "ROUTE 19",
+      "name_ko": "19번도로",
+      "kind": "route",
+      "region": [
+        128,
+        136,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        215,
+        351
+      ],
+      "area": "route19",
+      "local_tile": [
+        11,
+        11
+      ]
+    },
+    {
+      "id": "route20",
+      "name": "ROUTE 20",
+      "name_ko": "20번도로",
+      "kind": "route",
+      "region": [
+        72,
+        144,
+        56,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        144,
+        390
+      ],
+      "area": "route20",
+      "local_tile": [
+        60,
+        10
+      ]
+    },
+    {
+      "id": "route21",
+      "name": "ROUTE 21",
+      "name_ko": "21번도로",
+      "kind": "route",
+      "region": [
+        64,
+        128,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        75,
+        305
+      ],
+      "area": "route21_north",
+      "local_tile": [
+        15,
+        25
+      ]
+    },
+    {
+      "id": "route22",
+      "name": "ROUTE 22",
+      "name_ko": "22번도로",
+      "kind": "route",
+      "region": [
+        48,
+        96,
+        16,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        24,
+        203
+      ],
+      "area": "route22",
+      "local_tile": [
+        24,
+        13
+      ]
+    },
+    {
+      "id": "route23",
+      "name": "ROUTE 23",
+      "name_ko": "23번도로",
+      "kind": "route",
+      "region": [
+        48,
+        64,
+        8,
+        32
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        12,
+        107
+      ],
+      "area": "route23",
+      "local_tile": [
+        12,
+        77
+      ]
+    },
+    {
+      "id": "route24",
+      "name": "ROUTE 24",
+      "name_ko": "24번도로",
+      "kind": "route",
+      "region": [
+        144,
+        40,
+        8,
+        16
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        287,
+        20
+      ],
+      "area": "route24",
+      "local_tile": [
+        11,
+        20
+      ]
+    },
+    {
+      "id": "route25",
+      "name": "ROUTE 25",
+      "name_ko": "25번도로",
+      "kind": "route",
+      "region": [
+        152,
+        40,
+        16,
+        8
+      ],
+      "enabled": true,
+      "map": "kanto_world",
+      "tile": [
+        336,
+        8
+      ],
+      "area": "route25",
+      "local_tile": [
+        36,
+        8
+      ]
+    }
+  ]
+}

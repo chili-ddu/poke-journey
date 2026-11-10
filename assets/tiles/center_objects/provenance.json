@@ -1,0 +1,43 @@
+{
+  "source": "viridian_center original bottom+top; shared with pewter_center",
+  "bounds": {
+    "healing_device": [
+      80,
+      16,
+      111,
+      44
+    ],
+    "vase_left": [
+      66,
+      38,
+      78,
+      52
+    ],
+    "vase_right": [
+      162,
+      38,
+      174,
+      52
+    ],
+    "counter_nameplate": [
+      114,
+      46,
+      126,
+      53
+    ],
+    "counter": [
+      64,
+      24,
+      176,
+      63
+    ]
+  },
+  "sha256": {
+    "counter.png": "899259ba3e6c1570740a7c5fcc733cdc691ebd1f8015620f73bc292e2d9959bb",
+    "vase_left.png": "aeb8ac8ed29de0f18f9408f8c30d6f6cb3017207067925c0f15f4411b4ac9841",
+    "vase_right.png": "aeb8ac8ed29de0f18f9408f8c30d6f6cb3017207067925c0f15f4411b4ac9841",
+    "counter_nameplate.png": "99d868eaa46bfee2045b3433621d43c5f816d94050c2f7c1def9a0141fd10d08",
+    "healing_device.png": "4663e3de2d3faa02ac5e123c2ed38aa33a986c3912bb9440094ea1b586d2397e"
+  },
+  "inferred": "counter behind vases/nameplate restored; hidden side/back faces repeat front trim"
+}

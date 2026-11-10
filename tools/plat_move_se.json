@@ -1,0 +1,313 @@
+{
+ "scratch": [
+  "SEQ_SE_DP_W010_"
+ ],
+ "growl": [],
+ "ember": [
+  "SEQ_SE_DP_W052_"
+ ],
+ "smoke_screen": [
+  "SEQ_SE_DP_W104_",
+  "SEQ_SE_DP_W028B_"
+ ],
+ "dragon_rage": [
+  "SEQ_SE_DP_W082C_"
+ ],
+ "scary_face": [
+  "SEQ_SE_DP_W060_",
+  "SEQ_SE_DP_W043D_"
+ ],
+ "fire_fang": [
+  "SEQ_SE_DP_W044_",
+  "SEQ_SE_DP_W172B_"
+ ],
+ "slash": [
+  "SEQ_SE_DP_W013_"
+ ],
+ "flamethrower": [
+  "SEQ_SE_DP_W053_"
+ ],
+ "fire_spin": [
+  "SEQ_SE_DP_W221B_"
+ ],
+ "metal_claw": [
+  "SEQ_SE_DP_W231_",
+  "SEQ_SE_DP_W013_"
+ ],
+ "leech_seed": [
+  "SEQ_SE_DP_001_",
+  "SEQ_SE_DP_080_"
+ ],
+ "vine_whip": [
+  "SEQ_SE_PL_WHIP_",
+  "SEQ_SE_DP_PASA2_"
+ ],
+ "poison_powder": [
+  "SEQ_SE_DP_W077B_"
+ ],
+ "sleep_powder": [
+  "SEQ_SE_DP_W077B_"
+ ],
+ "take_down": [
+  "SEQ_SE_DP_W029_",
+  "SEQ_SE_DP_140_"
+ ],
+ "razor_leaf": [
+  "SEQ_SE_DP_KAZE_",
+  "SEQ_SE_DP_209_",
+  "SEQ_SE_DP_HURU_"
+ ],
+ "sweet_scent": [
+  "SEQ_SE_DP_W230_"
+ ],
+ "growth": [
+  "SEQ_SE_DP_W036_"
+ ],
+ "double_edge": [
+  "SEQ_SE_DP_W025_",
+  "SEQ_SE_DP_131_",
+  "SEQ_SE_DP_140_"
+ ],
+ "worry_seed": [
+  "SEQ_SE_DP_001_",
+  "SEQ_SE_DP_112_"
+ ],
+ "synthesis": [
+  "SEQ_SE_DP_W025_"
+ ],
+ "seed_bomb": [
+  "SEQ_SE_DP_HURU2_",
+  "SEQ_SE_DP_W120_"
+ ],
+ "solar_beam": [
+  "SEQ_SE_DP_SHUSHU_",
+  "SEQ_SE_DP_W076B_"
+ ],
+ "petal_dance": [
+  "SEQ_SE_DP_W080_",
+  "SEQ_SE_DP_W080C_"
+ ],
+ "bubble": [
+  "SEQ_SE_DP_W145_",
+  "SEQ_SE_DP_W145C_"
+ ],
+ "withdraw": [
+  "SEQ_SE_DP_W029_",
+  "SEQ_SE_DP_W145C_"
+ ],
+ "water_gun": [
+  "SEQ_SE_DP_W055_"
+ ],
+ "bite": [
+  "SEQ_SE_DP_W044_"
+ ],
+ "rapid_spin": [
+  "SEQ_SE_DP_207_",
+  "SEQ_SE_DP_143_"
+ ],
+ "protect": [
+  "SEQ_SE_DP_W115_"
+ ],
+ "water_pulse": [
+  "SEQ_SE_DP_W145C_",
+  "SEQ_SE_DP_W202_"
+ ],
+ "aqua_tail": [
+  "SEQ_SE_DP_W057_",
+  "SEQ_SE_DP_W291_"
+ ],
+ "skull_bash": [
+  "SEQ_SE_DP_W036_",
+  "SEQ_SE_DP_W025B_"
+ ],
+ "iron_defense": [
+  "SEQ_SE_DP_W231_"
+ ],
+ "rain_dance": [
+  "SEQ_SE_DP_W240_"
+ ],
+ "hydro_pump": [
+  "SEQ_SE_DP_SUIRYU_"
+ ],
+ "flash_cannon": [
+  "SEQ_SE_DP_W082_",
+  "SEQ_SE_DP_161_",
+  "SEQ_SE_DP_400_"
+ ],
+ "defense_curl": [
+  "SEQ_SE_DP_W161_",
+  "SEQ_SE_DP_166_"
+ ],
+ "bind": [
+  "SEQ_SE_DP_W020B_"
+ ],
+ "rock_tomb": [
+  "SEQ_SE_DP_W070_",
+  "SEQ_SE_DP_W063_"
+ ],
+ "tackle": [
+  "SEQ_SE_DP_050_"
+ ],
+ "string_shot": [
+  "SEQ_SE_DP_W081B_",
+  "SEQ_SE_DP_W020B_"
+ ],
+ "harden": [
+  "SEQ_SE_DP_W231_"
+ ],
+ "poison_sting": [
+  "SEQ_SE_DP_HURU2_",
+  "SEQ_SE_DP_W004_",
+  "SEQ_SE_DP_W092D_"
+ ],
+ "fury_attack": [
+  "SEQ_SE_DP_W030_"
+ ],
+ "thunder_shock": [
+  "SEQ_SE_DP_W085_",
+  "SEQ_SE_DP_W063B_"
+ ],
+ "sand_attack": [
+  "SEQ_SE_DP_W028_"
+ ],
+ "tail_whip": [
+  "SEQ_SE_DP_112_"
+ ],
+ "quick_attack": [
+  "SEQ_SE_DP_W104_",
+  "SEQ_SE_DP_030_"
+ ],
+ "dig": [
+  "SEQ_SE_DP_W091_",
+  "SEQ_SE_DP_030_"
+ ],
+ "brine": [
+  "SEQ_SE_DP_W362_"
+ ],
+ "giga_drain": [
+  "SEQ_SE_DP_W202_",
+  "SEQ_SE_DP_W071B_"
+ ],
+ "brick_break": [
+  "SEQ_SE_DP_W233_",
+  "SEQ_SE_DP_W280_"
+ ],
+ "sludge_bomb": [
+  "SEQ_SE_DP_W145B_",
+  "SEQ_SE_DP_W092D_"
+ ],
+ "facade": [
+  "SEQ_SE_DP_W207_",
+  "SEQ_SE_DP_030_"
+ ],
+ "dragon_breath": [
+  "SEQ_SE_DP_400_"
+ ],
+ "bug_bite": [
+  "SEQ_SE_DP_W025B_"
+ ],
+ "thunder_wave": [
+  "SEQ_SE_DP_W085C_"
+ ],
+ "rollout": [
+  "SEQ_SE_DP_W025B_"
+ ],
+ "rock_polish": [
+  "SEQ_SE_DP_BRADE_"
+ ],
+ "rock_throw": [
+  "SEQ_SE_DP_W088_"
+ ],
+ "smack_down": [
+  "SEQ_SE_DP_W088_"
+ ],
+ "bulldoze": [
+  "SEQ_SE_DP_W089_"
+ ],
+ "splash": [
+  "SEQ_SE_DP_023"
+ ],
+ "hypnosis": [
+  "SEQ_SE_DP_W048",
+  "SEQ_SE_DP_154",
+  "SEQ_SE_DP_W173B"
+ ],
+ "peck": [
+  "SEQ_SE_DP_W030"
+ ],
+ "pound": [
+  "SEQ_SE_DP_030"
+ ],
+ "astonish": [
+  "SEQ_SE_DP_W280B",
+  "SEQ_SE_DP_W166"
+ ],
+ "wrap": [
+  "SEQ_SE_DP_W020B"
+ ],
+ "fury_swipes": [
+  "SEQ_SE_DP_W010"
+ ],
+ "absorb": [
+  "SEQ_SE_DP_W152",
+  "SEQ_SE_DP_W071B"
+ ],
+ "mega_drain": [
+  "SEQ_SE_DP_W145C",
+  "SEQ_SE_DP_W071B"
+ ],
+ "acid": [
+  "SEQ_SE_DP_W145C",
+  "SEQ_SE_DP_W145"
+ ],
+ "disarming_voice": [],
+ "sing": [
+  "SEQ_SE_DP_W047"
+ ],
+ "supersonic": [
+  "SEQ_SE_DP_W048"
+ ],
+ "low_kick": [
+  "SEQ_SE_DP_007",
+  "SEQ_SE_DP_030"
+ ],
+ "confusion": [
+  "SEQ_SE_DP_480"
+ ],
+ "recover": [
+  "SEQ_SE_DP_W025",
+  "SEQ_SE_DP_W071B"
+ ],
+ "teleport": [
+  "SEQ_SE_PL_W100",
+  "SEQ_SE_DP_W100"
+ ],
+ "headbutt": [
+  "SEQ_SE_DP_W029",
+  "SEQ_SE_DP_030"
+ ],
+ "lick": [
+  "SEQ_SE_DP_W122"
+ ],
+ "mud_slap": [
+  "SEQ_SE_DP_W028"
+ ],
+ "icy_wind": [
+  "SEQ_SE_DP_W016B",
+  "SEQ_SE_DP_W258"
+ ],
+ "transform": [
+  "SEQ_SE_PL_W100",
+  "SEQ_SE_DP_W100"
+ ],
+ "counter": [
+  "SEQ_SE_DP_BASI",
+  "SEQ_SE_DP_030"
+ ],
+ "mirror_coat": [
+  "SEQ_SE_DP_W115"
+ ],
+ "leer": [
+  "SEQ_SE_DP_W043"
+ ]
+}

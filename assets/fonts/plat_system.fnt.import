@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dbn8jj4wj68hl"
+path="res://.godot/imported/plat_system.fnt-dafd9fb4069c9fc6252411e92c9addbf.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/plat_system.fnt"
+dest_files=["res://.godot/imported/plat_system.fnt-dafd9fb4069c9fc6252411e92c9addbf.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

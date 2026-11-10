@@ -1,0 +1,13 @@
+{
+  "schema": "active-mobile-gamepad/v1",
+  "stick_radius": 44.0,
+  "stick_deadzone": 0.14,
+  "minimum_control_height": 288.0,
+  "layout_reference_width": 360.0,
+  "landscape_control_height": 128.0,
+  "landscape_reference_width": 768.0,
+  "display_top_inset": 48.0,
+  "landscape_top_inset": 12.0,
+  "navigation_delay": 0.35,
+  "navigation_repeat": 0.14
+}

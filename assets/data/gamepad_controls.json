@@ -1,0 +1,8 @@
+{
+  "schema": "active-gamepad/v1",
+  "stick_deadzone": 0.2,
+  "trigger_press": 0.55,
+  "trigger_release": 0.35,
+  "navigation_delay": 0.35,
+  "navigation_repeat": 0.14
+}

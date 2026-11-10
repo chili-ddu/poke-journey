@@ -1,0 +1,8296 @@
+{
+  "version": "FireRed",
+  "source": "pret/pokefirered/src/data/wild_encounters.json",
+  "tables": {
+    "pallet_town": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            10
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            10
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "shellder",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "viridian_city": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "cerulean_city": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "vermilion_city": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "shellder",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "celadon_city": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "psyduck",
+          5,
+          60,
+          10
+        ],
+        [
+          "psyduck",
+          10,
+          30,
+          20
+        ],
+        [
+          "psyduck",
+          20,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          40
+        ],
+        [
+          "koffing",
+          30,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "magikarp",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "magikarp",
+            15,
+            40,
+            25
+          ],
+          [
+            "magikarp",
+            15,
+            40,
+            25
+          ],
+          [
+            "magikarp",
+            15,
+            15,
+            25
+          ],
+          [
+            "magikarp",
+            25,
+            4,
+            35
+          ],
+          [
+            "grimer",
+            30,
+            1,
+            40
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "fuchsia_city": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "goldeen",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "poliwag",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "goldeen",
+            15,
+            40,
+            25
+          ],
+          [
+            "seaking",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "cinnabar_island": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 1,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "shellder",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 10
+    },
+    "route1": {
+      "encounters": [
+        [
+          "pidgey",
+          3,
+          20
+        ],
+        [
+          "rattata",
+          3,
+          20
+        ],
+        [
+          "pidgey",
+          3,
+          10
+        ],
+        [
+          "rattata",
+          3,
+          10
+        ],
+        [
+          "pidgey",
+          2,
+          10
+        ],
+        [
+          "rattata",
+          2,
+          10
+        ],
+        [
+          "pidgey",
+          3,
+          5
+        ],
+        [
+          "rattata",
+          3,
+          5
+        ],
+        [
+          "pidgey",
+          4,
+          4
+        ],
+        [
+          "rattata",
+          4,
+          4
+        ],
+        [
+          "pidgey",
+          5,
+          1
+        ],
+        [
+          "rattata",
+          4,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route2": {
+      "encounters": [
+        [
+          "rattata",
+          3,
+          20
+        ],
+        [
+          "pidgey",
+          3,
+          20
+        ],
+        [
+          "rattata",
+          4,
+          10
+        ],
+        [
+          "pidgey",
+          4,
+          10
+        ],
+        [
+          "rattata",
+          2,
+          10
+        ],
+        [
+          "pidgey",
+          2,
+          10
+        ],
+        [
+          "rattata",
+          5,
+          5
+        ],
+        [
+          "pidgey",
+          5,
+          5
+        ],
+        [
+          "caterpie",
+          4,
+          4
+        ],
+        [
+          "weedle",
+          4,
+          4
+        ],
+        [
+          "caterpie",
+          5,
+          1
+        ],
+        [
+          "weedle",
+          5,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route3": {
+      "encounters": [
+        [
+          "spearow",
+          6,
+          20
+        ],
+        [
+          "pidgey",
+          6,
+          20
+        ],
+        [
+          "spearow",
+          7,
+          10
+        ],
+        [
+          "mankey",
+          7,
+          10
+        ],
+        [
+          "nidoran_m",
+          6,
+          10
+        ],
+        [
+          "pidgey",
+          7,
+          10
+        ],
+        [
+          "spearow",
+          8,
+          5
+        ],
+        [
+          "jigglypuff",
+          3,
+          5
+        ],
+        [
+          "nidoran_m",
+          7,
+          4
+        ],
+        [
+          "jigglypuff",
+          5,
+          4
+        ],
+        [
+          "nidoran_f",
+          6,
+          1
+        ],
+        [
+          "jigglypuff",
+          7,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route4": {
+      "encounters": [
+        [
+          "spearow",
+          10,
+          20
+        ],
+        [
+          "rattata",
+          10,
+          20
+        ],
+        [
+          "ekans",
+          6,
+          10
+        ],
+        [
+          "ekans",
+          10,
+          10
+        ],
+        [
+          "spearow",
+          8,
+          10
+        ],
+        [
+          "rattata",
+          8,
+          10
+        ],
+        [
+          "spearow",
+          12,
+          5
+        ],
+        [
+          "rattata",
+          12,
+          5
+        ],
+        [
+          "mankey",
+          10,
+          4
+        ],
+        [
+          "ekans",
+          8,
+          4
+        ],
+        [
+          "mankey",
+          12,
+          1
+        ],
+        [
+          "ekans",
+          12,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route5": {
+      "encounters": [
+        [
+          "meowth",
+          10,
+          20
+        ],
+        [
+          "pidgey",
+          13,
+          20
+        ],
+        [
+          "oddish",
+          13,
+          10
+        ],
+        [
+          "meowth",
+          12,
+          10
+        ],
+        [
+          "oddish",
+          15,
+          10
+        ],
+        [
+          "pidgey",
+          15,
+          10
+        ],
+        [
+          "oddish",
+          16,
+          5
+        ],
+        [
+          "pidgey",
+          16,
+          5
+        ],
+        [
+          "pidgey",
+          15,
+          4
+        ],
+        [
+          "meowth",
+          14,
+          4
+        ],
+        [
+          "pidgey",
+          15,
+          1
+        ],
+        [
+          "meowth",
+          16,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route6": {
+      "encounters": [
+        [
+          "meowth",
+          10,
+          20
+        ],
+        [
+          "pidgey",
+          13,
+          20
+        ],
+        [
+          "oddish",
+          13,
+          10
+        ],
+        [
+          "meowth",
+          12,
+          10
+        ],
+        [
+          "oddish",
+          15,
+          10
+        ],
+        [
+          "pidgey",
+          15,
+          10
+        ],
+        [
+          "oddish",
+          16,
+          5
+        ],
+        [
+          "pidgey",
+          16,
+          5
+        ],
+        [
+          "pidgey",
+          15,
+          4
+        ],
+        [
+          "meowth",
+          14,
+          4
+        ],
+        [
+          "pidgey",
+          15,
+          1
+        ],
+        [
+          "meowth",
+          16,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route7": {
+      "encounters": [
+        [
+          "pidgey",
+          19,
+          20
+        ],
+        [
+          "meowth",
+          17,
+          20
+        ],
+        [
+          "oddish",
+          19,
+          10
+        ],
+        [
+          "meowth",
+          18,
+          10
+        ],
+        [
+          "pidgey",
+          22,
+          10
+        ],
+        [
+          "oddish",
+          22,
+          10
+        ],
+        [
+          "growlithe",
+          18,
+          5
+        ],
+        [
+          "growlithe",
+          20,
+          5
+        ],
+        [
+          "meowth",
+          17,
+          4
+        ],
+        [
+          "meowth",
+          19,
+          4
+        ],
+        [
+          "meowth",
+          17,
+          1
+        ],
+        [
+          "meowth",
+          20,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route8": {
+      "encounters": [
+        [
+          "pidgey",
+          18,
+          20
+        ],
+        [
+          "meowth",
+          18,
+          20
+        ],
+        [
+          "growlithe",
+          16,
+          10
+        ],
+        [
+          "pidgey",
+          20,
+          10
+        ],
+        [
+          "meowth",
+          20,
+          10
+        ],
+        [
+          "ekans",
+          17,
+          10
+        ],
+        [
+          "growlithe",
+          17,
+          5
+        ],
+        [
+          "ekans",
+          19,
+          5
+        ],
+        [
+          "ekans",
+          17,
+          4
+        ],
+        [
+          "growlithe",
+          15,
+          4
+        ],
+        [
+          "ekans",
+          17,
+          1
+        ],
+        [
+          "growlithe",
+          18,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route9": {
+      "encounters": [
+        [
+          "spearow",
+          16,
+          20
+        ],
+        [
+          "rattata",
+          16,
+          20
+        ],
+        [
+          "ekans",
+          11,
+          10
+        ],
+        [
+          "ekans",
+          15,
+          10
+        ],
+        [
+          "spearow",
+          13,
+          10
+        ],
+        [
+          "rattata",
+          14,
+          10
+        ],
+        [
+          "spearow",
+          17,
+          5
+        ],
+        [
+          "rattata",
+          17,
+          5
+        ],
+        [
+          "rattata",
+          14,
+          4
+        ],
+        [
+          "ekans",
+          13,
+          4
+        ],
+        [
+          "rattata",
+          14,
+          1
+        ],
+        [
+          "ekans",
+          17,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route10": {
+      "encounters": [
+        [
+          "spearow",
+          16,
+          20
+        ],
+        [
+          "voltorb",
+          16,
+          20
+        ],
+        [
+          "ekans",
+          11,
+          10
+        ],
+        [
+          "ekans",
+          15,
+          10
+        ],
+        [
+          "spearow",
+          13,
+          10
+        ],
+        [
+          "voltorb",
+          14,
+          10
+        ],
+        [
+          "spearow",
+          17,
+          5
+        ],
+        [
+          "voltorb",
+          17,
+          5
+        ],
+        [
+          "voltorb",
+          14,
+          4
+        ],
+        [
+          "ekans",
+          13,
+          4
+        ],
+        [
+          "voltorb",
+          14,
+          1
+        ],
+        [
+          "ekans",
+          17,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route11": {
+      "encounters": [
+        [
+          "ekans",
+          14,
+          20
+        ],
+        [
+          "spearow",
+          15,
+          20
+        ],
+        [
+          "ekans",
+          12,
+          10
+        ],
+        [
+          "spearow",
+          13,
+          10
+        ],
+        [
+          "drowzee",
+          11,
+          10
+        ],
+        [
+          "drowzee",
+          13,
+          10
+        ],
+        [
+          "ekans",
+          15,
+          5
+        ],
+        [
+          "spearow",
+          17,
+          5
+        ],
+        [
+          "ekans",
+          12,
+          4
+        ],
+        [
+          "drowzee",
+          15,
+          4
+        ],
+        [
+          "ekans",
+          12,
+          1
+        ],
+        [
+          "drowzee",
+          15,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route12": {
+      "encounters": [
+        [
+          "oddish",
+          24,
+          20
+        ],
+        [
+          "venonat",
+          24,
+          20
+        ],
+        [
+          "oddish",
+          22,
+          10
+        ],
+        [
+          "pidgey",
+          23,
+          10
+        ],
+        [
+          "pidgey",
+          25,
+          10
+        ],
+        [
+          "venonat",
+          26,
+          10
+        ],
+        [
+          "oddish",
+          26,
+          5
+        ],
+        [
+          "pidgey",
+          27,
+          5
+        ],
+        [
+          "pidgey",
+          23,
+          4
+        ],
+        [
+          "gloom",
+          28,
+          4
+        ],
+        [
+          "pidgey",
+          23,
+          1
+        ],
+        [
+          "gloom",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 60
+    },
+    "route13": {
+      "encounters": [
+        [
+          "oddish",
+          24,
+          20
+        ],
+        [
+          "venonat",
+          24,
+          20
+        ],
+        [
+          "oddish",
+          22,
+          10
+        ],
+        [
+          "pidgey",
+          27,
+          10
+        ],
+        [
+          "pidgey",
+          25,
+          10
+        ],
+        [
+          "venonat",
+          26,
+          10
+        ],
+        [
+          "oddish",
+          26,
+          5
+        ],
+        [
+          "ditto",
+          25,
+          5
+        ],
+        [
+          "pidgeotto",
+          29,
+          4
+        ],
+        [
+          "gloom",
+          28,
+          4
+        ],
+        [
+          "pidgeotto",
+          29,
+          1
+        ],
+        [
+          "gloom",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route14": {
+      "encounters": [
+        [
+          "oddish",
+          24,
+          20
+        ],
+        [
+          "venonat",
+          24,
+          20
+        ],
+        [
+          "oddish",
+          22,
+          10
+        ],
+        [
+          "ditto",
+          23,
+          10
+        ],
+        [
+          "pidgey",
+          27,
+          10
+        ],
+        [
+          "venonat",
+          26,
+          10
+        ],
+        [
+          "oddish",
+          26,
+          5
+        ],
+        [
+          "gloom",
+          30,
+          5
+        ],
+        [
+          "ditto",
+          23,
+          4
+        ],
+        [
+          "pidgeotto",
+          29,
+          4
+        ],
+        [
+          "ditto",
+          23,
+          1
+        ],
+        [
+          "pidgeotto",
+          29,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route15": {
+      "encounters": [
+        [
+          "oddish",
+          24,
+          20
+        ],
+        [
+          "venonat",
+          24,
+          20
+        ],
+        [
+          "oddish",
+          22,
+          10
+        ],
+        [
+          "pidgey",
+          27,
+          10
+        ],
+        [
+          "pidgey",
+          25,
+          10
+        ],
+        [
+          "venonat",
+          26,
+          10
+        ],
+        [
+          "oddish",
+          26,
+          5
+        ],
+        [
+          "ditto",
+          25,
+          5
+        ],
+        [
+          "pidgeotto",
+          29,
+          4
+        ],
+        [
+          "gloom",
+          28,
+          4
+        ],
+        [
+          "pidgeotto",
+          29,
+          1
+        ],
+        [
+          "gloom",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route16": {
+      "encounters": [
+        [
+          "spearow",
+          20,
+          20
+        ],
+        [
+          "doduo",
+          18,
+          20
+        ],
+        [
+          "rattata",
+          18,
+          10
+        ],
+        [
+          "rattata",
+          20,
+          10
+        ],
+        [
+          "spearow",
+          22,
+          10
+        ],
+        [
+          "doduo",
+          20,
+          10
+        ],
+        [
+          "rattata",
+          22,
+          5
+        ],
+        [
+          "doduo",
+          22,
+          5
+        ],
+        [
+          "rattata",
+          18,
+          4
+        ],
+        [
+          "raticate",
+          23,
+          4
+        ],
+        [
+          "rattata",
+          18,
+          1
+        ],
+        [
+          "raticate",
+          25,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route17": {
+      "encounters": [
+        [
+          "spearow",
+          20,
+          20
+        ],
+        [
+          "doduo",
+          24,
+          20
+        ],
+        [
+          "spearow",
+          22,
+          10
+        ],
+        [
+          "doduo",
+          26,
+          10
+        ],
+        [
+          "raticate",
+          25,
+          10
+        ],
+        [
+          "raticate",
+          27,
+          10
+        ],
+        [
+          "doduo",
+          28,
+          5
+        ],
+        [
+          "raticate",
+          29,
+          5
+        ],
+        [
+          "rattata",
+          22,
+          4
+        ],
+        [
+          "fearow",
+          25,
+          4
+        ],
+        [
+          "rattata",
+          22,
+          1
+        ],
+        [
+          "fearow",
+          27,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route18": {
+      "encounters": [
+        [
+          "spearow",
+          20,
+          20
+        ],
+        [
+          "doduo",
+          24,
+          20
+        ],
+        [
+          "spearow",
+          22,
+          10
+        ],
+        [
+          "doduo",
+          26,
+          10
+        ],
+        [
+          "raticate",
+          25,
+          10
+        ],
+        [
+          "fearow",
+          25,
+          10
+        ],
+        [
+          "doduo",
+          28,
+          5
+        ],
+        [
+          "raticate",
+          29,
+          5
+        ],
+        [
+          "rattata",
+          22,
+          4
+        ],
+        [
+          "fearow",
+          27,
+          4
+        ],
+        [
+          "rattata",
+          22,
+          1
+        ],
+        [
+          "fearow",
+          29,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "route19": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route20": {
+      "encounters": [],
+      "encounter_rate": 0,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route21_north": {
+      "encounters": [
+        [
+          "tangela",
+          22,
+          20
+        ],
+        [
+          "tangela",
+          23,
+          20
+        ],
+        [
+          "tangela",
+          24,
+          10
+        ],
+        [
+          "tangela",
+          21,
+          10
+        ],
+        [
+          "tangela",
+          25,
+          10
+        ],
+        [
+          "tangela",
+          20,
+          10
+        ],
+        [
+          "tangela",
+          19,
+          5
+        ],
+        [
+          "tangela",
+          26,
+          5
+        ],
+        [
+          "tangela",
+          18,
+          4
+        ],
+        [
+          "tangela",
+          27,
+          4
+        ],
+        [
+          "tangela",
+          17,
+          1
+        ],
+        [
+          "tangela",
+          28,
+          1
+        ]
+      ],
+      "encounter_rate": 14,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route21_south": {
+      "encounters": [
+        [
+          "tangela",
+          22,
+          20
+        ],
+        [
+          "tangela",
+          23,
+          20
+        ],
+        [
+          "tangela",
+          24,
+          10
+        ],
+        [
+          "tangela",
+          21,
+          10
+        ],
+        [
+          "tangela",
+          25,
+          10
+        ],
+        [
+          "tangela",
+          20,
+          10
+        ],
+        [
+          "tangela",
+          19,
+          5
+        ],
+        [
+          "tangela",
+          26,
+          5
+        ],
+        [
+          "tangela",
+          18,
+          4
+        ],
+        [
+          "tangela",
+          27,
+          4
+        ],
+        [
+          "tangela",
+          17,
+          1
+        ],
+        [
+          "tangela",
+          28,
+          1
+        ]
+      ],
+      "encounter_rate": 14,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "seadra",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route22": {
+      "encounters": [
+        [
+          "rattata",
+          3,
+          20
+        ],
+        [
+          "mankey",
+          3,
+          20
+        ],
+        [
+          "rattata",
+          4,
+          10
+        ],
+        [
+          "mankey",
+          4,
+          10
+        ],
+        [
+          "rattata",
+          2,
+          10
+        ],
+        [
+          "mankey",
+          2,
+          10
+        ],
+        [
+          "spearow",
+          3,
+          5
+        ],
+        [
+          "spearow",
+          5,
+          5
+        ],
+        [
+          "rattata",
+          5,
+          4
+        ],
+        [
+          "mankey",
+          5,
+          4
+        ],
+        [
+          "rattata",
+          5,
+          1
+        ],
+        [
+          "mankey",
+          5,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route23": {
+      "encounters": [
+        [
+          "mankey",
+          32,
+          20
+        ],
+        [
+          "fearow",
+          40,
+          20
+        ],
+        [
+          "mankey",
+          34,
+          10
+        ],
+        [
+          "spearow",
+          34,
+          10
+        ],
+        [
+          "ekans",
+          32,
+          10
+        ],
+        [
+          "ekans",
+          34,
+          10
+        ],
+        [
+          "primeape",
+          42,
+          5
+        ],
+        [
+          "arbok",
+          44,
+          5
+        ],
+        [
+          "spearow",
+          32,
+          4
+        ],
+        [
+          "fearow",
+          42,
+          4
+        ],
+        [
+          "spearow",
+          32,
+          1
+        ],
+        [
+          "fearow",
+          44,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route24": {
+      "encounters": [
+        [
+          "weedle",
+          7,
+          20
+        ],
+        [
+          "caterpie",
+          7,
+          20
+        ],
+        [
+          "pidgey",
+          11,
+          10
+        ],
+        [
+          "oddish",
+          12,
+          10
+        ],
+        [
+          "oddish",
+          13,
+          10
+        ],
+        [
+          "abra",
+          10,
+          10
+        ],
+        [
+          "pidgey",
+          13,
+          5
+        ],
+        [
+          "oddish",
+          14,
+          5
+        ],
+        [
+          "kakuna",
+          8,
+          4
+        ],
+        [
+          "abra",
+          8,
+          4
+        ],
+        [
+          "metapod",
+          8,
+          1
+        ],
+        [
+          "abra",
+          12,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "tentacool",
+          5,
+          60,
+          10
+        ],
+        [
+          "tentacool",
+          10,
+          30,
+          20
+        ],
+        [
+          "tentacool",
+          20,
+          5,
+          30
+        ],
+        [
+          "tentacool",
+          30,
+          4,
+          35
+        ],
+        [
+          "tentacool",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "horsea",
+            25,
+            4,
+            35
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "route25": {
+      "encounters": [
+        [
+          "weedle",
+          8,
+          20
+        ],
+        [
+          "caterpie",
+          8,
+          20
+        ],
+        [
+          "pidgey",
+          13,
+          10
+        ],
+        [
+          "oddish",
+          14,
+          10
+        ],
+        [
+          "oddish",
+          13,
+          10
+        ],
+        [
+          "abra",
+          11,
+          10
+        ],
+        [
+          "pidgey",
+          11,
+          5
+        ],
+        [
+          "oddish",
+          12,
+          5
+        ],
+        [
+          "kakuna",
+          9,
+          4
+        ],
+        [
+          "abra",
+          9,
+          4
+        ],
+        [
+          "metapod",
+          9,
+          1
+        ],
+        [
+          "abra",
+          13,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "viridian_forest": {
+      "encounters": [
+        [
+          "caterpie",
+          4,
+          20
+        ],
+        [
+          "weedle",
+          4,
+          20
+        ],
+        [
+          "caterpie",
+          5,
+          10
+        ],
+        [
+          "weedle",
+          5,
+          10
+        ],
+        [
+          "caterpie",
+          3,
+          10
+        ],
+        [
+          "weedle",
+          3,
+          10
+        ],
+        [
+          "metapod",
+          5,
+          5
+        ],
+        [
+          "kakuna",
+          5,
+          5
+        ],
+        [
+          "kakuna",
+          4,
+          4
+        ],
+        [
+          "pikachu",
+          3,
+          4
+        ],
+        [
+          "kakuna",
+          6,
+          1
+        ],
+        [
+          "pikachu",
+          5,
+          1
+        ]
+      ],
+      "encounter_rate": 14,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0
+    },
+    "mt_moon_1f": {
+      "encounters": [
+        [
+          "zubat",
+          7,
+          20
+        ],
+        [
+          "zubat",
+          8,
+          20
+        ],
+        [
+          "geodude",
+          7,
+          10
+        ],
+        [
+          "zubat",
+          9,
+          10
+        ],
+        [
+          "zubat",
+          10,
+          10
+        ],
+        [
+          "geodude",
+          8,
+          10
+        ],
+        [
+          "geodude",
+          9,
+          5
+        ],
+        [
+          "paras",
+          8,
+          5
+        ],
+        [
+          "zubat",
+          7,
+          4
+        ],
+        [
+          "zubat",
+          7,
+          4
+        ],
+        [
+          "zubat",
+          7,
+          1
+        ],
+        [
+          "clefairy",
+          8,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "mt_moon_b1f": {
+      "encounters": [
+        [
+          "paras",
+          7,
+          20
+        ],
+        [
+          "paras",
+          8,
+          20
+        ],
+        [
+          "paras",
+          5,
+          10
+        ],
+        [
+          "paras",
+          6,
+          10
+        ],
+        [
+          "paras",
+          9,
+          10
+        ],
+        [
+          "paras",
+          10,
+          10
+        ],
+        [
+          "paras",
+          7,
+          5
+        ],
+        [
+          "paras",
+          8,
+          5
+        ],
+        [
+          "paras",
+          5,
+          4
+        ],
+        [
+          "paras",
+          6,
+          4
+        ],
+        [
+          "paras",
+          9,
+          1
+        ],
+        [
+          "paras",
+          10,
+          1
+        ]
+      ],
+      "encounter_rate": 5,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "mt_moon_b2f": {
+      "encounters": [
+        [
+          "zubat",
+          8,
+          20
+        ],
+        [
+          "geodude",
+          9,
+          20
+        ],
+        [
+          "zubat",
+          9,
+          10
+        ],
+        [
+          "zubat",
+          10,
+          10
+        ],
+        [
+          "geodude",
+          10,
+          10
+        ],
+        [
+          "paras",
+          10,
+          10
+        ],
+        [
+          "paras",
+          12,
+          5
+        ],
+        [
+          "clefairy",
+          10,
+          5
+        ],
+        [
+          "zubat",
+          11,
+          4
+        ],
+        [
+          "zubat",
+          11,
+          4
+        ],
+        [
+          "zubat",
+          11,
+          1
+        ],
+        [
+          "clefairy",
+          12,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "digletts_cave_b1f": {
+      "encounters": [
+        [
+          "diglett",
+          18,
+          20
+        ],
+        [
+          "diglett",
+          19,
+          20
+        ],
+        [
+          "diglett",
+          17,
+          10
+        ],
+        [
+          "diglett",
+          15,
+          10
+        ],
+        [
+          "diglett",
+          16,
+          10
+        ],
+        [
+          "diglett",
+          20,
+          10
+        ],
+        [
+          "diglett",
+          21,
+          5
+        ],
+        [
+          "diglett",
+          22,
+          5
+        ],
+        [
+          "diglett",
+          17,
+          4
+        ],
+        [
+          "dugtrio",
+          29,
+          4
+        ],
+        [
+          "diglett",
+          17,
+          1
+        ],
+        [
+          "dugtrio",
+          31,
+          1
+        ]
+      ],
+      "encounter_rate": 5,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "victory_road_1f": {
+      "encounters": [
+        [
+          "machop",
+          32,
+          20
+        ],
+        [
+          "geodude",
+          32,
+          20
+        ],
+        [
+          "onix",
+          40,
+          10
+        ],
+        [
+          "onix",
+          43,
+          10
+        ],
+        [
+          "onix",
+          46,
+          10
+        ],
+        [
+          "zubat",
+          32,
+          10
+        ],
+        [
+          "arbok",
+          44,
+          5
+        ],
+        [
+          "golbat",
+          44,
+          5
+        ],
+        [
+          "marowak",
+          44,
+          4
+        ],
+        [
+          "machoke",
+          44,
+          4
+        ],
+        [
+          "machoke",
+          46,
+          1
+        ],
+        [
+          "marowak",
+          46,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "victory_road_2f": {
+      "encounters": [
+        [
+          "machop",
+          34,
+          20
+        ],
+        [
+          "geodude",
+          34,
+          20
+        ],
+        [
+          "primeape",
+          42,
+          10
+        ],
+        [
+          "onix",
+          45,
+          10
+        ],
+        [
+          "onix",
+          48,
+          10
+        ],
+        [
+          "zubat",
+          34,
+          10
+        ],
+        [
+          "arbok",
+          46,
+          5
+        ],
+        [
+          "golbat",
+          46,
+          5
+        ],
+        [
+          "marowak",
+          46,
+          4
+        ],
+        [
+          "machoke",
+          46,
+          4
+        ],
+        [
+          "machoke",
+          48,
+          1
+        ],
+        [
+          "marowak",
+          48,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "victory_road_3f": {
+      "encounters": [
+        [
+          "machop",
+          32,
+          20
+        ],
+        [
+          "geodude",
+          32,
+          20
+        ],
+        [
+          "onix",
+          40,
+          10
+        ],
+        [
+          "onix",
+          43,
+          10
+        ],
+        [
+          "onix",
+          46,
+          10
+        ],
+        [
+          "zubat",
+          32,
+          10
+        ],
+        [
+          "arbok",
+          44,
+          5
+        ],
+        [
+          "golbat",
+          44,
+          5
+        ],
+        [
+          "marowak",
+          44,
+          4
+        ],
+        [
+          "machoke",
+          44,
+          4
+        ],
+        [
+          "machoke",
+          46,
+          1
+        ],
+        [
+          "marowak",
+          46,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_mansion_1f": {
+      "encounters": [
+        [
+          "koffing",
+          28,
+          20
+        ],
+        [
+          "raticate",
+          32,
+          20
+        ],
+        [
+          "koffing",
+          30,
+          10
+        ],
+        [
+          "raticate",
+          36,
+          10
+        ],
+        [
+          "growlithe",
+          30,
+          10
+        ],
+        [
+          "rattata",
+          28,
+          10
+        ],
+        [
+          "grimer",
+          28,
+          5
+        ],
+        [
+          "weezing",
+          32,
+          5
+        ],
+        [
+          "growlithe",
+          32,
+          4
+        ],
+        [
+          "rattata",
+          26,
+          4
+        ],
+        [
+          "growlithe",
+          32,
+          1
+        ],
+        [
+          "rattata",
+          26,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_mansion_2f": {
+      "encounters": [
+        [
+          "koffing",
+          28,
+          20
+        ],
+        [
+          "raticate",
+          32,
+          20
+        ],
+        [
+          "koffing",
+          30,
+          10
+        ],
+        [
+          "raticate",
+          36,
+          10
+        ],
+        [
+          "growlithe",
+          30,
+          10
+        ],
+        [
+          "rattata",
+          28,
+          10
+        ],
+        [
+          "grimer",
+          28,
+          5
+        ],
+        [
+          "weezing",
+          32,
+          5
+        ],
+        [
+          "growlithe",
+          32,
+          4
+        ],
+        [
+          "rattata",
+          26,
+          4
+        ],
+        [
+          "growlithe",
+          32,
+          1
+        ],
+        [
+          "rattata",
+          26,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_mansion_3f": {
+      "encounters": [
+        [
+          "koffing",
+          28,
+          20
+        ],
+        [
+          "raticate",
+          32,
+          20
+        ],
+        [
+          "koffing",
+          30,
+          10
+        ],
+        [
+          "raticate",
+          36,
+          10
+        ],
+        [
+          "growlithe",
+          30,
+          10
+        ],
+        [
+          "rattata",
+          28,
+          10
+        ],
+        [
+          "grimer",
+          28,
+          5
+        ],
+        [
+          "weezing",
+          32,
+          5
+        ],
+        [
+          "growlithe",
+          32,
+          4
+        ],
+        [
+          "rattata",
+          26,
+          4
+        ],
+        [
+          "growlithe",
+          32,
+          1
+        ],
+        [
+          "rattata",
+          26,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_mansion_b1f": {
+      "encounters": [
+        [
+          "koffing",
+          28,
+          20
+        ],
+        [
+          "raticate",
+          34,
+          20
+        ],
+        [
+          "koffing",
+          30,
+          10
+        ],
+        [
+          "ditto",
+          30,
+          10
+        ],
+        [
+          "growlithe",
+          30,
+          10
+        ],
+        [
+          "raticate",
+          38,
+          10
+        ],
+        [
+          "grimer",
+          28,
+          5
+        ],
+        [
+          "weezing",
+          34,
+          5
+        ],
+        [
+          "growlithe",
+          32,
+          4
+        ],
+        [
+          "rattata",
+          26,
+          4
+        ],
+        [
+          "growlithe",
+          32,
+          1
+        ],
+        [
+          "rattata",
+          26,
+          1
+        ]
+      ],
+      "encounter_rate": 5,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "safari_zone_center": {
+      "encounters": [
+        [
+          "rhyhorn",
+          25,
+          20
+        ],
+        [
+          "nidoran_m",
+          22,
+          20
+        ],
+        [
+          "exeggcute",
+          24,
+          10
+        ],
+        [
+          "exeggcute",
+          25,
+          10
+        ],
+        [
+          "venonat",
+          22,
+          10
+        ],
+        [
+          "nidorino",
+          31,
+          10
+        ],
+        [
+          "nidorina",
+          31,
+          5
+        ],
+        [
+          "parasect",
+          30,
+          5
+        ],
+        [
+          "venonat",
+          22,
+          4
+        ],
+        [
+          "scyther",
+          23,
+          4
+        ],
+        [
+          "venonat",
+          22,
+          1
+        ],
+        [
+          "chansey",
+          23,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "goldeen",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "poliwag",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "goldeen",
+            15,
+            40,
+            25
+          ],
+          [
+            "seaking",
+            20,
+            40,
+            30
+          ],
+          [
+            "dratini",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            35
+          ],
+          [
+            "dragonair",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "safari_zone_east": {
+      "encounters": [
+        [
+          "nidoran_m",
+          24,
+          20
+        ],
+        [
+          "doduo",
+          26,
+          20
+        ],
+        [
+          "exeggcute",
+          23,
+          10
+        ],
+        [
+          "exeggcute",
+          25,
+          10
+        ],
+        [
+          "paras",
+          22,
+          10
+        ],
+        [
+          "nidorino",
+          33,
+          10
+        ],
+        [
+          "nidoran_f",
+          24,
+          5
+        ],
+        [
+          "parasect",
+          25,
+          5
+        ],
+        [
+          "paras",
+          22,
+          4
+        ],
+        [
+          "kangaskhan",
+          25,
+          4
+        ],
+        [
+          "paras",
+          22,
+          1
+        ],
+        [
+          "scyther",
+          28,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "goldeen",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "poliwag",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "goldeen",
+            15,
+            40,
+            25
+          ],
+          [
+            "seaking",
+            20,
+            40,
+            30
+          ],
+          [
+            "dratini",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            35
+          ],
+          [
+            "dragonair",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "safari_zone_north": {
+      "encounters": [
+        [
+          "rhyhorn",
+          26,
+          20
+        ],
+        [
+          "nidoran_m",
+          30,
+          20
+        ],
+        [
+          "exeggcute",
+          25,
+          10
+        ],
+        [
+          "exeggcute",
+          27,
+          10
+        ],
+        [
+          "paras",
+          23,
+          10
+        ],
+        [
+          "nidorino",
+          30,
+          10
+        ],
+        [
+          "nidorina",
+          30,
+          5
+        ],
+        [
+          "venomoth",
+          32,
+          5
+        ],
+        [
+          "paras",
+          23,
+          4
+        ],
+        [
+          "chansey",
+          26,
+          4
+        ],
+        [
+          "paras",
+          23,
+          1
+        ],
+        [
+          "tauros",
+          28,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "goldeen",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "poliwag",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "goldeen",
+            15,
+            40,
+            25
+          ],
+          [
+            "seaking",
+            20,
+            40,
+            30
+          ],
+          [
+            "dratini",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            35
+          ],
+          [
+            "dragonair",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "safari_zone_west": {
+      "encounters": [
+        [
+          "doduo",
+          26,
+          20
+        ],
+        [
+          "nidoran_m",
+          22,
+          20
+        ],
+        [
+          "exeggcute",
+          25,
+          10
+        ],
+        [
+          "exeggcute",
+          27,
+          10
+        ],
+        [
+          "venonat",
+          23,
+          10
+        ],
+        [
+          "nidorino",
+          30,
+          10
+        ],
+        [
+          "nidoran_f",
+          30,
+          5
+        ],
+        [
+          "venomoth",
+          32,
+          5
+        ],
+        [
+          "venonat",
+          23,
+          4
+        ],
+        [
+          "tauros",
+          25,
+          4
+        ],
+        [
+          "venonat",
+          23,
+          1
+        ],
+        [
+          "kangaskhan",
+          28,
+          1
+        ]
+      ],
+      "encounter_rate": 21,
+      "water_encounters": [
+        [
+          "psyduck",
+          20,
+          60,
+          25
+        ],
+        [
+          "psyduck",
+          20,
+          30,
+          25
+        ],
+        [
+          "psyduck",
+          25,
+          5,
+          30
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          35
+        ],
+        [
+          "psyduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "goldeen",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "poliwag",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "goldeen",
+            15,
+            40,
+            25
+          ],
+          [
+            "seaking",
+            20,
+            40,
+            30
+          ],
+          [
+            "dratini",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            35
+          ],
+          [
+            "dragonair",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20
+    },
+    "cerulean_cave_1f": {
+      "encounters": [
+        [
+          "magneton",
+          49,
+          20
+        ],
+        [
+          "parasect",
+          49,
+          20
+        ],
+        [
+          "golbat",
+          46,
+          10
+        ],
+        [
+          "machoke",
+          46,
+          10
+        ],
+        [
+          "primeape",
+          52,
+          10
+        ],
+        [
+          "ditto",
+          52,
+          10
+        ],
+        [
+          "electrode",
+          58,
+          5
+        ],
+        [
+          "parasect",
+          58,
+          5
+        ],
+        [
+          "golbat",
+          55,
+          4
+        ],
+        [
+          "wobbuffet",
+          55,
+          4
+        ],
+        [
+          "primeape",
+          61,
+          1
+        ],
+        [
+          "ditto",
+          61,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [
+        [
+          "psyduck",
+          30,
+          60,
+          40
+        ],
+        [
+          "golduck",
+          40,
+          30,
+          50
+        ],
+        [
+          "golduck",
+          45,
+          5,
+          55
+        ],
+        [
+          "psyduck",
+          40,
+          4,
+          50
+        ],
+        [
+          "psyduck",
+          40,
+          1,
+          50
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "psyduck",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20,
+      "rock_smash_encounters": [
+        [
+          "geodude",
+          30,
+          60,
+          40
+        ],
+        [
+          "graveler",
+          40,
+          30,
+          50
+        ],
+        [
+          "graveler",
+          45,
+          5,
+          55
+        ],
+        [
+          "geodude",
+          40,
+          4,
+          50
+        ],
+        [
+          "geodude",
+          40,
+          1,
+          50
+        ]
+      ],
+      "rock_smash_encounter_rate": 50,
+      "encounter_terrain": "cave"
+    },
+    "cerulean_cave_2f": {
+      "encounters": [
+        [
+          "golbat",
+          49,
+          20
+        ],
+        [
+          "machoke",
+          49,
+          20
+        ],
+        [
+          "magneton",
+          52,
+          10
+        ],
+        [
+          "parasect",
+          52,
+          10
+        ],
+        [
+          "kadabra",
+          55,
+          10
+        ],
+        [
+          "ditto",
+          55,
+          10
+        ],
+        [
+          "golbat",
+          58,
+          5
+        ],
+        [
+          "wobbuffet",
+          58,
+          5
+        ],
+        [
+          "electrode",
+          61,
+          4
+        ],
+        [
+          "parasect",
+          61,
+          4
+        ],
+        [
+          "kadabra",
+          64,
+          1
+        ],
+        [
+          "ditto",
+          64,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "rock_smash_encounters": [
+        [
+          "geodude",
+          35,
+          60,
+          45
+        ],
+        [
+          "graveler",
+          45,
+          30,
+          55
+        ],
+        [
+          "graveler",
+          50,
+          5,
+          60
+        ],
+        [
+          "geodude",
+          45,
+          4,
+          55
+        ],
+        [
+          "geodude",
+          45,
+          1,
+          55
+        ]
+      ],
+      "rock_smash_encounter_rate": 50,
+      "encounter_terrain": "cave"
+    },
+    "cerulean_cave_b1f": {
+      "encounters": [
+        [
+          "kadabra",
+          58,
+          20
+        ],
+        [
+          "ditto",
+          58,
+          20
+        ],
+        [
+          "magneton",
+          55,
+          10
+        ],
+        [
+          "parasect",
+          55,
+          10
+        ],
+        [
+          "golbat",
+          52,
+          10
+        ],
+        [
+          "machoke",
+          52,
+          10
+        ],
+        [
+          "kadabra",
+          67,
+          5
+        ],
+        [
+          "ditto",
+          67,
+          5
+        ],
+        [
+          "electrode",
+          64,
+          4
+        ],
+        [
+          "parasect",
+          64,
+          4
+        ],
+        [
+          "golbat",
+          61,
+          1
+        ],
+        [
+          "wobbuffet",
+          61,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [
+        [
+          "psyduck",
+          40,
+          60,
+          50
+        ],
+        [
+          "golduck",
+          50,
+          30,
+          60
+        ],
+        [
+          "golduck",
+          55,
+          5,
+          65
+        ],
+        [
+          "psyduck",
+          50,
+          4,
+          60
+        ],
+        [
+          "psyduck",
+          50,
+          1,
+          60
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "poliwag",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "goldeen",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "poliwag",
+            15,
+            40,
+            25
+          ],
+          [
+            "poliwhirl",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "gyarados",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20,
+      "rock_smash_encounters": [
+        [
+          "geodude",
+          40,
+          60,
+          50
+        ],
+        [
+          "graveler",
+          50,
+          30,
+          60
+        ],
+        [
+          "graveler",
+          55,
+          5,
+          65
+        ],
+        [
+          "geodude",
+          50,
+          4,
+          60
+        ],
+        [
+          "geodude",
+          50,
+          1,
+          60
+        ]
+      ],
+      "rock_smash_encounter_rate": 50,
+      "encounter_terrain": "cave"
+    },
+    "rock_tunnel_1f": {
+      "encounters": [
+        [
+          "zubat",
+          15,
+          20
+        ],
+        [
+          "geodude",
+          16,
+          20
+        ],
+        [
+          "mankey",
+          16,
+          10
+        ],
+        [
+          "geodude",
+          17,
+          10
+        ],
+        [
+          "zubat",
+          16,
+          10
+        ],
+        [
+          "machop",
+          16,
+          10
+        ],
+        [
+          "mankey",
+          17,
+          5
+        ],
+        [
+          "machop",
+          17,
+          5
+        ],
+        [
+          "geodude",
+          15,
+          4
+        ],
+        [
+          "onix",
+          13,
+          4
+        ],
+        [
+          "geodude",
+          15,
+          1
+        ],
+        [
+          "onix",
+          15,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "rock_tunnel_b1f": {
+      "encounters": [
+        [
+          "zubat",
+          16,
+          20
+        ],
+        [
+          "geodude",
+          17,
+          20
+        ],
+        [
+          "mankey",
+          17,
+          10
+        ],
+        [
+          "geodude",
+          16,
+          10
+        ],
+        [
+          "zubat",
+          15,
+          10
+        ],
+        [
+          "machop",
+          17,
+          10
+        ],
+        [
+          "mankey",
+          16,
+          5
+        ],
+        [
+          "onix",
+          13,
+          5
+        ],
+        [
+          "geodude",
+          15,
+          4
+        ],
+        [
+          "onix",
+          15,
+          4
+        ],
+        [
+          "geodude",
+          15,
+          1
+        ],
+        [
+          "onix",
+          17,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "rock_smash_encounters": [
+        [
+          "geodude",
+          5,
+          60,
+          20
+        ],
+        [
+          "geodude",
+          10,
+          30,
+          20
+        ],
+        [
+          "geodude",
+          15,
+          5,
+          30
+        ],
+        [
+          "graveler",
+          25,
+          4,
+          40
+        ],
+        [
+          "graveler",
+          30,
+          1,
+          40
+        ]
+      ],
+      "rock_smash_encounter_rate": 50,
+      "encounter_terrain": "cave"
+    },
+    "seafoam_islands_1f": {
+      "encounters": [
+        [
+          "psyduck",
+          27,
+          20
+        ],
+        [
+          "psyduck",
+          29,
+          20
+        ],
+        [
+          "psyduck",
+          31,
+          10
+        ],
+        [
+          "zubat",
+          22,
+          10
+        ],
+        [
+          "zubat",
+          22,
+          10
+        ],
+        [
+          "zubat",
+          24,
+          10
+        ],
+        [
+          "golbat",
+          26,
+          5
+        ],
+        [
+          "golbat",
+          28,
+          5
+        ],
+        [
+          "psyduck",
+          33,
+          4
+        ],
+        [
+          "zubat",
+          26,
+          4
+        ],
+        [
+          "psyduck",
+          26,
+          1
+        ],
+        [
+          "golbat",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "seafoam_islands_b1f": {
+      "encounters": [
+        [
+          "psyduck",
+          29,
+          20
+        ],
+        [
+          "psyduck",
+          31,
+          20
+        ],
+        [
+          "seel",
+          28,
+          10
+        ],
+        [
+          "zubat",
+          22,
+          10
+        ],
+        [
+          "zubat",
+          22,
+          10
+        ],
+        [
+          "zubat",
+          24,
+          10
+        ],
+        [
+          "golbat",
+          26,
+          5
+        ],
+        [
+          "golbat",
+          28,
+          5
+        ],
+        [
+          "golduck",
+          33,
+          4
+        ],
+        [
+          "zubat",
+          26,
+          4
+        ],
+        [
+          "golduck",
+          35,
+          1
+        ],
+        [
+          "golbat",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "seafoam_islands_b2f": {
+      "encounters": [
+        [
+          "psyduck",
+          30,
+          20
+        ],
+        [
+          "psyduck",
+          32,
+          20
+        ],
+        [
+          "seel",
+          30,
+          10
+        ],
+        [
+          "seel",
+          32,
+          10
+        ],
+        [
+          "zubat",
+          22,
+          10
+        ],
+        [
+          "zubat",
+          24,
+          10
+        ],
+        [
+          "golbat",
+          26,
+          5
+        ],
+        [
+          "golduck",
+          34,
+          5
+        ],
+        [
+          "golduck",
+          32,
+          4
+        ],
+        [
+          "golbat",
+          28,
+          4
+        ],
+        [
+          "golduck",
+          32,
+          1
+        ],
+        [
+          "golbat",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "seafoam_islands_b3f": {
+      "encounters": [
+        [
+          "seel",
+          30,
+          20
+        ],
+        [
+          "seel",
+          32,
+          20
+        ],
+        [
+          "psyduck",
+          32,
+          10
+        ],
+        [
+          "psyduck",
+          30,
+          10
+        ],
+        [
+          "golduck",
+          32,
+          10
+        ],
+        [
+          "zubat",
+          24,
+          10
+        ],
+        [
+          "golbat",
+          26,
+          5
+        ],
+        [
+          "golduck",
+          34,
+          5
+        ],
+        [
+          "dewgong",
+          32,
+          4
+        ],
+        [
+          "golbat",
+          28,
+          4
+        ],
+        [
+          "dewgong",
+          34,
+          1
+        ],
+        [
+          "golbat",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [
+        [
+          "seel",
+          25,
+          60,
+          35
+        ],
+        [
+          "horsea",
+          25,
+          30,
+          30
+        ],
+        [
+          "dewgong",
+          35,
+          5,
+          40
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          40
+        ],
+        [
+          "golduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "gyarados",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20,
+      "encounter_terrain": "cave"
+    },
+    "seafoam_islands_b4f": {
+      "encounters": [
+        [
+          "seel",
+          30,
+          20
+        ],
+        [
+          "seel",
+          32,
+          20
+        ],
+        [
+          "psyduck",
+          32,
+          10
+        ],
+        [
+          "seel",
+          34,
+          10
+        ],
+        [
+          "golduck",
+          32,
+          10
+        ],
+        [
+          "golbat",
+          26,
+          10
+        ],
+        [
+          "dewgong",
+          34,
+          5
+        ],
+        [
+          "golduck",
+          34,
+          5
+        ],
+        [
+          "dewgong",
+          36,
+          4
+        ],
+        [
+          "golbat",
+          28,
+          4
+        ],
+        [
+          "dewgong",
+          36,
+          1
+        ],
+        [
+          "golbat",
+          30,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [
+        [
+          "seel",
+          25,
+          60,
+          35
+        ],
+        [
+          "horsea",
+          25,
+          30,
+          30
+        ],
+        [
+          "dewgong",
+          35,
+          5,
+          40
+        ],
+        [
+          "psyduck",
+          30,
+          4,
+          40
+        ],
+        [
+          "golduck",
+          35,
+          1,
+          40
+        ]
+      ],
+      "water_encounter_rate": 2,
+      "fishing": {
+        "old_rod": [
+          [
+            "magikarp",
+            5,
+            70,
+            5
+          ],
+          [
+            "magikarp",
+            5,
+            30,
+            5
+          ]
+        ],
+        "good_rod": [
+          [
+            "horsea",
+            5,
+            60,
+            15
+          ],
+          [
+            "magikarp",
+            5,
+            20,
+            15
+          ],
+          [
+            "krabby",
+            5,
+            20,
+            15
+          ]
+        ],
+        "super_rod": [
+          [
+            "horsea",
+            15,
+            40,
+            25
+          ],
+          [
+            "horsea",
+            20,
+            40,
+            30
+          ],
+          [
+            "gyarados",
+            15,
+            15,
+            25
+          ],
+          [
+            "psyduck",
+            15,
+            4,
+            25
+          ],
+          [
+            "gyarados",
+            25,
+            1,
+            35
+          ]
+        ]
+      },
+      "fishing_encounter_rate": 20,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_tower_3f": {
+      "encounters": [
+        [
+          "gastly",
+          15,
+          20
+        ],
+        [
+          "gastly",
+          16,
+          20
+        ],
+        [
+          "gastly",
+          17,
+          10
+        ],
+        [
+          "gastly",
+          13,
+          10
+        ],
+        [
+          "gastly",
+          14,
+          10
+        ],
+        [
+          "gastly",
+          18,
+          10
+        ],
+        [
+          "gastly",
+          19,
+          5
+        ],
+        [
+          "cubone",
+          15,
+          5
+        ],
+        [
+          "gastly",
+          17,
+          4
+        ],
+        [
+          "cubone",
+          17,
+          4
+        ],
+        [
+          "gastly",
+          17,
+          1
+        ],
+        [
+          "haunter",
+          20,
+          1
+        ]
+      ],
+      "encounter_rate": 2,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_tower_4f": {
+      "encounters": [
+        [
+          "gastly",
+          15,
+          20
+        ],
+        [
+          "gastly",
+          16,
+          20
+        ],
+        [
+          "gastly",
+          17,
+          10
+        ],
+        [
+          "gastly",
+          13,
+          10
+        ],
+        [
+          "gastly",
+          14,
+          10
+        ],
+        [
+          "gastly",
+          18,
+          10
+        ],
+        [
+          "haunter",
+          20,
+          5
+        ],
+        [
+          "cubone",
+          15,
+          5
+        ],
+        [
+          "gastly",
+          17,
+          4
+        ],
+        [
+          "cubone",
+          17,
+          4
+        ],
+        [
+          "gastly",
+          17,
+          1
+        ],
+        [
+          "gastly",
+          19,
+          1
+        ]
+      ],
+      "encounter_rate": 4,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_tower_5f": {
+      "encounters": [
+        [
+          "gastly",
+          15,
+          20
+        ],
+        [
+          "gastly",
+          16,
+          20
+        ],
+        [
+          "gastly",
+          17,
+          10
+        ],
+        [
+          "gastly",
+          13,
+          10
+        ],
+        [
+          "gastly",
+          14,
+          10
+        ],
+        [
+          "gastly",
+          18,
+          10
+        ],
+        [
+          "haunter",
+          20,
+          5
+        ],
+        [
+          "cubone",
+          15,
+          5
+        ],
+        [
+          "gastly",
+          17,
+          4
+        ],
+        [
+          "cubone",
+          17,
+          4
+        ],
+        [
+          "gastly",
+          17,
+          1
+        ],
+        [
+          "gastly",
+          19,
+          1
+        ]
+      ],
+      "encounter_rate": 6,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_tower_6f": {
+      "encounters": [
+        [
+          "gastly",
+          16,
+          20
+        ],
+        [
+          "gastly",
+          17,
+          20
+        ],
+        [
+          "gastly",
+          18,
+          10
+        ],
+        [
+          "gastly",
+          14,
+          10
+        ],
+        [
+          "gastly",
+          15,
+          10
+        ],
+        [
+          "gastly",
+          19,
+          10
+        ],
+        [
+          "haunter",
+          21,
+          5
+        ],
+        [
+          "cubone",
+          17,
+          5
+        ],
+        [
+          "gastly",
+          18,
+          4
+        ],
+        [
+          "cubone",
+          19,
+          4
+        ],
+        [
+          "gastly",
+          18,
+          1
+        ],
+        [
+          "haunter",
+          23,
+          1
+        ]
+      ],
+      "encounter_rate": 8,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "pokemon_tower_7f": {
+      "encounters": [
+        [
+          "gastly",
+          16,
+          20
+        ],
+        [
+          "gastly",
+          17,
+          20
+        ],
+        [
+          "gastly",
+          18,
+          10
+        ],
+        [
+          "gastly",
+          15,
+          10
+        ],
+        [
+          "gastly",
+          19,
+          10
+        ],
+        [
+          "haunter",
+          23,
+          10
+        ],
+        [
+          "cubone",
+          17,
+          5
+        ],
+        [
+          "cubone",
+          19,
+          5
+        ],
+        [
+          "gastly",
+          18,
+          4
+        ],
+        [
+          "haunter",
+          23,
+          4
+        ],
+        [
+          "gastly",
+          18,
+          1
+        ],
+        [
+          "haunter",
+          25,
+          1
+        ]
+      ],
+      "encounter_rate": 10,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    },
+    "power_plant": {
+      "encounters": [
+        [
+          "voltorb",
+          22,
+          20
+        ],
+        [
+          "magnemite",
+          22,
+          20
+        ],
+        [
+          "voltorb",
+          25,
+          10
+        ],
+        [
+          "magnemite",
+          25,
+          10
+        ],
+        [
+          "pikachu",
+          22,
+          10
+        ],
+        [
+          "pikachu",
+          24,
+          10
+        ],
+        [
+          "magneton",
+          31,
+          5
+        ],
+        [
+          "magneton",
+          34,
+          5
+        ],
+        [
+          "pikachu",
+          26,
+          4
+        ],
+        [
+          "electabuzz",
+          32,
+          4
+        ],
+        [
+          "pikachu",
+          26,
+          1
+        ],
+        [
+          "electabuzz",
+          35,
+          1
+        ]
+      ],
+      "encounter_rate": 7,
+      "water_encounters": [],
+      "water_encounter_rate": 0,
+      "fishing": {},
+      "fishing_encounter_rate": 0,
+      "encounter_terrain": "cave"
+    }
+  },
+  "origins": {
+    "pallet_town": "PalletTown",
+    "viridian_city": "ViridianCity",
+    "cerulean_city": "CeruleanCity",
+    "vermilion_city": "VermilionCity",
+    "celadon_city": "CeladonCity",
+    "fuchsia_city": "FuchsiaCity",
+    "cinnabar_island": "CinnabarIsland",
+    "route1": "Route1",
+    "route2": "Route2",
+    "route3": "Route3",
+    "route4": "Route4",
+    "route5": "Route5",
+    "route6": "Route6",
+    "route7": "Route7",
+    "route8": "Route8",
+    "route9": "Route9",
+    "route10": "Route10",
+    "route11": "Route11",
+    "route12": "Route12",
+    "route13": "Route13",
+    "route14": "Route14",
+    "route15": "Route15",
+    "route16": "Route16",
+    "route17": "Route17",
+    "route18": "Route18",
+    "route19": "Route19",
+    "route20": "Route20",
+    "route21_north": "Route21_North",
+    "route21_south": "Route21_South",
+    "route22": "Route22",
+    "route23": "Route23",
+    "route24": "Route24",
+    "route25": "Route25",
+    "viridian_forest": "ViridianForest",
+    "mt_moon_1f": "MtMoon_1F",
+    "mt_moon_b1f": "MtMoon_B1F",
+    "mt_moon_b2f": "MtMoon_B2F",
+    "digletts_cave_b1f": "DiglettsCave_B1F",
+    "victory_road_1f": "VictoryRoad_1F",
+    "victory_road_2f": "VictoryRoad_2F",
+    "victory_road_3f": "VictoryRoad_3F",
+    "pokemon_mansion_1f": "PokemonMansion_1F",
+    "pokemon_mansion_2f": "PokemonMansion_2F",
+    "pokemon_mansion_3f": "PokemonMansion_3F",
+    "pokemon_mansion_b1f": "PokemonMansion_B1F",
+    "safari_zone_center": "SafariZone_Center",
+    "safari_zone_east": "SafariZone_East",
+    "safari_zone_north": "SafariZone_North",
+    "safari_zone_west": "SafariZone_West",
+    "cerulean_cave_1f": "CeruleanCave_1F",
+    "cerulean_cave_2f": "CeruleanCave_2F",
+    "cerulean_cave_b1f": "CeruleanCave_B1F",
+    "rock_tunnel_1f": "RockTunnel_1F",
+    "rock_tunnel_b1f": "RockTunnel_B1F",
+    "seafoam_islands_1f": "SeafoamIslands_1F",
+    "seafoam_islands_b1f": "SeafoamIslands_B1F",
+    "seafoam_islands_b2f": "SeafoamIslands_B2F",
+    "seafoam_islands_b3f": "SeafoamIslands_B3F",
+    "seafoam_islands_b4f": "SeafoamIslands_B4F",
+    "pokemon_tower_3f": "PokemonTower_3F",
+    "pokemon_tower_4f": "PokemonTower_4F",
+    "pokemon_tower_5f": "PokemonTower_5F",
+    "pokemon_tower_6f": "PokemonTower_6F",
+    "pokemon_tower_7f": "PokemonTower_7F",
+    "power_plant": "PowerPlant"
+  },
+  "species": {
+    "caterpie": {
+      "dex": 10,
+      "min_level": 3,
+      "max_level": 8,
+      "areas": [
+        "route2",
+        "route24",
+        "route25",
+        "viridian_forest"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "metapod": {
+      "dex": 11,
+      "min_level": 5,
+      "max_level": 9,
+      "areas": [
+        "route24",
+        "route25",
+        "viridian_forest"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "weedle": {
+      "dex": 13,
+      "min_level": 3,
+      "max_level": 8,
+      "areas": [
+        "route2",
+        "route24",
+        "route25",
+        "viridian_forest"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "kakuna": {
+      "dex": 14,
+      "min_level": 4,
+      "max_level": 9,
+      "areas": [
+        "route24",
+        "route25",
+        "viridian_forest"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "pidgey": {
+      "dex": 16,
+      "min_level": 2,
+      "max_level": 27,
+      "areas": [
+        "route1",
+        "route2",
+        "route3",
+        "route5",
+        "route6",
+        "route7",
+        "route8",
+        "route12",
+        "route13",
+        "route14",
+        "route15",
+        "route24",
+        "route25"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "pidgeotto": {
+      "dex": 17,
+      "min_level": 29,
+      "max_level": 29,
+      "areas": [
+        "route13",
+        "route14",
+        "route15"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "rattata": {
+      "dex": 19,
+      "min_level": 2,
+      "max_level": 28,
+      "areas": [
+        "route1",
+        "route2",
+        "route4",
+        "route9",
+        "route16",
+        "route17",
+        "route18",
+        "route22",
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "raticate": {
+      "dex": 20,
+      "min_level": 23,
+      "max_level": 38,
+      "areas": [
+        "route16",
+        "route17",
+        "route18",
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "spearow": {
+      "dex": 21,
+      "min_level": 3,
+      "max_level": 34,
+      "areas": [
+        "route3",
+        "route4",
+        "route9",
+        "route10",
+        "route11",
+        "route16",
+        "route17",
+        "route18",
+        "route22",
+        "route23"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "fearow": {
+      "dex": 22,
+      "min_level": 25,
+      "max_level": 44,
+      "areas": [
+        "route17",
+        "route18",
+        "route23"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "ekans": {
+      "dex": 23,
+      "min_level": 6,
+      "max_level": 34,
+      "areas": [
+        "route4",
+        "route8",
+        "route9",
+        "route10",
+        "route11",
+        "route23"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "arbok": {
+      "dex": 24,
+      "min_level": 44,
+      "max_level": 46,
+      "areas": [
+        "route23",
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "pikachu": {
+      "dex": 25,
+      "min_level": 3,
+      "max_level": 26,
+      "areas": [
+        "viridian_forest",
+        "power_plant"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "nidoran_f": {
+      "dex": 29,
+      "min_level": 6,
+      "max_level": 30,
+      "areas": [
+        "route3",
+        "safari_zone_east",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "nidorina": {
+      "dex": 30,
+      "min_level": 30,
+      "max_level": 31,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_north"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "nidoran_m": {
+      "dex": 32,
+      "min_level": 6,
+      "max_level": 30,
+      "areas": [
+        "route3",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "nidorino": {
+      "dex": 33,
+      "min_level": 30,
+      "max_level": 33,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "clefairy": {
+      "dex": 35,
+      "min_level": 8,
+      "max_level": 12,
+      "areas": [
+        "mt_moon_1f",
+        "mt_moon_b2f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "jigglypuff": {
+      "dex": 39,
+      "min_level": 3,
+      "max_level": 7,
+      "areas": [
+        "route3"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "zubat": {
+      "dex": 41,
+      "min_level": 7,
+      "max_level": 34,
+      "areas": [
+        "mt_moon_1f",
+        "mt_moon_b2f",
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f",
+        "seafoam_islands_1f",
+        "seafoam_islands_b1f",
+        "seafoam_islands_b2f",
+        "seafoam_islands_b3f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "golbat": {
+      "dex": 42,
+      "min_level": 26,
+      "max_level": 61,
+      "areas": [
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f",
+        "seafoam_islands_1f",
+        "seafoam_islands_b1f",
+        "seafoam_islands_b2f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "oddish": {
+      "dex": 43,
+      "min_level": 12,
+      "max_level": 26,
+      "areas": [
+        "route5",
+        "route6",
+        "route7",
+        "route12",
+        "route13",
+        "route14",
+        "route15",
+        "route24",
+        "route25"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "gloom": {
+      "dex": 44,
+      "min_level": 28,
+      "max_level": 30,
+      "areas": [
+        "route12",
+        "route13",
+        "route14",
+        "route15"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "paras": {
+      "dex": 46,
+      "min_level": 5,
+      "max_level": 23,
+      "areas": [
+        "mt_moon_1f",
+        "mt_moon_b1f",
+        "mt_moon_b2f",
+        "safari_zone_east",
+        "safari_zone_north"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "parasect": {
+      "dex": 47,
+      "min_level": 25,
+      "max_level": 64,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east",
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "venonat": {
+      "dex": 48,
+      "min_level": 22,
+      "max_level": 26,
+      "areas": [
+        "route12",
+        "route13",
+        "route14",
+        "route15",
+        "safari_zone_center",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "venomoth": {
+      "dex": 49,
+      "min_level": 32,
+      "max_level": 32,
+      "areas": [
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "diglett": {
+      "dex": 50,
+      "min_level": 15,
+      "max_level": 22,
+      "areas": [
+        "digletts_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "dugtrio": {
+      "dex": 51,
+      "min_level": 29,
+      "max_level": 31,
+      "areas": [
+        "digletts_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "meowth": {
+      "dex": 52,
+      "min_level": 10,
+      "max_level": 20,
+      "areas": [
+        "route5",
+        "route6",
+        "route7",
+        "route8"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "psyduck": {
+      "dex": 54,
+      "min_level": 5,
+      "max_level": 60,
+      "areas": [
+        "pallet_town",
+        "viridian_city",
+        "cerulean_city",
+        "vermilion_city",
+        "celadon_city",
+        "fuchsia_city",
+        "cinnabar_island",
+        "route4",
+        "route6",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route22",
+        "route23",
+        "route24",
+        "route25",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f",
+        "seafoam_islands_1f",
+        "seafoam_islands_b1f",
+        "seafoam_islands_b2f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "super_rod",
+        "surf",
+        "land"
+      ]
+    },
+    "golduck": {
+      "dex": 55,
+      "min_level": 32,
+      "max_level": 65,
+      "areas": [
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f",
+        "seafoam_islands_b1f",
+        "seafoam_islands_b2f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "surf",
+        "land"
+      ]
+    },
+    "mankey": {
+      "dex": 56,
+      "min_level": 2,
+      "max_level": 34,
+      "areas": [
+        "route3",
+        "route4",
+        "route22",
+        "route23",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "primeape": {
+      "dex": 57,
+      "min_level": 42,
+      "max_level": 61,
+      "areas": [
+        "route23",
+        "victory_road_2f",
+        "cerulean_cave_1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "growlithe": {
+      "dex": 58,
+      "min_level": 15,
+      "max_level": 32,
+      "areas": [
+        "route7",
+        "route8",
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "poliwag": {
+      "dex": 60,
+      "min_level": 5,
+      "max_level": 25,
+      "areas": [
+        "viridian_city",
+        "fuchsia_city",
+        "route6",
+        "route22",
+        "route23",
+        "route25",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "good_rod",
+        "super_rod"
+      ]
+    },
+    "poliwhirl": {
+      "dex": 61,
+      "min_level": 20,
+      "max_level": 30,
+      "areas": [
+        "viridian_city",
+        "route6",
+        "route22",
+        "route23",
+        "route25",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "abra": {
+      "dex": 63,
+      "min_level": 8,
+      "max_level": 13,
+      "areas": [
+        "route24",
+        "route25"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "kadabra": {
+      "dex": 64,
+      "min_level": 55,
+      "max_level": 67,
+      "areas": [
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "machop": {
+      "dex": 66,
+      "min_level": 16,
+      "max_level": 34,
+      "areas": [
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "machoke": {
+      "dex": 67,
+      "min_level": 44,
+      "max_level": 52,
+      "areas": [
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "tentacool": {
+      "dex": 72,
+      "min_level": 5,
+      "max_level": 40,
+      "areas": [
+        "pallet_town",
+        "cerulean_city",
+        "vermilion_city",
+        "cinnabar_island",
+        "route4",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route24"
+      ],
+      "methods": [
+        "surf"
+      ]
+    },
+    "geodude": {
+      "dex": 74,
+      "min_level": 5,
+      "max_level": 60,
+      "areas": [
+        "mt_moon_1f",
+        "mt_moon_b2f",
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f"
+      ],
+      "methods": [
+        "land",
+        "rock_smash"
+      ]
+    },
+    "graveler": {
+      "dex": 75,
+      "min_level": 25,
+      "max_level": 65,
+      "areas": [
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f",
+        "rock_tunnel_b1f"
+      ],
+      "methods": [
+        "rock_smash"
+      ]
+    },
+    "magnemite": {
+      "dex": 81,
+      "min_level": 22,
+      "max_level": 25,
+      "areas": [
+        "power_plant"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "magneton": {
+      "dex": 82,
+      "min_level": 31,
+      "max_level": 55,
+      "areas": [
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f",
+        "power_plant"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "doduo": {
+      "dex": 84,
+      "min_level": 18,
+      "max_level": 28,
+      "areas": [
+        "route16",
+        "route17",
+        "route18",
+        "safari_zone_east",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "seel": {
+      "dex": 86,
+      "min_level": 25,
+      "max_level": 35,
+      "areas": [
+        "seafoam_islands_b1f",
+        "seafoam_islands_b2f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "land",
+        "surf"
+      ]
+    },
+    "dewgong": {
+      "dex": 87,
+      "min_level": 32,
+      "max_level": 40,
+      "areas": [
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "land",
+        "surf"
+      ]
+    },
+    "grimer": {
+      "dex": 88,
+      "min_level": 28,
+      "max_level": 40,
+      "areas": [
+        "celadon_city",
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "super_rod",
+        "land"
+      ]
+    },
+    "shellder": {
+      "dex": 90,
+      "min_level": 15,
+      "max_level": 25,
+      "areas": [
+        "pallet_town",
+        "vermilion_city",
+        "cinnabar_island"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "gastly": {
+      "dex": 92,
+      "min_level": 13,
+      "max_level": 19,
+      "areas": [
+        "pokemon_tower_3f",
+        "pokemon_tower_4f",
+        "pokemon_tower_5f",
+        "pokemon_tower_6f",
+        "pokemon_tower_7f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "haunter": {
+      "dex": 93,
+      "min_level": 20,
+      "max_level": 25,
+      "areas": [
+        "pokemon_tower_3f",
+        "pokemon_tower_4f",
+        "pokemon_tower_5f",
+        "pokemon_tower_6f",
+        "pokemon_tower_7f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "onix": {
+      "dex": 95,
+      "min_level": 13,
+      "max_level": 48,
+      "areas": [
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "drowzee": {
+      "dex": 96,
+      "min_level": 11,
+      "max_level": 15,
+      "areas": [
+        "route11"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "krabby": {
+      "dex": 98,
+      "min_level": 5,
+      "max_level": 15,
+      "areas": [
+        "pallet_town",
+        "cerulean_city",
+        "vermilion_city",
+        "cinnabar_island",
+        "route4",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route24",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "good_rod"
+      ]
+    },
+    "voltorb": {
+      "dex": 100,
+      "min_level": 14,
+      "max_level": 25,
+      "areas": [
+        "route10",
+        "power_plant"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "electrode": {
+      "dex": 101,
+      "min_level": 58,
+      "max_level": 64,
+      "areas": [
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "exeggcute": {
+      "dex": 102,
+      "min_level": 23,
+      "max_level": 27,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "cubone": {
+      "dex": 104,
+      "min_level": 15,
+      "max_level": 19,
+      "areas": [
+        "pokemon_tower_3f",
+        "pokemon_tower_4f",
+        "pokemon_tower_5f",
+        "pokemon_tower_6f",
+        "pokemon_tower_7f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "marowak": {
+      "dex": 105,
+      "min_level": 44,
+      "max_level": 48,
+      "areas": [
+        "victory_road_1f",
+        "victory_road_2f",
+        "victory_road_3f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "koffing": {
+      "dex": 109,
+      "min_level": 28,
+      "max_level": 40,
+      "areas": [
+        "celadon_city",
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "surf",
+        "land"
+      ]
+    },
+    "weezing": {
+      "dex": 110,
+      "min_level": 32,
+      "max_level": 34,
+      "areas": [
+        "pokemon_mansion_1f",
+        "pokemon_mansion_2f",
+        "pokemon_mansion_3f",
+        "pokemon_mansion_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "rhyhorn": {
+      "dex": 111,
+      "min_level": 25,
+      "max_level": 26,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_north"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "chansey": {
+      "dex": 113,
+      "min_level": 23,
+      "max_level": 26,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_north"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "tangela": {
+      "dex": 114,
+      "min_level": 17,
+      "max_level": 28,
+      "areas": [
+        "route21_north",
+        "route21_south"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "kangaskhan": {
+      "dex": 115,
+      "min_level": 25,
+      "max_level": 28,
+      "areas": [
+        "safari_zone_east",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "horsea": {
+      "dex": 116,
+      "min_level": 5,
+      "max_level": 35,
+      "areas": [
+        "pallet_town",
+        "cerulean_city",
+        "vermilion_city",
+        "cinnabar_island",
+        "route4",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route24",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "good_rod",
+        "super_rod",
+        "surf"
+      ]
+    },
+    "seadra": {
+      "dex": 117,
+      "min_level": 25,
+      "max_level": 35,
+      "areas": [
+        "pallet_town",
+        "cinnabar_island",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "goldeen": {
+      "dex": 118,
+      "min_level": 5,
+      "max_level": 25,
+      "areas": [
+        "viridian_city",
+        "fuchsia_city",
+        "route6",
+        "route22",
+        "route23",
+        "route25",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "good_rod",
+        "super_rod"
+      ]
+    },
+    "seaking": {
+      "dex": 119,
+      "min_level": 20,
+      "max_level": 30,
+      "areas": [
+        "fuchsia_city",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "scyther": {
+      "dex": 123,
+      "min_level": 23,
+      "max_level": 28,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "electabuzz": {
+      "dex": 125,
+      "min_level": 32,
+      "max_level": 35,
+      "areas": [
+        "power_plant"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "tauros": {
+      "dex": 128,
+      "min_level": 25,
+      "max_level": 28,
+      "areas": [
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "magikarp": {
+      "dex": 129,
+      "min_level": 5,
+      "max_level": 35,
+      "areas": [
+        "pallet_town",
+        "viridian_city",
+        "cerulean_city",
+        "vermilion_city",
+        "celadon_city",
+        "fuchsia_city",
+        "cinnabar_island",
+        "route4",
+        "route6",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route22",
+        "route23",
+        "route24",
+        "route25",
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "old_rod",
+        "good_rod",
+        "super_rod"
+      ]
+    },
+    "gyarados": {
+      "dex": 130,
+      "min_level": 15,
+      "max_level": 35,
+      "areas": [
+        "pallet_town",
+        "viridian_city",
+        "cerulean_city",
+        "vermilion_city",
+        "fuchsia_city",
+        "cinnabar_island",
+        "route4",
+        "route6",
+        "route10",
+        "route11",
+        "route12",
+        "route13",
+        "route19",
+        "route20",
+        "route21_north",
+        "route21_south",
+        "route22",
+        "route23",
+        "route24",
+        "route25",
+        "cerulean_cave_1f",
+        "cerulean_cave_b1f",
+        "seafoam_islands_b3f",
+        "seafoam_islands_b4f"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "ditto": {
+      "dex": 132,
+      "min_level": 23,
+      "max_level": 67,
+      "areas": [
+        "route13",
+        "route14",
+        "route15",
+        "pokemon_mansion_b1f",
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    },
+    "dratini": {
+      "dex": 147,
+      "min_level": 15,
+      "max_level": 25,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "dragonair": {
+      "dex": 148,
+      "min_level": 25,
+      "max_level": 35,
+      "areas": [
+        "safari_zone_center",
+        "safari_zone_east",
+        "safari_zone_north",
+        "safari_zone_west"
+      ],
+      "methods": [
+        "super_rod"
+      ]
+    },
+    "wobbuffet": {
+      "dex": 202,
+      "min_level": 55,
+      "max_level": 61,
+      "areas": [
+        "cerulean_cave_1f",
+        "cerulean_cave_2f",
+        "cerulean_cave_b1f"
+      ],
+      "methods": [
+        "land"
+      ]
+    }
+  }
+}

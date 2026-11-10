@@ -1,0 +1,2495 @@
+{
+ "species": {
+  "abomasnow": [
+   "snow_warning"
+  ],
+  "abra": [
+   "synchronize",
+   "inner_focus"
+  ],
+  "absol": [
+   "pressure",
+   "super_luck"
+  ],
+  "aerodactyl": [
+   "rock_head",
+   "pressure"
+  ],
+  "aggron": [
+   "sturdy",
+   "rock_head"
+  ],
+  "aipom": [
+   "run_away",
+   "pickup"
+  ],
+  "alakazam": [
+   "synchronize",
+   "inner_focus"
+  ],
+  "altaria": [
+   "natural_cure"
+  ],
+  "ambipom": [
+   "technician",
+   "pickup"
+  ],
+  "ampharos": [
+   "static"
+  ],
+  "anorith": [
+   "battle_armor"
+  ],
+  "arbok": [
+   "intimidate",
+   "shed_skin"
+  ],
+  "arcanine": [
+   "intimidate",
+   "flash_fire"
+  ],
+  "arceus": [
+   "multitype"
+  ],
+  "ariados": [
+   "swarm",
+   "insomnia"
+  ],
+  "armaldo": [
+   "battle_armor"
+  ],
+  "aron": [
+   "sturdy",
+   "rock_head"
+  ],
+  "articuno": [
+   "pressure"
+  ],
+  "azelf": [
+   "levitate"
+  ],
+  "azumarill": [
+   "thick_fat",
+   "huge_power"
+  ],
+  "azurill": [
+   "thick_fat",
+   "huge_power"
+  ],
+  "bagon": [
+   "rock_head"
+  ],
+  "baltoy": [
+   "levitate"
+  ],
+  "banette": [
+   "insomnia",
+   "frisk"
+  ],
+  "barboach": [
+   "oblivious",
+   "anticipation"
+  ],
+  "bastiodon": [
+   "sturdy"
+  ],
+  "bayleef": [
+   "overgrow"
+  ],
+  "beautifly": [
+   "swarm"
+  ],
+  "beedrill": [
+   "swarm"
+  ],
+  "beldum": [
+   "clear_body"
+  ],
+  "bellossom": [
+   "chlorophyll"
+  ],
+  "bellsprout": [
+   "chlorophyll"
+  ],
+  "bibarel": [
+   "simple",
+   "unaware"
+  ],
+  "bidoof": [
+   "simple",
+   "unaware"
+  ],
+  "blastoise": [
+   "torrent"
+  ],
+  "blaziken": [
+   "blaze"
+  ],
+  "blissey": [
+   "natural_cure",
+   "serene_grace"
+  ],
+  "bonsly": [
+   "sturdy",
+   "rock_head"
+  ],
+  "breloom": [
+   "effect_spore",
+   "poison_heal"
+  ],
+  "bronzong": [
+   "levitate",
+   "heatproof"
+  ],
+  "bronzor": [
+   "levitate",
+   "heatproof"
+  ],
+  "budew": [
+   "natural_cure",
+   "poison_point"
+  ],
+  "buizel": [
+   "swift_swim"
+  ],
+  "bulbasaur": [
+   "overgrow"
+  ],
+  "buneary": [
+   "run_away",
+   "klutz"
+  ],
+  "burmy": [
+   "shed_skin"
+  ],
+  "butterfree": [
+   "compound_eyes"
+  ],
+  "cacnea": [
+   "sand_veil"
+  ],
+  "cacturne": [
+   "sand_veil"
+  ],
+  "camerupt": [
+   "magma_armor",
+   "solid_rock"
+  ],
+  "carnivine": [
+   "levitate"
+  ],
+  "carvanha": [
+   "rough_skin"
+  ],
+  "cascoon": [
+   "shed_skin"
+  ],
+  "castform": [
+   "forecast"
+  ],
+  "caterpie": [
+   "shield_dust"
+  ],
+  "celebi": [
+   "natural_cure"
+  ],
+  "chansey": [
+   "natural_cure",
+   "serene_grace"
+  ],
+  "charizard": [
+   "blaze"
+  ],
+  "charmander": [
+   "blaze"
+  ],
+  "charmeleon": [
+   "blaze"
+  ],
+  "chatot": [
+   "keen_eye",
+   "tangled_feet"
+  ],
+  "cherrim": [
+   "flower_gift"
+  ],
+  "cherubi": [
+   "chlorophyll"
+  ],
+  "chikorita": [
+   "overgrow"
+  ],
+  "chimchar": [
+   "blaze"
+  ],
+  "chimecho": [
+   "levitate"
+  ],
+  "chinchou": [
+   "volt_absorb",
+   "illuminate"
+  ],
+  "chingling": [
+   "levitate"
+  ],
+  "clamperl": [
+   "shell_armor"
+  ],
+  "claydol": [
+   "levitate"
+  ],
+  "clefable": [
+   "cute_charm",
+   "magic_guard"
+  ],
+  "clefairy": [
+   "cute_charm",
+   "magic_guard"
+  ],
+  "cleffa": [
+   "cute_charm",
+   "magic_guard"
+  ],
+  "cloyster": [
+   "shell_armor",
+   "skill_link"
+  ],
+  "combee": [
+   "honey_gather"
+  ],
+  "combusken": [
+   "blaze"
+  ],
+  "corphish": [
+   "hyper_cutter",
+   "shell_armor"
+  ],
+  "corsola": [
+   "hustle",
+   "natural_cure"
+  ],
+  "cradily": [
+   "suction_cups"
+  ],
+  "cranidos": [
+   "mold_breaker"
+  ],
+  "crawdaunt": [
+   "hyper_cutter",
+   "shell_armor"
+  ],
+  "cresselia": [
+   "levitate"
+  ],
+  "croagunk": [
+   "anticipation",
+   "dry_skin"
+  ],
+  "crobat": [
+   "inner_focus"
+  ],
+  "croconaw": [
+   "torrent"
+  ],
+  "cubone": [
+   "rock_head",
+   "lightning_rod"
+  ],
+  "cyndaquil": [
+   "blaze"
+  ],
+  "darkrai": [
+   "bad_dreams"
+  ],
+  "delcatty": [
+   "cute_charm",
+   "normalize"
+  ],
+  "delibird": [
+   "vital_spirit",
+   "hustle"
+  ],
+  "deoxys": [
+   "pressure"
+  ],
+  "dewgong": [
+   "thick_fat",
+   "hydration"
+  ],
+  "dialga": [
+   "pressure"
+  ],
+  "diglett": [
+   "sand_veil",
+   "arena_trap"
+  ],
+  "ditto": [
+   "limber"
+  ],
+  "dodrio": [
+   "run_away",
+   "early_bird"
+  ],
+  "doduo": [
+   "run_away",
+   "early_bird"
+  ],
+  "donphan": [
+   "sturdy"
+  ],
+  "dragonair": [
+   "shed_skin"
+  ],
+  "dragonite": [
+   "inner_focus"
+  ],
+  "drapion": [
+   "battle_armor",
+   "sniper"
+  ],
+  "dratini": [
+   "shed_skin"
+  ],
+  "drifblim": [
+   "aftermath",
+   "unburden"
+  ],
+  "drifloon": [
+   "aftermath",
+   "unburden"
+  ],
+  "drowzee": [
+   "insomnia",
+   "forewarn"
+  ],
+  "dugtrio": [
+   "sand_veil",
+   "arena_trap"
+  ],
+  "dunsparce": [
+   "serene_grace",
+   "run_away"
+  ],
+  "dusclops": [
+   "pressure"
+  ],
+  "dusknoir": [
+   "pressure"
+  ],
+  "duskull": [
+   "levitate"
+  ],
+  "dustox": [
+   "shield_dust"
+  ],
+  "eevee": [
+   "run_away",
+   "adaptability"
+  ],
+  "ekans": [
+   "intimidate",
+   "shed_skin"
+  ],
+  "electabuzz": [
+   "static"
+  ],
+  "electivire": [
+   "motor_drive"
+  ],
+  "electrike": [
+   "static",
+   "lightning_rod"
+  ],
+  "electrode": [
+   "soundproof",
+   "static"
+  ],
+  "elekid": [
+   "static"
+  ],
+  "empoleon": [
+   "torrent"
+  ],
+  "entei": [
+   "pressure"
+  ],
+  "espeon": [
+   "synchronize",
+   "synchronize"
+  ],
+  "exeggcute": [
+   "chlorophyll"
+  ],
+  "exeggutor": [
+   "chlorophyll"
+  ],
+  "exploud": [
+   "soundproof"
+  ],
+  "farfetchd": [
+   "keen_eye",
+   "inner_focus"
+  ],
+  "fearow": [
+   "keen_eye"
+  ],
+  "feebas": [
+   "swift_swim"
+  ],
+  "feraligatr": [
+   "torrent"
+  ],
+  "finneon": [
+   "swift_swim",
+   "storm_drain"
+  ],
+  "flaaffy": [
+   "static"
+  ],
+  "flareon": [
+   "flash_fire",
+   "flash_fire"
+  ],
+  "floatzel": [
+   "swift_swim"
+  ],
+  "flygon": [
+   "levitate",
+   "levitate"
+  ],
+  "forretress": [
+   "sturdy"
+  ],
+  "froslass": [
+   "snow_cloak",
+   "snow_cloak"
+  ],
+  "furret": [
+   "run_away",
+   "keen_eye"
+  ],
+  "gabite": [
+   "sand_veil"
+  ],
+  "gallade": [
+   "steadfast",
+   "steadfast"
+  ],
+  "garchomp": [
+   "sand_veil"
+  ],
+  "gardevoir": [
+   "synchronize",
+   "trace"
+  ],
+  "gastly": [
+   "levitate"
+  ],
+  "gastrodon": [
+   "sticky_hold",
+   "storm_drain"
+  ],
+  "gengar": [
+   "levitate"
+  ],
+  "geodude": [
+   "rock_head",
+   "sturdy"
+  ],
+  "gible": [
+   "sand_veil"
+  ],
+  "girafarig": [
+   "inner_focus",
+   "early_bird"
+  ],
+  "giratina": [
+   "pressure"
+  ],
+  "glaceon": [
+   "snow_cloak",
+   "snow_cloak"
+  ],
+  "glalie": [
+   "inner_focus",
+   "ice_body"
+  ],
+  "glameow": [
+   "limber",
+   "own_tempo"
+  ],
+  "gligar": [
+   "hyper_cutter",
+   "sand_veil"
+  ],
+  "gliscor": [
+   "hyper_cutter",
+   "sand_veil"
+  ],
+  "gloom": [
+   "chlorophyll"
+  ],
+  "golbat": [
+   "inner_focus"
+  ],
+  "goldeen": [
+   "swift_swim",
+   "water_veil"
+  ],
+  "golduck": [
+   "damp",
+   "cloud_nine"
+  ],
+  "golem": [
+   "rock_head",
+   "sturdy"
+  ],
+  "gorebyss": [
+   "swift_swim"
+  ],
+  "granbull": [
+   "intimidate",
+   "quick_feet"
+  ],
+  "graveler": [
+   "rock_head",
+   "sturdy"
+  ],
+  "grimer": [
+   "stench",
+   "sticky_hold"
+  ],
+  "grotle": [
+   "overgrow"
+  ],
+  "groudon": [
+   "drought"
+  ],
+  "grovyle": [
+   "overgrow"
+  ],
+  "growlithe": [
+   "intimidate",
+   "flash_fire"
+  ],
+  "grumpig": [
+   "thick_fat",
+   "own_tempo"
+  ],
+  "gulpin": [
+   "liquid_ooze",
+   "sticky_hold"
+  ],
+  "gyarados": [
+   "intimidate"
+  ],
+  "happiny": [
+   "natural_cure",
+   "serene_grace"
+  ],
+  "hariyama": [
+   "thick_fat",
+   "guts"
+  ],
+  "haunter": [
+   "levitate"
+  ],
+  "heatran": [
+   "flash_fire"
+  ],
+  "heracross": [
+   "swarm",
+   "guts"
+  ],
+  "hippopotas": [
+   "sand_stream"
+  ],
+  "hippowdon": [
+   "sand_stream"
+  ],
+  "hitmonchan": [
+   "keen_eye",
+   "iron_fist"
+  ],
+  "hitmonlee": [
+   "limber",
+   "reckless"
+  ],
+  "hitmontop": [
+   "intimidate",
+   "technician"
+  ],
+  "ho_oh": [
+   "pressure"
+  ],
+  "honchkrow": [
+   "insomnia",
+   "super_luck"
+  ],
+  "hoothoot": [
+   "insomnia",
+   "keen_eye"
+  ],
+  "hoppip": [
+   "chlorophyll",
+   "leaf_guard"
+  ],
+  "horsea": [
+   "swift_swim",
+   "sniper"
+  ],
+  "houndoom": [
+   "early_bird",
+   "flash_fire"
+  ],
+  "houndour": [
+   "early_bird",
+   "flash_fire"
+  ],
+  "huntail": [
+   "swift_swim"
+  ],
+  "hypno": [
+   "insomnia",
+   "forewarn"
+  ],
+  "igglybuff": [
+   "cute_charm"
+  ],
+  "illumise": [
+   "oblivious",
+   "tinted_lens"
+  ],
+  "infernape": [
+   "blaze"
+  ],
+  "ivysaur": [
+   "overgrow"
+  ],
+  "jigglypuff": [
+   "cute_charm"
+  ],
+  "jirachi": [
+   "serene_grace"
+  ],
+  "jolteon": [
+   "volt_absorb",
+   "volt_absorb"
+  ],
+  "jumpluff": [
+   "chlorophyll",
+   "leaf_guard"
+  ],
+  "jynx": [
+   "oblivious",
+   "forewarn"
+  ],
+  "kabuto": [
+   "swift_swim",
+   "battle_armor"
+  ],
+  "kabutops": [
+   "swift_swim",
+   "battle_armor"
+  ],
+  "kadabra": [
+   "synchronize",
+   "inner_focus"
+  ],
+  "kakuna": [
+   "shed_skin"
+  ],
+  "kangaskhan": [
+   "early_bird",
+   "scrappy"
+  ],
+  "kecleon": [
+   "color_change"
+  ],
+  "kingdra": [
+   "swift_swim",
+   "sniper"
+  ],
+  "kingler": [
+   "hyper_cutter",
+   "shell_armor"
+  ],
+  "kirlia": [
+   "synchronize",
+   "trace"
+  ],
+  "koffing": [
+   "levitate"
+  ],
+  "krabby": [
+   "hyper_cutter",
+   "shell_armor"
+  ],
+  "kricketot": [
+   "shed_skin"
+  ],
+  "kricketune": [
+   "swarm"
+  ],
+  "kyogre": [
+   "drizzle"
+  ],
+  "lairon": [
+   "sturdy",
+   "rock_head"
+  ],
+  "lanturn": [
+   "volt_absorb",
+   "illuminate"
+  ],
+  "lapras": [
+   "water_absorb",
+   "shell_armor"
+  ],
+  "larvitar": [
+   "guts"
+  ],
+  "latias": [
+   "levitate"
+  ],
+  "latios": [
+   "levitate"
+  ],
+  "leafeon": [
+   "leaf_guard",
+   "leaf_guard"
+  ],
+  "ledian": [
+   "swarm",
+   "early_bird"
+  ],
+  "ledyba": [
+   "swarm",
+   "early_bird"
+  ],
+  "lickilicky": [
+   "own_tempo",
+   "oblivious"
+  ],
+  "lickitung": [
+   "own_tempo",
+   "oblivious"
+  ],
+  "lileep": [
+   "suction_cups"
+  ],
+  "linoone": [
+   "pickup",
+   "gluttony"
+  ],
+  "lombre": [
+   "swift_swim",
+   "rain_dish"
+  ],
+  "lopunny": [
+   "cute_charm",
+   "klutz"
+  ],
+  "lotad": [
+   "swift_swim",
+   "rain_dish"
+  ],
+  "loudred": [
+   "soundproof"
+  ],
+  "lucario": [
+   "steadfast",
+   "inner_focus"
+  ],
+  "ludicolo": [
+   "swift_swim",
+   "rain_dish"
+  ],
+  "lugia": [
+   "pressure"
+  ],
+  "lumineon": [
+   "swift_swim",
+   "storm_drain"
+  ],
+  "lunatone": [
+   "levitate"
+  ],
+  "luvdisc": [
+   "swift_swim"
+  ],
+  "luxio": [
+   "rivalry",
+   "intimidate"
+  ],
+  "luxray": [
+   "rivalry",
+   "intimidate"
+  ],
+  "machamp": [
+   "guts",
+   "no_guard"
+  ],
+  "machoke": [
+   "guts",
+   "no_guard"
+  ],
+  "machop": [
+   "guts",
+   "no_guard"
+  ],
+  "magby": [
+   "flame_body"
+  ],
+  "magcargo": [
+   "magma_armor",
+   "flame_body"
+  ],
+  "magikarp": [
+   "swift_swim"
+  ],
+  "magmar": [
+   "flame_body"
+  ],
+  "magmortar": [
+   "flame_body"
+  ],
+  "magnemite": [
+   "magnet_pull",
+   "sturdy"
+  ],
+  "magneton": [
+   "magnet_pull",
+   "sturdy"
+  ],
+  "magnezone": [
+   "magnet_pull",
+   "sturdy"
+  ],
+  "makuhita": [
+   "thick_fat",
+   "guts"
+  ],
+  "mamoswine": [
+   "oblivious",
+   "snow_cloak"
+  ],
+  "manaphy": [
+   "hydration"
+  ],
+  "manectric": [
+   "static",
+   "lightning_rod"
+  ],
+  "mankey": [
+   "vital_spirit",
+   "anger_point"
+  ],
+  "mantine": [
+   "swift_swim",
+   "water_absorb"
+  ],
+  "mantyke": [
+   "swift_swim",
+   "water_absorb"
+  ],
+  "mareep": [
+   "static"
+  ],
+  "marill": [
+   "thick_fat",
+   "huge_power"
+  ],
+  "marowak": [
+   "rock_head",
+   "lightning_rod"
+  ],
+  "marshtomp": [
+   "torrent"
+  ],
+  "masquerain": [
+   "intimidate"
+  ],
+  "mawile": [
+   "hyper_cutter",
+   "intimidate"
+  ],
+  "medicham": [
+   "pure_power"
+  ],
+  "meditite": [
+   "pure_power"
+  ],
+  "meganium": [
+   "overgrow"
+  ],
+  "meowth": [
+   "pickup",
+   "technician"
+  ],
+  "mesprit": [
+   "levitate"
+  ],
+  "metagross": [
+   "clear_body"
+  ],
+  "metang": [
+   "clear_body"
+  ],
+  "metapod": [
+   "shed_skin"
+  ],
+  "mew": [
+   "synchronize"
+  ],
+  "mewtwo": [
+   "pressure"
+  ],
+  "mightyena": [
+   "intimidate",
+   "quick_feet"
+  ],
+  "milotic": [
+   "marvel_scale"
+  ],
+  "miltank": [
+   "thick_fat",
+   "scrappy"
+  ],
+  "mime_jr": [
+   "soundproof",
+   "filter"
+  ],
+  "minun": [
+   "minus"
+  ],
+  "misdreavus": [
+   "levitate"
+  ],
+  "mismagius": [
+   "levitate"
+  ],
+  "moltres": [
+   "pressure"
+  ],
+  "monferno": [
+   "blaze"
+  ],
+  "mothim": [
+   "swarm"
+  ],
+  "mr_mime": [
+   "soundproof",
+   "filter"
+  ],
+  "mudkip": [
+   "torrent"
+  ],
+  "muk": [
+   "stench",
+   "sticky_hold"
+  ],
+  "munchlax": [
+   "pickup",
+   "thick_fat"
+  ],
+  "murkrow": [
+   "insomnia",
+   "super_luck"
+  ],
+  "natu": [
+   "synchronize",
+   "early_bird"
+  ],
+  "nidoking": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nidoqueen": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nidoran_f": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nidoran_m": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nidorina": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nidorino": [
+   "poison_point",
+   "rivalry"
+  ],
+  "nincada": [
+   "compound_eyes"
+  ],
+  "ninetales": [
+   "flash_fire"
+  ],
+  "ninjask": [
+   "speed_boost"
+  ],
+  "noctowl": [
+   "insomnia",
+   "keen_eye"
+  ],
+  "nosepass": [
+   "sturdy",
+   "magnet_pull"
+  ],
+  "numel": [
+   "oblivious",
+   "simple"
+  ],
+  "nuzleaf": [
+   "chlorophyll",
+   "early_bird"
+  ],
+  "octillery": [
+   "suction_cups",
+   "sniper"
+  ],
+  "oddish": [
+   "chlorophyll"
+  ],
+  "omanyte": [
+   "swift_swim",
+   "shell_armor"
+  ],
+  "omastar": [
+   "swift_swim",
+   "shell_armor"
+  ],
+  "onix": [
+   "rock_head",
+   "sturdy"
+  ],
+  "pachirisu": [
+   "run_away",
+   "pickup"
+  ],
+  "palkia": [
+   "pressure"
+  ],
+  "paras": [
+   "effect_spore",
+   "dry_skin"
+  ],
+  "parasect": [
+   "effect_spore",
+   "dry_skin"
+  ],
+  "pelipper": [
+   "keen_eye"
+  ],
+  "persian": [
+   "limber",
+   "technician"
+  ],
+  "phanpy": [
+   "pickup"
+  ],
+  "phione": [
+   "hydration"
+  ],
+  "pichu": [
+   "static"
+  ],
+  "pidgeot": [
+   "keen_eye",
+   "tangled_feet"
+  ],
+  "pidgeotto": [
+   "keen_eye",
+   "tangled_feet"
+  ],
+  "pidgey": [
+   "keen_eye",
+   "tangled_feet"
+  ],
+  "pikachu": [
+   "static"
+  ],
+  "piloswine": [
+   "oblivious",
+   "snow_cloak"
+  ],
+  "pineco": [
+   "sturdy"
+  ],
+  "pinsir": [
+   "hyper_cutter",
+   "mold_breaker"
+  ],
+  "piplup": [
+   "torrent"
+  ],
+  "plusle": [
+   "plus"
+  ],
+  "politoed": [
+   "water_absorb",
+   "damp"
+  ],
+  "poliwag": [
+   "water_absorb",
+   "damp"
+  ],
+  "poliwhirl": [
+   "water_absorb",
+   "damp"
+  ],
+  "poliwrath": [
+   "water_absorb",
+   "damp"
+  ],
+  "ponyta": [
+   "run_away",
+   "flash_fire"
+  ],
+  "poochyena": [
+   "run_away",
+   "quick_feet"
+  ],
+  "porygon": [
+   "trace",
+   "download"
+  ],
+  "porygon2": [
+   "trace",
+   "download"
+  ],
+  "porygon_z": [
+   "adaptability",
+   "download"
+  ],
+  "primeape": [
+   "vital_spirit",
+   "anger_point"
+  ],
+  "prinplup": [
+   "torrent"
+  ],
+  "probopass": [
+   "sturdy",
+   "magnet_pull"
+  ],
+  "psyduck": [
+   "damp",
+   "cloud_nine"
+  ],
+  "pupitar": [
+   "shed_skin"
+  ],
+  "purugly": [
+   "thick_fat",
+   "own_tempo"
+  ],
+  "quagsire": [
+   "damp",
+   "water_absorb"
+  ],
+  "quilava": [
+   "blaze"
+  ],
+  "qwilfish": [
+   "poison_point",
+   "swift_swim"
+  ],
+  "raichu": [
+   "static"
+  ],
+  "raikou": [
+   "pressure"
+  ],
+  "ralts": [
+   "synchronize",
+   "trace"
+  ],
+  "rampardos": [
+   "mold_breaker"
+  ],
+  "rapidash": [
+   "run_away",
+   "flash_fire"
+  ],
+  "raticate": [
+   "run_away",
+   "guts"
+  ],
+  "rattata": [
+   "run_away",
+   "guts"
+  ],
+  "rayquaza": [
+   "air_lock"
+  ],
+  "regice": [
+   "clear_body"
+  ],
+  "regigigas": [
+   "slow_start"
+  ],
+  "regirock": [
+   "clear_body"
+  ],
+  "registeel": [
+   "clear_body"
+  ],
+  "relicanth": [
+   "swift_swim",
+   "rock_head"
+  ],
+  "remoraid": [
+   "hustle",
+   "sniper"
+  ],
+  "rhydon": [
+   "lightning_rod",
+   "rock_head"
+  ],
+  "rhyhorn": [
+   "lightning_rod",
+   "rock_head"
+  ],
+  "rhyperior": [
+   "lightning_rod",
+   "solid_rock"
+  ],
+  "riolu": [
+   "steadfast",
+   "inner_focus"
+  ],
+  "roselia": [
+   "natural_cure",
+   "poison_point"
+  ],
+  "roserade": [
+   "natural_cure",
+   "poison_point"
+  ],
+  "rotom": [
+   "levitate"
+  ],
+  "sableye": [
+   "keen_eye",
+   "stall"
+  ],
+  "salamence": [
+   "intimidate"
+  ],
+  "sandshrew": [
+   "sand_veil"
+  ],
+  "sandslash": [
+   "sand_veil"
+  ],
+  "sceptile": [
+   "overgrow"
+  ],
+  "scizor": [
+   "swarm",
+   "technician"
+  ],
+  "scyther": [
+   "swarm",
+   "technician"
+  ],
+  "seadra": [
+   "poison_point",
+   "sniper"
+  ],
+  "seaking": [
+   "swift_swim",
+   "water_veil"
+  ],
+  "sealeo": [
+   "thick_fat",
+   "ice_body"
+  ],
+  "seedot": [
+   "chlorophyll",
+   "early_bird"
+  ],
+  "seel": [
+   "thick_fat",
+   "hydration"
+  ],
+  "sentret": [
+   "run_away",
+   "keen_eye"
+  ],
+  "seviper": [
+   "shed_skin"
+  ],
+  "sharpedo": [
+   "rough_skin"
+  ],
+  "shaymin": [
+   "natural_cure"
+  ],
+  "shedinja": [
+   "wonder_guard"
+  ],
+  "shelgon": [
+   "rock_head"
+  ],
+  "shellder": [
+   "shell_armor",
+   "skill_link"
+  ],
+  "shellos": [
+   "sticky_hold",
+   "storm_drain"
+  ],
+  "shieldon": [
+   "sturdy"
+  ],
+  "shiftry": [
+   "chlorophyll",
+   "early_bird"
+  ],
+  "shinx": [
+   "rivalry",
+   "intimidate"
+  ],
+  "shroomish": [
+   "effect_spore",
+   "poison_heal"
+  ],
+  "shuckle": [
+   "sturdy",
+   "gluttony"
+  ],
+  "shuppet": [
+   "insomnia",
+   "frisk"
+  ],
+  "silcoon": [
+   "shed_skin"
+  ],
+  "skarmory": [
+   "keen_eye",
+   "sturdy"
+  ],
+  "skiploom": [
+   "chlorophyll",
+   "leaf_guard"
+  ],
+  "skitty": [
+   "cute_charm",
+   "normalize"
+  ],
+  "skorupi": [
+   "battle_armor",
+   "sniper"
+  ],
+  "skuntank": [
+   "stench",
+   "aftermath"
+  ],
+  "slaking": [
+   "truant"
+  ],
+  "slakoth": [
+   "truant"
+  ],
+  "slowbro": [
+   "oblivious",
+   "own_tempo"
+  ],
+  "slowking": [
+   "oblivious",
+   "own_tempo"
+  ],
+  "slowpoke": [
+   "oblivious",
+   "own_tempo"
+  ],
+  "slugma": [
+   "magma_armor",
+   "flame_body"
+  ],
+  "smeargle": [
+   "own_tempo",
+   "technician"
+  ],
+  "smoochum": [
+   "oblivious",
+   "forewarn"
+  ],
+  "sneasel": [
+   "inner_focus",
+   "keen_eye"
+  ],
+  "snorlax": [
+   "immunity",
+   "thick_fat"
+  ],
+  "snorunt": [
+   "inner_focus",
+   "ice_body"
+  ],
+  "snover": [
+   "snow_warning"
+  ],
+  "snubbull": [
+   "intimidate",
+   "run_away"
+  ],
+  "solrock": [
+   "levitate"
+  ],
+  "spearow": [
+   "keen_eye"
+  ],
+  "spheal": [
+   "thick_fat",
+   "ice_body"
+  ],
+  "spinarak": [
+   "swarm",
+   "insomnia"
+  ],
+  "spinda": [
+   "own_tempo",
+   "tangled_feet"
+  ],
+  "spiritomb": [
+   "pressure"
+  ],
+  "spoink": [
+   "thick_fat",
+   "own_tempo"
+  ],
+  "squirtle": [
+   "torrent"
+  ],
+  "stantler": [
+   "intimidate",
+   "frisk"
+  ],
+  "staraptor": [
+   "intimidate"
+  ],
+  "staravia": [
+   "intimidate"
+  ],
+  "starly": [
+   "keen_eye"
+  ],
+  "starmie": [
+   "illuminate",
+   "natural_cure"
+  ],
+  "staryu": [
+   "illuminate",
+   "natural_cure"
+  ],
+  "steelix": [
+   "rock_head",
+   "sturdy"
+  ],
+  "stunky": [
+   "stench",
+   "aftermath"
+  ],
+  "sudowoodo": [
+   "sturdy",
+   "rock_head"
+  ],
+  "suicune": [
+   "pressure"
+  ],
+  "sunflora": [
+   "chlorophyll",
+   "solar_power"
+  ],
+  "sunkern": [
+   "chlorophyll",
+   "solar_power"
+  ],
+  "surskit": [
+   "swift_swim"
+  ],
+  "swablu": [
+   "natural_cure"
+  ],
+  "swalot": [
+   "liquid_ooze",
+   "sticky_hold"
+  ],
+  "swampert": [
+   "torrent"
+  ],
+  "swellow": [
+   "guts"
+  ],
+  "swinub": [
+   "oblivious",
+   "snow_cloak"
+  ],
+  "taillow": [
+   "guts"
+  ],
+  "tangela": [
+   "chlorophyll",
+   "leaf_guard"
+  ],
+  "tangrowth": [
+   "chlorophyll",
+   "leaf_guard"
+  ],
+  "tauros": [
+   "intimidate",
+   "anger_point"
+  ],
+  "teddiursa": [
+   "pickup",
+   "quick_feet"
+  ],
+  "tentacool": [
+   "clear_body",
+   "liquid_ooze"
+  ],
+  "tentacruel": [
+   "clear_body",
+   "liquid_ooze"
+  ],
+  "togekiss": [
+   "hustle",
+   "serene_grace"
+  ],
+  "togepi": [
+   "hustle",
+   "serene_grace"
+  ],
+  "togetic": [
+   "hustle",
+   "serene_grace"
+  ],
+  "torchic": [
+   "blaze"
+  ],
+  "torkoal": [
+   "white_smoke"
+  ],
+  "torterra": [
+   "overgrow"
+  ],
+  "totodile": [
+   "torrent"
+  ],
+  "toxicroak": [
+   "anticipation",
+   "dry_skin"
+  ],
+  "trapinch": [
+   "hyper_cutter",
+   "arena_trap"
+  ],
+  "treecko": [
+   "overgrow"
+  ],
+  "tropius": [
+   "chlorophyll",
+   "solar_power"
+  ],
+  "turtwig": [
+   "overgrow"
+  ],
+  "typhlosion": [
+   "blaze"
+  ],
+  "tyranitar": [
+   "sand_stream"
+  ],
+  "tyrogue": [
+   "guts",
+   "steadfast"
+  ],
+  "umbreon": [
+   "synchronize",
+   "synchronize"
+  ],
+  "unown": [
+   "levitate"
+  ],
+  "ursaring": [
+   "guts",
+   "quick_feet"
+  ],
+  "uxie": [
+   "levitate"
+  ],
+  "vaporeon": [
+   "water_absorb",
+   "water_absorb"
+  ],
+  "venomoth": [
+   "shield_dust",
+   "tinted_lens"
+  ],
+  "venonat": [
+   "compound_eyes",
+   "tinted_lens"
+  ],
+  "venusaur": [
+   "overgrow"
+  ],
+  "vespiquen": [
+   "pressure"
+  ],
+  "vibrava": [
+   "levitate",
+   "levitate"
+  ],
+  "victreebel": [
+   "chlorophyll"
+  ],
+  "vigoroth": [
+   "vital_spirit"
+  ],
+  "vileplume": [
+   "chlorophyll"
+  ],
+  "volbeat": [
+   "illuminate",
+   "swarm"
+  ],
+  "voltorb": [
+   "soundproof",
+   "static"
+  ],
+  "vulpix": [
+   "flash_fire"
+  ],
+  "wailmer": [
+   "water_veil",
+   "oblivious"
+  ],
+  "wailord": [
+   "water_veil",
+   "oblivious"
+  ],
+  "walrein": [
+   "thick_fat",
+   "ice_body"
+  ],
+  "wartortle": [
+   "torrent"
+  ],
+  "weavile": [
+   "pressure",
+   "pressure"
+  ],
+  "weedle": [
+   "shield_dust"
+  ],
+  "weepinbell": [
+   "chlorophyll"
+  ],
+  "weezing": [
+   "levitate"
+  ],
+  "whiscash": [
+   "oblivious",
+   "anticipation"
+  ],
+  "whismur": [
+   "soundproof"
+  ],
+  "wigglytuff": [
+   "cute_charm"
+  ],
+  "wingull": [
+   "keen_eye"
+  ],
+  "wobbuffet": [
+   "shadow_tag"
+  ],
+  "wooper": [
+   "damp",
+   "water_absorb"
+  ],
+  "wormadam": [
+   "anticipation"
+  ],
+  "wurmple": [
+   "shield_dust"
+  ],
+  "wynaut": [
+   "shadow_tag"
+  ],
+  "xatu": [
+   "synchronize",
+   "early_bird"
+  ],
+  "yanma": [
+   "speed_boost",
+   "compound_eyes"
+  ],
+  "yanmega": [
+   "speed_boost",
+   "tinted_lens"
+  ],
+  "zangoose": [
+   "immunity"
+  ],
+  "zapdos": [
+   "pressure"
+  ],
+  "zigzagoon": [
+   "pickup",
+   "gluttony"
+  ],
+  "zubat": [
+   "inner_focus"
+  ]
+ },
+ "abilities": {
+  "adaptability": {
+   "name": "ADAPTABILITY",
+   "name_ko": "적응력",
+   "desc": "Powers up moves of the same type.",
+   "desc_ko": "타입이 같은 기술의 위력이 올라간다."
+  },
+  "aftermath": {
+   "name": "AFTERMATH",
+   "name_ko": "유폭",
+   "desc": "Damages the foe landing the finishing hit.",
+   "desc_ko": "기절할 때 스친 상대에게 데미지를 준다."
+  },
+  "air_lock": {
+   "name": "AIR LOCK",
+   "name_ko": "에어록",
+   "desc": "Eliminates the effects of weather.",
+   "desc_ko": "날씨의 영향이 없어진다."
+  },
+  "anger_point": {
+   "name": "ANGER POINT",
+   "name_ko": "분노의경혈",
+   "desc": "Raises Attack upon taking a critical hit.",
+   "desc_ko": "급소에 맞으면 공격이 올라간다."
+  },
+  "anticipation": {
+   "name": "ANTICIPATION",
+   "name_ko": "위험예지",
+   "desc": "Senses the foe’s dangerous moves.",
+   "desc_ko": "상대가 지닌 위험한 기술을 감지한다."
+  },
+  "arena_trap": {
+   "name": "ARENA TRAP",
+   "name_ko": "개미지옥",
+   "desc": "Prevents the foe from fleeing.",
+   "desc_ko": "배틀에서 상대를 도망칠 수 없게 한다."
+  },
+  "bad_dreams": {
+   "name": "BAD DREAMS",
+   "name_ko": "나이트메어",
+   "desc": "Reduces a sleeping foe’s HP.",
+   "desc_ko": "잠들어 있는 상대의 HP를 줄인다."
+  },
+  "battle_armor": {
+   "name": "BATTLE ARMOR",
+   "name_ko": "전투무장",
+   "desc": "The Pokémon is protected against critical hits.",
+   "desc_ko": "상대의 공격이 급소에 맞지 않는다."
+  },
+  "blaze": {
+   "name": "BLAZE",
+   "name_ko": "맹화",
+   "desc": "Powers up Fire-type moves in a pinch.",
+   "desc_ko": "위급할 때 불꽃타입의 위력이 올라간다."
+  },
+  "chlorophyll": {
+   "name": "CHLOROPHYLL",
+   "name_ko": "엽록소",
+   "desc": "Boosts the Pokémon’s Speed in sunshine.",
+   "desc_ko": "맑을 때 스피드가 올라간다."
+  },
+  "clear_body": {
+   "name": "CLEAR BODY",
+   "name_ko": "클리어바디",
+   "desc": "Prevents the Pokémon’s stats from being lowered.",
+   "desc_ko": "상대가 능력을 떨어뜨릴 수 없다."
+  },
+  "cloud_nine": {
+   "name": "CLOUD NINE",
+   "name_ko": "날씨부정",
+   "desc": "Eliminates the effects of weather.",
+   "desc_ko": "날씨의 영향이 없어진다."
+  },
+  "color_change": {
+   "name": "COLOR CHANGE",
+   "name_ko": "변색",
+   "desc": "Changes the Pokémon’s type to the foe’s move.",
+   "desc_ko": "받은 기술의 타입으로 변화한다."
+  },
+  "compound_eyes": {
+   "name": "COMPOUND EYES",
+   "name_ko": "복안",
+   "desc": "The Pokémon’s accuracy is boosted.",
+   "desc_ko": "기술의 명중률이 올라간다."
+  },
+  "cute_charm": {
+   "name": "CUTE CHARM",
+   "name_ko": "헤롱헤롱바디",
+   "desc": "Contact with the Pokémon may cause infatuation.",
+   "desc_ko": "스치면 헤롱헤롱 상태가 될 때가 있다."
+  },
+  "damp": {
+   "name": "DAMP",
+   "name_ko": "습기",
+   "desc": "Prevents combatants from self destructing.",
+   "desc_ko": "누구도 폭발 할 수 없게 된다."
+  },
+  "download": {
+   "name": "DOWNLOAD",
+   "name_ko": "다운로드",
+   "desc": "Adjusts power according to the foe’s ability.",
+   "desc_ko": "상대의 능력을 보고 능력치를 바꾼다."
+  },
+  "drizzle": {
+   "name": "DRIZZLE",
+   "name_ko": "잔비",
+   "desc": "The Pokémon makes it rain if it appears in battle.",
+   "desc_ko": "배틀에 나가면 비를 내린다."
+  },
+  "drought": {
+   "name": "DROUGHT",
+   "name_ko": "가뭄",
+   "desc": "The Pokémon makes it sunny if it is in battle.",
+   "desc_ko": "배틀에 나가면 햇살이 강해진다."
+  },
+  "dry_skin": {
+   "name": "DRY SKIN",
+   "name_ko": "건조피부",
+   "desc": "Reduces HP if it is hot. Water restores HP.",
+   "desc_ko": "더우면 HP가 줄어든다. 물로 HP를 회복한다."
+  },
+  "early_bird": {
+   "name": "EARLY BIRD",
+   "name_ko": "일찍기상",
+   "desc": "The Pokémon awakens quickly from sleep.",
+   "desc_ko": "잠듦 상태에서 빨리 깨어난다."
+  },
+  "effect_spore": {
+   "name": "EFFECT SPORE",
+   "name_ko": "포자",
+   "desc": "Contact may paralyze, poison, or cause sleep.",
+   "desc_ko": "스치면 독, 마비, 잠듦 상태가 될 때가 있다."
+  },
+  "filter": {
+   "name": "FILTER",
+   "name_ko": "필터",
+   "desc": "Powers down super­ effective moves.",
+   "desc_ko": "효과가 굉장한 기술의 위력을 약하게 한다."
+  },
+  "flame_body": {
+   "name": "FLAME BODY",
+   "name_ko": "불꽃몸",
+   "desc": "Contact with the Pokémon may burn the foe.",
+   "desc_ko": "접촉한 상대에게 화상을 입힐 때가 있다."
+  },
+  "flash_fire": {
+   "name": "FLASH FIRE",
+   "name_ko": "타오르는불꽃",
+   "desc": "Powers up Fire-type moves if hit by a fire move.",
+   "desc_ko": "불꽃을 받으면 불꽃 기술이 강해진다."
+  },
+  "flower_gift": {
+   "name": "FLOWER GIFT",
+   "name_ko": "플라워기프트",
+   "desc": "Powers up party Pokémon when it is sunny.",
+   "desc_ko": "맑을 때 자신과 같은 편이 강해진다."
+  },
+  "forecast": {
+   "name": "FORECAST",
+   "name_ko": "기분파",
+   "desc": "CASTFORM transforms with the weather.",
+   "desc_ko": "날씨에 따라 캐스퐁이 변화한다."
+  },
+  "forewarn": {
+   "name": "FOREWARN",
+   "name_ko": "예지몽",
+   "desc": "Determines what moves the foe has.",
+   "desc_ko": "상대가 지닌 기술을 꿰뚫어볼 수 있다."
+  },
+  "frisk": {
+   "name": "FRISK",
+   "name_ko": "통찰",
+   "desc": "The Pokémon can check the foe’s held item.",
+   "desc_ko": "상대가 지닌 물건을 알 수 있다."
+  },
+  "gluttony": {
+   "name": "GLUTTONY",
+   "name_ko": "먹보",
+   "desc": "Encourages the early use of a held Berry.",
+   "desc_ko": "나무열매를 여느 때보다 빨리 사용한다."
+  },
+  "guts": {
+   "name": "GUTS",
+   "name_ko": "근성",
+   "desc": "Boosts Attack if there is a status problem.",
+   "desc_ko": "상태 이상이 되면 공격이 올라간다."
+  },
+  "heatproof": {
+   "name": "HEATPROOF",
+   "name_ko": "내열",
+   "desc": "Weakens the power of Fire-type moves.",
+   "desc_ko": "불꽃 기술의 위력을 약하게 한다."
+  },
+  "honey_gather": {
+   "name": "HONEY GATHER",
+   "name_ko": "꿀모으기",
+   "desc": "The Pokémon may gather Honey from somewhere.",
+   "desc_ko": "달콤한꿀을 모아서 올 때가 있다."
+  },
+  "huge_power": {
+   "name": "HUGE POWER",
+   "name_ko": "천하장사",
+   "desc": "Raises the Pokémon’s Attack stat.",
+   "desc_ko": "물리공격의 위력이 올라간다."
+  },
+  "hustle": {
+   "name": "HUSTLE",
+   "name_ko": "의욕",
+   "desc": "Boosts the Attack stat, but lowers accuracy.",
+   "desc_ko": "공격은 높지만 빗나가기 쉽다."
+  },
+  "hydration": {
+   "name": "HYDRATION",
+   "name_ko": "촉촉바디",
+   "desc": "Heals status problems if it is raining.",
+   "desc_ko": "비가 오면 상태 이상이 회복된다."
+  },
+  "hyper_cutter": {
+   "name": "HYPER CUTTER",
+   "name_ko": "괴력집게",
+   "desc": "Prevents the Attack stat from being lowered.",
+   "desc_ko": "상대가 공격을 떨어뜨리지 못한다."
+  },
+  "ice_body": {
+   "name": "ICE BODY",
+   "name_ko": "아이스바디",
+   "desc": "The Pokémon regains HP in a hailstorm.",
+   "desc_ko": "싸라기눈일 때 HP를 조금씩 회복한다."
+  },
+  "illuminate": {
+   "name": "ILLUMINATE",
+   "name_ko": "발광",
+   "desc": "Raises the likelihood of meeting wild Pokémon.",
+   "desc_ko": "야생 포켓몬과 만나기 쉬워진다."
+  },
+  "immunity": {
+   "name": "IMMUNITY",
+   "name_ko": "면역",
+   "desc": "Prevents the Pokémon from getting poisoned.",
+   "desc_ko": "독 상태가 되지 않는다."
+  },
+  "inner_focus": {
+   "name": "INNER FOCUS",
+   "name_ko": "정신력",
+   "desc": "The Pokémon is protected from flinching.",
+   "desc_ko": "풀죽지 않는다."
+  },
+  "insomnia": {
+   "name": "INSOMNIA",
+   "name_ko": "불면",
+   "desc": "Prevents the Pokémon from falling asleep.",
+   "desc_ko": "잠듦 상태가 되지 않는다."
+  },
+  "intimidate": {
+   "name": "INTIMIDATE",
+   "name_ko": "위협",
+   "desc": "Lowers the foe’s Attack stat.",
+   "desc_ko": "상대의 공격을 떨어뜨린다."
+  },
+  "iron_fist": {
+   "name": "IRON FIST",
+   "name_ko": "철주먹",
+   "desc": "Boosts the power of punching moves.",
+   "desc_ko": "펀치를 사용하는 기술의 위력이 올라간다."
+  },
+  "keen_eye": {
+   "name": "KEEN EYE",
+   "name_ko": "날카로운눈",
+   "desc": "Prevents the Pokémon from losing accuracy.",
+   "desc_ko": "명중률이 떨어지지 않는다."
+  },
+  "klutz": {
+   "name": "KLUTZ",
+   "name_ko": "서투름",
+   "desc": "The Pokémon can’t use any held items.",
+   "desc_ko": "지니고 있는 도구를 쓸 수 없다."
+  },
+  "leaf_guard": {
+   "name": "LEAF GUARD",
+   "name_ko": "리프가드",
+   "desc": "Prevents status problems in sunny weather.",
+   "desc_ko": "맑을 때는 상태 이상이 되지 않는다."
+  },
+  "levitate": {
+   "name": "LEVITATE",
+   "name_ko": "부유",
+   "desc": "Gives full immunity to all Ground-type moves.",
+   "desc_ko": "땅타입의 기술을 받지 않는다."
+  },
+  "lightning_rod": {
+   "name": "LIGHTNING ROD",
+   "name_ko": "피뢰침",
+   "desc": "The Pokémon draws in all Electric-type moves.",
+   "desc_ko": "전기를 끌어모아 특수공격을 올린다."
+  },
+  "limber": {
+   "name": "LIMBER",
+   "name_ko": "유연",
+   "desc": "The Pokémon is protected from paralysis.",
+   "desc_ko": "마비 상태가 되지 않는다."
+  },
+  "liquid_ooze": {
+   "name": "LIQUID OOZE",
+   "name_ko": "해감액",
+   "desc": "Inflicts damage on foes using any draining move.",
+   "desc_ko": "흡수한 상대의 HP를 줄인다."
+  },
+  "magic_guard": {
+   "name": "MAGIC GUARD",
+   "name_ko": "매직가드",
+   "desc": "The Pokémon only takes damage from attacks.",
+   "desc_ko": "공격 이외에는 데미지를 입지 않는다."
+  },
+  "magma_armor": {
+   "name": "MAGMA ARMOR",
+   "name_ko": "마그마의무장",
+   "desc": "Prevents the Pokémon from becoming frozen.",
+   "desc_ko": "얼음 상태가 되지 않는다."
+  },
+  "magnet_pull": {
+   "name": "MAGNET PULL",
+   "name_ko": "자력",
+   "desc": "Prevents Steel-type Pokémon from escaping.",
+   "desc_ko": "강철의 포켓몬을 도망칠 수 없게 한다."
+  },
+  "marvel_scale": {
+   "name": "MARVEL SCALE",
+   "name_ko": "이상한비늘",
+   "desc": "Boosts Defense if there is a status problem.",
+   "desc_ko": "상태 이상이 되면 방어가 올라간다."
+  },
+  "minus": {
+   "name": "MINUS",
+   "name_ko": "마이너스",
+   "desc": "Boosts Sp. Atk if another Pokémon has Plus.",
+   "desc_ko": "플러스나 마이너스가 있으면 특수공격이 올라간다."
+  },
+  "mold_breaker": {
+   "name": "MOLD BREAKER",
+   "name_ko": "틀깨기",
+   "desc": "Moves can be used regardless of abilities.",
+   "desc_ko": "특성에 관계없이 상대에게 기술을 쓸 수 있다."
+  },
+  "motor_drive": {
+   "name": "MOTOR DRIVE",
+   "name_ko": "전기엔진",
+   "desc": "Raises Speed if hit by an Electric-type move.",
+   "desc_ko": "전기를 받으면 스피드가 올라간다."
+  },
+  "multitype": {
+   "name": "MULTITYPE",
+   "name_ko": "멀티타입",
+   "desc": "Changes type to match the held Plate.",
+   "desc_ko": "지니고 있는 플레이트에 따라 타입이 바뀐다."
+  },
+  "natural_cure": {
+   "name": "NATURAL CURE",
+   "name_ko": "자연회복",
+   "desc": "All status problems are healed upon switching out.",
+   "desc_ko": "배틀에서 일단 물러나면 상태 이상이 회복된다."
+  },
+  "no_guard": {
+   "name": "NO GUARD",
+   "name_ko": "노가드",
+   "desc": "Ensures the Pokémon and its foe’s attacks land.",
+   "desc_ko": "서로의 기술이 반드시 맞는다."
+  },
+  "normalize": {
+   "name": "NORMALIZE",
+   "name_ko": "노말스킨",
+   "desc": "All the Pokémon’s moves become the Normal type.",
+   "desc_ko": "쓴 기술이 모두 노말타입이 된다."
+  },
+  "oblivious": {
+   "name": "OBLIVIOUS",
+   "name_ko": "둔감",
+   "desc": "Prevents the Pokémon from becoming infatuated.",
+   "desc_ko": "헤롱헤롱이나 도발 상태가 되지 않는다."
+  },
+  "overgrow": {
+   "name": "OVERGROW",
+   "name_ko": "심록",
+   "desc": "Powers up Grass-type moves in a pinch.",
+   "desc_ko": "위급할 때 풀타입의 위력이 올라간다."
+  },
+  "own_tempo": {
+   "name": "OWN TEMPO",
+   "name_ko": "마이페이스",
+   "desc": "Prevents the Pokémon from becoming confused.",
+   "desc_ko": "혼란 상태가 되지 않는다."
+  },
+  "pickup": {
+   "name": "PICKUP",
+   "name_ko": "픽업",
+   "desc": "The Pokémon may pick up items.",
+   "desc_ko": "도구를 주워올 때가 있다."
+  },
+  "plus": {
+   "name": "PLUS",
+   "name_ko": "플러스",
+   "desc": "Boosts Sp. Atk if another Pokémon has Minus.",
+   "desc_ko": "플러스나 마이너스가 있으면 특수공격이 올라간다."
+  },
+  "poison_heal": {
+   "name": "POISON HEAL",
+   "name_ko": "포이즌힐",
+   "desc": "Restores HP if the Pokémon is poisoned.",
+   "desc_ko": "독 상태가 되면 HP를 회복한다."
+  },
+  "poison_point": {
+   "name": "POISON POINT",
+   "name_ko": "독가시",
+   "desc": "Contact with the Pokémon may poison the foe.",
+   "desc_ko": "접촉한 상대를 중독시킬 때가 있다."
+  },
+  "pressure": {
+   "name": "PRESSURE",
+   "name_ko": "프레셔",
+   "desc": "The Pokémon raises the foe’s PP usage.",
+   "desc_ko": "상대가 사용하는 기술의 PP를 많이 줄인다."
+  },
+  "pure_power": {
+   "name": "PURE POWER",
+   "name_ko": "순수한힘",
+   "desc": "Boosts the power of physical attacks.",
+   "desc_ko": "물리공격의 위력이 올라간다."
+  },
+  "quick_feet": {
+   "name": "QUICK FEET",
+   "name_ko": "속보",
+   "desc": "Boosts Speed if there is a status problem.",
+   "desc_ko": "상태 이상이 되면 스피드가 올라간다."
+  },
+  "rain_dish": {
+   "name": "RAIN DISH",
+   "name_ko": "젖은접시",
+   "desc": "The Pokémon gradually recovers HP in rain.",
+   "desc_ko": "비가 올 때 조금씩 HP를 회복한다."
+  },
+  "reckless": {
+   "name": "RECKLESS",
+   "name_ko": "이판사판",
+   "desc": "Powers up moves that have recoil damage.",
+   "desc_ko": "반동 데미지를 받는 기술이 강해진다."
+  },
+  "rivalry": {
+   "name": "RIVALRY",
+   "name_ko": "투쟁심",
+   "desc": "Raises Attack if the foe is of the same gender.",
+   "desc_ko": "상대와 성별이 같으면 강해진다."
+  },
+  "rock_head": {
+   "name": "ROCK HEAD",
+   "name_ko": "돌머리",
+   "desc": "Protects the Pokémon from recoil damage.",
+   "desc_ko": "부딪쳐도 반동을 받지 않는다."
+  },
+  "rough_skin": {
+   "name": "ROUGH SKIN",
+   "name_ko": "까칠한피부",
+   "desc": "Inflicts damage to the foe on contact.",
+   "desc_ko": "접촉한 상대에게 상처를 입힌다."
+  },
+  "run_away": {
+   "name": "RUN AWAY",
+   "name_ko": "도주",
+   "desc": "Enables sure getaway from wild Pokémon.",
+   "desc_ko": "야생 포켓몬으로부터 반드시 도망칠 수 있다."
+  },
+  "sand_stream": {
+   "name": "SAND STREAM",
+   "name_ko": "모래날림",
+   "desc": "The Pokémon summons a sandstorm in battle.",
+   "desc_ko": "배틀에서 모래바람을 일으킨다."
+  },
+  "sand_veil": {
+   "name": "SAND VEIL",
+   "name_ko": "모래숨기",
+   "desc": "Boosts the Pokémon’s evasion in a sandstorm.",
+   "desc_ko": "모래바람으로 회피율이 올라간다."
+  },
+  "scrappy": {
+   "name": "SCRAPPY",
+   "name_ko": "배짱",
+   "desc": "Enables moves to hit Ghost-type foes.",
+   "desc_ko": "고스트타입에 노말 기술이 맞는다."
+  },
+  "serene_grace": {
+   "name": "SERENE GRACE",
+   "name_ko": "하늘의은총",
+   "desc": "Boosts the likelihood of added effects appearing.",
+   "desc_ko": "기술의 추가 효과가 나오기 쉽다."
+  },
+  "shadow_tag": {
+   "name": "SHADOW TAG",
+   "name_ko": "그림자밟기",
+   "desc": "Prevents the foe from escaping.",
+   "desc_ko": "상대의 그림자를 밟아 도망칠 수 없게 한다."
+  },
+  "shed_skin": {
+   "name": "SHED SKIN",
+   "name_ko": "탈피",
+   "desc": "The Pokémon may heal its own status problems.",
+   "desc_ko": "상태 이상을 회복할 때가 있다."
+  },
+  "shell_armor": {
+   "name": "SHELL ARMOR",
+   "name_ko": "조가비갑옷",
+   "desc": "The Pokémon is protected against critical hits.",
+   "desc_ko": "상대의 공격이 급소에 맞지 않는다."
+  },
+  "shield_dust": {
+   "name": "SHIELD DUST",
+   "name_ko": "인분",
+   "desc": "Blocks the added effects of attacks taken.",
+   "desc_ko": "기술의 추가 효과를 받지 않는다."
+  },
+  "simple": {
+   "name": "SIMPLE",
+   "name_ko": "단순",
+   "desc": "The Pokémon is prone to wild stat changes.",
+   "desc_ko": "능력 변화가 여느 때보다 심하다."
+  },
+  "skill_link": {
+   "name": "SKILL LINK",
+   "name_ko": "스킬링크",
+   "desc": "Increases the frequency of multi-strike moves.",
+   "desc_ko": "연속 기술을 많이 쓸 수 있다."
+  },
+  "slow_start": {
+   "name": "SLOW START",
+   "name_ko": "슬로스타트",
+   "desc": "Temporarily halves Attack and Speed.",
+   "desc_ko": "공격과 스피드가 잠시 동안 절반이 된다."
+  },
+  "sniper": {
+   "name": "SNIPER",
+   "name_ko": "스나이퍼",
+   "desc": "Powers up moves if they become critical hits.",
+   "desc_ko": "급소에 맞혔을 때 위력이 올라간다."
+  },
+  "snow_cloak": {
+   "name": "SNOW CLOAK",
+   "name_ko": "눈숨기",
+   "desc": "Raises evasion in a hailstorm.",
+   "desc_ko": "날씨가 싸라기눈일 때 회피율이 올라간다."
+  },
+  "snow_warning": {
+   "name": "SNOW WARNING",
+   "name_ko": "눈퍼뜨리기",
+   "desc": "The Pokémon summons a hailstorm in battle.",
+   "desc_ko": "배틀에 나가면 싸라기눈을 내리게 한다."
+  },
+  "solar_power": {
+   "name": "SOLAR POWER",
+   "name_ko": "선파워",
+   "desc": "Boosts Sp. Atk, but lowers HP in sunshine.",
+   "desc_ko": "맑으면 HP가 줄지만 특수공격이 올라간다."
+  },
+  "solid_rock": {
+   "name": "SOLID ROCK",
+   "name_ko": "하드록",
+   "desc": "Powers down super­ effective moves.",
+   "desc_ko": "효과가 굉장한 기술의 위력을 약하게 한다."
+  },
+  "soundproof": {
+   "name": "SOUNDPROOF",
+   "name_ko": "방음",
+   "desc": "Gives full immunity to all sound-based moves.",
+   "desc_ko": "소리 기술을 받지 않는다."
+  },
+  "speed_boost": {
+   "name": "SPEED BOOST",
+   "name_ko": "가속",
+   "desc": "The Pokémon’s Speed stat is gradually boosted.",
+   "desc_ko": "조금씩 스피드가 높아진다."
+  },
+  "stall": {
+   "name": "STALL",
+   "name_ko": "시간벌기",
+   "desc": "The Pokémon moves after even slower foes.",
+   "desc_ko": "상대보다 재빨라도 행동이 느려진다."
+  },
+  "static": {
+   "name": "STATIC",
+   "name_ko": "정전기",
+   "desc": "Contact with the Pokémon may cause paralysis.",
+   "desc_ko": "접촉한 상대를 마비시킬 때가 있다."
+  },
+  "steadfast": {
+   "name": "STEADFAST",
+   "name_ko": "불굴의마음",
+   "desc": "Raises Speed each time the Pokémon flinches.",
+   "desc_ko": "풀죽을 때마다 스피드가 올라간다."
+  },
+  "stench": {
+   "name": "STENCH",
+   "name_ko": "악취",
+   "desc": "The stench helps keep wild Pokémon away.",
+   "desc_ko": "악취 때문에 상대가 풀죽을 때가 있다."
+  },
+  "sticky_hold": {
+   "name": "STICKY HOLD",
+   "name_ko": "점착",
+   "desc": "Protects the Pokémon from item theft.",
+   "desc_ko": "달라붙어서 도구를 지킨다."
+  },
+  "storm_drain": {
+   "name": "STORM DRAIN",
+   "name_ko": "마중물",
+   "desc": "The Pokémon draws in all Water-type moves.",
+   "desc_ko": "물을 끌어모아 특수공격을 올린다."
+  },
+  "sturdy": {
+   "name": "STURDY",
+   "name_ko": "옹골참",
+   "desc": "The Pokémon is protected against 1-hit KO attacks.",
+   "desc_ko": "일격으로 쓰러지지 않는다."
+  },
+  "suction_cups": {
+   "name": "SUCTION CUPS",
+   "name_ko": "흡반",
+   "desc": "Negates moves that force switching out.",
+   "desc_ko": "교체시키는 기술이나 도구의 효과를 받지 않는다."
+  },
+  "super_luck": {
+   "name": "SUPER LUCK",
+   "name_ko": "대운",
+   "desc": "Heightens the critical-hit ratios of moves.",
+   "desc_ko": "상대의 급소에 공격이 맞기 쉽다."
+  },
+  "swarm": {
+   "name": "SWARM",
+   "name_ko": "벌레의알림",
+   "desc": "Powers up Bug-type moves in a pinch.",
+   "desc_ko": "위급할 때 벌레타입의 위력이 올라간다."
+  },
+  "swift_swim": {
+   "name": "SWIFT SWIM",
+   "name_ko": "쓱쓱",
+   "desc": "Boosts the Pokémon’s Speed in rain.",
+   "desc_ko": "비가 올 때 스피드가 올라간다."
+  },
+  "synchronize": {
+   "name": "SYNCHRONIZE",
+   "name_ko": "싱크로",
+   "desc": "Passes on a burn, poison, or paralysis to the foe.",
+   "desc_ko": "독, 마비, 화상을 상대에게 옮긴다."
+  },
+  "tangled_feet": {
+   "name": "TANGLED FEET",
+   "name_ko": "갈지자걸음",
+   "desc": "Raises evasion if the Pokémon is confused.",
+   "desc_ko": "혼란에 빠져있으면 회피하기 쉬워진다."
+  },
+  "technician": {
+   "name": "TECHNICIAN",
+   "name_ko": "테크니션",
+   "desc": "Powers up the Pokémon’s weaker moves.",
+   "desc_ko": "약한 기술의 위력이 올라간다."
+  },
+  "thick_fat": {
+   "name": "THICK FAT",
+   "name_ko": "두꺼운지방",
+   "desc": "Raises resistance to Fire-​ and Ice-type moves.",
+   "desc_ko": "불꽃과 얼음타입의 기술에 강하다."
+  },
+  "tinted_lens": {
+   "name": "TINTED LENS",
+   "name_ko": "색안경",
+   "desc": "Powers up “not very effective” moves.",
+   "desc_ko": "효과가 별로인 기술이 강해진다."
+  },
+  "torrent": {
+   "name": "TORRENT",
+   "name_ko": "급류",
+   "desc": "Powers up Water-type moves in a pinch.",
+   "desc_ko": "위급할 때 물타입의 위력이 올라간다."
+  },
+  "trace": {
+   "name": "TRACE",
+   "name_ko": "트레이스",
+   "desc": "The Pokémon copies the foe’s ability.",
+   "desc_ko": "상대와 같은 특성이 된다."
+  },
+  "truant": {
+   "name": "TRUANT",
+   "name_ko": "게으름",
+   "desc": "The Pokémon can’t attack on consecutive turns.",
+   "desc_ko": "연속으로 공격할 수 없다."
+  },
+  "unaware": {
+   "name": "UNAWARE",
+   "name_ko": "천진",
+   "desc": "Ignores any change in ability by the foe.",
+   "desc_ko": "상대의 능력 변화를 무시한다."
+  },
+  "unburden": {
+   "name": "UNBURDEN",
+   "name_ko": "곡예",
+   "desc": "Raises Speed if a held item is used.",
+   "desc_ko": "도구가 없어지면 스피드가 올라간다."
+  },
+  "vital_spirit": {
+   "name": "VITAL SPIRIT",
+   "name_ko": "의기양양",
+   "desc": "Prevents the Pokémon from falling asleep.",
+   "desc_ko": "잠듦 상태가 되지 않는다."
+  },
+  "volt_absorb": {
+   "name": "VOLT ABSORB",
+   "name_ko": "축전",
+   "desc": "Restores HP if hit by an Electric-type move.",
+   "desc_ko": "전기를 받으면 회복한다."
+  },
+  "water_absorb": {
+   "name": "WATER ABSORB",
+   "name_ko": "저수",
+   "desc": "Restores HP if hit by a Water-type move.",
+   "desc_ko": "물을 받으면 회복한다."
+  },
+  "water_veil": {
+   "name": "WATER VEIL",
+   "name_ko": "수의베일",
+   "desc": "Prevents the Pokémon from getting a burn.",
+   "desc_ko": "화상 상태가 되지 않는다."
+  },
+  "white_smoke": {
+   "name": "WHITE SMOKE",
+   "name_ko": "하얀연기",
+   "desc": "Prevents the Pokémon’s stats from being lowered.",
+   "desc_ko": "상대가 능력을 떨어뜨릴 수 없다."
+  },
+  "wonder_guard": {
+   "name": "WONDER GUARD",
+   "name_ko": "불가사의부적",
+   "desc": "Only supereffective moves will hit.",
+   "desc_ko": "효과가 굉장한 기술밖에 맞지 않는다."
+  }
+ }
+}

@@ -1,0 +1,3515 @@
+{
+  "source": "PokeAPI pokemon.csv, cached in third_party/pokeapi; default forms matched by National Dex number",
+  "basis": "Default-form Pokedex height or body length, in decimeters",
+  "tiers": [
+    {
+      "id": 1,
+      "label_ko": "초소형",
+      "max_height_dm": 3,
+      "display_span": 16,
+      "radius": 6
+    },
+    {
+      "id": 2,
+      "label_ko": "소형",
+      "max_height_dm": 6,
+      "display_span": 22,
+      "radius": 8
+    },
+    {
+      "id": 3,
+      "label_ko": "중소형",
+      "max_height_dm": 10,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    {
+      "id": 4,
+      "label_ko": "중형",
+      "max_height_dm": 14,
+      "display_span": 34,
+      "radius": 9
+    },
+    {
+      "id": 5,
+      "label_ko": "중대형",
+      "max_height_dm": 20,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    {
+      "id": 6,
+      "label_ko": "대형",
+      "max_height_dm": 30,
+      "display_span": 48,
+      "radius": 10
+    },
+    {
+      "id": 7,
+      "label_ko": "초대형",
+      "max_height_dm": 50,
+      "display_span": 64,
+      "radius": 11
+    },
+    {
+      "id": 8,
+      "label_ko": "거대",
+      "max_height_dm": null,
+      "display_span": 88,
+      "radius": 11.5
+    }
+  ],
+  "species": {
+    "abomasnow": {
+      "dex": 460,
+      "height_dm": 22,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "abra": {
+      "dex": 63,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "absol": {
+      "dex": 359,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "aerodactyl": {
+      "dex": 142,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "aggron": {
+      "dex": 306,
+      "height_dm": 21,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "aipom": {
+      "dex": 190,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "alakazam": {
+      "dex": 65,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "altaria": {
+      "dex": 334,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ambipom": {
+      "dex": 424,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ampharos": {
+      "dex": 181,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "anorith": {
+      "dex": 347,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "arbok": {
+      "dex": 24,
+      "height_dm": 35,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "arcanine": {
+      "dex": 59,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "arceus": {
+      "dex": 493,
+      "height_dm": 32,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "ariados": {
+      "dex": 168,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "armaldo": {
+      "dex": 348,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "aron": {
+      "dex": 304,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "articuno": {
+      "dex": 144,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "azelf": {
+      "dex": 482,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "azumarill": {
+      "dex": 184,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "azurill": {
+      "dex": 298,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "bagon": {
+      "dex": 371,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "baltoy": {
+      "dex": 343,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "banette": {
+      "dex": 354,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "barboach": {
+      "dex": 339,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "bastiodon": {
+      "dex": 411,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "bayleef": {
+      "dex": 153,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "beautifly": {
+      "dex": 267,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "beedrill": {
+      "dex": 15,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "beldum": {
+      "dex": 374,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "bellossom": {
+      "dex": 182,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "bellsprout": {
+      "dex": 69,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "bibarel": {
+      "dex": 400,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "bidoof": {
+      "dex": 399,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "blastoise": {
+      "dex": 9,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "blaziken": {
+      "dex": 257,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "blissey": {
+      "dex": 242,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "bonsly": {
+      "dex": 438,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "breloom": {
+      "dex": 286,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "bronzong": {
+      "dex": 437,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "bronzor": {
+      "dex": 436,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "budew": {
+      "dex": 406,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "buizel": {
+      "dex": 418,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "bulbasaur": {
+      "dex": 1,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "buneary": {
+      "dex": 427,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "burmy": {
+      "dex": 412,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "butterfree": {
+      "dex": 12,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "cacnea": {
+      "dex": 331,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cacturne": {
+      "dex": 332,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "camerupt": {
+      "dex": 323,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "carnivine": {
+      "dex": 455,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "carvanha": {
+      "dex": 318,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "cascoon": {
+      "dex": 268,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "castform": {
+      "dex": 351,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "caterpie": {
+      "dex": 10,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "celebi": {
+      "dex": 251,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "chansey": {
+      "dex": 113,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "charizard": {
+      "dex": 6,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "charmander": {
+      "dex": 4,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "charmeleon": {
+      "dex": 5,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "chatot": {
+      "dex": 441,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cherrim": {
+      "dex": 421,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cherubi": {
+      "dex": 420,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "chikorita": {
+      "dex": 152,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "chimchar": {
+      "dex": 390,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "chimecho": {
+      "dex": 358,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "chinchou": {
+      "dex": 170,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "chingling": {
+      "dex": 433,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "clamperl": {
+      "dex": 366,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "claydol": {
+      "dex": 344,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "clefable": {
+      "dex": 36,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "clefairy": {
+      "dex": 35,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cleffa": {
+      "dex": 173,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "cloyster": {
+      "dex": 91,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "combee": {
+      "dex": 415,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "combusken": {
+      "dex": 256,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "corphish": {
+      "dex": 341,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "corsola": {
+      "dex": 222,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cradily": {
+      "dex": 346,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "cranidos": {
+      "dex": 408,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "crawdaunt": {
+      "dex": 342,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "cresselia": {
+      "dex": 488,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "croagunk": {
+      "dex": 453,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "crobat": {
+      "dex": 169,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "croconaw": {
+      "dex": 159,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "cubone": {
+      "dex": 104,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "cyndaquil": {
+      "dex": 155,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "darkrai": {
+      "dex": 491,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "delcatty": {
+      "dex": 301,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "delibird": {
+      "dex": 225,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "deoxys": {
+      "dex": 386,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "dewgong": {
+      "dex": 87,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "dialga": {
+      "dex": 483,
+      "height_dm": 54,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "diglett": {
+      "dex": 50,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "ditto": {
+      "dex": 132,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "dodrio": {
+      "dex": 85,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "doduo": {
+      "dex": 84,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "donphan": {
+      "dex": 232,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "dragonair": {
+      "dex": 148,
+      "height_dm": 40,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "dragonite": {
+      "dex": 149,
+      "height_dm": 22,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "drapion": {
+      "dex": 452,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "dratini": {
+      "dex": 147,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "drifblim": {
+      "dex": 426,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "drifloon": {
+      "dex": 425,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "drowzee": {
+      "dex": 96,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "dugtrio": {
+      "dex": 51,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "dunsparce": {
+      "dex": 206,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "dusclops": {
+      "dex": 356,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "dusknoir": {
+      "dex": 477,
+      "height_dm": 22,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "duskull": {
+      "dex": 355,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "dustox": {
+      "dex": 269,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "eevee": {
+      "dex": 133,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "ekans": {
+      "dex": 23,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "electabuzz": {
+      "dex": 125,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "electivire": {
+      "dex": 466,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "electrike": {
+      "dex": 309,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "electrode": {
+      "dex": 101,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "elekid": {
+      "dex": 239,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "empoleon": {
+      "dex": 395,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "entei": {
+      "dex": 244,
+      "height_dm": 21,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "espeon": {
+      "dex": 196,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "exeggcute": {
+      "dex": 102,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "exeggutor": {
+      "dex": 103,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "exploud": {
+      "dex": 295,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "farfetchd": {
+      "dex": 83,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "fearow": {
+      "dex": 22,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "feebas": {
+      "dex": 349,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "feraligatr": {
+      "dex": 160,
+      "height_dm": 23,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "finneon": {
+      "dex": 456,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "flaaffy": {
+      "dex": 180,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "flareon": {
+      "dex": 136,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "floatzel": {
+      "dex": 419,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "flygon": {
+      "dex": 330,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "forretress": {
+      "dex": 205,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "froslass": {
+      "dex": 478,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "furret": {
+      "dex": 162,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "gabite": {
+      "dex": 444,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "gallade": {
+      "dex": 475,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "garchomp": {
+      "dex": 445,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "gardevoir": {
+      "dex": 282,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "gastly": {
+      "dex": 92,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "gastrodon": {
+      "dex": 423,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "gengar": {
+      "dex": 94,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "geodude": {
+      "dex": 74,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "gible": {
+      "dex": 443,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "girafarig": {
+      "dex": 203,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "giratina": {
+      "dex": 487,
+      "height_dm": 45,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "glaceon": {
+      "dex": 471,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "glalie": {
+      "dex": 362,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "glameow": {
+      "dex": 431,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "gligar": {
+      "dex": 207,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "gliscor": {
+      "dex": 472,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "gloom": {
+      "dex": 44,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "golbat": {
+      "dex": 42,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "goldeen": {
+      "dex": 118,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "golduck": {
+      "dex": 55,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "golem": {
+      "dex": 76,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "gorebyss": {
+      "dex": 368,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "granbull": {
+      "dex": 210,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "graveler": {
+      "dex": 75,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "grimer": {
+      "dex": 88,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "grotle": {
+      "dex": 388,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "groudon": {
+      "dex": 383,
+      "height_dm": 35,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "grovyle": {
+      "dex": 253,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "growlithe": {
+      "dex": 58,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "grumpig": {
+      "dex": 326,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "gulpin": {
+      "dex": 316,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "gyarados": {
+      "dex": 130,
+      "height_dm": 65,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "happiny": {
+      "dex": 440,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "hariyama": {
+      "dex": 297,
+      "height_dm": 23,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "haunter": {
+      "dex": 93,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "heatran": {
+      "dex": 485,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "heracross": {
+      "dex": 214,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "hippopotas": {
+      "dex": 449,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "hippowdon": {
+      "dex": 450,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "hitmonchan": {
+      "dex": 107,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "hitmonlee": {
+      "dex": 106,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "hitmontop": {
+      "dex": 237,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ho_oh": {
+      "dex": 250,
+      "height_dm": 38,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "honchkrow": {
+      "dex": 430,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "hoothoot": {
+      "dex": 163,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "hoppip": {
+      "dex": 187,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "horsea": {
+      "dex": 116,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "houndoom": {
+      "dex": 229,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "houndour": {
+      "dex": 228,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "huntail": {
+      "dex": 367,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "hypno": {
+      "dex": 97,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "igglybuff": {
+      "dex": 174,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "illumise": {
+      "dex": 314,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "infernape": {
+      "dex": 392,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ivysaur": {
+      "dex": 2,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "jigglypuff": {
+      "dex": 39,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "jirachi": {
+      "dex": 385,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "jolteon": {
+      "dex": 135,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "jumpluff": {
+      "dex": 189,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "jynx": {
+      "dex": 124,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "kabuto": {
+      "dex": 140,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "kabutops": {
+      "dex": 141,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "kadabra": {
+      "dex": 64,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "kakuna": {
+      "dex": 14,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "kangaskhan": {
+      "dex": 115,
+      "height_dm": 22,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "kecleon": {
+      "dex": 352,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "kingdra": {
+      "dex": 230,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "kingler": {
+      "dex": 99,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "kirlia": {
+      "dex": 281,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "koffing": {
+      "dex": 109,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "krabby": {
+      "dex": 98,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "kricketot": {
+      "dex": 401,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "kricketune": {
+      "dex": 402,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "kyogre": {
+      "dex": 382,
+      "height_dm": 45,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "lairon": {
+      "dex": 305,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "lanturn": {
+      "dex": 171,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "lapras": {
+      "dex": 131,
+      "height_dm": 25,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "larvitar": {
+      "dex": 246,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "latias": {
+      "dex": 380,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "latios": {
+      "dex": 381,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "leafeon": {
+      "dex": 470,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "ledian": {
+      "dex": 166,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ledyba": {
+      "dex": 165,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "lickilicky": {
+      "dex": 463,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "lickitung": {
+      "dex": 108,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "lileep": {
+      "dex": 345,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "linoone": {
+      "dex": 264,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "lombre": {
+      "dex": 271,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "lopunny": {
+      "dex": 428,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "lotad": {
+      "dex": 270,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "loudred": {
+      "dex": 294,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "lucario": {
+      "dex": 448,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ludicolo": {
+      "dex": 272,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "lugia": {
+      "dex": 249,
+      "height_dm": 52,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "lumineon": {
+      "dex": 457,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "lunatone": {
+      "dex": 337,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "luvdisc": {
+      "dex": 370,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "luxio": {
+      "dex": 404,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "luxray": {
+      "dex": 405,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "machamp": {
+      "dex": 68,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "machoke": {
+      "dex": 67,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "machop": {
+      "dex": 66,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "magby": {
+      "dex": 240,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "magcargo": {
+      "dex": 219,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "magikarp": {
+      "dex": 129,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "magmar": {
+      "dex": 126,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "magmortar": {
+      "dex": 467,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "magnemite": {
+      "dex": 81,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "magneton": {
+      "dex": 82,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "magnezone": {
+      "dex": 462,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "makuhita": {
+      "dex": 296,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mamoswine": {
+      "dex": 473,
+      "height_dm": 25,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "manaphy": {
+      "dex": 490,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "manectric": {
+      "dex": 310,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "mankey": {
+      "dex": 56,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "mantine": {
+      "dex": 226,
+      "height_dm": 21,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "mantyke": {
+      "dex": 458,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mareep": {
+      "dex": 179,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "marill": {
+      "dex": 183,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "marowak": {
+      "dex": 105,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "marshtomp": {
+      "dex": 259,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "masquerain": {
+      "dex": 284,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mawile": {
+      "dex": 303,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "medicham": {
+      "dex": 308,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "meditite": {
+      "dex": 307,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "meganium": {
+      "dex": 154,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "meowth": {
+      "dex": 52,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "mesprit": {
+      "dex": 481,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "metagross": {
+      "dex": 376,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "metang": {
+      "dex": 375,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "metapod": {
+      "dex": 11,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mew": {
+      "dex": 151,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "mewtwo": {
+      "dex": 150,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "mightyena": {
+      "dex": 262,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "milotic": {
+      "dex": 350,
+      "height_dm": 62,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "miltank": {
+      "dex": 241,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "mime_jr": {
+      "dex": 439,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "minun": {
+      "dex": 312,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "misdreavus": {
+      "dex": 200,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mismagius": {
+      "dex": 429,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "moltres": {
+      "dex": 146,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "monferno": {
+      "dex": 391,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mothim": {
+      "dex": 414,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "mr_mime": {
+      "dex": 122,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "mudkip": {
+      "dex": 258,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "muk": {
+      "dex": 89,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "munchlax": {
+      "dex": 446,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "murkrow": {
+      "dex": 198,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "natu": {
+      "dex": 177,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "nidoking": {
+      "dex": 34,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "nidoqueen": {
+      "dex": 31,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "nidoran_f": {
+      "dex": 29,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "nidoran_m": {
+      "dex": 32,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "nidorina": {
+      "dex": 30,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "nidorino": {
+      "dex": 33,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "nincada": {
+      "dex": 290,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "ninetales": {
+      "dex": 38,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ninjask": {
+      "dex": 291,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "noctowl": {
+      "dex": 164,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "nosepass": {
+      "dex": 299,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "numel": {
+      "dex": 322,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "nuzleaf": {
+      "dex": 274,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "octillery": {
+      "dex": 224,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "oddish": {
+      "dex": 43,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "omanyte": {
+      "dex": 138,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "omastar": {
+      "dex": 139,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "onix": {
+      "dex": 95,
+      "height_dm": 88,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "pachirisu": {
+      "dex": 417,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "palkia": {
+      "dex": 484,
+      "height_dm": 42,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "paras": {
+      "dex": 46,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "parasect": {
+      "dex": 47,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "pelipper": {
+      "dex": 279,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "persian": {
+      "dex": 53,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "phanpy": {
+      "dex": 231,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "phione": {
+      "dex": 489,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "pichu": {
+      "dex": 172,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "pidgeot": {
+      "dex": 18,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "pidgeotto": {
+      "dex": 17,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "pidgey": {
+      "dex": 16,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "pikachu": {
+      "dex": 25,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "piloswine": {
+      "dex": 221,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "pineco": {
+      "dex": 204,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "pinsir": {
+      "dex": 127,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "piplup": {
+      "dex": 393,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "plusle": {
+      "dex": 311,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "politoed": {
+      "dex": 186,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "poliwag": {
+      "dex": 60,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "poliwhirl": {
+      "dex": 61,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "poliwrath": {
+      "dex": 62,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "ponyta": {
+      "dex": 77,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "poochyena": {
+      "dex": 261,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "porygon": {
+      "dex": 137,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "porygon2": {
+      "dex": 233,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "porygon_z": {
+      "dex": 474,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "primeape": {
+      "dex": 57,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "prinplup": {
+      "dex": 394,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "probopass": {
+      "dex": 476,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "psyduck": {
+      "dex": 54,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "pupitar": {
+      "dex": 247,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "purugly": {
+      "dex": 432,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "quagsire": {
+      "dex": 195,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "quilava": {
+      "dex": 156,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "qwilfish": {
+      "dex": 211,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "raichu": {
+      "dex": 26,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "raikou": {
+      "dex": 243,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "ralts": {
+      "dex": 280,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "rampardos": {
+      "dex": 409,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "rapidash": {
+      "dex": 78,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "raticate": {
+      "dex": 20,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "rattata": {
+      "dex": 19,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "rayquaza": {
+      "dex": 384,
+      "height_dm": 70,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "regice": {
+      "dex": 378,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "regigigas": {
+      "dex": 486,
+      "height_dm": 37,
+      "size_tier": 7,
+      "display_span": 64,
+      "radius": 11
+    },
+    "regirock": {
+      "dex": 377,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "registeel": {
+      "dex": 379,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "relicanth": {
+      "dex": 369,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "remoraid": {
+      "dex": 223,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "rhydon": {
+      "dex": 112,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "rhyhorn": {
+      "dex": 111,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "rhyperior": {
+      "dex": 464,
+      "height_dm": 24,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "riolu": {
+      "dex": 447,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "roselia": {
+      "dex": 315,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "roserade": {
+      "dex": 407,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "rotom": {
+      "dex": 479,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "sableye": {
+      "dex": 302,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "salamence": {
+      "dex": 373,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "sandshrew": {
+      "dex": 27,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "sandslash": {
+      "dex": 28,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "sceptile": {
+      "dex": 254,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "scizor": {
+      "dex": 212,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "scyther": {
+      "dex": 123,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "seadra": {
+      "dex": 117,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "seaking": {
+      "dex": 119,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "sealeo": {
+      "dex": 364,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "seedot": {
+      "dex": 273,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "seel": {
+      "dex": 86,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "sentret": {
+      "dex": 161,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "seviper": {
+      "dex": 336,
+      "height_dm": 27,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "sharpedo": {
+      "dex": 319,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "shaymin": {
+      "dex": 492,
+      "height_dm": 2,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "shedinja": {
+      "dex": 292,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "shelgon": {
+      "dex": 372,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "shellder": {
+      "dex": 90,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "shellos": {
+      "dex": 422,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "shieldon": {
+      "dex": 410,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "shiftry": {
+      "dex": 275,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "shinx": {
+      "dex": 403,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "shroomish": {
+      "dex": 285,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "shuckle": {
+      "dex": 213,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "shuppet": {
+      "dex": 353,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "silcoon": {
+      "dex": 266,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "skarmory": {
+      "dex": 227,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "skiploom": {
+      "dex": 188,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "skitty": {
+      "dex": 300,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "skorupi": {
+      "dex": 451,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "skuntank": {
+      "dex": 435,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "slaking": {
+      "dex": 289,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "slakoth": {
+      "dex": 287,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "slowbro": {
+      "dex": 80,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "slowking": {
+      "dex": 199,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "slowpoke": {
+      "dex": 79,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "slugma": {
+      "dex": 218,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "smeargle": {
+      "dex": 235,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "smoochum": {
+      "dex": 238,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "sneasel": {
+      "dex": 215,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "snorlax": {
+      "dex": 143,
+      "height_dm": 21,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "snorunt": {
+      "dex": 361,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "snover": {
+      "dex": 459,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "snubbull": {
+      "dex": 209,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "solrock": {
+      "dex": 338,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "spearow": {
+      "dex": 21,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "spheal": {
+      "dex": 363,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "spinarak": {
+      "dex": 167,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "spinda": {
+      "dex": 327,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "spiritomb": {
+      "dex": 442,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "spoink": {
+      "dex": 325,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "squirtle": {
+      "dex": 7,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "stantler": {
+      "dex": 234,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "staraptor": {
+      "dex": 398,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "staravia": {
+      "dex": 397,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "starly": {
+      "dex": 396,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "starmie": {
+      "dex": 121,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "staryu": {
+      "dex": 120,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "steelix": {
+      "dex": 208,
+      "height_dm": 92,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "stunky": {
+      "dex": 434,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "sudowoodo": {
+      "dex": 185,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "suicune": {
+      "dex": 245,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "sunflora": {
+      "dex": 192,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "sunkern": {
+      "dex": 191,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "surskit": {
+      "dex": 283,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "swablu": {
+      "dex": 333,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "swalot": {
+      "dex": 317,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "swampert": {
+      "dex": 260,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "swellow": {
+      "dex": 277,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "swinub": {
+      "dex": 220,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "taillow": {
+      "dex": 276,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "tangela": {
+      "dex": 114,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "tangrowth": {
+      "dex": 465,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "tauros": {
+      "dex": 128,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "teddiursa": {
+      "dex": 216,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "tentacool": {
+      "dex": 72,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "tentacruel": {
+      "dex": 73,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "togekiss": {
+      "dex": 468,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "togepi": {
+      "dex": 175,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "togetic": {
+      "dex": 176,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "torchic": {
+      "dex": 255,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "torkoal": {
+      "dex": 324,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "torterra": {
+      "dex": 389,
+      "height_dm": 22,
+      "size_tier": 6,
+      "display_span": 48,
+      "radius": 10
+    },
+    "totodile": {
+      "dex": 158,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "toxicroak": {
+      "dex": 454,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "trapinch": {
+      "dex": 328,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "treecko": {
+      "dex": 252,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "tropius": {
+      "dex": 357,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "turtwig": {
+      "dex": 387,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "typhlosion": {
+      "dex": 157,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "tyranitar": {
+      "dex": 248,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "tyrogue": {
+      "dex": 236,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "umbreon": {
+      "dex": 197,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "unown": {
+      "dex": 201,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "ursaring": {
+      "dex": 217,
+      "height_dm": 18,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "uxie": {
+      "dex": 480,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "vaporeon": {
+      "dex": 134,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "venomoth": {
+      "dex": 49,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "venonat": {
+      "dex": 48,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "venusaur": {
+      "dex": 3,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "vespiquen": {
+      "dex": 416,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "vibrava": {
+      "dex": 329,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "victreebel": {
+      "dex": 71,
+      "height_dm": 17,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "vigoroth": {
+      "dex": 288,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "vileplume": {
+      "dex": 45,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "volbeat": {
+      "dex": 313,
+      "height_dm": 7,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "voltorb": {
+      "dex": 100,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "vulpix": {
+      "dex": 37,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "wailmer": {
+      "dex": 320,
+      "height_dm": 20,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "wailord": {
+      "dex": 321,
+      "height_dm": 145,
+      "size_tier": 8,
+      "display_span": 88,
+      "radius": 11.5
+    },
+    "walrein": {
+      "dex": 365,
+      "height_dm": 14,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "wartortle": {
+      "dex": 8,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "weavile": {
+      "dex": 461,
+      "height_dm": 11,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "weedle": {
+      "dex": 13,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "weepinbell": {
+      "dex": 70,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "weezing": {
+      "dex": 110,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "whiscash": {
+      "dex": 340,
+      "height_dm": 9,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "whismur": {
+      "dex": 293,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "wigglytuff": {
+      "dex": 40,
+      "height_dm": 10,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    },
+    "wingull": {
+      "dex": 278,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "wobbuffet": {
+      "dex": 202,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "wooper": {
+      "dex": 194,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "wormadam": {
+      "dex": 413,
+      "height_dm": 5,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "wurmple": {
+      "dex": 265,
+      "height_dm": 3,
+      "size_tier": 1,
+      "display_span": 16,
+      "radius": 6
+    },
+    "wynaut": {
+      "dex": 360,
+      "height_dm": 6,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "xatu": {
+      "dex": 178,
+      "height_dm": 15,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "yanma": {
+      "dex": 193,
+      "height_dm": 12,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "yanmega": {
+      "dex": 469,
+      "height_dm": 19,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "zangoose": {
+      "dex": 335,
+      "height_dm": 13,
+      "size_tier": 4,
+      "display_span": 34,
+      "radius": 9
+    },
+    "zapdos": {
+      "dex": 145,
+      "height_dm": 16,
+      "size_tier": 5,
+      "display_span": 40,
+      "radius": 9.5
+    },
+    "zigzagoon": {
+      "dex": 263,
+      "height_dm": 4,
+      "size_tier": 2,
+      "display_span": 22,
+      "radius": 8
+    },
+    "zubat": {
+      "dex": 41,
+      "height_dm": 8,
+      "size_tier": 3,
+      "display_span": 28,
+      "radius": 8.5
+    }
+  }
+}

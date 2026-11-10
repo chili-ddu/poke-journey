@@ -1,0 +1,210 @@
+{
+ "arcanine": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "beedrill": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "bibarel": {
+  "common": "oran_berry",
+  "rare": "sitrus_berry"
+ },
+ "budew": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "camerupt": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "celebi": {
+  "common": "lum_berry",
+  "rare": "lum_berry"
+ },
+ "clefable": {
+  "common": "leppa_berry",
+  "rare": null
+ },
+ "clefairy": {
+  "common": "leppa_berry",
+  "rare": null
+ },
+ "cleffa": {
+  "common": "leppa_berry",
+  "rare": null
+ },
+ "delcatty": {
+  "common": null,
+  "rare": "leppa_berry"
+ },
+ "drapion": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "exploud": {
+  "common": null,
+  "rare": "chesto_berry"
+ },
+ "furret": {
+  "common": "oran_berry",
+  "rare": "sitrus_berry"
+ },
+ "geodude": {
+  "common": null,
+  "rare": "everstone"
+ },
+ "girafarig": {
+  "common": null,
+  "rare": "persim_berry"
+ },
+ "glameow": {
+  "common": null,
+  "rare": "cheri_berry"
+ },
+ "golem": {
+  "common": null,
+  "rare": "everstone"
+ },
+ "graveler": {
+  "common": null,
+  "rare": "everstone"
+ },
+ "growlithe": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "kecleon": {
+  "common": null,
+  "rare": "persim_berry"
+ },
+ "linoone": {
+  "common": "oran_berry",
+  "rare": "sitrus_berry"
+ },
+ "loudred": {
+  "common": null,
+  "rare": "chesto_berry"
+ },
+ "mew": {
+  "common": "lum_berry",
+  "rare": "lum_berry"
+ },
+ "mightyena": {
+  "common": null,
+  "rare": "pecha_berry"
+ },
+ "mime_jr": {
+  "common": null,
+  "rare": "leppa_berry"
+ },
+ "mr_mime": {
+  "common": null,
+  "rare": "leppa_berry"
+ },
+ "ninetales": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "numel": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "pichu": {
+  "common": null,
+  "rare": "oran_berry"
+ },
+ "pikachu": {
+  "common": "oran_berry",
+  "rare": "light_ball"
+ },
+ "poochyena": {
+  "common": null,
+  "rare": "pecha_berry"
+ },
+ "purugly": {
+  "common": null,
+  "rare": "cheri_berry"
+ },
+ "qwilfish": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "raichu": {
+  "common": null,
+  "rare": "oran_berry"
+ },
+ "raticate": {
+  "common": null,
+  "rare": "chilan_berry"
+ },
+ "rattata": {
+  "common": null,
+  "rare": "chilan_berry"
+ },
+ "roselia": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "roserade": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "sentret": {
+  "common": null,
+  "rare": "oran_berry"
+ },
+ "shaymin": {
+  "common": "lum_berry",
+  "rare": "lum_berry"
+ },
+ "shuckle": {
+  "common": "oran_berry",
+  "rare": "oran_berry"
+ },
+ "skitty": {
+  "common": null,
+  "rare": "leppa_berry"
+ },
+ "skorupi": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "skuntank": {
+  "common": null,
+  "rare": "pecha_berry"
+ },
+ "spinda": {
+  "common": null,
+  "rare": "chesto_berry"
+ },
+ "stunky": {
+  "common": null,
+  "rare": "pecha_berry"
+ },
+ "tentacool": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "tentacruel": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "vespiquen": {
+  "common": null,
+  "rare": "poison_barb"
+ },
+ "vulpix": {
+  "common": "rawst_berry",
+  "rare": "rawst_berry"
+ },
+ "whismur": {
+  "common": null,
+  "rare": "chesto_berry"
+ },
+ "zigzagoon": {
+  "common": null,
+  "rare": "oran_berry"
+ }
+}

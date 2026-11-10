@@ -1,0 +1,272 @@
+{
+ "potion": {
+  "name": "POTION",
+  "name_ko": "상처약",
+  "price": 300,
+  "desc": "A spray-type medicine for wounds. It restores the HP of one Pokémon by just 20 points.",
+  "desc_ko": "스프레이식의 상처약. 포켓몬 1마리의 HP를 20만큼 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "super_potion": {
+  "name": "SUPER POTION",
+  "name_ko": "좋은상처약",
+  "price": 700,
+  "desc": "A spray-type medicine for wounds. It restores the HP of one Pokémon by 50 points.",
+  "desc_ko": "스프레이식의 상처약. 포켓몬 1마리의 HP를 50만큼 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "hyper_potion": {
+  "name": "HYPER POTION",
+  "name_ko": "고급상처약",
+  "price": 1200,
+  "desc": "A spray-type medicine for wounds. It restores the HP of one Pokémon by 200 points.",
+  "desc_ko": "스프레이식의 상처약. 포켓몬 1마리의 HP를 200만큼 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "max_potion": {
+  "name": "MAX POTION",
+  "name_ko": "풀회복약",
+  "price": 2500,
+  "desc": "A spray-type medicine for wounds. It completely restores the HP of a single Pokémon.",
+  "desc_ko": "스프레이식의 상처약. 포켓몬 1마리의 HP를 모두 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "full_restore": {
+  "name": "FULL RESTORE",
+  "name_ko": "회복약",
+  "price": 3000,
+  "desc": "A medicine that fully restores the HP and heals any status problems of a single Pokémon.",
+  "desc_ko": "포켓몬 1마리의 HP와 상태 이상을 모두 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "revive": {
+  "name": "REVIVE",
+  "name_ko": "기력의조각",
+  "price": 1500,
+  "desc": "A medicine that revives a fainted Pokémon. It restores half the Pokémon’s maximum HP.",
+  "desc_ko": "기절해 버린 포켓몬 1마리를 건강하게 하고 HP를 절반까지 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "antidote": {
+  "name": "ANTIDOTE",
+  "name_ko": "해독제",
+  "price": 100,
+  "desc": "A spray-type medicine. It lifts the effect of poison from one Pokémon.",
+  "desc_ko": "스프레이식의 약. 포켓몬 1마리의 독 상태를 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "burn_heal": {
+  "name": "BURN HEAL",
+  "name_ko": "화상치료제",
+  "price": 250,
+  "desc": "A spray-type medicine. It heals a single Pokémon that is suffering from a burn.",
+  "desc_ko": "스프레이식의 약. 포켓몬 1마리의 화상 상태를 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "parlyz_heal": {
+  "name": "PARLYZ HEAL",
+  "name_ko": "마비치료제",
+  "price": 200,
+  "desc": "A spray-type medicine. It eliminates paralysis from a single Pokémon.",
+  "desc_ko": "스프레이식의 약. 포켓몬 1마리의 마비 상태를 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "full_heal": {
+  "name": "FULL HEAL",
+  "name_ko": "만병통치제",
+  "price": 600,
+  "desc": "A spray-type medicine. It heals all the status problems of a single Pokémon.",
+  "desc_ko": "스프레이식의 약. 포켓몬 1마리의 상태 이상을 모두 회복한다.",
+  "pocket": "medicine",
+  "shop": true,
+  "held": false
+ },
+ "escape_rope": {
+  "name": "ESCAPE ROPE",
+  "name_ko": "동굴탈출로프",
+  "price": 550,
+  "desc": "A long, durable rope. Use it to escape instantly from a cave or a dungeon.",
+  "desc_ko": "길고 튼튼한 끈. 동굴이나 던전에서 빠져나올 수 있다.",
+  "pocket": "items",
+  "shop": true,
+  "held": false
+ },
+ "repel": {
+  "name": "REPEL",
+  "name_ko": "벌레회피스프레이",
+  "price": 350,
+  "desc": "An item that prevents weak wild Pokémon from appearing for 100 steps after its use.",
+  "desc_ko": "100보 걸어가는 동안 약한 야생 포켓몬이 전혀 나오지 않게 된다.",
+  "pocket": "items",
+  "shop": true,
+  "held": false
+ },
+ "super_repel": {
+  "name": "SUPER REPEL",
+  "name_ko": "실버스프레이",
+  "price": 500,
+  "desc": "An item that prevents weak wild Pokémon from appearing for 200 steps after its use.",
+  "desc_ko": "200보 걸어가는 동안 약한 야생 포켓몬이 전혀 나오지 않게 된다.",
+  "pocket": "items",
+  "shop": true,
+  "held": false
+ },
+ "max_repel": {
+  "name": "MAX REPEL",
+  "name_ko": "골드스프레이",
+  "price": 700,
+  "desc": "An item that prevents weak wild Pokémon from appearing for 250 steps after its use.",
+  "desc_ko": "250보 걸어가는 동안 약한 야생 포켓몬이 전혀 나오지 않게 된다.",
+  "pocket": "items",
+  "shop": true,
+  "held": false
+ },
+ "oran_berry": {
+  "name": "ORAN BERRY",
+  "name_ko": "오랭열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to heal the user by just 10 HP.",
+  "desc_ko": "HP를 10만큼 회복한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "chilan_berry": {
+  "name": "CHILAN BERRY",
+  "name_ko": "카리열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. If held by a Pokémon, it weakens a foe’s Normal-type attack.",
+  "desc_ko": "포켓몬에게 지니게 하면 노말 기술을 당했을 때 위력이 약해진다.",
+  "pocket": "berries",
+  "shop": false,
+  "held": true
+ },
+ "light_ball": {
+  "name": "LIGHT BALL",
+  "name_ko": "전기구슬",
+  "price": 100,
+  "desc": "An item to be held by PIKACHU. It is a puzzling orb that raises the Attack and Sp. Atk stat.",
+  "desc_ko": "피카츄에게 지니게 하면 공격과 특수공격의 위력이 올라가는 이상한 구슬.",
+  "pocket": "items",
+  "shop": false,
+  "held": true
+ },
+ "poison_barb": {
+  "name": "POISON BARB",
+  "name_ko": "독바늘",
+  "price": 100,
+  "desc": "An item to be held by a Pokémon. It is a small, poisonous barb that ups the power of Poison-type moves.",
+  "desc_ko": "독이 있는 작은 침. 지니게 하면 독타입 기술의 위력이 올라간다.",
+  "pocket": "items",
+  "shop": false,
+  "held": true
+ },
+ "everstone": {
+  "name": "EVERSTONE",
+  "name_ko": "변함없는돌",
+  "price": 200,
+  "desc": "An item to be held by a Pokémon. The Pokémon holding this peculiar stone is prevented from evolving.",
+  "desc_ko": "포켓몬에게 지니게 하면 지닌 동안에는 진화하지 않게 되는 이상한 돌.",
+  "pocket": "items",
+  "shop": false,
+  "held": false
+ },
+ "sitrus_berry": {
+  "name": "SITRUS BERRY",
+  "name_ko": "자뭉열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to heal the user’s HP a little.",
+  "desc_ko": "HP를 최대 HP의 1/4만큼 회복한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "leppa_berry": {
+  "name": "LEPPA BERRY",
+  "name_ko": "과사열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to restore a move’s PP by 10.",
+  "desc_ko": "기술 하나의 PP를 10 회복한다. 단축키로 쓰면 PP 비율이 가장 낮은 기술에 사용한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "cheri_berry": {
+  "name": "CHERI BERRY",
+  "name_ko": "버치열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from paralysis.",
+  "desc_ko": "마비 상태를 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "chesto_berry": {
+  "name": "CHESTO BERRY",
+  "name_ko": "유루열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from sleep.",
+  "desc_ko": "잠듦 상태를 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "pecha_berry": {
+  "name": "PECHA BERRY",
+  "name_ko": "복슝열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from poison.",
+  "desc_ko": "독 상태를 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "rawst_berry": {
+  "name": "RAWST BERRY",
+  "name_ko": "복분열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from a burn.",
+  "desc_ko": "화상 상태를 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "persim_berry": {
+  "name": "PERSIM BERRY",
+  "name_ko": "시몬열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from confusion.",
+  "desc_ko": "혼란 상태를 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ },
+ "lum_berry": {
+  "name": "LUM BERRY",
+  "name_ko": "리샘열매",
+  "price": 20,
+  "desc": "A Poffin ingredient. It may be used or held by a Pokémon to recover from any status problem.",
+  "desc_ko": "독, 화상, 마비, 잠듦과 혼란을 치료한다.",
+  "pocket": "berries",
+  "shop": true,
+  "held": true
+ }
+}

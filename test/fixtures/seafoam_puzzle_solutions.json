@@ -1,0 +1,599 @@
+{
+  "seafoam_islands_1f": [
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_1",
+      "from": [
+        22,
+        12
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        22,
+        13
+      ],
+      "to": [
+        22,
+        11
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_1",
+      "from": [
+        22,
+        11
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        22,
+        12
+      ],
+      "to": [
+        22,
+        10
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_1",
+      "from": [
+        22,
+        10
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        22,
+        11
+      ],
+      "to": [
+        22,
+        9
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_1",
+      "from": [
+        22,
+        9
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        22,
+        10
+      ],
+      "to": [
+        22,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_1",
+      "from": [
+        22,
+        8
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        23,
+        8
+      ],
+      "to": [
+        21,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_2",
+      "from": [
+        32,
+        9
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        32,
+        10
+      ],
+      "to": [
+        32,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_2",
+      "from": [
+        32,
+        8
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        33,
+        8
+      ],
+      "to": [
+        31,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_1F_BOULDER_2",
+      "from": [
+        31,
+        8
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        32,
+        8
+      ],
+      "to": [
+        30,
+        8
+      ]
+    }
+  ],
+  "seafoam_islands_b1f": [
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_1",
+      "from": [
+        22,
+        8
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "stand": [
+        21,
+        8
+      ],
+      "to": [
+        23,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2",
+      "from": [
+        30,
+        8
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        30,
+        9
+      ],
+      "to": [
+        30,
+        7
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2",
+      "from": [
+        30,
+        7
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        31,
+        7
+      ],
+      "to": [
+        29,
+        7
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2",
+      "from": [
+        29,
+        7
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        30,
+        7
+      ],
+      "to": [
+        28,
+        7
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B1F_BOULDER_2",
+      "from": [
+        28,
+        7
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "stand": [
+        28,
+        6
+      ],
+      "to": [
+        28,
+        8
+      ]
+    }
+  ],
+  "seafoam_islands_b2f": [
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1",
+      "from": [
+        22,
+        8
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "stand": [
+        21,
+        8
+      ],
+      "to": [
+        23,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_1",
+      "from": [
+        23,
+        8
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "stand": [
+        22,
+        8
+      ],
+      "to": [
+        24,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        30,
+        8
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "stand": [
+        29,
+        8
+      ],
+      "to": [
+        31,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        31,
+        8
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "stand": [
+        31,
+        7
+      ],
+      "to": [
+        31,
+        9
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        31,
+        9
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        32,
+        9
+      ],
+      "to": [
+        30,
+        9
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        30,
+        9
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        31,
+        9
+      ],
+      "to": [
+        29,
+        9
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        29,
+        9
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        30,
+        9
+      ],
+      "to": [
+        28,
+        9
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        28,
+        9
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        28,
+        10
+      ],
+      "to": [
+        28,
+        8
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B2F_BOULDER_2",
+      "from": [
+        28,
+        8
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        29,
+        8
+      ],
+      "to": [
+        27,
+        8
+      ]
+    }
+  ],
+  "seafoam_islands_b3f": [
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_6",
+      "from": [
+        13,
+        16
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        13,
+        17
+      ],
+      "to": [
+        13,
+        15
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_6",
+      "from": [
+        13,
+        15
+      ],
+      "direction": [
+        0,
+        -1
+      ],
+      "stand": [
+        13,
+        16
+      ],
+      "to": [
+        13,
+        14
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5",
+      "from": [
+        12,
+        16
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "stand": [
+        12,
+        15
+      ],
+      "to": [
+        12,
+        17
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5",
+      "from": [
+        12,
+        17
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        13,
+        17
+      ],
+      "to": [
+        11,
+        17
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5",
+      "from": [
+        11,
+        17
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        12,
+        17
+      ],
+      "to": [
+        10,
+        17
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5",
+      "from": [
+        10,
+        17
+      ],
+      "direction": [
+        -1,
+        0
+      ],
+      "stand": [
+        11,
+        17
+      ],
+      "to": [
+        9,
+        17
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_4",
+      "from": [
+        9,
+        16
+      ],
+      "direction": [
+        1,
+        0
+      ],
+      "stand": [
+        8,
+        16
+      ],
+      "to": [
+        10,
+        16
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_5",
+      "from": [
+        9,
+        17
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "stand": [
+        9,
+        16
+      ],
+      "to": [
+        9,
+        18
+      ]
+    },
+    {
+      "stage": "FLAG_HIDE_SEAFOAM_B3F_BOULDER_3",
+      "from": [
+        6,
+        17
+      ],
+      "direction": [
+        0,
+        1
+      ],
+      "stand": [
+        6,
+        16
+      ],
+      "to": [
+        6,
+        18
+      ]
+    }
+  ]
+}

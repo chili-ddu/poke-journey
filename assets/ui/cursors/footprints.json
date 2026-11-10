@@ -1,0 +1,83 @@
+{
+  "charmander": {
+    "texture": "res://assets/ui/cursors/charmander.png",
+    "hotspot": [
+      21,
+      11
+    ],
+    "color": "#ee8938",
+    "source": "graphics/pokemon/charmander/footprint.png"
+  },
+  "charmeleon": {
+    "texture": "res://assets/ui/cursors/charmeleon.png",
+    "hotspot": [
+      21,
+      9
+    ],
+    "color": "#d95e4d",
+    "source": "graphics/pokemon/charmeleon/footprint.png"
+  },
+  "charizard": {
+    "texture": "res://assets/ui/cursors/charizard.png",
+    "hotspot": [
+      21,
+      7
+    ],
+    "color": "#e68a41",
+    "source": "graphics/pokemon/charizard/footprint.png"
+  },
+  "squirtle": {
+    "texture": "res://assets/ui/cursors/squirtle.png",
+    "hotspot": [
+      19,
+      13
+    ],
+    "color": "#5abbd1",
+    "source": "graphics/pokemon/squirtle/footprint.png"
+  },
+  "wartortle": {
+    "texture": "res://assets/ui/cursors/wartortle.png",
+    "hotspot": [
+      21,
+      11
+    ],
+    "color": "#77a7d3",
+    "source": "graphics/pokemon/wartortle/footprint.png"
+  },
+  "blastoise": {
+    "texture": "res://assets/ui/cursors/blastoise.png",
+    "hotspot": [
+      19,
+      7
+    ],
+    "color": "#4f86b5",
+    "source": "graphics/pokemon/blastoise/footprint.png"
+  },
+  "bulbasaur": {
+    "texture": "res://assets/ui/cursors/bulbasaur.png",
+    "hotspot": [
+      21,
+      13
+    ],
+    "color": "#61b780",
+    "source": "graphics/pokemon/bulbasaur/footprint.png"
+  },
+  "ivysaur": {
+    "texture": "res://assets/ui/cursors/ivysaur.png",
+    "hotspot": [
+      21,
+      11
+    ],
+    "color": "#4ba78b",
+    "source": "graphics/pokemon/ivysaur/footprint.png"
+  },
+  "venusaur": {
+    "texture": "res://assets/ui/cursors/venusaur.png",
+    "hotspot": [
+      21,
+      9
+    ],
+    "color": "#428f76",
+    "source": "graphics/pokemon/venusaur/footprint.png"
+  }
+}

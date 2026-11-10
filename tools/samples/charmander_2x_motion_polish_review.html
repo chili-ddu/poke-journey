@@ -1,0 +1,24 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>파이리 · 2배 동작 다듬기</title>
+<style>body{background:#222a28;color:#f1e8d5;font:14px system-ui;max-width:800px;margin:24px auto;padding:0 10px}h1{font-size:21px}p{line-height:1.65}select,button{font:inherit;padding:5px;margin:3px}canvas{image-rendering:pixelated;border:1px solid #677366}a{color:#dec28f}#detail{color:#c9cbb8}</style>
+<h1>파이리 · 2배 프레임 동작 다듬기</h1>
+<p>왼쪽 기존 2배 / 오른쪽 다듬은 2배. <strong>게임 미적용.</strong><br>프레임 수·원본 해상도·색상·전체 시간·타격 시점은 같습니다.</p>
+<select id="action" aria-label="동작"></select><select id="direction" aria-label="방향"></select><br>
+<button id="play">일시 정지</button><button id="restart">처음부터</button><button id="prev">이전 칸</button><button id="next">다음 칸</button><br>
+<select id="speed" aria-label="재생 속도"><option value="1">원래 속도</option><option value="0.5">0.5배속</option><option value="0.25">0.25배속</option></select>
+<select id="scale" aria-label="표시 크기"><option value="2">2배 확대 보기</option><option value="1">원본 1배 보기</option></select><button id="background">밝은 배경</button><br>
+<canvas id="preview" width="384" height="216"></canvas><p id="caption"></p><p id="detail"></p>
+<p>걷기 측면은 발 복귀와 꼬리 뒤따름을 조정했습니다. 공격·점프 등은 같은 개수의 칸 안에서 중간 자세와 보유 시간을 골랐습니다. 원본 키 프레임의 그림과 시작 시각을 유지했습니다.</p>
+<p><a id="gif" href="#">현재 동작 비교 GIF</a> · <a id="slow" href="#">느린 비교</a> · <a href="README.md">동작별 변경 내용</a> · <a href="QA-NOTES.md">검수 실패·경고</a></p>
+<script>
+const data=__DATA__,action=document.querySelector('#action'),direction=document.querySelector('#direction'),canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;
+for(const [name,m]of Object.entries(data.actions))action.add(new Option(`${m.label} · ${name}`,name));action.value='Walk';
+const images={};for(const [name,m]of Object.entries(data.actions)){images[name]={};for(const [v,url]of Object.entries(m.sheets)){let im=new Image();im.src=url;images[name][v]=im;}}
+let tick=0,last=performance.now(),playing=true,light=false;
+function meta(){return data.actions[action.value]}
+function indexAt(t,ts,loop){const total=ts.reduce((a,b)=>a+b,0);t=loop?((t%total)+total)%total:Math.max(0,Math.min(t,total-1e-8));for(let k=0;k<ts.length;k++){if(t<ts[k])return k;t-=ts[k]}return ts.length-1}
+function rowOptions(){const old=direction.value;direction.replaceChildren();for(let r=0;r<meta().rows;r++)direction.add(new Option(meta().rows===1?'원본 단일 방향':data.directions[r],r));direction.value=meta().rows===1?'0':old||'2';if(!direction.value)direction.value='2';tick=0}rowOptions();
+function draw(now,schedule=true){if(playing)tick+=(now-last)*.12*Number(document.querySelector('#speed').value);last=now;const m=meta(),period=m.duration_ticks+(m.loop?0:60),t=playing?tick%period:tick,scale=Number(document.querySelector('#scale').value),[w,h]=m.size;ctx.fillStyle=light?'#d7d8c4':'#222a28';ctx.fillRect(0,0,384,216);ctx.fillStyle=light?'#30382e':'#f1e8d5';ctx.font='12px system-ui';for(const [side,v]of ['baseline','refined'].entries()){const k=indexAt(t,m[v+'_ticks'],m.loop),im=images[action.value][v];ctx.fillText(`${side?'다듬은 2배':'기존 2배'} · ${m[v+'_ticks'].length}칸`,side*192+8,16);ctx.fillText(`${k+1}/${m[v+'_ticks'].length} · 표시 ${scale}배`,side*192+8,31);if(im.complete&&im.naturalWidth)ctx.drawImage(im,k*w,+direction.value*h,w,h,side*192+96-w*scale/2,120-h*scale/2,w*scale,h*scale)}document.querySelector('#caption').textContent=`${m.label} · ${w}×${h}px · ${(m.duration_ticks/120).toFixed(3)}초 · ${m.baseline_ticks.length}→${m.refined_ticks.length}칸 유지`;const count=m.row_image_changes[+direction.value];document.querySelector('#detail').textContent=`이 방향: 중간장 ${count}개 변경 · ${m.timing_changed?'보유 시간 조정':'보유 시간 유지'} · 원본 키 보존`;document.querySelector('#gif').href=`gifs/${action.value}-1speed.gif`;document.querySelector('#slow').href=`gifs/${action.value}-0.25speed.gif`;if(schedule)requestAnimationFrame(draw)}requestAnimationFrame(draw);
+document.querySelector('#play').onclick=()=>{if(playing)tick%=meta().duration_ticks+(meta().loop?0:60);playing=!playing;document.querySelector('#play').textContent=playing?'일시 정지':'재생'};document.querySelector('#restart').onclick=()=>{tick=0};
+function step(d){const m=meta(),t=playing?tick%(m.duration_ticks+(m.loop?0:60)):tick;playing=false;document.querySelector('#play').textContent='재생';const ts=m.refined_ticks;let k=indexAt(t,ts,m.loop)+d;k=m.loop?(k+ts.length)%ts.length:Math.max(0,Math.min(k,ts.length-1));tick=ts.slice(0,k).reduce((a,b)=>a+b,0)+1e-5}
+document.querySelector('#prev').onclick=()=>step(-1);document.querySelector('#next').onclick=()=>step(1);action.onchange=rowOptions;direction.onchange=()=>{tick=0};document.querySelector('#background').onclick=()=>{light=!light;document.querySelector('#background').textContent=light?'어두운 배경':'밝은 배경'};
+</script></html>

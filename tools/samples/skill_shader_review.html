@@ -1,0 +1,25 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>대표 기술 쉐이더 비교</title>
+<style>body{max-width:700px;margin:18px;background:#222a28;color:#f1e8d5;font:14px system-ui}h1{font-size:20px}p{line-height:1.6}select,button{font:inherit;background:#334039;color:inherit;border:1px solid #728475;padding:5px;margin:3px 0;border-radius:4px}video,#fallback{display:block;width:384px;height:216px;image-rendering:pixelated;margin-top:8px}a,small{color:#c4d0c0}table{border-collapse:collapse;font-size:13px}td,th{border-bottom:1px solid #526056;padding:6px;text-align:left}@media(max-width:410px){body{margin:0}h1,p{margin-left:4px;margin-right:4px}}[hidden]{display:none!important}</style>
+<h1>대표 기술의 부드러운 빛결</h1>
+<p>왼쪽은 기존 연출, 오른쪽은 같은 그림에 속성별 쉐이더를 더한 샘플입니다. 기존 외곽·색·크기를 기준으로 조정했습니다. <b>게임에는 아직 적용하지 않았습니다.</b></p>
+<select id="skill" aria-label="기술"><option value="electric">전기쇼크</option><option value="leaf">잎날가르기</option><option value="wind">바람일으키기</option><option value="psychic">염동력</option></select>
+<select id="direction" aria-label="방향"><option value="right">오른쪽</option><option value="left">왼쪽</option><option value="up">위쪽</option><option value="down">아래쪽</option></select><br>
+<button id="replay">처음부터</button> <button id="slow">0.25배속</button> <button id="step">한 프레임</button> <button id="format">PNG 애니메이션</button>
+<video id="clip" width="384" height="216" muted controls loop playsinline preload="metadata"></video>
+<img id="fallback" hidden alt="기존과 속성별 쉐이더 샘플의 같은 속도 애니메이션"><p id="caption"></p><p id="error" role="alert"></p>
+<table><thead><tr><th>기술</th><th>재질의 움직임</th></tr></thead><tbody><tr><td>전기쇼크</td><td>부드러운 빛 안에서 맥동하는 전류</td></tr><tr><td>잎날가르기</td><td>표면을 스치는 은은한 반사광</td></tr><tr><td>바람일으키기</td><td>진행 방향을 따라 흐르는 밝고 어두운 결</td></tr><tr><td>염동력</td><td>원래 색을 유지하며 내부에서 회전하는 파동</td></tr></tbody></table>
+<p><small>384×216의 실제 HD-2D 장면을 같은 영역으로 잘라 비교합니다. 시작부터 상대를 바라보도록 맞췄습니다. 캐릭터 동작과 정해둔 피격·상태 연출은 양쪽이 같고, 럭키 위 흰 숫자는 피해량입니다. 앞서 조정한 원거리 물리 넉백 50%도 양쪽에 동일하게 적용됩니다.</small></p>
+<p><a href="REVIEW.md">제작·검수 기록</a> · <a href="qa-summary.json">검증 결과</a> · <a href="pixelfx-check.txt">pixelfx 참고 효과 검사</a></p>
+<script>
+const S=document.querySelector('#skill'),D=document.querySelector('#direction'),v=document.querySelector('#clip'),im=document.querySelector('#fallback'),slow=document.querySelector('#slow'),step=document.querySelector('#step');let cases=[],rate=1,png=false;
+async function load(){const c=cases.find(c=>c.kind===S.value&&c.direction===D.value);if(!c){document.querySelector('#error').textContent='비교 자료를 찾지 못했습니다.';return;}document.querySelector('#error').textContent='';v.src=c.video;v.playbackRate=rate;im.src=c.image;v.hidden=png;im.hidden=!png;document.querySelector('#caption').textContent=`${c.name} · ${D.selectedOptions[0].text} · 기존 / 쉐이더 · 게임 미적용`;if(!png)try{await v.play()}catch{}}
+S.onchange=load;D.onchange=load;
+document.querySelector('#replay').onclick=()=>{if(png){const src=im.src;im.src='';im.src=src;}else{v.currentTime=0;v.play()}};
+slow.onclick=()=>{rate=rate===1?.25:1;v.playbackRate=rate;slow.textContent=rate===1?'0.25배속':'1배속'};
+step.onclick=()=>{v.pause();v.currentTime=Math.min(v.duration,Math.floor(v.currentTime*30+1.001)/30)};
+function showFormat(){v.hidden=png;im.hidden=!png;slow.disabled=png;step.disabled=png;document.querySelector('#format').textContent=png?'동영상으로 보기':'PNG 애니메이션';}
+document.querySelector('#format').onclick=()=>{png=!png;showFormat();if(png)v.pause();else v.play()};
+v.onerror=()=>{png=true;showFormat()};
+fetch('comparisons.json').then(r=>{if(!r.ok)throw Error('비교 자료를 불러오지 못했습니다.');return r.json()}).then(data=>{cases=data;load()}).catch(e=>document.querySelector('#error').textContent=e.message);
+window.shaderReview={select:async(kind,direction)=>{S.value=kind;D.value=direction;await load()},state:()=>({kind:S.value,direction:D.value,ready:v.readyState,width:v.videoWidth,height:v.videoHeight,time:v.currentTime,rate:v.playbackRate,png,paused:v.paused,error:v.error?.message||'',count:cases.length})};
+</script></html>

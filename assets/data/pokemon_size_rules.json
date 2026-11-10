@@ -1,0 +1,14 @@
+{
+  "basis": "Default-form Pokedex height or body length, in decimeters",
+  "reference": "One per-species scale, measured from all native walking frames and directions",
+  "tiers": [
+    {"id": 1, "label_ko": "초소형", "max_height_dm": 3, "display_span": 16, "radius": 6},
+    {"id": 2, "label_ko": "소형", "max_height_dm": 6, "display_span": 22, "radius": 8},
+    {"id": 3, "label_ko": "중소형", "max_height_dm": 10, "display_span": 28, "radius": 8.5},
+    {"id": 4, "label_ko": "중형", "max_height_dm": 14, "display_span": 34, "radius": 9},
+    {"id": 5, "label_ko": "중대형", "max_height_dm": 20, "display_span": 40, "radius": 9.5},
+    {"id": 6, "label_ko": "대형", "max_height_dm": 30, "display_span": 48, "radius": 10},
+    {"id": 7, "label_ko": "초대형", "max_height_dm": 50, "display_span": 64, "radius": 11},
+    {"id": 8, "label_ko": "거대", "max_height_dm": null, "display_span": 88, "radius": 11.5}
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "width": 9,
+  "height": 9,
+  "tile": 16,
+  "pad": 10,
+  "solid": [
+    "111111111",
+    "111101111",
+    "111000111",
+    "101000101",
+    "101000101",
+    "101000101",
+    "101000101",
+    "101000101",
+    "111111111"
+  ],
+  "grass": [
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000"
+  ],
+  "ledge": [
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000",
+    "000000000"
+  ],
+  "start": [
+    72,
+    72
+  ],
+  "areas": [
+    {
+      "id": "fuchsia_city_safari_zone_entrance",
+      "x": 0,
+      "y": 0,
+      "w": 9,
+      "h": 9
+    }
+  ],
+  "warps": [
+    {
+      "x": 4,
+      "y": 1,
+      "map": "fuchsia_city_safari_zone_entrance",
+      "index": 0,
+      "to": "safari_zone_center",
+      "to_warp": 1
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "map": "fuchsia_city_safari_zone_entrance",
+      "index": 1,
+      "to": "fuchsia_city",
+      "to_warp": 0
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "map": "fuchsia_city_safari_zone_entrance",
+      "index": 2,
+      "to": "fuchsia_city",
+      "to_warp": 0
+    },
+    {
+      "x": 3,
+      "y": 7,
+      "map": "fuchsia_city_safari_zone_entrance",
+      "index": 3,
+      "to": "fuchsia_city",
+      "to_warp": 0
+    }
+  ],
+  "source": "pret/pokefirered FuchsiaCity_SafariZone_Entrance(9×9 @0,0)"
+}

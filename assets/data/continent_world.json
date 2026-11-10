@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "johto_offset": [-928, -96],
+  "mainland_scene": "matrix_0000",
+  "bounds": [-896, -96, 1304, 496],
+  "art_source": "existing",
+  "land_outline": [[-864,160],[-768,160],[-704,96],[-672,32],[-576,16],[-512,32],[-448,32],[-384,-64],[-224,-64],[-192,16],[-96,48],[-32,0],[0,0],[0,272],[-32,304],[-128,288],[-224,304],[-320,304],[-416,320],[-448,384],[-576,384],[-608,288],[-704,288],[-768,288],[-848,304],[-864,256]],
+  "ridge_outline": [[-176,80],[-112,48],[-32,0],[0,0],[0,192],[-16,240],[-64,256],[-128,224],[-160,176]],
+  "ridge_peaks": [[-64,64,64,16],[-80,144,56,14],[-32,208,40,10]],
+  "grass_texture": "res://assets/maps/johto_hgss/models/terrain_0453_071/grass01gs.png",
+  "rock_texture": "res://assets/maps/johto_hgss/models/terrain_0453_071/cliff01gs.png",
+  "sea_texture": "res://assets/maps/johto_hgss/models/terrain_0040_005/sea_on.png",
+  "tree_texture": "res://assets/maps/johto_hgss/models/terrain_0453_071/tree01gs.png"
+}

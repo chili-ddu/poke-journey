@@ -1,0 +1,79 @@
+{
+  "width": 12,
+  "height": 9,
+  "tile": 16,
+  "pad": 10,
+  "solid": [
+    "111111111111",
+    "111111111111",
+    "100000001001",
+    "100000001001",
+    "100001100001",
+    "100001100001",
+    "100000000001",
+    "100000000001",
+    "111111111111"
+  ],
+  "grass": [
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000"
+  ],
+  "ledge": [
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000",
+    "000000000000"
+  ],
+  "start": [
+    120,
+    72
+  ],
+  "areas": [
+    {
+      "id": "lavender_town_volunteer_pokemon_house",
+      "x": 0,
+      "y": 0,
+      "w": 12,
+      "h": 9
+    }
+  ],
+  "warps": [
+    {
+      "x": 3,
+      "y": 7,
+      "map": "lavender_town_volunteer_pokemon_house",
+      "index": 0,
+      "to": "lavender_town",
+      "to_warp": 2
+    },
+    {
+      "x": 4,
+      "y": 7,
+      "map": "lavender_town_volunteer_pokemon_house",
+      "index": 1,
+      "to": "lavender_town",
+      "to_warp": 2
+    },
+    {
+      "x": 5,
+      "y": 7,
+      "map": "lavender_town_volunteer_pokemon_house",
+      "index": 2,
+      "to": "lavender_town",
+      "to_warp": 2
+    }
+  ],
+  "source": "pret/pokefirered LavenderTown_VolunteerPokemonHouse(12×9 @0,0)"
+}

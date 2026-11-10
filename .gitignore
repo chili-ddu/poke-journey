@@ -1,0 +1,31 @@
+# Godot generates these locally. Keep source .import settings and .uid files.
+.godot/
+.import/
+export_credentials.cfg
+
+# Local review output, exports and downloaded upstream source trees.
+/docs/
+/build/
+/dist/
+/third_party/
+/.gitnexus/
+
+# Tool caches and local environments.
+__pycache__/
+*.py[cod]
+node_modules/
+.venv/
+venv/
+.cache/
+*.log
+
+# Machine settings and credentials.
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.jks

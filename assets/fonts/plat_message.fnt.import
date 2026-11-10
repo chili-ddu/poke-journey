@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://dm5c738ebvsev"
+path="res://.godot/imported/plat_message.fnt-3010ff5f72e8815c2bea5007080de8cc.fontdata"
+
+[deps]
+
+source_file="res://assets/fonts/plat_message.fnt"
+dest_files=["res://.godot/imported/plat_message.fnt-3010ff5f72e8815c2bea5007080de8cc.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

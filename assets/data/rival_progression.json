@@ -1,0 +1,592 @@
+{
+  "stages": [
+    {
+      "id": "route22_early",
+      "area": "route22",
+      "map": "",
+      "rect": [
+        33,
+        4,
+        1,
+        3
+      ],
+      "from": [
+        25,
+        4
+      ],
+      "native": "ROUTE22_EARLY",
+      "arena": "arena_route1",
+      "name": "22번도로 첫 재전",
+      "rule": "before_brock"
+    },
+    {
+      "id": "lavender",
+      "area": "lavender_town",
+      "map": "",
+      "rect": [
+        17,
+        7,
+        3,
+        2
+      ],
+      "from": [
+        15,
+        8
+      ],
+      "native": "POKEMON_TOWER",
+      "arena": "arena_route1",
+      "name": "보라시티 타워 앞",
+      "rule": "always"
+    },
+    {
+      "id": "silph",
+      "area": "silph_co_7f",
+      "map": "silph_co_7f",
+      "rect": [
+        2,
+        4,
+        1,
+        2
+      ],
+      "from": [
+        2,
+        6
+      ],
+      "native": "SILPH",
+      "arena": "arena_silph_rival",
+      "name": "실프주식회사 7층",
+      "rule": "always"
+    },
+    {
+      "id": "route22_late",
+      "area": "route22",
+      "map": "",
+      "rect": [
+        33,
+        4,
+        1,
+        3
+      ],
+      "from": [
+        25,
+        4
+      ],
+      "native": "ROUTE22_LATE",
+      "arena": "arena_route1",
+      "name": "22번도로 마지막 재전",
+      "rule": "all_leaders"
+    }
+  ],
+  "origins": {
+    "rival_route22_early_squirtle": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_EARLY_SQUIRTLE",
+      "party_id": "sParty_RivalRoute22EarlySquirtle",
+      "party": [
+        [
+          "pidgey",
+          9,
+          [
+            "tackle",
+            "sand_attack"
+          ]
+        ],
+        [
+          "squirtle",
+          9,
+          [
+            "tackle",
+            "tail_whip"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50
+      ],
+      "stage": "route22_early"
+    },
+    "rival_route22_early_bulbasaur": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_EARLY_BULBASAUR",
+      "party_id": "sParty_RivalRoute22EarlyBulbasaur",
+      "party": [
+        [
+          "pidgey",
+          9,
+          [
+            "tackle",
+            "sand_attack"
+          ]
+        ],
+        [
+          "bulbasaur",
+          9,
+          [
+            "tackle",
+            "growl"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50
+      ],
+      "stage": "route22_early"
+    },
+    "rival_route22_early_charmander": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_EARLY_CHARMANDER",
+      "party_id": "sParty_RivalRoute22EarlyCharmander",
+      "party": [
+        [
+          "pidgey",
+          9,
+          [
+            "tackle",
+            "sand_attack"
+          ]
+        ],
+        [
+          "charmander",
+          9,
+          [
+            "scratch",
+            "growl"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50
+      ],
+      "stage": "route22_early"
+    },
+    "rival_lavender_squirtle": {
+      "trainer": "TRAINER_RIVAL_POKEMON_TOWER_SQUIRTLE",
+      "party_id": "sParty_RivalPokemonTowerSquirtle",
+      "party": [
+        [
+          "pidgeotto",
+          25
+        ],
+        [
+          "growlithe",
+          23
+        ],
+        [
+          "exeggcute",
+          22
+        ],
+        [
+          "kadabra",
+          20
+        ],
+        [
+          "wartortle",
+          25
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "stage": "lavender"
+    },
+    "rival_lavender_bulbasaur": {
+      "trainer": "TRAINER_RIVAL_POKEMON_TOWER_BULBASAUR",
+      "party_id": "sParty_RivalPokemonTowerBulbasaur",
+      "party": [
+        [
+          "pidgeotto",
+          25
+        ],
+        [
+          "gyarados",
+          23
+        ],
+        [
+          "growlithe",
+          22
+        ],
+        [
+          "kadabra",
+          20
+        ],
+        [
+          "ivysaur",
+          25
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "stage": "lavender"
+    },
+    "rival_lavender_charmander": {
+      "trainer": "TRAINER_RIVAL_POKEMON_TOWER_CHARMANDER",
+      "party_id": "sParty_RivalPokemonTowerCharmander",
+      "party": [
+        [
+          "pidgeotto",
+          25
+        ],
+        [
+          "exeggcute",
+          23
+        ],
+        [
+          "gyarados",
+          22
+        ],
+        [
+          "kadabra",
+          20
+        ],
+        [
+          "charmeleon",
+          25
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ],
+      "stage": "lavender"
+    },
+    "rival_silph_squirtle": {
+      "trainer": "TRAINER_RIVAL_SILPH_SQUIRTLE",
+      "party_id": "sParty_RivalSilphSquirtle",
+      "party": [
+        [
+          "pidgeot",
+          37
+        ],
+        [
+          "growlithe",
+          38
+        ],
+        [
+          "exeggcute",
+          35
+        ],
+        [
+          "alakazam",
+          35
+        ],
+        [
+          "blastoise",
+          40
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        150
+      ],
+      "stage": "silph"
+    },
+    "rival_silph_bulbasaur": {
+      "trainer": "TRAINER_RIVAL_SILPH_BULBASAUR",
+      "party_id": "sParty_RivalSilphBulbasaur",
+      "party": [
+        [
+          "pidgeot",
+          37
+        ],
+        [
+          "gyarados",
+          38
+        ],
+        [
+          "growlithe",
+          35
+        ],
+        [
+          "alakazam",
+          35
+        ],
+        [
+          "venusaur",
+          40
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        150
+      ],
+      "stage": "silph"
+    },
+    "rival_silph_charmander": {
+      "trainer": "TRAINER_RIVAL_SILPH_CHARMANDER",
+      "party_id": "sParty_RivalSilphCharmander",
+      "party": [
+        [
+          "pidgeot",
+          37
+        ],
+        [
+          "exeggcute",
+          38
+        ],
+        [
+          "gyarados",
+          35
+        ],
+        [
+          "alakazam",
+          35
+        ],
+        [
+          "charizard",
+          40
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        150
+      ],
+      "stage": "silph"
+    },
+    "rival_route22_late_squirtle": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_LATE_SQUIRTLE",
+      "party_id": "sParty_RivalRoute22LateSquirtle",
+      "party": [
+        [
+          "pidgeot",
+          47,
+          [
+            "feather_dance",
+            "wing_attack",
+            "gust",
+            "quick_attack"
+          ]
+        ],
+        [
+          "rhyhorn",
+          45,
+          [
+            "take_down",
+            "horn_drill",
+            "rock_blast",
+            "fury_attack"
+          ]
+        ],
+        [
+          "growlithe",
+          45,
+          [
+            "flame_wheel",
+            "take_down",
+            "leer",
+            "agility"
+          ]
+        ],
+        [
+          "exeggcute",
+          45,
+          [
+            "solar_beam",
+            "sleep_powder",
+            "poison_powder",
+            "stun_spore"
+          ]
+        ],
+        [
+          "alakazam",
+          47,
+          [
+            "psychic",
+            "calm_mind",
+            "future_sight",
+            "disable"
+          ]
+        ],
+        [
+          "blastoise",
+          53,
+          [
+            "water_gun",
+            "rain_dance",
+            "bite",
+            "rapid_spin"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        250
+      ],
+      "stage": "route22_late"
+    },
+    "rival_route22_late_bulbasaur": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_LATE_BULBASAUR",
+      "party_id": "sParty_RivalRoute22LateBulbasaur",
+      "party": [
+        [
+          "pidgeot",
+          47,
+          [
+            "feather_dance",
+            "wing_attack",
+            "gust",
+            "quick_attack"
+          ]
+        ],
+        [
+          "rhyhorn",
+          45,
+          [
+            "take_down",
+            "horn_drill",
+            "rock_blast",
+            "fury_attack"
+          ]
+        ],
+        [
+          "gyarados",
+          45,
+          [
+            "hydro_pump",
+            "twister",
+            "leer",
+            "rain_dance"
+          ]
+        ],
+        [
+          "growlithe",
+          45,
+          [
+            "flame_wheel",
+            "take_down",
+            "leer",
+            "agility"
+          ]
+        ],
+        [
+          "alakazam",
+          47,
+          [
+            "psychic",
+            "calm_mind",
+            "future_sight",
+            "disable"
+          ]
+        ],
+        [
+          "venusaur",
+          53,
+          [
+            "razor_leaf",
+            "sweet_scent",
+            "growth",
+            "synthesis"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        250
+      ],
+      "stage": "route22_late"
+    },
+    "rival_route22_late_charmander": {
+      "trainer": "TRAINER_RIVAL_ROUTE22_LATE_CHARMANDER",
+      "party_id": "sParty_RivalRoute22LateCharmander",
+      "party": [
+        [
+          "pidgeot",
+          47,
+          [
+            "feather_dance",
+            "wing_attack",
+            "gust",
+            "quick_attack"
+          ]
+        ],
+        [
+          "rhyhorn",
+          45,
+          [
+            "take_down",
+            "horn_drill",
+            "rock_blast",
+            "fury_attack"
+          ]
+        ],
+        [
+          "exeggcute",
+          45,
+          [
+            "solar_beam",
+            "sleep_powder",
+            "poison_powder",
+            "stun_spore"
+          ]
+        ],
+        [
+          "gyarados",
+          45,
+          [
+            "hydro_pump",
+            "twister",
+            "leer",
+            "rain_dance"
+          ]
+        ],
+        [
+          "alakazam",
+          47,
+          [
+            "psychic",
+            "calm_mind",
+            "future_sight",
+            "disable"
+          ]
+        ],
+        [
+          "charizard",
+          53,
+          [
+            "flamethrower",
+            "wing_attack",
+            "slash",
+            "scary_face"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        150,
+        150,
+        150,
+        150,
+        150,
+        250
+      ],
+      "stage": "route22_late"
+    }
+  }
+}

@@ -1,0 +1,5748 @@
+{
+  "source": "pret/pokefirered",
+  "coverage": {
+    "route1": {
+      "source": "Route1",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route2": {
+      "source": "Route2",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route3": {
+      "source": "Route3",
+      "objects": 8,
+      "trainers": [
+        "road3_lass_robin",
+        "road3_bug_catcher_james",
+        "road3_lass_sally",
+        "road3_bug_catcher_greg",
+        "road3_youngster_calvin",
+        "road3_lass_janice",
+        "road3_bug_catcher_colton",
+        "road3_youngster_ben"
+      ],
+      "fixed": []
+    },
+    "route4": {
+      "source": "Route4",
+      "objects": 1,
+      "trainers": [],
+      "fixed": [
+        "route4_lass_crissy"
+      ]
+    },
+    "route5": {
+      "source": "Route5",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route6": {
+      "source": "Route6",
+      "objects": 6,
+      "trainers": [
+        "road6_bug_catcher_keigo",
+        "road6_camper_ricky",
+        "road6_picnicker_nancy",
+        "road6_bug_catcher_elijah",
+        "road6_picnicker_isabelle",
+        "road6_camper_jeff"
+      ],
+      "fixed": []
+    },
+    "route7": {
+      "source": "Route7",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route8": {
+      "source": "Route8",
+      "objects": 13,
+      "trainers": [
+        "road8_lass_julia",
+        "road8_old_man_1_rich",
+        "road8_scientist_glenn",
+        "road8_lass_paige",
+        "road8_scientist_leslie",
+        "road8_lass_andrea",
+        "road8_lass_megan",
+        "road8_old_man_1_stan",
+        "road8_scientist_aidan",
+        "road8_little_girl_eli",
+        "road8_biker_ricardo",
+        "road8_biker_jaren"
+      ],
+      "fixed": []
+    },
+    "route9": {
+      "source": "Route9",
+      "objects": 9,
+      "trainers": [
+        "road9_picnicker_alicia",
+        "road9_hiker_jeremy",
+        "road9_hiker_alan",
+        "road9_camper_chris",
+        "road9_bug_catcher_brent",
+        "road9_bug_catcher_conner",
+        "road9_hiker_brice",
+        "road9_picnicker_caitlin",
+        "road9_camper_drew"
+      ],
+      "fixed": []
+    },
+    "route10": {
+      "source": "Route10",
+      "objects": 6,
+      "trainers": [
+        "road10_picnicker_carol",
+        "road10_hiker_clark",
+        "road10_poke_maniac_herman",
+        "road10_hiker_trent",
+        "road10_poke_maniac_mark",
+        "road10_picnicker_heidi"
+      ],
+      "fixed": []
+    },
+    "route11": {
+      "source": "Route11",
+      "objects": 10,
+      "trainers": [
+        "road11_youngster_eddie",
+        "road11_old_man_1_hugo",
+        "road11_youngster_dillon",
+        "road11_youngster_dave",
+        "road11_old_man_1_jasper",
+        "road11_old_man_1_darian",
+        "road11_balding_man_braxton",
+        "road11_youngster_yasu",
+        "road11_old_man_1_dirk",
+        "road11_balding_man_bernie"
+      ],
+      "fixed": []
+    },
+    "route12": {
+      "source": "Route12",
+      "objects": 9,
+      "trainers": [
+        "road12_fisher_ned",
+        "road12_fisher_chip",
+        "road12_fisher_hank",
+        "road12_fisher_elliot",
+        "road12_rocker_luca",
+        "road12_camper_justin",
+        "road12_fisher_andrew",
+        "road12_beauty_gia"
+      ],
+      "fixed": []
+    },
+    "route13": {
+      "source": "Route13",
+      "objects": 10,
+      "trainers": [
+        "road13_picnicker_alma",
+        "road13_rocker_sebastian",
+        "road13_picnicker_susie",
+        "road13_beauty_sheila",
+        "road13_beauty_lola",
+        "road13_picnicker_valerie",
+        "road13_picnicker_gwen",
+        "road13_rocker_robert",
+        "road13_rocker_perry",
+        "road13_biker_jared"
+      ],
+      "fixed": []
+    },
+    "route14": {
+      "source": "Route14",
+      "objects": 12,
+      "trainers": [
+        "road14_biker_gerald",
+        "road14_rocker_donald",
+        "road14_rocker_beck",
+        "road14_rocker_marlon",
+        "road14_biker_isaac",
+        "road14_biker_malik",
+        "road14_rocker_mitch",
+        "road14_rocker_carter",
+        "road14_biker_lukas",
+        "road14_rocker_benny",
+        "road14_little_girl_jan"
+      ],
+      "fixed": []
+    },
+    "route15": {
+      "source": "Route15",
+      "objects": 12,
+      "trainers": [
+        "road15_picnicker_yazmin",
+        "road15_rocker_edwin",
+        "road15_rocker_chester",
+        "road15_picnicker_kindra",
+        "road15_beauty_olivia",
+        "road15_biker_alex",
+        "road15_biker_ernest",
+        "road15_picnicker_becky",
+        "road15_beauty_grace",
+        "road15_picnicker_celia",
+        "road15_black_belt_ron"
+      ],
+      "fixed": []
+    },
+    "route16": {
+      "source": "Route16",
+      "objects": 8,
+      "trainers": [
+        "road16_biker_lao",
+        "road16_biker_koji",
+        "road16_biker_luke",
+        "road16_biker_ruben",
+        "road16_biker_hideo",
+        "road16_biker_camron",
+        "road16_beauty_lea"
+      ],
+      "fixed": []
+    },
+    "route17": {
+      "source": "Route17",
+      "objects": 10,
+      "trainers": [
+        "road17_biker_virgil",
+        "road17_biker_isaiah",
+        "road17_biker_raul",
+        "road17_biker_nikolas",
+        "road17_biker_billy",
+        "road17_biker_jamal",
+        "road17_biker_zeek",
+        "road17_biker_corey",
+        "road17_biker_william",
+        "road17_biker_jaxon"
+      ],
+      "fixed": []
+    },
+    "route18": {
+      "source": "Route18",
+      "objects": 3,
+      "trainers": [
+        "road18_rocker_jacob",
+        "road18_rocker_ramiro",
+        "road18_rocker_wilton"
+      ],
+      "fixed": []
+    },
+    "route19": {
+      "source": "Route19",
+      "objects": 12,
+      "trainers": [
+        "road19_swimmer_m_land_reece",
+        "road19_swimmer_m_land_richard",
+        "road19_swimmer_m_water_tony",
+        "road19_swimmer_m_water_matthew",
+        "road19_swimmer_m_water_douglas",
+        "road19_swimmer_m_water_david",
+        "road19_swimmer_m_water_axle",
+        "road19_swimmer_f_water_alice",
+        "road19_swimmer_f_water_connie",
+        "road19_swimmer_f_water_anya",
+        "road19_swimmer_f_water_lia"
+      ],
+      "fixed": []
+    },
+    "route20": {
+      "source": "Route20",
+      "objects": 10,
+      "trainers": [
+        "road20_swimmer_f_water_melissa",
+        "road20_picnicker_missy",
+        "road20_swimmer_f_water_nora",
+        "road20_rocker_roger",
+        "road20_swimmer_m_water_dean",
+        "road20_picnicker_irene",
+        "road20_swimmer_m_water_barry",
+        "road20_swimmer_m_water_darrin",
+        "road20_swimmer_f_water_shirley",
+        "road20_swimmer_f_water_tiffany"
+      ],
+      "fixed": []
+    },
+    "route22": {
+      "source": "Route22",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route23": {
+      "source": "Route23",
+      "objects": 0,
+      "trainers": [],
+      "fixed": []
+    },
+    "route24": {
+      "source": "Route24",
+      "objects": 6,
+      "trainers": [
+        "road24_camper_ethan",
+        "road24_lass_reli",
+        "road24_youngster_timmy",
+        "road24_lass_ali",
+        "road24_bug_catcher_cale",
+        "road24_camper_shane"
+      ],
+      "fixed": []
+    },
+    "route25": {
+      "source": "Route25",
+      "objects": 9,
+      "trainers": [
+        "road25_hiker_franklin",
+        "road25_youngster_joey",
+        "road25_hiker_wayne",
+        "road25_youngster_dan",
+        "road25_picnicker_kelsey",
+        "road25_hiker_nob",
+        "road25_camper_flint",
+        "road25_youngster_chad",
+        "road25_lass_haley"
+      ],
+      "fixed": []
+    },
+    "route21_north": {
+      "source": "Route21_North",
+      "objects": 5,
+      "trainers": [
+        "road21_north_fisher_ronald",
+        "road21_north_fisher_wade",
+        "road21_north_swimmer_m_water_spencer",
+        "road21_north_swimmer_f_water_lil"
+      ],
+      "fixed": []
+    },
+    "route21_south": {
+      "source": "Route21_South",
+      "objects": 5,
+      "trainers": [
+        "road21_south_fisher_claude",
+        "road21_south_fisher_nolan",
+        "road21_south_swimmer_m_water_jack",
+        "road21_south_swimmer_m_water_jerome",
+        "road21_south_swimmer_m_water_roland"
+      ],
+      "fixed": []
+    },
+    "viridian_forest": {
+      "source": "ViridianForest",
+      "objects": 5,
+      "trainers": [
+        "forest_bug_catcher_rick",
+        "forest_bug_catcher_doug",
+        "bug_catcher_sammy",
+        "forest_bug_catcher_anthony",
+        "forest_bug_catcher_charlie"
+      ],
+      "fixed": []
+    },
+    "mt_moon_1f": {
+      "source": "MtMoon_1F",
+      "objects": 7,
+      "trainers": [
+        "mt_moon_1f_lass_iris",
+        "mt_moon_1f_bug_catcher_robby",
+        "mt_moon_1f_scientist_jovan",
+        "mt_moon_1f_lass_miriam",
+        "mt_moon_1f_bug_catcher_kent",
+        "mt_moon_1f_youngster_josh",
+        "mt_moon_1f_hiker_marcos"
+      ],
+      "fixed": []
+    },
+    "mt_moon_b2f": {
+      "source": "MtMoon_B2F",
+      "objects": 4,
+      "trainers": [
+        "mt_moon_b2f_rocket_m_grunt4",
+        "mt_moon_b2f_rocket_m_grunt1",
+        "mt_moon_b2f_rocket_m_grunt3",
+        "mt_moon_b2f_rocket_m_grunt2"
+      ],
+      "fixed": []
+    }
+  },
+  "origins": {
+    "road3_lass_robin": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_LASS_ROBIN",
+      "party_id": "sParty_LassRobin",
+      "party": [
+        [
+          "jigglypuff",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Robin"
+      ]
+    },
+    "road3_bug_catcher_james": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_BUG_CATCHER_JAMES",
+      "party_id": "sParty_BugCatcherJames",
+      "party": [
+        [
+          "caterpie",
+          11
+        ],
+        [
+          "metapod",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_James"
+      ]
+    },
+    "road3_lass_sally": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_LASS_SALLY",
+      "party_id": "sParty_LassSally",
+      "party": [
+        [
+          "rattata",
+          10
+        ],
+        [
+          "nidoran_f",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Sally"
+      ]
+    },
+    "road3_bug_catcher_greg": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_BUG_CATCHER_GREG",
+      "party_id": "sParty_BugCatcherGreg",
+      "party": [
+        [
+          "weedle",
+          9
+        ],
+        [
+          "kakuna",
+          9
+        ],
+        [
+          "caterpie",
+          9
+        ],
+        [
+          "metapod",
+          9
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Greg"
+      ]
+    },
+    "road3_youngster_calvin": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_YOUNGSTER_CALVIN",
+      "party_id": "sParty_YoungsterCalvin",
+      "party": [
+        [
+          "spearow",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Calvin"
+      ]
+    },
+    "road3_lass_janice": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_LASS_JANICE",
+      "party_id": "sParty_LassJanice",
+      "party": [
+        [
+          "pidgey",
+          9
+        ],
+        [
+          "pidgey",
+          9
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Janice"
+      ]
+    },
+    "road3_bug_catcher_colton": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_BUG_CATCHER_COLTON",
+      "party_id": "sParty_BugCatcherColton",
+      "party": [
+        [
+          "caterpie",
+          10
+        ],
+        [
+          "weedle",
+          10
+        ],
+        [
+          "caterpie",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Colton"
+      ]
+    },
+    "road3_youngster_ben": {
+      "area": "route3",
+      "source": "Route3",
+      "trainer": "TRAINER_YOUNGSTER_BEN",
+      "party_id": "sParty_YoungsterBen",
+      "party": [
+        [
+          "rattata",
+          11
+        ],
+        [
+          "ekans",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route3_EventScript_Ben"
+      ]
+    },
+    "route4_lass_crissy": {
+      "area": "route4",
+      "source": "Route4",
+      "trainer": "TRAINER_LASS_CRISSY",
+      "party_id": "sParty_LassCrissy",
+      "party": [
+        [
+          "paras",
+          31
+        ],
+        [
+          "paras",
+          31
+        ],
+        [
+          "parasect",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route4_EventScript_Crissy"
+      ]
+    },
+    "road6_bug_catcher_keigo": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_BUG_CATCHER_KEIGO",
+      "party_id": "sParty_BugCatcherKeigo",
+      "party": [
+        [
+          "weedle",
+          16
+        ],
+        [
+          "caterpie",
+          16
+        ],
+        [
+          "weedle",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Keigo"
+      ]
+    },
+    "road6_camper_ricky": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_CAMPER_RICKY",
+      "party_id": "sParty_CamperRicky",
+      "party": [
+        [
+          "squirtle",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Ricky"
+      ]
+    },
+    "road6_picnicker_nancy": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_PICNICKER_NANCY",
+      "party_id": "sParty_PicnickerNancy",
+      "party": [
+        [
+          "rattata",
+          16
+        ],
+        [
+          "pikachu",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Nancy"
+      ]
+    },
+    "road6_bug_catcher_elijah": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_BUG_CATCHER_ELIJAH",
+      "party_id": "sParty_BugCatcherElijah",
+      "party": [
+        [
+          "butterfree",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Elijah"
+      ]
+    },
+    "road6_picnicker_isabelle": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_PICNICKER_ISABELLE",
+      "party_id": "sParty_PicnickerIsabelle",
+      "party": [
+        [
+          "pidgey",
+          16
+        ],
+        [
+          "pidgey",
+          16
+        ],
+        [
+          "pidgey",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Isabelle"
+      ]
+    },
+    "road6_camper_jeff": {
+      "area": "route6",
+      "source": "Route6",
+      "trainer": "TRAINER_CAMPER_JEFF",
+      "party_id": "sParty_CamperJeff",
+      "party": [
+        [
+          "spearow",
+          16
+        ],
+        [
+          "raticate",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route6_EventScript_Jeff"
+      ]
+    },
+    "road8_lass_julia": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_LASS_JULIA",
+      "party_id": "sParty_LassJulia",
+      "party": [
+        [
+          "clefairy",
+          22
+        ],
+        [
+          "clefairy",
+          22
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Julia"
+      ]
+    },
+    "road8_old_man_1_rich": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_GAMER_RICH",
+      "party_id": "sParty_GamerRich",
+      "party": [
+        [
+          "growlithe",
+          24
+        ],
+        [
+          "vulpix",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Rich"
+      ]
+    },
+    "road8_scientist_glenn": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_SUPER_NERD_GLENN",
+      "party_id": "sParty_SuperNerdGlenn",
+      "party": [
+        [
+          "grimer",
+          22
+        ],
+        [
+          "muk",
+          22
+        ],
+        [
+          "grimer",
+          22
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "scientist",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Glenn"
+      ]
+    },
+    "road8_lass_paige": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_LASS_PAIGE",
+      "party_id": "sParty_LassPaige",
+      "party": [
+        [
+          "nidoran_f",
+          23
+        ],
+        [
+          "nidorina",
+          23
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Paige"
+      ]
+    },
+    "road8_scientist_leslie": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_SUPER_NERD_LESLIE",
+      "party_id": "sParty_SuperNerdLeslie",
+      "party": [
+        [
+          "koffing",
+          26,
+          [
+            "sludge",
+            "smoke_screen",
+            "smog",
+            "selfdestruct"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "scientist",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Leslie"
+      ]
+    },
+    "road8_lass_andrea": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_LASS_ANDREA",
+      "party_id": "sParty_LassAndrea",
+      "party": [
+        [
+          "meowth",
+          24
+        ],
+        [
+          "meowth",
+          24
+        ],
+        [
+          "meowth",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Andrea"
+      ]
+    },
+    "road8_lass_megan": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_LASS_MEGAN",
+      "party_id": "sParty_LassMegan",
+      "party": [
+        [
+          "pidgey",
+          19
+        ],
+        [
+          "rattata",
+          19
+        ],
+        [
+          "nidoran_m",
+          19
+        ],
+        [
+          "meowth",
+          19
+        ],
+        [
+          "pikachu",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Megan"
+      ]
+    },
+    "road8_old_man_1_stan": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_GAMER_STAN",
+      "party_id": "sParty_GamerStan",
+      "party": [
+        [
+          "poliwag",
+          22
+        ],
+        [
+          "poliwag",
+          22
+        ],
+        [
+          "poliwhirl",
+          22
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Stan"
+      ]
+    },
+    "road8_scientist_aidan": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_SUPER_NERD_AIDAN",
+      "party_id": "sParty_SuperNerdAidan",
+      "party": [
+        [
+          "voltorb",
+          20,
+          [
+            "sonic_boom",
+            "screech",
+            "tackle",
+            "charge"
+          ]
+        ],
+        [
+          "koffing",
+          20,
+          [
+            "sludge",
+            "smog",
+            "tackle",
+            "poison_gas"
+          ]
+        ],
+        [
+          "voltorb",
+          20,
+          [
+            "sonic_boom",
+            "screech",
+            "tackle",
+            "charge"
+          ]
+        ],
+        [
+          "magnemite",
+          20,
+          [
+            "sonic_boom",
+            "supersonic",
+            "thunder_shock",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "scientist",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Aidan"
+      ]
+    },
+    "road8_little_girl_eli": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_TWINS_ELI_ANNE",
+      "party_id": "sParty_TwinsEliAnne",
+      "party": [
+        [
+          "clefairy",
+          22
+        ],
+        [
+          "jigglypuff",
+          22
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "little_girl",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Eli",
+        "Route8_EventScript_Anne"
+      ],
+      "partner_sprite": "little_girl"
+    },
+    "road8_biker_ricardo": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_BIKER_RICARDO",
+      "party_id": "sParty_BikerRicardo",
+      "party": [
+        [
+          "koffing",
+          22,
+          [
+            "sludge",
+            "smog",
+            "tackle",
+            "poison_gas"
+          ]
+        ],
+        [
+          "koffing",
+          22,
+          [
+            "sludge",
+            "smog",
+            "tackle",
+            "poison_gas"
+          ]
+        ],
+        [
+          "grimer",
+          23,
+          [
+            "minimize",
+            "sludge",
+            "disable",
+            "pound"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Ricardo"
+      ]
+    },
+    "road8_biker_jaren": {
+      "area": "route8",
+      "source": "Route8",
+      "trainer": "TRAINER_BIKER_JAREN",
+      "party_id": "sParty_BikerJaren",
+      "party": [
+        [
+          "grimer",
+          24
+        ],
+        [
+          "grimer",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route8_EventScript_Jaren"
+      ]
+    },
+    "road9_picnicker_alicia": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_PICNICKER_ALICIA",
+      "party_id": "sParty_PicnickerAlicia",
+      "party": [
+        [
+          "oddish",
+          18
+        ],
+        [
+          "bellsprout",
+          18
+        ],
+        [
+          "oddish",
+          18
+        ],
+        [
+          "bellsprout",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Alicia"
+      ]
+    },
+    "road9_hiker_jeremy": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_HIKER_JEREMY",
+      "party_id": "sParty_HikerJeremy",
+      "party": [
+        [
+          "machop",
+          20
+        ],
+        [
+          "onix",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Jeremy"
+      ]
+    },
+    "road9_hiker_alan": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_HIKER_ALAN",
+      "party_id": "sParty_HikerAlan",
+      "party": [
+        [
+          "geodude",
+          21,
+          [
+            "magnitude",
+            "rock_throw",
+            "mud_sport",
+            "defense_curl"
+          ]
+        ],
+        [
+          "onix",
+          21,
+          [
+            "harden",
+            "rock_throw",
+            "bind",
+            "screech"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Alan"
+      ]
+    },
+    "road9_camper_chris": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_CAMPER_CHRIS",
+      "party_id": "sParty_CamperChris",
+      "party": [
+        [
+          "growlithe",
+          21
+        ],
+        [
+          "charmander",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Chris"
+      ]
+    },
+    "road9_bug_catcher_brent": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_BUG_CATCHER_BRENT",
+      "party_id": "sParty_BugCatcherBrent",
+      "party": [
+        [
+          "beedrill",
+          19
+        ],
+        [
+          "beedrill",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Brent"
+      ]
+    },
+    "road9_bug_catcher_conner": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_BUG_CATCHER_CONNER",
+      "party_id": "sParty_BugCatcherConner",
+      "party": [
+        [
+          "caterpie",
+          20
+        ],
+        [
+          "weedle",
+          20
+        ],
+        [
+          "venonat",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Conner"
+      ]
+    },
+    "road9_hiker_brice": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_HIKER_BRICE",
+      "party_id": "sParty_HikerBrice",
+      "party": [
+        [
+          "geodude",
+          20
+        ],
+        [
+          "machop",
+          20
+        ],
+        [
+          "geodude",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Brice"
+      ]
+    },
+    "road9_picnicker_caitlin": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_PICNICKER_CAITLIN",
+      "party_id": "sParty_PicnickerCaitlin",
+      "party": [
+        [
+          "meowth",
+          23
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Caitlin"
+      ]
+    },
+    "road9_camper_drew": {
+      "area": "route9",
+      "source": "Route9",
+      "trainer": "TRAINER_CAMPER_DREW",
+      "party_id": "sParty_CamperDrew",
+      "party": [
+        [
+          "rattata",
+          19
+        ],
+        [
+          "sandshrew",
+          19
+        ],
+        [
+          "ekans",
+          19
+        ],
+        [
+          "sandshrew",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route9_EventScript_Drew"
+      ]
+    },
+    "road10_picnicker_carol": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_PICNICKER_CAROL",
+      "party_id": "sParty_PicnickerCarol",
+      "party": [
+        [
+          "pidgey",
+          21
+        ],
+        [
+          "pidgeotto",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Carol"
+      ]
+    },
+    "road10_hiker_clark": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_HIKER_CLARK",
+      "party_id": "sParty_HikerClark",
+      "party": [
+        [
+          "geodude",
+          21,
+          [
+            "magnitude",
+            "rock_throw",
+            "mud_sport",
+            "defense_curl"
+          ]
+        ],
+        [
+          "onix",
+          21,
+          [
+            "harden",
+            "rock_throw",
+            "bind",
+            "screech"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Clark"
+      ]
+    },
+    "road10_poke_maniac_herman": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_POKEMANIAC_HERMAN",
+      "party_id": "sParty_PokemaniacHerman",
+      "party": [
+        [
+          "cubone",
+          20
+        ],
+        [
+          "slowpoke",
+          20
+        ]
+      ],
+      "native_ivs": [
+        30,
+        30
+      ],
+      "double_battle": false,
+      "sprite": "poke_maniac",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Herman"
+      ]
+    },
+    "road10_hiker_trent": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_HIKER_TRENT",
+      "party_id": "sParty_HikerTrent",
+      "party": [
+        [
+          "onix",
+          19
+        ],
+        [
+          "graveler",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Trent"
+      ]
+    },
+    "road10_poke_maniac_mark": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_POKEMANIAC_MARK",
+      "party_id": "sParty_PokemaniacMark",
+      "party": [
+        [
+          "rhyhorn",
+          29
+        ],
+        [
+          "lickitung",
+          29
+        ]
+      ],
+      "native_ivs": [
+        30,
+        30
+      ],
+      "double_battle": false,
+      "sprite": "poke_maniac",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Mark"
+      ]
+    },
+    "road10_picnicker_heidi": {
+      "area": "route10",
+      "source": "Route10",
+      "trainer": "TRAINER_PICNICKER_HEIDI",
+      "party_id": "sParty_PicnickerHeidi",
+      "party": [
+        [
+          "pikachu",
+          20
+        ],
+        [
+          "clefairy",
+          20
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route10_EventScript_Heidi"
+      ]
+    },
+    "road11_youngster_eddie": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_YOUNGSTER_EDDIE",
+      "party_id": "sParty_YoungsterEddie",
+      "party": [
+        [
+          "ekans",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Eddie"
+      ]
+    },
+    "road11_old_man_1_hugo": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_GAMER_HUGO",
+      "party_id": "sParty_GamerHugo",
+      "party": [
+        [
+          "poliwag",
+          18
+        ],
+        [
+          "horsea",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Hugo"
+      ]
+    },
+    "road11_youngster_dillon": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_YOUNGSTER_DILLON",
+      "party_id": "sParty_YoungsterDillon",
+      "party": [
+        [
+          "sandshrew",
+          19
+        ],
+        [
+          "zubat",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Dillon"
+      ]
+    },
+    "road11_youngster_dave": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_YOUNGSTER_DAVE",
+      "party_id": "sParty_YoungsterDave",
+      "party": [
+        [
+          "nidoran_m",
+          18
+        ],
+        [
+          "nidorino",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Dave"
+      ]
+    },
+    "road11_old_man_1_jasper": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_GAMER_JASPER",
+      "party_id": "sParty_GamerJasper",
+      "party": [
+        [
+          "bellsprout",
+          18
+        ],
+        [
+          "oddish",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Jasper"
+      ]
+    },
+    "road11_old_man_1_darian": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_GAMER_DARIAN",
+      "party_id": "sParty_GamerDarian",
+      "party": [
+        [
+          "growlithe",
+          18
+        ],
+        [
+          "vulpix",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Darian"
+      ]
+    },
+    "road11_balding_man_braxton": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_ENGINEER_BRAXTON",
+      "party_id": "sParty_EngineerBraxton",
+      "party": [
+        [
+          "magnemite",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "balding_man",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Braxton"
+      ]
+    },
+    "road11_youngster_yasu": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_YOUNGSTER_YASU",
+      "party_id": "sParty_YoungsterYasu",
+      "party": [
+        [
+          "rattata",
+          17
+        ],
+        [
+          "rattata",
+          17
+        ],
+        [
+          "raticate",
+          17
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Yasu"
+      ]
+    },
+    "road11_old_man_1_dirk": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_GAMER_DIRK",
+      "party_id": "sParty_GamerDirk",
+      "party": [
+        [
+          "voltorb",
+          18
+        ],
+        [
+          "magnemite",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "old_man_1",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Dirk"
+      ]
+    },
+    "road11_balding_man_bernie": {
+      "area": "route11",
+      "source": "Route11",
+      "trainer": "TRAINER_ENGINEER_BERNIE",
+      "party_id": "sParty_EngineerBernie",
+      "party": [
+        [
+          "magnemite",
+          18
+        ],
+        [
+          "magnemite",
+          18
+        ],
+        [
+          "magneton",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "balding_man",
+      "terrain": 0,
+      "objects": [
+        "Route11_EventScript_Bernie"
+      ]
+    },
+    "road12_fisher_ned": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_FISHERMAN_NED",
+      "party_id": "sParty_FishermanNed",
+      "party": [
+        [
+          "goldeen",
+          22
+        ],
+        [
+          "poliwag",
+          22
+        ],
+        [
+          "goldeen",
+          22
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Ned"
+      ]
+    },
+    "road12_fisher_chip": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_FISHERMAN_CHIP",
+      "party_id": "sParty_FishermanChip",
+      "party": [
+        [
+          "tentacool",
+          24
+        ],
+        [
+          "goldeen",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Chip"
+      ]
+    },
+    "road12_fisher_hank": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_FISHERMAN_HANK",
+      "party_id": "sParty_FishermanHank",
+      "party": [
+        [
+          "goldeen",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Hank"
+      ]
+    },
+    "road12_fisher_elliot": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_FISHERMAN_ELLIOT",
+      "party_id": "sParty_FishermanElliot",
+      "party": [
+        [
+          "poliwag",
+          21
+        ],
+        [
+          "shellder",
+          21
+        ],
+        [
+          "goldeen",
+          21
+        ],
+        [
+          "horsea",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Elliot"
+      ]
+    },
+    "road12_rocker_luca": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_ROCKER_LUCA",
+      "party_id": "sParty_RockerLuca",
+      "party": [
+        [
+          "voltorb",
+          29
+        ],
+        [
+          "electrode",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Luca"
+      ]
+    },
+    "road12_camper_justin": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_CAMPER_JUSTIN",
+      "party_id": "sParty_CamperJustin",
+      "party": [
+        [
+          "nidoran_m",
+          29
+        ],
+        [
+          "nidorino",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Justin"
+      ]
+    },
+    "road12_fisher_andrew": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_FISHERMAN_ANDREW",
+      "party_id": "sParty_FishermanAndrew",
+      "party": [
+        [
+          "magikarp",
+          24
+        ],
+        [
+          "magikarp",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Andrew"
+      ]
+    },
+    "road12_beauty_gia": {
+      "area": "route12",
+      "source": "Route12",
+      "trainer": "TRAINER_YOUNG_COUPLE_GIA_JES",
+      "party_id": "sParty_YoungCoupleGiaJes",
+      "party": [
+        [
+          "nidoran_m",
+          24
+        ],
+        [
+          "nidoran_f",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route12_EventScript_Gia",
+        "Route12_EventScript_Jes"
+      ],
+      "partner_sprite": "man"
+    },
+    "road13_picnicker_alma": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_PICNICKER_ALMA",
+      "party_id": "sParty_PicnickerAlma",
+      "party": [
+        [
+          "goldeen",
+          28
+        ],
+        [
+          "poliwag",
+          28
+        ],
+        [
+          "horsea",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Alma"
+      ]
+    },
+    "road13_rocker_sebastian": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BIRD_KEEPER_SEBASTIAN",
+      "party_id": "sParty_BirdKeeperSebastian",
+      "party": [
+        [
+          "pidgey",
+          29
+        ],
+        [
+          "pidgeotto",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Sebastian"
+      ]
+    },
+    "road13_picnicker_susie": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_PICNICKER_SUSIE",
+      "party_id": "sParty_PicnickerSusie",
+      "party": [
+        [
+          "pidgey",
+          24
+        ],
+        [
+          "meowth",
+          24
+        ],
+        [
+          "rattata",
+          24
+        ],
+        [
+          "pikachu",
+          24
+        ],
+        [
+          "meowth",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Susie"
+      ]
+    },
+    "road13_beauty_sheila": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BEAUTY_SHEILA",
+      "party_id": "sParty_BeautySheila",
+      "party": [
+        [
+          "clefairy",
+          29
+        ],
+        [
+          "meowth",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Sheila"
+      ]
+    },
+    "road13_beauty_lola": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BEAUTY_LOLA",
+      "party_id": "sParty_BeautyLola",
+      "party": [
+        [
+          "rattata",
+          27
+        ],
+        [
+          "pikachu",
+          27
+        ],
+        [
+          "rattata",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Lola"
+      ]
+    },
+    "road13_picnicker_valerie": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_PICNICKER_VALERIE",
+      "party_id": "sParty_PicnickerValerie",
+      "party": [
+        [
+          "poliwag",
+          30
+        ],
+        [
+          "poliwag",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Valerie"
+      ]
+    },
+    "road13_picnicker_gwen": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_PICNICKER_GWEN",
+      "party_id": "sParty_PicnickerGwen",
+      "party": [
+        [
+          "pidgey",
+          27
+        ],
+        [
+          "meowth",
+          27
+        ],
+        [
+          "pidgey",
+          27
+        ],
+        [
+          "pidgeotto",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Gwen"
+      ]
+    },
+    "road13_rocker_robert": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BIRD_KEEPER_ROBERT",
+      "party_id": "sParty_BirdKeeperRobert",
+      "party": [
+        [
+          "pidgey",
+          26
+        ],
+        [
+          "pidgeotto",
+          26
+        ],
+        [
+          "spearow",
+          26
+        ],
+        [
+          "fearow",
+          26
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Robert"
+      ]
+    },
+    "road13_rocker_perry": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BIRD_KEEPER_PERRY",
+      "party_id": "sParty_BirdKeeperPerry",
+      "party": [
+        [
+          "spearow",
+          25
+        ],
+        [
+          "pidgey",
+          25
+        ],
+        [
+          "pidgey",
+          25
+        ],
+        [
+          "spearow",
+          25
+        ],
+        [
+          "spearow",
+          25
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Perry"
+      ]
+    },
+    "road13_biker_jared": {
+      "area": "route13",
+      "source": "Route13",
+      "trainer": "TRAINER_BIKER_JARED",
+      "party_id": "sParty_BikerJared",
+      "party": [
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "poison_gas"
+          ]
+        ],
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route13_EventScript_Jared"
+      ]
+    },
+    "road14_biker_gerald": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIKER_GERALD",
+      "party_id": "sParty_BikerGerald",
+      "party": [
+        [
+          "koffing",
+          29,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "muk",
+          29,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Gerald"
+      ]
+    },
+    "road14_rocker_donald": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_DONALD",
+      "party_id": "sParty_BirdKeeperDonald",
+      "party": [
+        [
+          "farfetchd",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Donald"
+      ]
+    },
+    "road14_rocker_beck": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_BECK",
+      "party_id": "sParty_BirdKeeperBeck",
+      "party": [
+        [
+          "pidgeotto",
+          29
+        ],
+        [
+          "fearow",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Beck"
+      ]
+    },
+    "road14_rocker_marlon": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_MARLON",
+      "party_id": "sParty_BirdKeeperMarlon",
+      "party": [
+        [
+          "spearow",
+          28
+        ],
+        [
+          "doduo",
+          28
+        ],
+        [
+          "fearow",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Marlon"
+      ]
+    },
+    "road14_biker_isaac": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIKER_ISAAC",
+      "party_id": "sParty_BikerIsaac",
+      "party": [
+        [
+          "grimer",
+          28,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ],
+        [
+          "grimer",
+          28,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ],
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Isaac"
+      ]
+    },
+    "road14_biker_malik": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIKER_MALIK",
+      "party_id": "sParty_BikerMalik",
+      "party": [
+        [
+          "koffing",
+          29,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "grimer",
+          29,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Malik"
+      ]
+    },
+    "road14_rocker_mitch": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_MITCH",
+      "party_id": "sParty_BirdKeeperMitch",
+      "party": [
+        [
+          "pidgey",
+          26
+        ],
+        [
+          "spearow",
+          26
+        ],
+        [
+          "pidgey",
+          26
+        ],
+        [
+          "fearow",
+          26
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Mitch"
+      ]
+    },
+    "road14_rocker_carter": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_CARTER",
+      "party_id": "sParty_BirdKeeperCarter",
+      "party": [
+        [
+          "pidgey",
+          28
+        ],
+        [
+          "doduo",
+          28
+        ],
+        [
+          "pidgeotto",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Carter"
+      ]
+    },
+    "road14_biker_lukas": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIKER_LUKAS",
+      "party_id": "sParty_BikerLukas",
+      "party": [
+        [
+          "koffing",
+          26,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          26,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "grimer",
+          26,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ],
+        [
+          "koffing",
+          26,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Lukas"
+      ]
+    },
+    "road14_rocker_benny": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_BIRD_KEEPER_BENNY",
+      "party_id": "sParty_BirdKeeperBenny",
+      "party": [
+        [
+          "spearow",
+          29
+        ],
+        [
+          "fearow",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Benny"
+      ]
+    },
+    "road14_little_girl_jan": {
+      "area": "route14",
+      "source": "Route14",
+      "trainer": "TRAINER_TWINS_KIRI_JAN",
+      "party_id": "sParty_TwinsKiriJan",
+      "party": [
+        [
+          "charmander",
+          29
+        ],
+        [
+          "squirtle",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "little_girl",
+      "terrain": 0,
+      "objects": [
+        "Route14_EventScript_Jan",
+        "Route14_EventScript_Kiri"
+      ],
+      "partner_sprite": "little_girl"
+    },
+    "road15_picnicker_yazmin": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_PICNICKER_YAZMIN",
+      "party_id": "sParty_PicnickerYazmin",
+      "party": [
+        [
+          "bellsprout",
+          29
+        ],
+        [
+          "oddish",
+          29
+        ],
+        [
+          "tangela",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Yazmin"
+      ]
+    },
+    "road15_rocker_edwin": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BIRD_KEEPER_EDWIN",
+      "party_id": "sParty_BirdKeeperEdwin",
+      "party": [
+        [
+          "pidgeotto",
+          26
+        ],
+        [
+          "farfetchd",
+          26
+        ],
+        [
+          "doduo",
+          26
+        ],
+        [
+          "pidgey",
+          26
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Edwin"
+      ]
+    },
+    "road15_rocker_chester": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BIRD_KEEPER_CHESTER",
+      "party_id": "sParty_BirdKeeperChester",
+      "party": [
+        [
+          "dodrio",
+          28
+        ],
+        [
+          "doduo",
+          28
+        ],
+        [
+          "doduo",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Chester"
+      ]
+    },
+    "road15_picnicker_kindra": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_PICNICKER_KINDRA",
+      "party_id": "sParty_PicnickerKindra",
+      "party": [
+        [
+          "gloom",
+          28
+        ],
+        [
+          "oddish",
+          28
+        ],
+        [
+          "oddish",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Kindra"
+      ]
+    },
+    "road15_beauty_olivia": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BEAUTY_OLIVIA",
+      "party_id": "sParty_BeautyOlivia",
+      "party": [
+        [
+          "bulbasaur",
+          29
+        ],
+        [
+          "ivysaur",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Olivia"
+      ]
+    },
+    "road15_biker_alex": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BIKER_ALEX",
+      "party_id": "sParty_BikerAlex",
+      "party": [
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "grimer",
+          28,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ],
+        [
+          "weezing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Alex"
+      ]
+    },
+    "road15_biker_ernest": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BIKER_ERNEST",
+      "party_id": "sParty_BikerErnest",
+      "party": [
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "weezing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "grimer",
+          25,
+          [
+            "minimize",
+            "sludge",
+            "disable",
+            "pound"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Ernest"
+      ]
+    },
+    "road15_picnicker_becky": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_PICNICKER_BECKY",
+      "party_id": "sParty_PicnickerBecky",
+      "party": [
+        [
+          "pikachu",
+          29
+        ],
+        [
+          "raichu",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Becky"
+      ]
+    },
+    "road15_beauty_grace": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_BEAUTY_GRACE",
+      "party_id": "sParty_BeautyGrace",
+      "party": [
+        [
+          "pidgeotto",
+          29
+        ],
+        [
+          "wigglytuff",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Grace"
+      ]
+    },
+    "road15_picnicker_celia": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_PICNICKER_CELIA",
+      "party_id": "sParty_PicnickerCelia",
+      "party": [
+        [
+          "clefairy",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Celia"
+      ]
+    },
+    "road15_black_belt_ron": {
+      "area": "route15",
+      "source": "Route15",
+      "trainer": "TRAINER_CRUSH_KIN_RON_MYA",
+      "party_id": "sParty_CrushKinRonMya",
+      "party": [
+        [
+          "hitmonchan",
+          29
+        ],
+        [
+          "hitmonlee",
+          29
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50
+      ],
+      "double_battle": true,
+      "sprite": "black_belt",
+      "terrain": 0,
+      "objects": [
+        "Route15_EventScript_Ron",
+        "Route15_EventScript_Mya"
+      ],
+      "partner_sprite": "crush_girl"
+    },
+    "road16_biker_lao": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_BIKER_LAO",
+      "party_id": "sParty_BikerLao",
+      "party": [
+        [
+          "grimer",
+          29,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ],
+        [
+          "koffing",
+          29,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Lao"
+      ]
+    },
+    "road16_biker_koji": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_CUE_BALL_KOJI",
+      "party_id": "sParty_CueBallKoji",
+      "party": [
+        [
+          "machop",
+          28
+        ],
+        [
+          "mankey",
+          28
+        ],
+        [
+          "machop",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Koji"
+      ]
+    },
+    "road16_biker_luke": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_CUE_BALL_LUKE",
+      "party_id": "sParty_CueBallLuke",
+      "party": [
+        [
+          "mankey",
+          29
+        ],
+        [
+          "machop",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Luke"
+      ]
+    },
+    "road16_biker_ruben": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_BIKER_RUBEN",
+      "party_id": "sParty_BikerRuben",
+      "party": [
+        [
+          "weezing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "weezing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Ruben"
+      ]
+    },
+    "road16_biker_hideo": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_BIKER_HIDEO",
+      "party_id": "sParty_BikerHideo",
+      "party": [
+        [
+          "weezing",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Hideo"
+      ]
+    },
+    "road16_biker_camron": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_CUE_BALL_CAMRON",
+      "party_id": "sParty_CueBallCamron",
+      "party": [
+        [
+          "mankey",
+          29
+        ],
+        [
+          "machop",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Camron"
+      ]
+    },
+    "road16_beauty_lea": {
+      "area": "route16",
+      "source": "Route16",
+      "trainer": "TRAINER_YOUNG_COUPLE_LEA_JED",
+      "party_id": "sParty_YoungCoupleLeaJed",
+      "party": [
+        [
+          "rapidash",
+          29
+        ],
+        [
+          "ninetales",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "beauty",
+      "terrain": 0,
+      "objects": [
+        "Route16_EventScript_Lea",
+        "Route16_EventScript_Jed"
+      ],
+      "partner_sprite": "man"
+    },
+    "road17_biker_virgil": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_BIKER_VIRGIL",
+      "party_id": "sParty_BikerVirgil",
+      "party": [
+        [
+          "weezing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "weezing",
+          28,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Virgil"
+      ]
+    },
+    "road17_biker_isaiah": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_CUE_BALL_ISAIAH",
+      "party_id": "sParty_CueBallIsaiah",
+      "party": [
+        [
+          "machop",
+          29
+        ],
+        [
+          "machamp",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Isaiah"
+      ]
+    },
+    "road17_biker_raul": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_CUE_BALL_RAUL",
+      "party_id": "sParty_CueBallRaul",
+      "party": [
+        [
+          "mankey",
+          29
+        ],
+        [
+          "primeape",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Raul"
+      ]
+    },
+    "road17_biker_nikolas": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_BIKER_NIKOLAS",
+      "party_id": "sParty_BikerNikolas",
+      "party": [
+        [
+          "voltorb",
+          29,
+          [
+            "spark",
+            "sonic_boom",
+            "screech",
+            "charge"
+          ]
+        ],
+        [
+          "voltorb",
+          29,
+          [
+            "spark",
+            "sonic_boom",
+            "screech",
+            "charge"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Nikolas"
+      ]
+    },
+    "road17_biker_billy": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_BIKER_BILLY",
+      "party_id": "sParty_BikerBilly",
+      "party": [
+        [
+          "muk",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Billy"
+      ]
+    },
+    "road17_biker_jamal": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_CUE_BALL_JAMAL",
+      "party_id": "sParty_CueBallJamal",
+      "party": [
+        [
+          "mankey",
+          26
+        ],
+        [
+          "mankey",
+          26
+        ],
+        [
+          "machamp",
+          26
+        ],
+        [
+          "machop",
+          26
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Jamal"
+      ]
+    },
+    "road17_biker_zeek": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_CUE_BALL_ZEEK",
+      "party_id": "sParty_CueBallZeek",
+      "party": [
+        [
+          "machoke",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Zeek"
+      ]
+    },
+    "road17_biker_corey": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_CUE_BALL_COREY",
+      "party_id": "sParty_CueBallCorey",
+      "party": [
+        [
+          "primeape",
+          29
+        ],
+        [
+          "machoke",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Corey"
+      ]
+    },
+    "road17_biker_william": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_BIKER_WILLIAM",
+      "party_id": "sParty_BikerWilliam",
+      "party": [
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "weezing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "koffing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "weezing",
+          25,
+          [
+            "smoke_screen",
+            "sludge",
+            "selfdestruct",
+            "tackle"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_William"
+      ]
+    },
+    "road17_biker_jaxon": {
+      "area": "route17",
+      "source": "Route17",
+      "trainer": "TRAINER_BIKER_JAXON",
+      "party_id": "sParty_BikerJaxon",
+      "party": [
+        [
+          "weezing",
+          29,
+          [
+            "sludge",
+            "smoke_screen",
+            "smog",
+            "tackle"
+          ]
+        ],
+        [
+          "muk",
+          29,
+          [
+            "screech",
+            "minimize",
+            "sludge",
+            "disable"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "biker",
+      "terrain": 0,
+      "objects": [
+        "Route17_EventScript_Jaxon"
+      ]
+    },
+    "road18_rocker_jacob": {
+      "area": "route18",
+      "source": "Route18",
+      "trainer": "TRAINER_BIRD_KEEPER_JACOB",
+      "party_id": "sParty_BirdKeeperJacob",
+      "party": [
+        [
+          "spearow",
+          26
+        ],
+        [
+          "spearow",
+          26
+        ],
+        [
+          "fearow",
+          26
+        ],
+        [
+          "spearow",
+          26
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route18_EventScript_Jacob"
+      ]
+    },
+    "road18_rocker_ramiro": {
+      "area": "route18",
+      "source": "Route18",
+      "trainer": "TRAINER_BIRD_KEEPER_RAMIRO",
+      "party_id": "sParty_BirdKeeperRamiro",
+      "party": [
+        [
+          "dodrio",
+          34
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route18_EventScript_Ramiro"
+      ]
+    },
+    "road18_rocker_wilton": {
+      "area": "route18",
+      "source": "Route18",
+      "trainer": "TRAINER_BIRD_KEEPER_WILTON",
+      "party_id": "sParty_BirdKeeperWilton",
+      "party": [
+        [
+          "spearow",
+          29
+        ],
+        [
+          "fearow",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route18_EventScript_Wilton"
+      ]
+    },
+    "road19_swimmer_m_land_reece": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_REECE",
+      "party_id": "sParty_SwimmerMaleReece",
+      "party": [
+        [
+          "goldeen",
+          29
+        ],
+        [
+          "horsea",
+          29
+        ],
+        [
+          "staryu",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_land",
+      "terrain": 0,
+      "objects": [
+        "Route19_EventScript_Reece"
+      ]
+    },
+    "road19_swimmer_m_land_richard": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_RICHARD",
+      "party_id": "sParty_SwimmerMaleRichard",
+      "party": [
+        [
+          "tentacool",
+          30
+        ],
+        [
+          "shellder",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_land",
+      "terrain": 0,
+      "objects": [
+        "Route19_EventScript_Richard"
+      ]
+    },
+    "road19_swimmer_m_water_tony": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_TONY",
+      "party_id": "sParty_SwimmerMaleTony",
+      "party": [
+        [
+          "horsea",
+          30
+        ],
+        [
+          "horsea",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Tony"
+      ]
+    },
+    "road19_swimmer_m_water_matthew": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_MATTHEW",
+      "party_id": "sParty_SwimmerMaleMatthew",
+      "party": [
+        [
+          "poliwag",
+          30
+        ],
+        [
+          "poliwhirl",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Matthew"
+      ]
+    },
+    "road19_swimmer_m_water_douglas": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_DOUGLAS",
+      "party_id": "sParty_SwimmerMaleDouglas",
+      "party": [
+        [
+          "horsea",
+          27
+        ],
+        [
+          "tentacool",
+          27
+        ],
+        [
+          "tentacool",
+          27
+        ],
+        [
+          "goldeen",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Douglas"
+      ]
+    },
+    "road19_swimmer_m_water_david": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_DAVID",
+      "party_id": "sParty_SwimmerMaleDavid",
+      "party": [
+        [
+          "goldeen",
+          29
+        ],
+        [
+          "shellder",
+          29
+        ],
+        [
+          "seaking",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_David"
+      ]
+    },
+    "road19_swimmer_m_water_axle": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_MALE_AXLE",
+      "party_id": "sParty_SwimmerMaleAxle",
+      "party": [
+        [
+          "tentacool",
+          27
+        ],
+        [
+          "tentacool",
+          27
+        ],
+        [
+          "staryu",
+          27
+        ],
+        [
+          "horsea",
+          27
+        ],
+        [
+          "tentacruel",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Axle"
+      ]
+    },
+    "road19_swimmer_f_water_alice": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_FEMALE_ALICE",
+      "party_id": "sParty_SwimmerFemaleAlice",
+      "party": [
+        [
+          "goldeen",
+          30
+        ],
+        [
+          "seaking",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Alice"
+      ]
+    },
+    "road19_swimmer_f_water_connie": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_FEMALE_CONNIE",
+      "party_id": "sParty_SwimmerFemaleConnie",
+      "party": [
+        [
+          "staryu",
+          29
+        ],
+        [
+          "staryu",
+          29
+        ],
+        [
+          "staryu",
+          29
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Connie"
+      ]
+    },
+    "road19_swimmer_f_water_anya": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SWIMMER_FEMALE_ANYA",
+      "party_id": "sParty_SwimmerFemaleAnya",
+      "party": [
+        [
+          "poliwag",
+          27
+        ],
+        [
+          "goldeen",
+          27
+        ],
+        [
+          "seaking",
+          27
+        ],
+        [
+          "goldeen",
+          27
+        ],
+        [
+          "poliwag",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Anya"
+      ]
+    },
+    "road19_swimmer_f_water_lia": {
+      "area": "route19",
+      "source": "Route19",
+      "trainer": "TRAINER_SIS_AND_BRO_LIA_LUC",
+      "party_id": "sParty_SisAndBroLiaLuc",
+      "party": [
+        [
+          "goldeen",
+          30
+        ],
+        [
+          "seaking",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route19_EventScript_Lia",
+        "Route19_EventScript_Luc"
+      ],
+      "partner_sprite": "tuber_m_water"
+    },
+    "road20_swimmer_f_water_melissa": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_FEMALE_MELISSA",
+      "party_id": "sParty_SwimmerFemaleMelissa",
+      "party": [
+        [
+          "poliwag",
+          31
+        ],
+        [
+          "seaking",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Melissa"
+      ]
+    },
+    "road20_picnicker_missy": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_PICNICKER_MISSY",
+      "party_id": "sParty_PicnickerMissy",
+      "party": [
+        [
+          "goldeen",
+          31
+        ],
+        [
+          "seaking",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route20_EventScript_Missy"
+      ]
+    },
+    "road20_swimmer_f_water_nora": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_FEMALE_NORA",
+      "party_id": "sParty_SwimmerFemaleNora",
+      "party": [
+        [
+          "shellder",
+          30
+        ],
+        [
+          "shellder",
+          30
+        ],
+        [
+          "cloyster",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Nora"
+      ]
+    },
+    "road20_rocker_roger": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_BIRD_KEEPER_ROGER",
+      "party_id": "sParty_BirdKeeperRoger",
+      "party": [
+        [
+          "fearow",
+          30
+        ],
+        [
+          "fearow",
+          30
+        ],
+        [
+          "pidgeotto",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocker",
+      "terrain": 0,
+      "objects": [
+        "Route20_EventScript_Roger"
+      ]
+    },
+    "road20_swimmer_m_water_dean": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_MALE_DEAN",
+      "party_id": "sParty_SwimmerMaleDean",
+      "party": [
+        [
+          "staryu",
+          35
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Dean"
+      ]
+    },
+    "road20_picnicker_irene": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_PICNICKER_IRENE",
+      "party_id": "sParty_PicnickerIrene",
+      "party": [
+        [
+          "tentacool",
+          30
+        ],
+        [
+          "horsea",
+          30
+        ],
+        [
+          "seel",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route20_EventScript_Irene"
+      ]
+    },
+    "road20_swimmer_m_water_barry": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_MALE_BARRY",
+      "party_id": "sParty_SwimmerMaleBarry",
+      "party": [
+        [
+          "shellder",
+          31
+        ],
+        [
+          "cloyster",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Barry"
+      ]
+    },
+    "road20_swimmer_m_water_darrin": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_MALE_DARRIN",
+      "party_id": "sParty_SwimmerMaleDarrin",
+      "party": [
+        [
+          "horsea",
+          28
+        ],
+        [
+          "horsea",
+          28
+        ],
+        [
+          "seadra",
+          28
+        ],
+        [
+          "horsea",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Darrin"
+      ]
+    },
+    "road20_swimmer_f_water_shirley": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_FEMALE_SHIRLEY",
+      "party_id": "sParty_SwimmerFemaleShirley",
+      "party": [
+        [
+          "seadra",
+          30
+        ],
+        [
+          "horsea",
+          30
+        ],
+        [
+          "seadra",
+          30
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Shirley"
+      ]
+    },
+    "road20_swimmer_f_water_tiffany": {
+      "area": "route20",
+      "source": "Route20",
+      "trainer": "TRAINER_SWIMMER_FEMALE_TIFFANY",
+      "party_id": "sParty_SwimmerFemaleTiffany",
+      "party": [
+        [
+          "seaking",
+          35
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route20_EventScript_Tiffany"
+      ]
+    },
+    "road24_camper_ethan": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_CAMPER_ETHAN",
+      "party_id": "sParty_CamperEthan",
+      "party": [
+        [
+          "mankey",
+          18
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Ethan"
+      ]
+    },
+    "road24_lass_reli": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_LASS_RELI",
+      "party_id": "sParty_LassReli",
+      "party": [
+        [
+          "nidoran_m",
+          16
+        ],
+        [
+          "nidoran_f",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Reli"
+      ]
+    },
+    "road24_youngster_timmy": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_YOUNGSTER_TIMMY",
+      "party_id": "sParty_YoungsterTimmy",
+      "party": [
+        [
+          "sandshrew",
+          14
+        ],
+        [
+          "ekans",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Timmy"
+      ]
+    },
+    "road24_lass_ali": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_LASS_ALI",
+      "party_id": "sParty_LassAli",
+      "party": [
+        [
+          "pidgey",
+          12
+        ],
+        [
+          "oddish",
+          12
+        ],
+        [
+          "bellsprout",
+          12
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Ali"
+      ]
+    },
+    "road24_bug_catcher_cale": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_BUG_CATCHER_CALE",
+      "party_id": "sParty_BugCatcherCale",
+      "party": [
+        [
+          "caterpie",
+          10
+        ],
+        [
+          "weedle",
+          10
+        ],
+        [
+          "metapod",
+          10
+        ],
+        [
+          "kakuna",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Cale"
+      ]
+    },
+    "road24_camper_shane": {
+      "area": "route24",
+      "source": "Route24",
+      "trainer": "TRAINER_CAMPER_SHANE",
+      "party_id": "sParty_CamperShane",
+      "party": [
+        [
+          "rattata",
+          14
+        ],
+        [
+          "ekans",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route24_EventScript_Shane"
+      ]
+    },
+    "road25_hiker_franklin": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_HIKER_FRANKLIN",
+      "party_id": "sParty_HikerFranklin",
+      "party": [
+        [
+          "machop",
+          15
+        ],
+        [
+          "geodude",
+          15
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Franklin"
+      ]
+    },
+    "road25_youngster_joey": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_YOUNGSTER_JOEY",
+      "party_id": "sParty_YoungsterJoey",
+      "party": [
+        [
+          "rattata",
+          15
+        ],
+        [
+          "spearow",
+          15
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Joey"
+      ]
+    },
+    "road25_hiker_wayne": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_HIKER_WAYNE",
+      "party_id": "sParty_HikerWayne",
+      "party": [
+        [
+          "onix",
+          17
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Wayne"
+      ]
+    },
+    "road25_youngster_dan": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_YOUNGSTER_DAN",
+      "party_id": "sParty_YoungsterDan",
+      "party": [
+        [
+          "slowpoke",
+          17
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Dan"
+      ]
+    },
+    "road25_picnicker_kelsey": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_PICNICKER_KELSEY",
+      "party_id": "sParty_PicnickerKelsey",
+      "party": [
+        [
+          "nidoran_m",
+          15
+        ],
+        [
+          "nidoran_f",
+          15
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "picnicker",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Kelsey"
+      ]
+    },
+    "road25_hiker_nob": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_HIKER_NOB",
+      "party_id": "sParty_HikerNob",
+      "party": [
+        [
+          "geodude",
+          13
+        ],
+        [
+          "geodude",
+          13
+        ],
+        [
+          "machop",
+          13
+        ],
+        [
+          "geodude",
+          13
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Nob"
+      ]
+    },
+    "road25_camper_flint": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_CAMPER_FLINT",
+      "party_id": "sParty_CamperFlint",
+      "party": [
+        [
+          "rattata",
+          14
+        ],
+        [
+          "ekans",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "camper",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Flint"
+      ]
+    },
+    "road25_youngster_chad": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_YOUNGSTER_CHAD",
+      "party_id": "sParty_YoungsterChad",
+      "party": [
+        [
+          "ekans",
+          14
+        ],
+        [
+          "sandshrew",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Chad"
+      ]
+    },
+    "road25_lass_haley": {
+      "area": "route25",
+      "source": "Route25",
+      "trainer": "TRAINER_LASS_HALEY",
+      "party_id": "sParty_LassHaley",
+      "party": [
+        [
+          "oddish",
+          13
+        ],
+        [
+          "pidgey",
+          13
+        ],
+        [
+          "oddish",
+          13
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "Route25_EventScript_Haley"
+      ]
+    },
+    "road21_north_fisher_ronald": {
+      "area": "route21_north",
+      "source": "Route21_North",
+      "trainer": "TRAINER_FISHERMAN_RONALD",
+      "party_id": "sParty_FishermanRonald",
+      "party": [
+        [
+          "seaking",
+          28
+        ],
+        [
+          "goldeen",
+          28
+        ],
+        [
+          "seaking",
+          28
+        ],
+        [
+          "seaking",
+          28
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route21_North_EventScript_Ronald"
+      ]
+    },
+    "road21_north_fisher_wade": {
+      "area": "route21_north",
+      "source": "Route21_North",
+      "trainer": "TRAINER_FISHERMAN_WADE",
+      "party_id": "sParty_FishermanWade",
+      "party": [
+        [
+          "magikarp",
+          27
+        ],
+        [
+          "magikarp",
+          27
+        ],
+        [
+          "magikarp",
+          27
+        ],
+        [
+          "magikarp",
+          27
+        ],
+        [
+          "magikarp",
+          27
+        ],
+        [
+          "magikarp",
+          27
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route21_North_EventScript_Wade"
+      ]
+    },
+    "road21_north_swimmer_m_water_spencer": {
+      "area": "route21_north",
+      "source": "Route21_North",
+      "trainer": "TRAINER_SWIMMER_MALE_SPENCER",
+      "party_id": "sParty_SwimmerMaleSpencer",
+      "party": [
+        [
+          "seadra",
+          33
+        ],
+        [
+          "tentacruel",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route21_North_EventScript_Spencer"
+      ]
+    },
+    "road21_north_swimmer_f_water_lil": {
+      "area": "route21_north",
+      "source": "Route21_North",
+      "trainer": "TRAINER_SIS_AND_BRO_LIL_IAN",
+      "party_id": "sParty_SisAndBroLilIan",
+      "party": [
+        [
+          "seadra",
+          33
+        ],
+        [
+          "starmie",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": true,
+      "sprite": "swimmer_f_water",
+      "terrain": 1,
+      "objects": [
+        "Route21_North_EventScript_Lil",
+        "Route21_North_EventScript_Ian"
+      ],
+      "partner_sprite": "tuber_m_water"
+    },
+    "road21_south_fisher_claude": {
+      "area": "route21_south",
+      "source": "Route21_South",
+      "trainer": "TRAINER_FISHERMAN_CLAUDE",
+      "party_id": "sParty_FishermanClaude",
+      "party": [
+        [
+          "shellder",
+          31
+        ],
+        [
+          "cloyster",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route21_South_EventScript_Claude"
+      ]
+    },
+    "road21_south_fisher_nolan": {
+      "area": "route21_south",
+      "source": "Route21_South",
+      "trainer": "TRAINER_FISHERMAN_NOLAN",
+      "party_id": "sParty_FishermanNolan",
+      "party": [
+        [
+          "seaking",
+          33
+        ],
+        [
+          "goldeen",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "fisher",
+      "terrain": 0,
+      "objects": [
+        "Route21_South_EventScript_Nolan"
+      ]
+    },
+    "road21_south_swimmer_m_water_jack": {
+      "area": "route21_south",
+      "source": "Route21_South",
+      "trainer": "TRAINER_SWIMMER_MALE_JACK",
+      "party_id": "sParty_SwimmerMaleJack",
+      "party": [
+        [
+          "starmie",
+          37
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route21_South_EventScript_Jack"
+      ]
+    },
+    "road21_south_swimmer_m_water_jerome": {
+      "area": "route21_south",
+      "source": "Route21_South",
+      "trainer": "TRAINER_SWIMMER_MALE_JEROME",
+      "party_id": "sParty_SwimmerMaleJerome",
+      "party": [
+        [
+          "staryu",
+          33
+        ],
+        [
+          "wartortle",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route21_South_EventScript_Jerome"
+      ]
+    },
+    "road21_south_swimmer_m_water_roland": {
+      "area": "route21_south",
+      "source": "Route21_South",
+      "trainer": "TRAINER_SWIMMER_MALE_ROLAND",
+      "party_id": "sParty_SwimmerMaleRoland",
+      "party": [
+        [
+          "poliwhirl",
+          32
+        ],
+        [
+          "tentacool",
+          32
+        ],
+        [
+          "seadra",
+          32
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "swimmer_m_water",
+      "terrain": 1,
+      "objects": [
+        "Route21_South_EventScript_Roland"
+      ]
+    },
+    "forest_bug_catcher_rick": {
+      "area": "viridian_forest",
+      "source": "ViridianForest",
+      "trainer": "TRAINER_BUG_CATCHER_RICK",
+      "party_id": "sParty_BugCatcherRick",
+      "party": [
+        [
+          "weedle",
+          6
+        ],
+        [
+          "caterpie",
+          6
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "ViridianForest_EventScript_Rick"
+      ]
+    },
+    "forest_bug_catcher_doug": {
+      "area": "viridian_forest",
+      "source": "ViridianForest",
+      "trainer": "TRAINER_BUG_CATCHER_DOUG",
+      "party_id": "sParty_BugCatcherDoug",
+      "party": [
+        [
+          "weedle",
+          7
+        ],
+        [
+          "kakuna",
+          7
+        ],
+        [
+          "weedle",
+          7
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "ViridianForest_EventScript_Doug"
+      ]
+    },
+    "bug_catcher_sammy": {
+      "area": "viridian_forest",
+      "source": "ViridianForest",
+      "trainer": "TRAINER_BUG_CATCHER_SAMMY",
+      "party_id": "sParty_BugCatcherSammy",
+      "party": [
+        [
+          "weedle",
+          9
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "ViridianForest_EventScript_Sammy"
+      ]
+    },
+    "forest_bug_catcher_anthony": {
+      "area": "viridian_forest",
+      "source": "ViridianForest",
+      "trainer": "TRAINER_BUG_CATCHER_ANTHONY",
+      "party_id": "sParty_BugCatcherAnthony",
+      "party": [
+        [
+          "caterpie",
+          7
+        ],
+        [
+          "caterpie",
+          8
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "ViridianForest_EventScript_Anthony"
+      ]
+    },
+    "forest_bug_catcher_charlie": {
+      "area": "viridian_forest",
+      "source": "ViridianForest",
+      "trainer": "TRAINER_BUG_CATCHER_CHARLIE",
+      "party_id": "sParty_BugCatcherCharlie",
+      "party": [
+        [
+          "metapod",
+          7
+        ],
+        [
+          "caterpie",
+          7
+        ],
+        [
+          "metapod",
+          7
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "ViridianForest_EventScript_Charlie"
+      ]
+    },
+    "mt_moon_1f_lass_iris": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_LASS_IRIS",
+      "party_id": "sParty_LassIris",
+      "party": [
+        [
+          "clefairy",
+          14
+        ]
+      ],
+      "native_ivs": [
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Iris"
+      ]
+    },
+    "mt_moon_1f_bug_catcher_robby": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_BUG_CATCHER_ROBBY",
+      "party_id": "sParty_BugCatcherRobby",
+      "party": [
+        [
+          "caterpie",
+          10
+        ],
+        [
+          "metapod",
+          10
+        ],
+        [
+          "caterpie",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Robby"
+      ]
+    },
+    "mt_moon_1f_scientist_jovan": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_SUPER_NERD_JOVAN",
+      "party_id": "sParty_SuperNerdJovan",
+      "party": [
+        [
+          "magnemite",
+          11
+        ],
+        [
+          "voltorb",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "scientist",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Jovan"
+      ]
+    },
+    "mt_moon_1f_lass_miriam": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_LASS_MIRIAM",
+      "party_id": "sParty_LassMiriam",
+      "party": [
+        [
+          "oddish",
+          11
+        ],
+        [
+          "bellsprout",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "lass",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Miriam"
+      ]
+    },
+    "mt_moon_1f_bug_catcher_kent": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_BUG_CATCHER_KENT",
+      "party_id": "sParty_BugCatcherKent",
+      "party": [
+        [
+          "weedle",
+          11
+        ],
+        [
+          "kakuna",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "bug_catcher",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Kent"
+      ]
+    },
+    "mt_moon_1f_youngster_josh": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_YOUNGSTER_JOSH",
+      "party_id": "sParty_YoungsterJosh",
+      "party": [
+        [
+          "rattata",
+          10
+        ],
+        [
+          "rattata",
+          10
+        ],
+        [
+          "zubat",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "youngster",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Josh"
+      ]
+    },
+    "mt_moon_1f_hiker_marcos": {
+      "area": "mt_moon_1f",
+      "source": "MtMoon_1F",
+      "trainer": "TRAINER_HIKER_MARCOS",
+      "party_id": "sParty_HikerMarcos",
+      "party": [
+        [
+          "geodude",
+          10
+        ],
+        [
+          "geodude",
+          10
+        ],
+        [
+          "onix",
+          10
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "hiker",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_1F_EventScript_Marcos"
+      ]
+    },
+    "mt_moon_b2f_rocket_m_grunt4": {
+      "area": "mt_moon_b2f",
+      "source": "MtMoon_B2F",
+      "trainer": "TRAINER_TEAM_ROCKET_GRUNT_4",
+      "party_id": "sParty_TeamRocketGrunt4",
+      "party": [
+        [
+          "rattata",
+          13
+        ],
+        [
+          "sandshrew",
+          13
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocket_m",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_B2F_EventScript_Grunt4"
+      ]
+    },
+    "mt_moon_b2f_rocket_m_grunt1": {
+      "area": "mt_moon_b2f",
+      "source": "MtMoon_B2F",
+      "trainer": "TRAINER_TEAM_ROCKET_GRUNT",
+      "party_id": "sParty_TeamRocketGrunt",
+      "party": [
+        [
+          "rattata",
+          13
+        ],
+        [
+          "zubat",
+          13
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocket_m",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_B2F_EventScript_Grunt1"
+      ]
+    },
+    "mt_moon_b2f_rocket_m_grunt3": {
+      "area": "mt_moon_b2f",
+      "source": "MtMoon_B2F",
+      "trainer": "TRAINER_TEAM_ROCKET_GRUNT_3",
+      "party_id": "sParty_TeamRocketGrunt3",
+      "party": [
+        [
+          "zubat",
+          11
+        ],
+        [
+          "ekans",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocket_m",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_B2F_EventScript_Grunt3"
+      ]
+    },
+    "mt_moon_b2f_rocket_m_grunt2": {
+      "area": "mt_moon_b2f",
+      "source": "MtMoon_B2F",
+      "trainer": "TRAINER_TEAM_ROCKET_GRUNT_2",
+      "party_id": "sParty_TeamRocketGrunt2",
+      "party": [
+        [
+          "sandshrew",
+          11
+        ],
+        [
+          "rattata",
+          11
+        ],
+        [
+          "zubat",
+          11
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ],
+      "double_battle": false,
+      "sprite": "rocket_m",
+      "terrain": 0,
+      "objects": [
+        "MtMoon_B2F_EventScript_Grunt2"
+      ]
+    }
+  },
+  "npcs": {
+    "balding_man": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "beauty": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_blue"
+    },
+    "biker": {
+      "frame": [
+        32,
+        32
+      ],
+      "palette": "npc_pink"
+    },
+    "black_belt": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "bug_catcher": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_green"
+    },
+    "camper": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_green"
+    },
+    "crush_girl": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "fisher": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "hiker": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "lass": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_blue"
+    },
+    "little_girl": {
+      "frame": [
+        16,
+        16
+      ],
+      "palette": "npc_pink"
+    },
+    "man": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "old_man_1": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_pink"
+    },
+    "picnicker": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_green"
+    },
+    "poke_maniac": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_pink"
+    },
+    "rocker": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_blue"
+    },
+    "rocket_m": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "scientist": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "swimmer_f_water": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_green"
+    },
+    "swimmer_m_land": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "swimmer_m_water": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_white"
+    },
+    "tuber_m_water": {
+      "frame": [
+        16,
+        16
+      ],
+      "palette": "npc_blue"
+    },
+    "youngster": {
+      "frame": [
+        16,
+        32
+      ],
+      "palette": "npc_blue"
+    }
+  }
+}

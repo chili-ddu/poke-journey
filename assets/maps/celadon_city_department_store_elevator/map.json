@@ -1,0 +1,65 @@
+{
+  "width": 5,
+  "height": 7,
+  "tile": 16,
+  "pad": 10,
+  "solid": [
+    "11111",
+    "11111",
+    "11111",
+    "10001",
+    "10001",
+    "10001",
+    "11011"
+  ],
+  "grass": [
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000"
+  ],
+  "ledge": [
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000",
+    "00000"
+  ],
+  "start": [
+    40,
+    56
+  ],
+  "areas": [
+    {
+      "id": "celadon_city_department_store_elevator",
+      "x": 0,
+      "y": 0,
+      "w": 5,
+      "h": 7
+    }
+  ],
+  "warps": [
+    {
+      "x": 2,
+      "y": 5,
+      "map": "celadon_city_department_store_elevator",
+      "index": 0,
+      "to": "dynamic",
+      "to_warp": 0
+    },
+    {
+      "x": 2,
+      "y": 6,
+      "map": "celadon_city_department_store_elevator",
+      "index": 1,
+      "to": "dynamic",
+      "to_warp": 0
+    }
+  ],
+  "source": "pret/pokefirered CeladonCity_DepartmentStore_Elevator(5×7 @0,0)"
+}

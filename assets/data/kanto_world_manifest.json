@@ -1,0 +1,552 @@
+{
+  "parts": [
+    {
+      "map": "kanto_field",
+      "x": 48,
+      "y": 40,
+      "folders": [
+        "PalletTown",
+        "ViridianCity",
+        "PewterCity",
+        "CeruleanCity",
+        "Route1",
+        "Route2",
+        "Route3",
+        "Route4",
+        "Route5"
+      ]
+    },
+    {
+      "map": "kanto_east",
+      "x": 264,
+      "y": 160,
+      "folders": [
+        "VermilionCity",
+        "Route6"
+      ]
+    },
+    {
+      "map": "cerulean_north",
+      "x": 276,
+      "y": 0,
+      "folders": [
+        "Route24",
+        "Route25"
+      ]
+    },
+    {
+      "map": "kanto_rock_pass",
+      "x": 312,
+      "y": 50,
+      "folders": [
+        "LavenderTown",
+        "Route9",
+        "Route10"
+      ]
+    },
+    {
+      "map": "route11",
+      "x": 312,
+      "y": 210,
+      "folders": [
+        "Route11"
+      ]
+    },
+    {
+      "map": "world_celadon_city",
+      "x": 180,
+      "y": 120,
+      "folders": [
+        "CeladonCity"
+      ]
+    },
+    {
+      "map": "world_fuchsia_city",
+      "x": 192,
+      "y": 300,
+      "folders": [
+        "FuchsiaCity"
+      ]
+    },
+    {
+      "map": "world_cinnabar_island",
+      "x": 60,
+      "y": 380,
+      "folders": [
+        "CinnabarIsland"
+      ]
+    },
+    {
+      "map": "world_indigo_plateau_exterior",
+      "x": 0,
+      "y": 10,
+      "folders": [
+        "IndigoPlateau_Exterior"
+      ]
+    },
+    {
+      "map": "world_route7",
+      "x": 240,
+      "y": 130,
+      "folders": [
+        "Route7"
+      ]
+    },
+    {
+      "map": "world_route8",
+      "x": 312,
+      "y": 130,
+      "folders": [
+        "Route8"
+      ]
+    },
+    {
+      "map": "world_route12",
+      "x": 384,
+      "y": 150,
+      "folders": [
+        "Route12"
+      ]
+    },
+    {
+      "map": "world_route13",
+      "x": 336,
+      "y": 270,
+      "folders": [
+        "Route13"
+      ]
+    },
+    {
+      "map": "world_route14",
+      "x": 312,
+      "y": 270,
+      "folders": [
+        "Route14"
+      ]
+    },
+    {
+      "map": "world_route15",
+      "x": 240,
+      "y": 310,
+      "folders": [
+        "Route15"
+      ]
+    },
+    {
+      "map": "world_route16",
+      "x": 132,
+      "y": 130,
+      "folders": [
+        "Route16"
+      ]
+    },
+    {
+      "map": "world_route17",
+      "x": 132,
+      "y": 150,
+      "folders": [
+        "Route17"
+      ]
+    },
+    {
+      "map": "world_route18",
+      "x": 132,
+      "y": 310,
+      "folders": [
+        "Route18"
+      ]
+    },
+    {
+      "map": "world_route19",
+      "x": 204,
+      "y": 340,
+      "folders": [
+        "Route19"
+      ]
+    },
+    {
+      "map": "world_route20",
+      "x": 84,
+      "y": 380,
+      "folders": [
+        "Route20"
+      ]
+    },
+    {
+      "map": "world_route21_north",
+      "x": 60,
+      "y": 280,
+      "folders": [
+        "Route21_North"
+      ]
+    },
+    {
+      "map": "world_route21_south",
+      "x": 60,
+      "y": 330,
+      "folders": [
+        "Route21_South"
+      ]
+    },
+    {
+      "map": "world_route22",
+      "x": 0,
+      "y": 190,
+      "folders": [
+        "Route22"
+      ]
+    },
+    {
+      "map": "world_route23",
+      "x": 0,
+      "y": 30,
+      "folders": [
+        "Route23"
+      ]
+    },
+    {
+      "map": "world_saffron_city_connection",
+      "x": 264,
+      "y": 120,
+      "folders": [
+        "SaffronCity_Connection"
+      ]
+    }
+  ],
+  "legacy_offsets": {
+    "kanto_field": [
+      48,
+      40
+    ],
+    "kanto_east": [
+      264,
+      160
+    ],
+    "cerulean_north": [
+      276,
+      0
+    ],
+    "kanto_rock_pass": [
+      312,
+      50
+    ],
+    "route11": [
+      312,
+      210
+    ],
+    "kanto_south": [
+      48,
+      40
+    ],
+    "kanto_north": [
+      48,
+      40
+    ]
+  },
+  "positions": {
+    "PalletTown": [
+      60,
+      260
+    ],
+    "Route1": [
+      60,
+      220
+    ],
+    "Route21_North": [
+      60,
+      280
+    ],
+    "ViridianCity": [
+      48,
+      180
+    ],
+    "Route21_South": [
+      60,
+      330
+    ],
+    "Route2": [
+      60,
+      100
+    ],
+    "Route22": [
+      0,
+      190
+    ],
+    "CinnabarIsland": [
+      60,
+      380
+    ],
+    "PewterCity": [
+      48,
+      60
+    ],
+    "Route23": [
+      0,
+      30
+    ],
+    "Route20": [
+      84,
+      380
+    ],
+    "Route3": [
+      96,
+      70
+    ],
+    "IndigoPlateau_Exterior": [
+      0,
+      10
+    ],
+    "Route19": [
+      204,
+      340
+    ],
+    "Route4": [
+      156,
+      50
+    ],
+    "FuchsiaCity": [
+      192,
+      300
+    ],
+    "CeruleanCity": [
+      264,
+      40
+    ],
+    "Route18": [
+      132,
+      310
+    ],
+    "Route15": [
+      240,
+      310
+    ],
+    "Route24": [
+      276,
+      0
+    ],
+    "Route5": [
+      264,
+      80
+    ],
+    "Route9": [
+      312,
+      50
+    ],
+    "Route17": [
+      132,
+      150
+    ],
+    "Route14": [
+      312,
+      270
+    ],
+    "Route25": [
+      300,
+      0
+    ],
+    "SaffronCity_Connection": [
+      264,
+      120
+    ],
+    "Route10": [
+      384,
+      50
+    ],
+    "Route16": [
+      132,
+      130
+    ],
+    "Route13": [
+      336,
+      270
+    ],
+    "Route6": [
+      276,
+      160
+    ],
+    "Route7": [
+      240,
+      130
+    ],
+    "Route8": [
+      312,
+      130
+    ],
+    "LavenderTown": [
+      384,
+      130
+    ],
+    "CeladonCity": [
+      180,
+      120
+    ],
+    "Route12": [
+      384,
+      150
+    ],
+    "VermilionCity": [
+      264,
+      200
+    ],
+    "Route11": [
+      312,
+      210
+    ]
+  },
+  "width": 408,
+  "height": 400,
+  "scope": [
+    "PalletTown",
+    "ViridianCity",
+    "PewterCity",
+    "CeruleanCity",
+    "LavenderTown",
+    "VermilionCity",
+    "CeladonCity",
+    "FuchsiaCity",
+    "CinnabarIsland",
+    "IndigoPlateau_Exterior",
+    "Route1",
+    "Route2",
+    "Route3",
+    "Route4",
+    "Route5",
+    "Route6",
+    "Route7",
+    "Route8",
+    "Route9",
+    "Route10",
+    "Route11",
+    "Route12",
+    "Route13",
+    "Route14",
+    "Route15",
+    "Route16",
+    "Route17",
+    "Route18",
+    "Route19",
+    "Route20",
+    "Route21_North",
+    "Route21_South",
+    "Route22",
+    "Route23",
+    "Route24",
+    "Route25"
+  ],
+  "new_interiors": [
+    "ViridianCity_House",
+    "ViridianCity_Gym",
+    "ViridianCity_School",
+    "LavenderTown_PokemonCenter_1F",
+    "LavenderTown_VolunteerPokemonHouse",
+    "LavenderTown_House1",
+    "LavenderTown_House2",
+    "LavenderTown_Mart",
+    "CeladonCity_DepartmentStore_1F",
+    "CeladonCity_DepartmentStore_2F",
+    "CeladonCity_DepartmentStore_3F",
+    "CeladonCity_DepartmentStore_4F",
+    "CeladonCity_DepartmentStore_5F",
+    "CeladonCity_DepartmentStore_Roof",
+    "CeladonCity_DepartmentStore_Elevator",
+    "CeladonCity_Condominiums_1F",
+    "CeladonCity_Condominiums_2F",
+    "CeladonCity_Condominiums_3F",
+    "CeladonCity_Condominiums_Roof",
+    "CeladonCity_Condominiums_RoofRoom",
+    "CeladonCity_PokemonCenter_1F",
+    "CeladonCity_GameCorner",
+    "CeladonCity_GameCorner_PrizeRoom",
+    "CeladonCity_Gym",
+    "CeladonCity_Restaurant",
+    "CeladonCity_House1",
+    "CeladonCity_Hotel",
+    "FuchsiaCity_SafariZone_Entrance",
+    "FuchsiaCity_Mart",
+    "FuchsiaCity_SafariZone_Office",
+    "FuchsiaCity_Gym",
+    "FuchsiaCity_House1",
+    "FuchsiaCity_PokemonCenter_1F",
+    "FuchsiaCity_WardensHouse",
+    "FuchsiaCity_House2",
+    "FuchsiaCity_House3",
+    "CinnabarIsland_Gym",
+    "CinnabarIsland_PokemonLab_Entrance",
+    "CinnabarIsland_PokemonLab_Lounge",
+    "CinnabarIsland_PokemonLab_ResearchRoom",
+    "CinnabarIsland_PokemonLab_ExperimentRoom",
+    "CinnabarIsland_PokemonCenter_1F",
+    "CinnabarIsland_Mart",
+    "IndigoPlateau_PokemonCenter_1F",
+    "SaffronCity_CopycatsHouse_1F",
+    "SaffronCity_CopycatsHouse_2F",
+    "SaffronCity_Dojo",
+    "SaffronCity_Gym",
+    "SaffronCity_House",
+    "SaffronCity_MrPsychicsHouse",
+    "SaffronCity_PokemonTrainerFanClub",
+    "Route7_EastEntrance",
+    "Route8_WestEntrance",
+    "Route10_PokemonCenter_1F",
+    "Route12_NorthEntrance_1F",
+    "Route12_NorthEntrance_2F",
+    "Route12_FishingHouse",
+    "Route15_WestEntrance_1F",
+    "Route15_WestEntrance_2F",
+    "Route16_House",
+    "Route16_NorthEntrance_1F",
+    "Route16_NorthEntrance_2F",
+    "Route18_EastEntrance_1F",
+    "Route18_EastEntrance_2F",
+    "Route22_NorthEntrance",
+    "UndergroundPath_WestEntrance",
+    "UndergroundPath_EastWestTunnel",
+    "UndergroundPath_EastEntrance",
+    "VictoryRoad_1F",
+    "VictoryRoad_2F",
+    "VictoryRoad_3F",
+    "RocketHideout_B1F",
+    "RocketHideout_B2F",
+    "RocketHideout_B3F",
+    "RocketHideout_B4F",
+    "RocketHideout_Elevator",
+    "SilphCo_1F",
+    "SilphCo_2F",
+    "SilphCo_3F",
+    "SilphCo_4F",
+    "SilphCo_5F",
+    "SilphCo_6F",
+    "SilphCo_7F",
+    "SilphCo_8F",
+    "SilphCo_9F",
+    "SilphCo_10F",
+    "SilphCo_11F",
+    "SilphCo_Elevator",
+    "PokemonMansion_1F",
+    "PokemonMansion_2F",
+    "PokemonMansion_3F",
+    "PokemonMansion_B1F",
+    "CeruleanCave_1F",
+    "CeruleanCave_2F",
+    "CeruleanCave_B1F",
+    "PokemonLeague_LoreleisRoom",
+    "PokemonLeague_BrunosRoom",
+    "PokemonLeague_AgathasRoom",
+    "PokemonLeague_LancesRoom",
+    "PokemonLeague_ChampionsRoom",
+    "PokemonLeague_HallOfFame",
+    "SeafoamIslands_1F",
+    "SeafoamIslands_B1F",
+    "SeafoamIslands_B2F",
+    "SeafoamIslands_B3F",
+    "SeafoamIslands_B4F",
+    "PokemonTower_1F",
+    "PokemonTower_2F",
+    "PokemonTower_3F",
+    "PokemonTower_4F",
+    "PokemonTower_5F",
+    "PokemonTower_6F",
+    "PokemonTower_7F",
+    "PowerPlant"
+  ]
+}

@@ -1,0 +1,27 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>파이리 · 프레임 2배 / 3배 / 4배 비교</title>
+<style>body{background:#222a28;color:#f1e8d5;font:14px system-ui;max-width:800px;margin:24px auto;padding:0 10px}h1{font-size:21px}p{line-height:1.65}select,button{font:inherit;padding:5px;margin:3px}canvas{image-rendering:pixelated;border:1px solid #677366}a{color:#dec28f}</style>
+<h1>파이리 · 프레임 수를 더 늘리면?</h1>
+<p>원본 해상도·색상·전체 동작 시간 유지. <strong>게임 미적용</strong>.<br>왼쪽 기준본 / 오른쪽 추가본. 프레임 수와 고유한 포즈 수는 구분해서 보세요.</p>
+<select id="action" aria-label="동작"></select><select id="direction" aria-label="방향"></select><br>
+<select id="baseline" aria-label="왼쪽 기준"><option value="double">왼쪽: 기존 2배 프레임</option><option value="original">왼쪽: 원본 프레임</option></select>
+<select id="density" aria-label="오른쪽 프레임"><option value="quad">오른쪽: 4배 프레임</option><option value="triple">오른쪽: 3배 프레임</option></select><br>
+<button id="play">일시 정지</button><button id="restart">처음부터</button><button id="prev">이전 칸</button><button id="next">다음 칸</button><br>
+<select id="speed" aria-label="재생 속도"><option value="1">원래 속도</option><option value="0.5">0.5배속</option><option value="0.25">0.25배속</option></select>
+<select id="scale" aria-label="표시 크기"><option value="2">2배 확대 보기</option><option value="1">원본 1배 보기</option></select><button id="background">밝은 배경</button><br>
+<canvas id="preview" width="384" height="216"></canvas><p id="caption"></p>
+<p>4배 버전은 기존 2배 샘플의 모든 프레임을 보존합니다. 정지 자세와 끝 자세의 유지 칸은 그대로입니다. 새로 보간한 칸에도 같은 이미지가 남을 수 있습니다.</p>
+<p>1/240초 칸은 60Hz 화면에서 원래 속도로 모두 볼 수 없습니다. 0.25배속·한 칸 이동으로 확인하세요. GIF에는 10ms 시간 단위 제약도 있습니다.</p>
+<p><a id="gif" href="#">동작 GIF (2배 기준)</a> · <a href="README.md">동작별 고유 이미지 수</a> · <a href="QA-NOTES.md">검수 실패·경고</a></p>
+<script>
+const data=__DATA__,action=document.querySelector('#action'),direction=document.querySelector('#direction'),canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=false;
+for(const [name,m]of Object.entries(data.actions))action.add(new Option(`${m.label} · ${name}`,name));action.value='Hop';
+const images={};for(const [name,m]of Object.entries(data.actions)){images[name]={};for(const [v,url]of Object.entries(m.sheets)){const im=new Image();im.src=url;images[name][v]=im;}}
+let tick=0,last=performance.now(),playing=true,light=false;
+function meta(){return data.actions[action.value]}
+function indexAt(t,ts,loop){const total=ts.reduce((a,b)=>a+b,0);t=loop?((t%total)+total)%total:Math.max(0,Math.min(t,total-1e-8));for(let k=0;k<ts.length;k++){if(t<ts[k])return k;t-=ts[k]}return ts.length-1}
+function rowOptions(){let old=direction.value;direction.replaceChildren();for(let r=0;r<meta().rows;r++)direction.add(new Option(meta().rows===1?'원본 단일 방향':data.directions[r],r));direction.value=meta().rows===1?'0':old||'2';if(!direction.value)direction.value='2';tick=0}rowOptions();
+function draw(now,schedule=true){if(playing)tick+=(now-last)*.72*Number(document.querySelector('#speed').value);last=now;const m=meta(),period=m.duration_ticks+(m.loop?0:360),t=playing?tick%period:tick,scale=Number(document.querySelector('#scale').value),[w,h]=m.size;ctx.fillStyle=light?'#d7d8c4':'#222a28';ctx.fillRect(0,0,384,216);ctx.fillStyle=light?'#30382e':'#f1e8d5';ctx.font='12px system-ui';const baseline=document.querySelector('#baseline').value,density=document.querySelector('#density').value;for(const [side,v]of [baseline,density].entries()){let k=indexAt(t,m.ticks[v],m.loop),im=images[action.value][v];const label={original:'원본',double:'2배 프레임',triple:'3배 프레임',quad:'4배 프레임'}[v];ctx.fillText(`${label} · ${m.ticks[v].length}칸`,side*192+8,16);ctx.fillText(`${k+1}/${m.ticks[v].length} · 표시 ${scale}배`,side*192+8,31);if(im.complete&&im.naturalWidth)ctx.drawImage(im,k*w,+direction.value*h,w,h,side*192+96-w*scale/2,120-h*scale/2,w*scale,h*scale)}document.querySelector('#caption').textContent=`${m.label} · ${w}×${h}px 그대로 · ${(m.duration_ticks/720).toFixed(3)}초 · ${m.loop?'반복':'1회 동작 뒤 0.5초 대기'}`;document.querySelector('#gif').href=`gifs/${action.value}-2-vs-${density==='quad'?4:3}.gif`;if(schedule)requestAnimationFrame(draw)}requestAnimationFrame(draw);
+document.querySelector('#play').onclick=()=>{if(playing)tick%=meta().duration_ticks+(meta().loop?0:360);playing=!playing;document.querySelector('#play').textContent=playing?'일시 정지':'재생'};document.querySelector('#restart').onclick=()=>{tick=0};
+function step(d){const m=meta(),v=document.querySelector('#density').value,t=playing?tick%(m.duration_ticks+(m.loop?0:360)):tick;playing=false;document.querySelector('#play').textContent='재생';const ts=m.ticks[v];let k=indexAt(t,ts,m.loop)+d;k=m.loop?(k+ts.length)%ts.length:Math.max(0,Math.min(k,ts.length-1));tick=ts.slice(0,k).reduce((a,b)=>a+b,0)+1e-5}
+document.querySelector('#prev').onclick=()=>step(-1);document.querySelector('#next').onclick=()=>step(1);action.onchange=rowOptions;direction.onchange=()=>{tick=0};document.querySelector('#density').onchange=()=>{tick=0};document.querySelector('#background').onclick=()=>{light=!light;document.querySelector('#background').textContent=light?'어두운 배경':'밝은 배경'};
+</script></html>

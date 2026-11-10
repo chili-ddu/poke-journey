@@ -1,0 +1,23 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>기존 재질을 살린 스킬 연출</title>
+<style>body{max-width:720px;margin:18px;background:#222a28;color:#f1e8d5;font:14px system-ui}h1{font-size:20px}p{line-height:1.6}select,button{font:inherit;background:#334039;color:inherit;border:1px solid #728475;padding:5px;margin:3px 0;border-radius:4px}video,#fallback{display:block;width:384px;height:216px;image-rendering:pixelated;margin-top:8px}a,small{color:#c4d0c0}@media(max-width:410px){body{margin:0}h1,p{margin-left:4px;margin-right:4px}}[hidden]{display:none!important}</style>
+<h1>기존의 부드러운 재질을 살려서</h1>
+<p>불꽃의 열기 쉐이더와 물의 반투명 레이어를 그대로 사용했습니다. 오른쪽은 길이와 미세한 움직임만 조정한 샘플입니다. <b>게임에는 아직 적용하지 않았습니다.</b></p>
+<select id="skill" aria-label="기술"><option value="fire">불꽃세례</option><option value="water">물대포</option></select>
+<select id="direction" aria-label="방향"><option value="right">오른쪽</option><option value="left">왼쪽</option><option value="up">위쪽</option><option value="down">아래쪽</option></select><br>
+<select id="reference" aria-label="왼쪽 비교 대상"><option value="existing">기존 연출과 비교</option><option value="crisp">앞선 딱딱한 시안과 비교</option></select><br>
+<button id="replay">처음부터 재생</button> <button id="slow">0.25배속</button> <button id="format">PNG 애니메이션</button>
+<video id="clip" width="384" height="216" muted controls loop playsinline preload="metadata"></video>
+<img id="fallback" hidden alt="기존 재질을 살린 연출 비교 애니메이션"><p id="caption"></p><p id="error" role="alert"></p>
+<p><small>실제 HD-2D 장면을 같은 384×216 창에서 렌더했습니다. 확대나 추가 블러 없이 원래 표시 크기로 비교합니다. 양쪽 캐릭터 동작과 정해둔 피격·상태 연출은 동일합니다.</small></p>
+<p><a href="REVIEW.md">변경·검수 기록</a> · <a href="qa-summary.json">재질·전투 동일성 검사</a></p>
+<script>
+const S=document.querySelector('#skill'),D=document.querySelector('#direction'),R=document.querySelector('#reference'),v=document.querySelector('#clip'),im=document.querySelector('#fallback'),slow=document.querySelector('#slow');let cases=[],rate=1,png=false;
+async function load(){const item=cases.find(c=>c.kind===S.value&&c.direction===D.value&&c.reference===R.value);if(!item){document.querySelector('#error').textContent='이 비교는 아직 준비 중입니다.';return;}document.querySelector('#error').textContent='';v.src=item.video;v.playbackRate=rate;im.src=item.image;v.hidden=png;im.hidden=!png;document.querySelector('#caption').textContent=`${item.name} · ${D.selectedOptions[0].text} · 왼쪽: ${R.value==='existing'?'기존 연출':'앞선 시안'} / 오른쪽: 재질 유지 샘플`;if(!png)try{await v.play()}catch{}}
+S.onchange=load;D.onchange=load;R.onchange=load;
+document.querySelector('#replay').onclick=()=>{if(png){const src=im.src;im.src='';im.src=src;}else{v.currentTime=0;v.play()}};
+slow.onclick=()=>{rate=rate===1?.25:1;v.playbackRate=rate;slow.textContent=rate===1?'0.25배속':'1배속'};
+document.querySelector('#format').onclick=()=>{png=!png;v.hidden=png;im.hidden=!png;document.querySelector('#format').textContent=png?'동영상으로 보기':'PNG 애니메이션';slow.disabled=png;if(png)v.pause();else v.play()};
+v.onerror=()=>{png=true;v.hidden=true;im.hidden=false;slow.disabled=true;document.querySelector('#format').textContent='동영상으로 보기'};
+fetch('comparisons.json').then(r=>{if(!r.ok)throw Error('비교 자료를 불러오지 못했습니다.');return r.json()}).then(data=>{cases=data;load()}).catch(e=>document.querySelector('#error').textContent=e.message);
+window.softnessReview={select:async(kind,direction,reference='existing')=>{S.value=kind;D.value=direction;R.value=reference;await load()},state:()=>({kind:S.value,direction:D.value,reference:R.value,ready:v.readyState,width:v.videoWidth,height:v.videoHeight,time:v.currentTime,rate:v.playbackRate,png,error:v.error?.message||'',count:cases.length})};
+</script></html>

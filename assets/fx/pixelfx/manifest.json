@@ -1,0 +1,157 @@
+{
+  "repository": "https://github.com/patch-gg/pixelfx",
+  "revision": "a84159688af3ca37a4be05a0d422b94451b2e24e",
+  "effects": {
+    "pickup": {
+      "id": "pickups/collect-burst",
+      "frames": 16,
+      "frame_size": [
+        48,
+        48
+      ],
+      "pivot": [
+        24,
+        24
+      ],
+      "source_rect": [
+        8,
+        16,
+        96,
+        96
+      ],
+      "options": {
+        "light": 0.02,
+        "palette": [
+          "#695744",
+          "#897450",
+          "#a08b65",
+          "#bfaa7a",
+          "#d0bd8c",
+          "#ede0b9",
+          "#f6eed7",
+          "#f8f4e6"
+        ]
+      }
+    },
+    "scratch": {
+      "id": "impacts/hit-spark",
+      "frames": 16,
+      "frame_size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "source_rect": [
+        -4,
+        -4,
+        96,
+        96
+      ],
+      "options": {
+        "palette": [
+          "#39343a",
+          "#665b58",
+          "#958678",
+          "#c0b29c",
+          "#d8cdb8",
+          "#eee4ce",
+          "#f5eedf"
+        ],
+        "aim": 1.35,
+        "seed": 17,
+        "light": 0.04
+      }
+    },
+    "ember": {
+      "id": "impacts/hit-spark",
+      "frames": 16,
+      "frame_size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "source_rect": [
+        -49,
+        -49,
+        186,
+        186
+      ],
+      "options": {
+        "light": 0.3,
+        "aim": -0.4
+      }
+    },
+    "smoke": {
+      "id": "spawn/poof",
+      "frames": 31,
+      "frame_size": [
+        64,
+        64
+      ],
+      "pivot": [
+        32,
+        32
+      ],
+      "source_rect": [
+        9,
+        16,
+        94,
+        94
+      ],
+      "options": {
+        "palette": [
+          "#202530",
+          "#343d49",
+          "#4e5864",
+          "#6c7781",
+          "#929ba1",
+          "#b4bbbf"
+        ],
+        "stars": [
+          "#343d49",
+          "#4e5864",
+          "#6c7781"
+        ],
+        "light": 0
+      }
+    },
+    "flame": {
+      "id": "fire/spirit-flame",
+      "frames": 90,
+      "frame_size": [
+        24,
+        40
+      ],
+      "pivot": [
+        12,
+        36
+      ],
+      "source_rect": [
+        22,
+        40,
+        36,
+        60
+      ],
+      "options": {
+        "palette": [
+          "#42170e",
+          "#76220f",
+          "#ab3311",
+          "#d84c16",
+          "#f57320",
+          "#ffad32",
+          "#ffcf58",
+          "#ffe99b",
+          "#fff5cf"
+        ],
+        "light": 0.16
+      }
+    }
+  }
+}

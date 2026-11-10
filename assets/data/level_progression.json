@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "unlock_event": "visited_area_saffron_city",
+  "tutorial_max_level": 10,
+  "tutorial_trainer_party_limit": 2,
+  "player_offsets": [
+    -3,
+    2
+  ],
+  "experience_multiplier": 0.5,
+  "overlevel_factors": [
+    1.0,
+    0.75,
+    0.5,
+    0.25,
+    0.0
+  ],
+  "bands": [
+    {
+      "id": "central",
+      "levels": [
+        10,
+        25
+      ],
+      "areas": [
+        "route5",
+        "route6",
+        "route7",
+        "route8"
+      ]
+    },
+    {
+      "id": "north_east",
+      "levels": [
+        12,
+        30
+      ],
+      "areas": [
+        "route9",
+        "route10",
+        "route11",
+        "route24",
+        "route25",
+        "digletts_cave_b1f",
+        "rock_tunnel_1f",
+        "rock_tunnel_b1f"
+      ]
+    },
+    {
+      "id": "southern",
+      "levels": [
+        20,
+        40
+      ],
+      "areas": [
+        "route12",
+        "route13",
+        "route14",
+        "route15",
+        "route16",
+        "route17",
+        "route18"
+      ],
+      "prefixes": [
+        "safari_zone_"
+      ]
+    },
+    {
+      "id": "sea_islands",
+      "levels": [
+        30,
+        50
+      ],
+      "areas": [
+        "route19",
+        "route20",
+        "route21",
+        "route21_north",
+        "route21_south"
+      ],
+      "prefixes": [
+        "seafoam_islands_",
+        "pokemon_mansion_"
+      ]
+    },
+    {
+      "id": "late",
+      "levels": [
+        40,
+        65
+      ],
+      "areas": [
+        "route23"
+      ],
+      "prefixes": [
+        "victory_road_"
+      ]
+    },
+    {
+      "id": "final",
+      "levels": [
+        55,
+        80
+      ],
+      "prefixes": [
+        "cerulean_cave_"
+      ],
+      "areas": []
+    }
+  ],
+  "native_areas": [
+    "route1",
+    "route2",
+    "route3",
+    "route4",
+    "route22",
+    "viridian_forest",
+    "mt_moon_1f",
+    "mt_moon_b1f",
+    "mt_moon_b2f"
+  ]
+}

@@ -1,0 +1,2198 @@
+{
+  "gyms": {
+    "pewter_gym": {
+      "source": "PewterCity_Gym",
+      "slug": "brock",
+      "leader": "leader_brock",
+      "name": "웅",
+      "city": "회색",
+      "arena": "arena_pewter_gym",
+      "members": 1,
+      "banner": "roark"
+    },
+    "cerulean_city_gym": {
+      "source": "CeruleanCity_Gym",
+      "slug": "misty",
+      "leader": "leader_misty",
+      "name": "이슬",
+      "city": "블루",
+      "arena": "arena_cerulean_gym",
+      "members": 2,
+      "banner": "wake"
+    },
+    "vermilion_city_gym": {
+      "source": "VermilionCity_Gym",
+      "slug": "lt_surge",
+      "leader": "leader_lt_surge",
+      "name": "마티스",
+      "city": "갈색",
+      "arena": "arena_lt_surge_gym",
+      "members": 3,
+      "banner": "volkner"
+    },
+    "celadon_city_gym": {
+      "source": "CeladonCity_Gym",
+      "slug": "erika",
+      "leader": "leader_erika",
+      "name": "민화",
+      "city": "무지개",
+      "arena": "arena_erika_gym",
+      "members": 7,
+      "banner": "gardenia"
+    },
+    "fuchsia_city_gym": {
+      "source": "FuchsiaCity_Gym",
+      "slug": "koga",
+      "leader": "leader_koga",
+      "name": "독수",
+      "city": "연분홍",
+      "arena": "arena_koga_gym",
+      "members": 6,
+      "banner": "fantina"
+    },
+    "saffron_city_gym": {
+      "source": "SaffronCity_Gym",
+      "slug": "sabrina",
+      "leader": "leader_sabrina",
+      "name": "초련",
+      "city": "노랑",
+      "arena": "arena_sabrina_gym",
+      "members": 7,
+      "banner": "maylene"
+    },
+    "cinnabar_island_gym": {
+      "source": "CinnabarIsland_Gym",
+      "slug": "blaine",
+      "leader": "leader_blaine",
+      "name": "강연",
+      "city": "홍련",
+      "arena": "arena_blaine_gym",
+      "members": 7,
+      "banner": "roark"
+    },
+    "viridian_city_gym": {
+      "source": "ViridianCity_Gym",
+      "slug": "giovanni",
+      "leader": "leader_giovanni",
+      "name": "비주기",
+      "city": "상록",
+      "arena": "arena_giovanni_gym",
+      "members": 8,
+      "banner": "byron"
+    }
+  },
+  "origins": {
+    "leader_lt_surge": {
+      "source": "VermilionCity_Gym",
+      "trainer": "TRAINER_LEADER_LT_SURGE",
+      "party_id": "sParty_LeaderLtSurge",
+      "party": [
+        [
+          "voltorb",
+          21,
+          [
+            "sonic_boom",
+            "tackle",
+            "screech",
+            "shock_wave"
+          ]
+        ],
+        [
+          "pikachu",
+          18,
+          [
+            "quick_attack",
+            "thunder_wave",
+            "double_team",
+            "shock_wave"
+          ]
+        ],
+        [
+          "raichu",
+          24,
+          [
+            "quick_attack",
+            "thunder_wave",
+            "double_team",
+            "shock_wave"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ]
+    },
+    "leader_erika": {
+      "source": "CeladonCity_Gym",
+      "trainer": "TRAINER_LEADER_ERIKA",
+      "party_id": "sParty_LeaderErika",
+      "party": [
+        [
+          "victreebel",
+          29,
+          [
+            "stun_spore",
+            "acid",
+            "poison_powder",
+            "giga_drain"
+          ]
+        ],
+        [
+          "tangela",
+          24,
+          [
+            "poison_powder",
+            "constrict",
+            "ingrain",
+            "giga_drain"
+          ]
+        ],
+        [
+          "vileplume",
+          29,
+          [
+            "sleep_powder",
+            "acid",
+            "stun_spore",
+            "giga_drain"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ]
+    },
+    "leader_koga": {
+      "source": "FuchsiaCity_Gym",
+      "trainer": "TRAINER_LEADER_KOGA",
+      "party_id": "sParty_LeaderKoga",
+      "party": [
+        [
+          "koffing",
+          37,
+          [
+            "selfdestruct",
+            "sludge",
+            "smoke_screen",
+            "toxic"
+          ]
+        ],
+        [
+          "muk",
+          39,
+          [
+            "minimize",
+            "sludge",
+            "acid_armor",
+            "toxic"
+          ]
+        ],
+        [
+          "koffing",
+          37,
+          [
+            "selfdestruct",
+            "sludge",
+            "smoke_screen",
+            "toxic"
+          ]
+        ],
+        [
+          "weezing",
+          43,
+          [
+            "tackle",
+            "sludge",
+            "smoke_screen",
+            "toxic"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "leader_sabrina": {
+      "source": "SaffronCity_Gym",
+      "trainer": "TRAINER_LEADER_SABRINA",
+      "party_id": "sParty_LeaderSabrina",
+      "party": [
+        [
+          "kadabra",
+          38,
+          [
+            "psybeam",
+            "reflect",
+            "future_sight",
+            "calm_mind"
+          ]
+        ],
+        [
+          "mr_mime",
+          37,
+          [
+            "barrier",
+            "psybeam",
+            "baton_pass",
+            "calm_mind"
+          ]
+        ],
+        [
+          "venomoth",
+          38,
+          [
+            "psybeam",
+            "gust",
+            "leech_life",
+            "supersonic"
+          ]
+        ],
+        [
+          "alakazam",
+          43,
+          [
+            "psychic",
+            "recover",
+            "future_sight",
+            "calm_mind"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "leader_blaine": {
+      "source": "CinnabarIsland_Gym",
+      "trainer": "TRAINER_LEADER_BLAINE",
+      "party_id": "sParty_LeaderBlaine",
+      "party": [
+        [
+          "growlithe",
+          42,
+          [
+            "bite",
+            "roar",
+            "take_down",
+            "fire_blast"
+          ]
+        ],
+        [
+          "ponyta",
+          40,
+          [
+            "stomp",
+            "bounce",
+            "fire_spin",
+            "fire_blast"
+          ]
+        ],
+        [
+          "rapidash",
+          42,
+          [
+            "stomp",
+            "bounce",
+            "fire_spin",
+            "fire_blast"
+          ]
+        ],
+        [
+          "arcanine",
+          47,
+          [
+            "bite",
+            "roar",
+            "take_down",
+            "fire_blast"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "leader_giovanni": {
+      "source": "ViridianCity_Gym",
+      "trainer": "TRAINER_LEADER_GIOVANNI",
+      "party_id": "sParty_LeaderGiovanni",
+      "party": [
+        [
+          "rhyhorn",
+          45,
+          [
+            "take_down",
+            "rock_blast",
+            "scary_face",
+            "earthquake"
+          ]
+        ],
+        [
+          "dugtrio",
+          42,
+          [
+            "slash",
+            "sand_tomb",
+            "mud_slap",
+            "earthquake"
+          ]
+        ],
+        [
+          "nidoqueen",
+          44,
+          [
+            "body_slam",
+            "double_kick",
+            "poison_sting",
+            "earthquake"
+          ]
+        ],
+        [
+          "nidoking",
+          45,
+          [
+            "thrash",
+            "double_kick",
+            "poison_sting",
+            "earthquake"
+          ]
+        ],
+        [
+          "rhyhorn",
+          50,
+          [
+            "take_down",
+            "rock_blast",
+            "scary_face",
+            "earthquake"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "places": {
+    "pewter_gym": {
+      "arena": "arena_pewter_gym",
+      "trainers": [
+        {
+          "trainer": "leader_brock",
+          "tile": [
+            6,
+            5
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_liam",
+          "sprite": "camper",
+          "tile": [
+            3,
+            8
+          ],
+          "face": "right",
+          "talk": "gym_surprised",
+          "talk_tile": [
+            4,
+            8
+          ]
+        },
+        {
+          "id": "gym_brock_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            7,
+            12
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            7,
+            13
+          ]
+        }
+      ]
+    },
+    "cerulean_city_gym": {
+      "arena": "arena_cerulean_gym",
+      "trainers": [
+        {
+          "trainer": "leader_misty",
+          "tile": [
+            8,
+            6
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_luis",
+          "sprite": "swimmer_m_water",
+          "tile": [
+            10,
+            12
+          ],
+          "face": "left",
+          "talk": "gym_surprised",
+          "talk_tile": [
+            9,
+            12
+          ]
+        },
+        {
+          "id": "gym_diana",
+          "sprite": "picnicker",
+          "tile": [
+            4,
+            7
+          ],
+          "face": "right",
+          "talk": "gym_surprised",
+          "talk_tile": [
+            5,
+            7
+          ]
+        },
+        {
+          "id": "gym_misty_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            7,
+            16
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            7,
+            17
+          ]
+        }
+      ]
+    },
+    "vermilion_city_gym": {
+      "arena": "arena_lt_surge_gym",
+      "trainers": [
+        {
+          "trainer": "leader_lt_surge",
+          "tile": [
+            5,
+            2
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_lt_surge_baily",
+          "sprite": "balding_man",
+          "tile": [
+            2,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            12
+          ]
+        },
+        {
+          "id": "gym_lt_surge_dwayne",
+          "sprite": "sailor",
+          "tile": [
+            8,
+            13
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            8,
+            14
+          ]
+        },
+        {
+          "id": "gym_lt_surge_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            4,
+            17
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            18
+          ]
+        },
+        {
+          "id": "gym_lt_surge_tucker",
+          "sprite": "gentleman",
+          "tile": [
+            7,
+            8
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            7,
+            9
+          ]
+        }
+      ]
+    },
+    "arena_lt_surge_gym": {
+      "name": "LT. SURGE GYM",
+      "name_ko": "갈색시티 체육관",
+      "theme": "arena_lt_surge_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    },
+    "celadon_city_gym": {
+      "arena": "arena_erika_gym",
+      "trainers": [
+        {
+          "trainer": "leader_erika",
+          "tile": [
+            6,
+            4
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_erika_kay",
+          "sprite": "lass",
+          "tile": [
+            3,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            3,
+            12
+          ]
+        },
+        {
+          "id": "gym_erika_bridget",
+          "sprite": "beauty",
+          "tile": [
+            9,
+            10
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            9,
+            11
+          ]
+        },
+        {
+          "id": "gym_erika_tina",
+          "sprite": "picnicker",
+          "tile": [
+            10,
+            7
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            10,
+            8
+          ]
+        },
+        {
+          "id": "gym_erika_tamia",
+          "sprite": "beauty",
+          "tile": [
+            2,
+            6
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            7
+          ]
+        },
+        {
+          "id": "gym_erika_lori",
+          "sprite": "beauty",
+          "tile": [
+            5,
+            4
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            5,
+            5
+          ]
+        },
+        {
+          "id": "gym_erika_lisa",
+          "sprite": "lass",
+          "tile": [
+            7,
+            4
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            7,
+            5
+          ]
+        },
+        {
+          "id": "gym_erika_mary",
+          "sprite": "cooltrainer_f",
+          "tile": [
+            8,
+            7
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            7,
+            7
+          ]
+        }
+      ]
+    },
+    "arena_erika_gym": {
+      "name": "ERIKA GYM",
+      "name_ko": "무지개시티 체육관",
+      "theme": "arena_erika_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    },
+    "fuchsia_city_gym": {
+      "arena": "arena_koga_gym",
+      "trainers": [
+        {
+          "trainer": "leader_koga",
+          "tile": [
+            7,
+            13
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_koga_kayden",
+          "sprite": "rocker",
+          "tile": [
+            12,
+            16
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            12,
+            17
+          ]
+        },
+        {
+          "id": "gym_koga_shawn",
+          "sprite": "rocker",
+          "tile": [
+            2,
+            9
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            10
+          ]
+        },
+        {
+          "id": "gym_koga_kirk",
+          "sprite": "rocker",
+          "tile": [
+            11,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            11,
+            12
+          ]
+        },
+        {
+          "id": "gym_koga_edgar",
+          "sprite": "man",
+          "tile": [
+            13,
+            4
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            13,
+            5
+          ]
+        },
+        {
+          "id": "gym_koga_phil",
+          "sprite": "man",
+          "tile": [
+            4,
+            6
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            7
+          ]
+        },
+        {
+          "id": "gym_koga_nate",
+          "sprite": "rocker",
+          "tile": [
+            2,
+            16
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            17
+          ]
+        },
+        {
+          "id": "gym_koga_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            11,
+            19
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            11,
+            20
+          ]
+        }
+      ]
+    },
+    "arena_koga_gym": {
+      "name": "KOGA GYM",
+      "name_ko": "연분홍시티 체육관",
+      "theme": "arena_koga_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    },
+    "saffron_city_gym": {
+      "arena": "arena_sabrina_gym",
+      "trainers": [
+        {
+          "trainer": "leader_sabrina",
+          "tile": [
+            14,
+            11
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_sabrina_cameron",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            24,
+            18
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            24,
+            19
+          ]
+        },
+        {
+          "id": "gym_sabrina_johan",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            24,
+            2
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            24,
+            3
+          ]
+        },
+        {
+          "id": "gym_sabrina_preston",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            4,
+            2
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            3
+          ]
+        },
+        {
+          "id": "gym_sabrina_amanda",
+          "sprite": "channeler",
+          "tile": [
+            14,
+            2
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            14,
+            3
+          ]
+        },
+        {
+          "id": "gym_sabrina_stacy",
+          "sprite": "channeler",
+          "tile": [
+            4,
+            10
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            11
+          ]
+        },
+        {
+          "id": "gym_sabrina_tasha",
+          "sprite": "channeler",
+          "tile": [
+            4,
+            18
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            19
+          ]
+        },
+        {
+          "id": "gym_sabrina_tyron",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            24,
+            10
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            24,
+            11
+          ]
+        },
+        {
+          "id": "gym_sabrina_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            15,
+            20
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            15,
+            21
+          ]
+        }
+      ]
+    },
+    "arena_sabrina_gym": {
+      "name": "SABRINA GYM",
+      "name_ko": "노랑시티 체육관",
+      "theme": "arena_sabrina_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    },
+    "cinnabar_island_gym": {
+      "arena": "arena_blaine_gym",
+      "trainers": [
+        {
+          "trainer": "leader_blaine",
+          "tile": [
+            5,
+            4
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_blaine_quinn",
+          "sprite": "poke_maniac",
+          "tile": [
+            25,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            25,
+            12
+          ]
+        },
+        {
+          "id": "gym_blaine_erik",
+          "sprite": "scientist",
+          "tile": [
+            25,
+            4
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            25,
+            5
+          ]
+        },
+        {
+          "id": "gym_blaine_avery",
+          "sprite": "scientist",
+          "tile": [
+            17,
+            5
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            17,
+            6
+          ]
+        },
+        {
+          "id": "gym_blaine_ramon",
+          "sprite": "poke_maniac",
+          "tile": [
+            16,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            16,
+            12
+          ]
+        },
+        {
+          "id": "gym_blaine_derek",
+          "sprite": "scientist",
+          "tile": [
+            16,
+            18
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            16,
+            19
+          ]
+        },
+        {
+          "id": "gym_blaine_dusty",
+          "sprite": "poke_maniac",
+          "tile": [
+            4,
+            19
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            20
+          ]
+        },
+        {
+          "id": "gym_blaine_zac",
+          "sprite": "scientist",
+          "tile": [
+            4,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            4,
+            12
+          ]
+        },
+        {
+          "id": "gym_blaine_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            24,
+            20
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            24,
+            21
+          ]
+        }
+      ]
+    },
+    "arena_blaine_gym": {
+      "name": "BLAINE GYM",
+      "name_ko": "홍련시티 체육관",
+      "theme": "arena_blaine_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    },
+    "viridian_city_gym": {
+      "arena": "arena_giovanni_gym",
+      "trainers": [
+        {
+          "trainer": "leader_giovanni",
+          "tile": [
+            2,
+            2
+          ],
+          "face": "down",
+          "sight": 0
+        }
+      ],
+      "npcs": [
+        {
+          "id": "gym_giovanni_takashi",
+          "sprite": "black_belt",
+          "tile": [
+            10,
+            2
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            10,
+            3
+          ]
+        },
+        {
+          "id": "gym_giovanni_yuji",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            12,
+            10
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            12,
+            11
+          ]
+        },
+        {
+          "id": "gym_giovanni_atsushi",
+          "sprite": "black_belt",
+          "tile": [
+            11,
+            14
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            10,
+            14
+          ]
+        },
+        {
+          "id": "gym_giovanni_jason",
+          "sprite": "man",
+          "tile": [
+            10,
+            10
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            10,
+            11
+          ]
+        },
+        {
+          "id": "gym_giovanni_cole",
+          "sprite": "man",
+          "tile": [
+            2,
+            21
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            22
+          ]
+        },
+        {
+          "id": "gym_giovanni_kiyo",
+          "sprite": "black_belt",
+          "tile": [
+            3,
+            11
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            2,
+            11
+          ]
+        },
+        {
+          "id": "gym_giovanni_samuel",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            6,
+            8
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            6,
+            9
+          ]
+        },
+        {
+          "id": "gym_giovanni_warren",
+          "sprite": "cooltrainer_m",
+          "tile": [
+            13,
+            7
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            12,
+            7
+          ]
+        },
+        {
+          "id": "gym_giovanni_gymguy",
+          "sprite": "gym_guy",
+          "tile": [
+            16,
+            20
+          ],
+          "face": "down",
+          "talk": "gym_member",
+          "talk_tile": [
+            16,
+            21
+          ]
+        }
+      ]
+    },
+    "arena_giovanni_gym": {
+      "name": "GIOVANNI GYM",
+      "name_ko": "상록시티 체육관",
+      "theme": "arena_giovanni_gym",
+      "arena_field": true,
+      "battle_style": "room",
+      "count": 0,
+      "encounters": []
+    }
+  },
+  "npc_parties": {
+    "gym_liam": {
+      "trainer": "TRAINER_CAMPER_LIAM",
+      "party_id": "sParty_CamperLiam",
+      "party": [
+        [
+          "geodude",
+          10,
+          [
+            "tackle",
+            "defense_curl"
+          ]
+        ],
+        [
+          "sandshrew",
+          11,
+          [
+            "scratch",
+            "defense_curl",
+            "sand_attack"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_luis": {
+      "trainer": "TRAINER_SWIMMER_MALE_LUIS",
+      "party_id": "sParty_SwimmerMaleLuis",
+      "party": [
+        [
+          "horsea",
+          16
+        ],
+        [
+          "shellder",
+          16
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_diana": {
+      "trainer": "TRAINER_PICNICKER_DIANA",
+      "party_id": "sParty_PicnickerDiana",
+      "party": [
+        [
+          "goldeen",
+          19
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_lt_surge_baily": {
+      "trainer": "TRAINER_ENGINEER_BAILY",
+      "party_id": "sParty_EngineerBaily",
+      "party": [
+        [
+          "voltorb",
+          21
+        ],
+        [
+          "magnemite",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_lt_surge_dwayne": {
+      "trainer": "TRAINER_SAILOR_DWAYNE",
+      "party_id": "sParty_SailorDwayne",
+      "party": [
+        [
+          "pikachu",
+          21
+        ],
+        [
+          "pikachu",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_lt_surge_tucker": {
+      "trainer": "TRAINER_GENTLEMAN_TUCKER",
+      "party_id": "sParty_GentlemanTucker",
+      "party": [
+        [
+          "pikachu",
+          23
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_erika_kay": {
+      "trainer": "TRAINER_LASS_KAY",
+      "party_id": "sParty_LassKay",
+      "party": [
+        [
+          "bellsprout",
+          23
+        ],
+        [
+          "weepinbell",
+          23
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_erika_bridget": {
+      "trainer": "TRAINER_BEAUTY_BRIDGET",
+      "party_id": "sParty_BeautyBridget",
+      "party": [
+        [
+          "oddish",
+          21
+        ],
+        [
+          "bellsprout",
+          21
+        ],
+        [
+          "oddish",
+          21
+        ],
+        [
+          "bellsprout",
+          21
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_erika_tina": {
+      "trainer": "TRAINER_PICNICKER_TINA",
+      "party_id": "sParty_PicnickerTina",
+      "party": [
+        [
+          "bulbasaur",
+          24
+        ],
+        [
+          "ivysaur",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_erika_tamia": {
+      "trainer": "TRAINER_BEAUTY_TAMIA",
+      "party_id": "sParty_BeautyTamia",
+      "party": [
+        [
+          "bellsprout",
+          24
+        ],
+        [
+          "bellsprout",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_erika_lori": {
+      "trainer": "TRAINER_BEAUTY_LORI",
+      "party_id": "sParty_BeautyLori",
+      "party": [
+        [
+          "exeggcute",
+          24
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_erika_lisa": {
+      "trainer": "TRAINER_LASS_LISA",
+      "party_id": "sParty_LassLisa",
+      "party": [
+        [
+          "oddish",
+          23
+        ],
+        [
+          "gloom",
+          23
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_erika_mary": {
+      "trainer": "TRAINER_COOLTRAINER_MARY",
+      "party_id": "sParty_CooltrainerMary",
+      "party": [
+        [
+          "bellsprout",
+          22,
+          [
+            "wrap",
+            "stun_spore",
+            "poison_powder",
+            "growth"
+          ]
+        ],
+        [
+          "oddish",
+          22,
+          [
+            "poison_powder",
+            "stun_spore",
+            "absorb",
+            "sweet_scent"
+          ]
+        ],
+        [
+          "weepinbell",
+          22,
+          [
+            "vine_whip",
+            "stun_spore",
+            "poison_powder",
+            "growth"
+          ]
+        ],
+        [
+          "gloom",
+          22,
+          [
+            "absorb",
+            "stun_spore",
+            "poison_powder",
+            "sweet_scent"
+          ]
+        ],
+        [
+          "ivysaur",
+          22,
+          [
+            "razor_leaf",
+            "sleep_powder",
+            "vine_whip",
+            "leech_seed"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "gym_koga_kayden": {
+      "trainer": "TRAINER_JUGGLER_KAYDEN",
+      "party_id": "sParty_JugglerKayden",
+      "party": [
+        [
+          "hypno",
+          38
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_koga_shawn": {
+      "trainer": "TRAINER_JUGGLER_SHAWN",
+      "party_id": "sParty_JugglerShawn",
+      "party": [
+        [
+          "drowzee",
+          34
+        ],
+        [
+          "hypno",
+          34
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_koga_kirk": {
+      "trainer": "TRAINER_JUGGLER_KIRK",
+      "party_id": "sParty_JugglerKirk",
+      "party": [
+        [
+          "drowzee",
+          31
+        ],
+        [
+          "drowzee",
+          31
+        ],
+        [
+          "kadabra",
+          31
+        ],
+        [
+          "drowzee",
+          31
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_koga_edgar": {
+      "trainer": "TRAINER_TAMER_EDGAR",
+      "party_id": "sParty_TamerEdgar",
+      "party": [
+        [
+          "arbok",
+          33
+        ],
+        [
+          "sandslash",
+          33
+        ],
+        [
+          "arbok",
+          33
+        ]
+      ],
+      "native_ivs": [
+        40,
+        40,
+        40
+      ]
+    },
+    "gym_koga_phil": {
+      "trainer": "TRAINER_TAMER_PHIL",
+      "party_id": "sParty_TamerPhil",
+      "party": [
+        [
+          "sandslash",
+          34
+        ],
+        [
+          "arbok",
+          34
+        ]
+      ],
+      "native_ivs": [
+        40,
+        40
+      ]
+    },
+    "gym_koga_nate": {
+      "trainer": "TRAINER_JUGGLER_NATE",
+      "party_id": "sParty_JugglerNate",
+      "party": [
+        [
+          "drowzee",
+          34
+        ],
+        [
+          "kadabra",
+          34
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_sabrina_cameron": {
+      "trainer": "TRAINER_PSYCHIC_CAMERON",
+      "party_id": "sParty_PsychicCameron",
+      "party": [
+        [
+          "slowpoke",
+          33
+        ],
+        [
+          "slowpoke",
+          33
+        ],
+        [
+          "slowbro",
+          33
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50,
+        50
+      ]
+    },
+    "gym_sabrina_johan": {
+      "trainer": "TRAINER_PSYCHIC_JOHAN",
+      "party_id": "sParty_PsychicJohan",
+      "party": [
+        [
+          "kadabra",
+          31
+        ],
+        [
+          "slowpoke",
+          31
+        ],
+        [
+          "mr_mime",
+          31
+        ],
+        [
+          "kadabra",
+          31
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50,
+        50,
+        50
+      ]
+    },
+    "gym_sabrina_preston": {
+      "trainer": "TRAINER_PSYCHIC_PRESTON",
+      "party_id": "sParty_PsychicPreston",
+      "party": [
+        [
+          "slowbro",
+          38
+        ]
+      ],
+      "native_ivs": [
+        50
+      ]
+    },
+    "gym_sabrina_amanda": {
+      "trainer": "TRAINER_CHANNELER_AMANDA",
+      "party_id": "sParty_ChannelerAmanda",
+      "party": [
+        [
+          "gastly",
+          34
+        ],
+        [
+          "haunter",
+          34
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_sabrina_stacy": {
+      "trainer": "TRAINER_CHANNELER_STACY",
+      "party_id": "sParty_ChannelerStacy",
+      "party": [
+        [
+          "haunter",
+          38
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_sabrina_tasha": {
+      "trainer": "TRAINER_CHANNELER_TASHA",
+      "party_id": "sParty_ChannelerTasha",
+      "party": [
+        [
+          "gastly",
+          33
+        ],
+        [
+          "gastly",
+          33
+        ],
+        [
+          "haunter",
+          33
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_sabrina_tyron": {
+      "trainer": "TRAINER_PSYCHIC_TYRON",
+      "party_id": "sParty_PsychicTyron",
+      "party": [
+        [
+          "mr_mime",
+          34
+        ],
+        [
+          "kadabra",
+          34
+        ]
+      ],
+      "native_ivs": [
+        50,
+        50
+      ]
+    },
+    "gym_blaine_quinn": {
+      "trainer": "TRAINER_BURGLAR_QUINN",
+      "party_id": "sParty_BurglarQuinn",
+      "party": [
+        [
+          "growlithe",
+          36
+        ],
+        [
+          "vulpix",
+          36
+        ],
+        [
+          "ninetales",
+          36
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_blaine_erik": {
+      "trainer": "TRAINER_SUPER_NERD_ERIK",
+      "party_id": "sParty_SuperNerdErik",
+      "party": [
+        [
+          "vulpix",
+          36
+        ],
+        [
+          "vulpix",
+          36
+        ],
+        [
+          "ninetales",
+          36
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_blaine_avery": {
+      "trainer": "TRAINER_SUPER_NERD_AVERY",
+      "party_id": "sParty_SuperNerdAvery",
+      "party": [
+        [
+          "ponyta",
+          34
+        ],
+        [
+          "charmander",
+          34
+        ],
+        [
+          "vulpix",
+          34
+        ],
+        [
+          "growlithe",
+          34
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "gym_blaine_ramon": {
+      "trainer": "TRAINER_BURGLAR_RAMON",
+      "party_id": "sParty_BurglarRamon",
+      "party": [
+        [
+          "ponyta",
+          41
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_blaine_derek": {
+      "trainer": "TRAINER_SUPER_NERD_DEREK",
+      "party_id": "sParty_SuperNerdDerek",
+      "party": [
+        [
+          "rapidash",
+          41
+        ]
+      ],
+      "native_ivs": [
+        0
+      ]
+    },
+    "gym_blaine_dusty": {
+      "trainer": "TRAINER_BURGLAR_DUSTY",
+      "party_id": "sParty_BurglarDusty",
+      "party": [
+        [
+          "vulpix",
+          37
+        ],
+        [
+          "growlithe",
+          37
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_blaine_zac": {
+      "trainer": "TRAINER_SUPER_NERD_ZAC",
+      "party_id": "sParty_SuperNerdZac",
+      "party": [
+        [
+          "growlithe",
+          37
+        ],
+        [
+          "vulpix",
+          37
+        ]
+      ],
+      "native_ivs": [
+        0,
+        0
+      ]
+    },
+    "gym_giovanni_takashi": {
+      "trainer": "TRAINER_BLACK_BELT_TAKASHI",
+      "party_id": "sParty_BlackBeltTakashi",
+      "party": [
+        [
+          "machoke",
+          38
+        ],
+        [
+          "machop",
+          38
+        ],
+        [
+          "machoke",
+          38
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100
+      ]
+    },
+    "gym_giovanni_yuji": {
+      "trainer": "TRAINER_COOLTRAINER_YUJI",
+      "party_id": "sParty_CooltrainerYuji",
+      "party": [
+        [
+          "sandslash",
+          38,
+          [
+            "slash",
+            "swift",
+            "sand_attack",
+            "poison_sting"
+          ]
+        ],
+        [
+          "graveler",
+          38,
+          [
+            "rock_blast",
+            "magnitude",
+            "mud_sport",
+            "defense_curl"
+          ]
+        ],
+        [
+          "onix",
+          38,
+          [
+            "dragon_breath",
+            "sandstorm",
+            "rock_throw",
+            "bind"
+          ]
+        ],
+        [
+          "graveler",
+          38,
+          [
+            "rock_blast",
+            "magnitude",
+            "rollout",
+            "defense_curl"
+          ]
+        ],
+        [
+          "marowak",
+          38,
+          [
+            "bonemerang",
+            "headbutt",
+            "leer",
+            "growl"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "gym_giovanni_atsushi": {
+      "trainer": "TRAINER_BLACK_BELT_ATSUSHI",
+      "party_id": "sParty_BlackBeltAtsushi",
+      "party": [
+        [
+          "machop",
+          40
+        ],
+        [
+          "machoke",
+          40
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100
+      ]
+    },
+    "gym_giovanni_jason": {
+      "trainer": "TRAINER_TAMER_JASON",
+      "party_id": "sParty_TamerJason",
+      "party": [
+        [
+          "rhyhorn",
+          43
+        ]
+      ],
+      "native_ivs": [
+        40
+      ]
+    },
+    "gym_giovanni_cole": {
+      "trainer": "TRAINER_TAMER_COLE",
+      "party_id": "sParty_TamerCole",
+      "party": [
+        [
+          "arbok",
+          39
+        ],
+        [
+          "tauros",
+          39
+        ]
+      ],
+      "native_ivs": [
+        40,
+        40
+      ]
+    },
+    "gym_giovanni_kiyo": {
+      "trainer": "TRAINER_BLACK_BELT_KIYO",
+      "party_id": "sParty_BlackBeltKiyo",
+      "party": [
+        [
+          "machoke",
+          43
+        ]
+      ],
+      "native_ivs": [
+        100
+      ]
+    },
+    "gym_giovanni_samuel": {
+      "trainer": "TRAINER_COOLTRAINER_SAMUEL",
+      "party_id": "sParty_CooltrainerSamuel",
+      "party": [
+        [
+          "sandslash",
+          37,
+          [
+            "slash",
+            "swift",
+            "sand_attack",
+            "poison_sting"
+          ]
+        ],
+        [
+          "sandslash",
+          37,
+          [
+            "slash",
+            "swift",
+            "sand_attack",
+            "poison_sting"
+          ]
+        ],
+        [
+          "rhyhorn",
+          38,
+          [
+            "take_down",
+            "rock_blast",
+            "fury_attack",
+            "scary_face"
+          ]
+        ],
+        [
+          "nidorino",
+          39,
+          [
+            "fury_attack",
+            "horn_attack",
+            "poison_sting",
+            "double_kick"
+          ]
+        ],
+        [
+          "nidoking",
+          39,
+          [
+            "thrash",
+            "double_kick",
+            "poison_sting",
+            "focus_energy"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "gym_giovanni_warren": {
+      "trainer": "TRAINER_COOLTRAINER_WARREN",
+      "party_id": "sParty_CooltrainerWarren",
+      "party": [
+        [
+          "marowak",
+          37,
+          [
+            "bonemerang",
+            "headbutt",
+            "leer",
+            "growl"
+          ]
+        ],
+        [
+          "marowak",
+          37,
+          [
+            "bonemerang",
+            "headbutt",
+            "leer",
+            "growl"
+          ]
+        ],
+        [
+          "rhyhorn",
+          38,
+          [
+            "take_down",
+            "rock_blast",
+            "fury_attack",
+            "scary_face"
+          ]
+        ],
+        [
+          "nidorina",
+          39,
+          [
+            "fury_swipes",
+            "bite",
+            "poison_sting",
+            "double_kick"
+          ]
+        ],
+        [
+          "nidoqueen",
+          39,
+          [
+            "body_slam",
+            "bite",
+            "poison_sting",
+            "double_kick"
+          ]
+        ]
+      ],
+      "native_ivs": [
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    }
+  }
+}

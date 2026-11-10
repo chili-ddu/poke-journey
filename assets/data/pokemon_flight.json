@@ -1,0 +1,14 @@
+{
+  "basis": "Species capability, independent of learned moves. Cached Platinum HM02 compatibility plus winged species; walking bird exceptions are excluded.",
+  "excluded": ["doduo", "dodrio"],
+  "additional": ["butterfree", "beedrill", "venomoth", "scyther", "ledyba", "ledian", "yanma", "yanmega", "heracross", "beautifly", "dustox", "masquerain", "volbeat", "illumise", "combee", "vespiquen", "mothim", "garchomp"],
+  "hover": ["mew", "arceus", "drifblim", "rayquaza", "latias", "latios", "garchomp"],
+  "animation_overrides": {"charizard": "SpAttack", "beedrill": "Hover", "spearow": "Hover", "zubat": "Hover", "scyther": "Walk", "pidgeotto": "Shoot", "pidgeot": "Shoot"},
+  "cycles": {
+    "FlapAround": {"frames": [0, 1, 2, 1], "ticks": [4, 4, 4, 4], "short_source_frames": 18, "short_frames": [0, 1], "short_ticks": [5, 5]},
+    "SpAttack": {"frames": [0, 1, 2, 1], "ticks": [4, 4, 4, 4]},
+    "Shoot": {"frames": [0, 1], "ticks": [6, 6], "native_frames": true}
+  },
+  "wing_animation": "FlapAround",
+  "hover_animation": "Walk"
+}

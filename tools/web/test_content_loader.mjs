@@ -6,7 +6,7 @@ import {webcrypto} from 'node:crypto';
 import vm from 'node:vm';
 const code = await readFile(new URL('./content_loader.js', import.meta.url), 'utf8');
 
-async function fixture({offlineCache = false} = {}) {
+async function fixture({offlineCache = false, failInitially = ""} = {}) {
     const entries = {};
     const bodies = {};
     for (const name of ['boot', 'engine', 'world', 'actors', 'pokemon-0252', 'pokemon-0253', 'pokemon-0254']) {
@@ -18,7 +18,7 @@ async function fixture({offlineCache = false} = {}) {
     }
     const requests = [], copies = [], started = [];
     const store = new Map();
-    let fail = '';
+    let fail = failInitially;
     const cache = {
         match: async url => store.get(url)?.clone(),
         put: async (url, response) => { store.set(url, response.clone()); },
@@ -104,4 +104,9 @@ test('a damaged network response is never copied to the engine', async () => {
     f.bodies[url] = Buffer.from('incomplete');
     assert.match((await f.prepare('charmander')).error, /damaged/);
     assert.equal(f.copies.length, 2);
+});
+
+
+test('an engine download failure rejects startup instead of leaving initialization pending', async () => {
+    await assert.rejects(fixture({failInitially: 'engine-'}), /404/);
 });

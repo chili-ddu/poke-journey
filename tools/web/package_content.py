@@ -63,10 +63,14 @@ def main():
     script_tag = '<script src="index.js"></script>'
     assert html.count(script_tag) == 1
     html = html[:begin] + '\t\tjourneyContent.start(engine, GODOT_CONFIG)' + html[end:]
+    wrapper = js.replace(WASM_FETCH, 'window.journeyContent.wasm()')
+    loader = (ROOT / 'tools/web/content_loader.js').read_bytes()
+    wrapper_tag = '<script src="index.js?v=' + hashlib.sha256(wrapper.encode()).hexdigest()[:16] + '"></script>'
+    loader_tag = '<script src="content-loader.js?v=' + hashlib.sha256(loader).hexdigest()[:16] + '"></script>'
     html = html.replace(script_tag, '<script>window.JOURNEY_CONTENT=' + json.dumps(manifest, separators=(',', ':'))
-                        + ';</script>\n\t\t<script src="content-loader.js"></script>\n\t\t' + script_tag)
-    # A single exact replacement; fail above if the pinned SDK changes its wrapper.
-    (directory / 'index.js').write_text(js.replace(WASM_FETCH, 'window.journeyContent.wasm()'))
+                        + ';</script>\n\t\t' + loader_tag + '\n\t\t' + wrapper_tag)
+    # Version script URLs too: existing visitors can still have the old Web wrapper cached.
+    (directory / 'index.js').write_text(wrapper)
     (directory / 'index.html').write_text(html)
     shutil.copyfile(ROOT / 'tools/web/content_loader.js', directory / 'content-loader.js')
     # Full, uncompressed outputs are validated before this step, and never published.

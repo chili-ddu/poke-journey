@@ -25,6 +25,10 @@ def main():
     assert not (directory / 'index.pck').exists() and not (directory / 'index.wasm').exists()
     assert 'journeyContent.start(engine, GODOT_CONFIG)' in (directory / 'index.html').read_text()
     assert 'window.journeyContent.wasm()' in (directory / 'index.js').read_text()
+    html = (directory / 'index.html').read_text()
+    for script in ('index.js', 'content-loader.js'):
+        digest = hashlib.sha256((directory / script).read_bytes()).hexdigest()[:16]
+        assert f'src="{script}?v={digest}"' in html, f'Unversioned script: {script}'
     entries = {'boot': manifest['boot'], 'engine': manifest['engine'], **manifest['packs']}
     for groups in manifest['species'].values():
         assert set(groups) <= manifest['packs'].keys(), groups

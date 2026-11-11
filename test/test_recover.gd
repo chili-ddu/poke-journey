@@ -192,7 +192,7 @@ func test_scratch_uses_actual_motion_without_end_teleport() -> void:
 		prev = w.player.position
 	assert_almost_eq(w.player.position.x - origin.x, float(Arena.TILE), 0.01)
 
-func test_scratch_follows_target_after_contact_knockback() -> void:
+func test_scratch_stops_at_first_contact_after_target_knockback() -> void:
 	var w := _world(["scratch"])
 	w.player.controller = Still.new()
 	(w.player.controller as Masher).slot = -1
@@ -214,7 +214,7 @@ func test_scratch_follows_target_after_contact_knockback() -> void:
 		assert_gte(w.player.position.distance_to(target.position), w.player.radius + target.radius - 0.1, "몸을 뚫고 지나가지 않는다")
 	assert_lt(target.hp, 900, "접촉 후 적중")
 	assert_gt(target.position.x, target_start.x, "상대가 밀려난다")
-	assert_almost_eq(w.player.position.x - origin.x, float(Arena.TILE), 0.01, "밀려난 공간으로 남은 전진을 잇는다")
+	assert_almost_eq(w.player.position.x - origin.x, 0.5, 0.02, "처음 몸에 닿은 자리에서 멈추고 밀려난 상대를 뒤쫓지 않는다")
 
 func test_scratch_blocked_step_expires_without_overlap() -> void:
 	var w := _world(["scratch"])

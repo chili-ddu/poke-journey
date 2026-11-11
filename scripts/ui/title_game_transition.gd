@@ -21,6 +21,8 @@ class Cover:
 		if icon!=null:
 			var bounce := floorf(absf(sin(clock*4.0))*2.0)
 			draw_texture_rect(icon,Rect2(at-Vector2(0,bounce),Vector2(16,16)),false)
+		if not WebContent.message.is_empty():
+			PixelUi.text(self,Vector2(size.x*0.5,size.y-45),WebContent.message,true,Color.WHITE,Color.BLACK,HORIZONTAL_ALIGNMENT_CENTER)
 		for i in 3:
 			var alpha := 0.35+0.65*maxf(0.0,sin(clock*5.0-float(i)*0.9))
 			draw_rect(Rect2(at+Vector2(18+i*4,10),Vector2(2,2)),Color(0.9,0.94,1.0,alpha))
@@ -38,16 +40,17 @@ func _input(event: InputEvent) -> void:
 	# The pad service tracks releases while this cover blocks its commands.
 	if active and not (event is InputEventJoypadButton or event is InputEventJoypadMotion):get_viewport().set_input_as_handled()
 
-func begin(path: String,prepare: Callable=Callable()) -> void:
+func begin(path: String,prepare: Callable=Callable(),species: String="charmander") -> void:
 	if active:return
 	active=true
 	scene_path=path
 	var tree := get_tree()
-	var error := ERR_FILE_NOT_FOUND
-	if ResourceLoader.exists(path):error=ResourceLoader.load_threaded_request(path,"PackedScene")
 	await _fade(1.0,FADE_OUT)
 	# Submit an opaque loading frame before any main-thread scene construction.
 	if DisplayServer.get_name()!="headless":await RenderingServer.frame_post_draw
+	var error := await WebContent.prepare(tree,species)
+	if error==OK:
+		error=ResourceLoader.load_threaded_request(path,"PackedScene") if ResourceLoader.exists(path) else ERR_FILE_NOT_FOUND
 	if error!=OK:
 		await _restore(error)
 		return

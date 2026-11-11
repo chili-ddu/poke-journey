@@ -275,7 +275,7 @@ func start_game(s: String) -> void:
 		g.came_from_faint=false
 		last=s
 		last_records[s]=chosen
-	)
+	,String(_info.get(s,{}).get("species",s)))
 
 # ── 그리기 ──
 

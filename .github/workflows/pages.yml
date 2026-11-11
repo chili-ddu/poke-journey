@@ -69,11 +69,19 @@ jobs:
           cat build/export.log
           python3 tools/check_web_build.py build/web
 
+      - name: Verify download and retry behavior
+        run: node --test tools/web/test_content_loader.mjs
+
       - name: Verify packed raw assets without source-file fallbacks
         run: |
           mkdir -p "$RUNNER_TEMP/pack-check"
           touch "$RUNNER_TEMP/pack-check/project.godot"
           godot --headless --path "$RUNNER_TEMP/pack-check" --script "$GITHUB_WORKSPACE/tools/check_export_pack.gd" -- "$GITHUB_WORKSPACE/build/web/index.pck"
+
+      - name: Package smaller startup and on-demand content
+        run: |
+          python3 tools/web/package_content.py build/web
+          python3 tools/web/check_content_build.py build/web
 
       - name: Show diagnostics if the build fails
         if: failure()

@@ -1,5 +1,17 @@
 # 성도 지도 연결 회귀 목록
 
+## Web 다운로드 분리 회귀 — 2026-11-11
+
+| 경로 / 재발 방지 | 검증 |
+| --- | --- |
+| 시작 화면에서 엔진·시작 자료만 요청, 게임 진입 전 맵→포켓몬 준비, 중복 요청 방지 | tools/web/test_content_loader.mjs |
+| 다른 종족 저장의 진화 계열, 404 후 재시도, 손상된 캐시·응답, 캐시 사용 불가 | tools/web/test_content_loader.mjs |
+| 선택 화면의 조작·장면 전환과 키보드·가상 패드·물리 패드 입력 보존 | test_title_screen.gd; test_touch_controls.gd; test_physical_gamepad.gd |
+| 선택 다운로드 없이 현재 등장 종족의 원본·부드러운 움직임 자료 완비 | tools/web/check_startup_pack.gd |
+| 전체 493종·원시 맵/GLB/텍스처 참조·압축 무결성·초기 용량 검사 | tools/web/check_content_build.py; tools/check_export_pack.gd |
+
+검증 창은 384×216, 브라우저 저장은 전용 이름으로 격리한다. 빌드별 실제 용량은 Web 결과의 `download-sizes.json`에 기록한다.
+
 ## 모바일 컨트롤러 배치 회귀 — 2026-11-11
 
 기존 목록을 보존한다. 이번 변경의 기록은 [모바일 패드](../docs/touch_controls/controller_layout/README.md)를 따른다.

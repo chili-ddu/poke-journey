@@ -3,10 +3,15 @@ extends SceneTree
 ## Run from an empty project so loose source files cannot hide missing exports.
 func _initialize() -> void:
 	var args := OS.get_cmdline_user_args()
-	if args.size() != 1 or not ProjectSettings.load_resource_pack(args[0]):
-		push_error("Usage: check_export_pack.gd -- /absolute/path/index.pck")
+	if args.is_empty():
+		push_error("Usage: check_export_pack.gd -- /absolute/path/first.pck [more.pck ...]")
 		quit(1)
 		return
+	for pack: String in args:
+		if not ProjectSettings.load_resource_pack(pack):
+			push_error("Cannot mount: "+pack)
+			quit(1)
+			return
 	var path := "res://assets/data/export_runtime_files.json"
 	if not FileAccess.file_exists(path):
 		push_error("Runtime export manifest is missing")

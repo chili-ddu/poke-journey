@@ -11,8 +11,10 @@ const DT := 1.0 / 60.0
 var game: Node
 var out := "."
 var headless := false
+var reveal_frames_ms: Array[float] = []
 
 func _init() -> void:
+	SaveData.path = "user://opening_shot_review_only.cfg"
 	var argv := OS.get_cmdline_user_args()
 	out = argv[0] if argv.size() > 0 else "."
 	headless = DisplayServer.get_name() == "headless"
@@ -31,12 +33,13 @@ func _init() -> void:
 	OS.set_environment("DUNGEON", "")
 	assert(game.state == "talk" and game.monologue, "새 게임은 검은 화면 독백부터(%s)" % game.state)
 	assert(game.world.player.appear == 0.0, "볼에서 나오기 전엔 안 보인다")
-	assert(game.world.cam.zoom == Vector2(2, 2), "볼에 2배로 다가가 있다")
+	assert(game.world.cam.zoom == Vector2.ONE * game.ZOOM_START, "시작 배율로 볼에로 다가가 있다")
 	# 1) 독백
 	await _hold_shot("story-1-monologue")
 	await _pump_until(func(): return not game.monologue, 5.0)
 	# 2) 밝아짐 + 해설
 	await _pump(0.6, true)
+	assert(game.world.player.visual_appear() == 0.0, "연구소가 보이는 동안 포켓몬은 볼 안에 있다")
 	await _hold_shot("story-2-lab")
 	await _pump_until(func(): return String(game.opening.get("phase", "")) == "wobble", 5.0)
 	# 3) 흔들림(세 번째, 가장 다가간 때)
@@ -46,13 +49,16 @@ func _init() -> void:
 	print("  흔들림 배율 %s" % str(game.world.cam.zoom))
 	assert(game.world.cam.zoom.x >= 4.5, "흔들릴수록 다가간다")
 	# 4) 탈출: 뛰어오르는 순간(빛과 함께 줌아웃 중, 오박사 "!")
-	await _pump_until(func(): return float(game.opening.get("t", 0.0)) >= open_at + game.ESCAPE_JUMP * 0.45, 5.0)
+	await _pump_until(func(): return float(game.opening.get("t", 0.0)) >= open_at + BallRelease.GROWN + game.ESCAPE_JUMP * 0.45, 5.0)
+	assert(game.world.player.appear > 0.0 and game.world.player.lift > 0.0, "볼 밖에서 포켓몬이 뛰어오른다")
 	await _shot("story-4-escape")
 	var oak: Npc = game._npc("prof_oak")
 	assert(oak != null and oak.face == "right" and oak.emote_t > 0.0, "오박사가 놀라 볼 쪽을 돌아본다")
 	# 5) 오박사 첫 마디
 	await _pump_until(func(): return game.state == "talk", 5.0)
 	assert(game.world.cam.zoom == Vector2(1, 1), "탈출하면 1배로 빠진다")
+	if not reveal_frames_ms.is_empty():
+		print("볼 개방~착지 최장 프레임 %.1fms (%d프레임)" % [reveal_frames_ms.max(), reveal_frames_ms.size()])
 	await _hold_shot("story-5-oak")
 	# 6) 도망 + 오박사 추격
 	await _pump_until(func(): return String(game.opening.get("phase", "")) == "run" and bool(game.opening.get("called", false)), 5.0)
@@ -67,7 +73,7 @@ func _init() -> void:
 	assert(Arena.tile_of(game.world.player.position) == game.LAB_EXIT, "출구로 달아났다")
 	# 7) 연구소 문 앞
 	await _follow()
-	assert(DungeonDB.current == "kanto_south" and game.state == "opening", "태초마을 연구소 문 앞 장면(%s %s)" % [DungeonDB.current, game.state])
+	assert(DungeonDB.current == DungeonDB.WARP_MAPS["pallet_town"] and game.state == "opening", "태초마을 연구소 문 앞 장면(%s %s)" % [DungeonDB.current, game.state])
 	await _pump_until(func(): return game.state == "talk", 5.0)
 	await _pump_until(func(): return String(game.dialog_text) == Lang.t("oak_eyes").split("|")[0], 5.0)
 	await _hold_shot("story-7-door")
@@ -100,13 +106,17 @@ func _pump(sec: float, hold: bool) -> void:
 func _pump_until(cond: Callable, limit: float) -> void:
 	var t := 0.0
 	while t < limit and not cond.call():
+		var started := Time.get_ticks_usec()
 		game.advance(DT)
+		var airborne: bool = not headless and game.opening.get("phase") == "wobble" and game.world.player.lift > 0.001
 		t += DT
 		await process_frame
+		if airborne: reveal_frames_ms.append((Time.get_ticks_usec() - started) / 1000.0)
 
 # 장면이 바뀔 때까지 옛 장면을 돌린다(암전 → reload_current_scene).
 func _follow() -> void:
 	var old = game
+	var exit_started := Time.get_ticks_usec()
 	for i in 600:
 		if current_scene != null and current_scene != old and is_instance_valid(current_scene) and current_scene.get("world") != null:
 			break
@@ -116,6 +126,7 @@ func _follow() -> void:
 	game = current_scene
 	game.set_process(false)
 	await process_frame
+	print("연구소 출구 → 바깥 장면 %.0fms" % ((Time.get_ticks_usec() - exit_started) / 1000.0))
 
 func _shot(name: String) -> void:
 	if headless:

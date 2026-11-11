@@ -51,3 +51,34 @@ func test_native_foliage_preserves_tree_roots_and_uses_an_alpha_cutout() -> void
 	assert_same(node.material_override.albedo_texture,texture)
 	assert_true(texture.get_image().detect_alpha()!=Image.ALPHA_NONE)
 	node.free()
+
+func test_celadon_restaurant_only_replaces_its_four_facade_columns() -> void:
+	var dir := "res://assets/maps/kanto_world"
+	var replacements := EnvironmentArt.replacements(dir)
+	var restaurant := Vector2(217.5, 149.5)
+	var matches := 0
+	for spec in replacements.buildings:
+		if Vector2(spec.door[0], spec.door[1]) == restaurant:
+			matches += 1
+			assert_eq(int(spec.envelope[0]), 216)
+			assert_eq(int(spec.envelope[2]), 220)
+	assert_eq(matches, 1)
+	var metadata: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(dir + "/hd2d_cards.json"))
+	var row := {}
+	for card in EnvironmentArt.remaining_cards(dir, metadata.cards):
+		if int(card[1]) == 145 and int(card[2]) == 5:
+			row[int(card[0])] = true
+	for x in range(212, 232):
+		assert_eq(row.has(x), x < 216 or x >= 220, "Celadon facade column %d" % x)
+
+func test_house_projects_sun_shadow_without_the_painted_floor_surface() -> void:
+	var path := "res://assets/maps/hgss_game_source/models/prop_field_313_017/mst_rdh.glb"
+	var house := EnvironmentArt.model(path).instantiate()
+	var surfaces: Array[String] = []
+	for node: MeshInstance3D in house.find_children("*", "MeshInstance3D", true, false):
+		assert_eq(node.cast_shadow, GeometryInstance3D.SHADOW_CASTING_SETTING_ON)
+		for i in node.mesh.get_surface_count():
+			surfaces.append(node.mesh.surface_get_material(i).resource_name)
+	surfaces.sort()
+	assert_eq(surfaces, ["h_in", "h_mado_lm1", "mt_rdh01", "mt_rdh02"])
+	house.free()

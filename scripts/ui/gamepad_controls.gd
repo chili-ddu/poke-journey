@@ -76,7 +76,7 @@ func _snapshot_device() -> void:
 	_down.clear();_axes.clear()
 	for button in GamepadBindings.BUTTONS:
 		if Input.is_joy_button_pressed(active_device,button):_down["b:%d"%button] = GamepadBindings.BUTTONS[button]
-	for axis in range(JOY_AXIS_LEFT_X,JOY_AXIS_TRIGGER_RIGHT+1):
+	for axis in [JOY_AXIS_LEFT_X,JOY_AXIS_LEFT_Y,JOY_AXIS_TRIGGER_LEFT,JOY_AXIS_TRIGGER_RIGHT]:
 		_axes[axis] = Input.get_joy_axis(active_device,axis)
 	for axis in GamepadBindings.TRIGGERS:
 		if float(_axes[axis])>=float(config.trigger_press):_down["a:%d"%axis] = GamepadBindings.TRIGGERS[axis]
@@ -96,7 +96,10 @@ func handle_event(event: InputEvent) -> bool:
 	refresh_target()
 	var accepted := is_instance_valid(router.target) or _transition_active()
 	if event is InputEventJoypadButton and not GamepadBindings.BUTTONS.has(event.button_index):return false
-	if event is InputEventJoypadMotion and (event.axis<JOY_AXIS_LEFT_X or event.axis>JOY_AXIS_TRIGGER_RIGHT):return false
+	if event is InputEventJoypadMotion:
+		if event.axis<JOY_AXIS_LEFT_X or event.axis>JOY_AXIS_TRIGGER_RIGHT:return false
+		# R-stick motion is unbound and cannot claim a device or change input mode.
+		if event.axis in [JOY_AXIS_RIGHT_X,JOY_AXIS_RIGHT_Y]:return accepted
 	if active_device!=event.device:
 		if active_device>=0 and _has_input():return accepted
 		_clear_intents();_axes.clear();_down.clear();_suppress_current();active_device = event.device
@@ -166,11 +169,10 @@ func _summary_held() -> bool:
 func _update_axes(dt: float) -> void:
 	if not _focused or not is_instance_valid(router.target) or _transition_active():return
 	var left := _stick(JOY_AXIS_LEFT_X,JOY_AXIS_LEFT_Y)
-	var right := _stick(JOY_AXIS_RIGHT_X,JOY_AXIS_RIGHT_Y)
 	if _bound!=null:
 		_bound.pad_move = left if _playing() else Vector2.ZERO
-		_bound.pad_aim = right if _playing() else Vector2.ZERO
-		if left!=Vector2.ZERO or right!=Vector2.ZERO:_bound.pad_active = true
+		_bound.pad_aim = Vector2.ZERO
+		if left!=Vector2.ZERO:_bound.pad_active = true
 	var code := _direction(left) if router.navigation() else KEY_NONE
 	if code!=_nav:
 		_nav = code;_nav_timer = float(config.navigation_delay)

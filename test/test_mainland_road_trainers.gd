@@ -158,5 +158,5 @@ func test_paired_trainer_throws_from_each_owner_and_passes_native_ivs() -> void:
 		game.battle={"trainer":lead,"idx":index,"resume":"fight"};game._send_next()
 		var mon: Enemy=game.battle.mon
 		assert_eq(int(mon.ivs.hp),6)
-		assert_eq(game.sendout.ball.from, (lead if index==0 else partner).position+Vector2(0,-Arena.TILE*0.4))
+		assert_eq(game.sendout.ball.from, (lead if index==0 else partner).throw_hand_world())
 		game.world.enemies.erase(mon);mon.queue_free();game.sendout={}

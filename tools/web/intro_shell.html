@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>$GODOT_PROJECT_NAME</title>
+<style>
+html,body{margin:0;padding:0;background:#08100d;color:#f6f0d6;overflow:hidden;touch-action:none}
+#canvas{display:block;outline:none;width:100%;height:100%}
+#journey-intro{--unit:min(.260417vw,.462963vh);position:fixed;inset:0;z-index:128;display:grid;place-items:center;background:#15241f;pointer-events:auto;font-family:system-ui,sans-serif}
+#journey-intro[hidden]{display:none}
+#journey-intro.live{background:transparent}
+.loading-corner{display:none;position:absolute;right:calc(var(--unit)*6);bottom:calc(var(--unit)*9);width:calc(var(--unit)*30);height:calc(var(--unit)*16);align-items:center;gap:calc(var(--unit)*2)}
+.loading-corner img{width:calc(var(--unit)*16);height:calc(var(--unit)*16);image-rendering:pixelated;animation:ball-roll 2.1s linear infinite}
+.loading-corner i{display:block;width:calc(var(--unit)*2);height:calc(var(--unit)*2);background:#e6efff;animation:ball-dot 1.2s ease-in-out infinite}
+.loading-corner i:nth-child(3){animation-delay:.18s}.loading-corner i:nth-child(4){animation-delay:.36s}
+#journey-intro[data-phase="loading"]{background:#080b10}
+#journey-intro[data-phase="loading"] .intro-stage{container-type:normal;width:100%;height:100%}
+#journey-intro[data-phase="loading"] .intro-title,#journey-intro[data-phase="loading"] #intro-progress{display:none}
+#journey-intro[data-phase="loading"] .intro-footer{background:transparent}
+#journey-intro[data-phase="loading"] #intro-message{position:fixed;bottom:calc(var(--unit)*45);left:0;right:0;max-width:100%;font-size:calc(var(--unit)*11)}
+#journey-intro[data-phase="loading"] .loading-corner{display:flex}
+@keyframes ball-roll{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-2px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
+@keyframes ball-dot{0%,100%{opacity:.35}50%{opacity:1}}
+.intro-stage{width:min(100vw,177.7778vh);height:min(100vh,56.25vw);position:relative;container-type:size}
+.intro-title{position:absolute;inset:0 0 auto;height:28.704%;background:rgba(6,14,12,.9);text-align:center;box-sizing:border-box;padding-top:2.34cqw}
+.intro-title span{display:block;color:#e8cf8b;font-size:3.125cqw;font-weight:650;letter-spacing:.36em;padding-left:.36em}
+.intro-title strong{display:block;font-size:7.292cqw;letter-spacing:.14em;padding-left:.14em;line-height:1.2}
+.intro-footer{position:absolute;inset:auto 0 0;height:19.444%;background:rgba(6,14,12,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2cqh;text-align:center}
+#intro-message{font-size:2.865cqw;line-height:1.4;margin:0;max-width:95%}
+#intro-progress{width:31.25%;height:.926cqh;background:#526253;overflow:hidden}
+#intro-fill{height:100%;background:#e8cf8b;width:20%;animation:travel 2.5s linear infinite}
+#intro-start{display:none;border:0;background:transparent;color:#f6f0d6;font:650 3.646cqw/1 system-ui,sans-serif;letter-spacing:.15em;cursor:pointer;padding:1.85cqh 4cqw;min-height:44px}
+#journey-intro[data-phase="ready"] #intro-start,#journey-intro[data-phase="error"] #intro-start{display:block}
+#journey-intro[data-phase="ready"] #intro-message,#journey-intro[data-phase="ready"] #intro-progress,#journey-intro[data-phase="error"] #intro-progress{display:none}
+#journey-intro[data-phase="error"] #intro-message{color:#f4bcb0;font-size:2.4cqw}
+#journey-intro[data-phase="error"] #intro-start{font-size:2.8cqw;padding:0;min-height:24px}
+@keyframes travel{from{transform:translateX(-100%)}to{transform:translateX(500%)}}
+@media(prefers-reduced-motion:reduce){#intro-fill,.loading-corner img,.loading-corner i{animation:none}}
+</style>
+$GODOT_HEAD_INCLUDE
+</head>
+<body>
+<canvas id="canvas" tabindex="0">브라우저가 게임 화면을 지원하지 않습니다.</canvas>
+<div id="journey-intro" data-phase="loading" aria-label="포켓몬 언테임드 시작 화면">
+ <div class="loading-corner" aria-hidden="true"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABAUlEQVR4nKVToQ7CMBB9W/ojk+MPhgMJDmQluOEIbrKOIPcJk0iQmxt/QOU+AzlypW3argliL7m1ub73rtfcgJlIYsnNqhjD3LN7RbksJnzk+YS4BcaYUeKKlXC5/CX6fmLylhKXwCQNxR9+UGGNHCzyHNegxRQzkZDbVbsr/GnBwLTCJqw/whCMPnWWodQk2huUwxAVKY4+Y14SwJ5vUKw5Xm2Dunl6Jq6594iVONsEid2VRCYMMmef0kMc+UmZ0AFVJpjVFRGHbti1rZ0FZghSSpSVQC0q3JtfdfdmdE4RfUTtNhKdH3YeIRTdRO1NojfXZsLOVTmpREKnmMXsv/ELm/l5Zpgv2DYAAAAASUVORK5CYII=" alt=""><i></i><i></i><i></i></div>
+ <div class="intro-stage">
+  <div class="intro-title"><span>POKÉMON</span><strong>UNTAMED</strong></div>
+  <div class="intro-footer">
+   <p id="intro-message" role="status" aria-live="polite">모험을 준비하고 있습니다…</p>
+   <div id="intro-progress" role="progressbar" aria-label="게임 자료 준비"><div id="intro-fill"></div></div>
+   <button id="intro-start" type="button" disabled>PRESS START</button>
+  </div>
+ </div>
+</div>
+<noscript>게임을 실행하려면 JavaScript를 켜 주세요.</noscript>
+<script>
+// BEGIN SHARED INTRO
+(() => {
+ 'use strict';
+ const panel=document.getElementById('journey-intro');
+ const message=document.getElementById('intro-message');
+ const progress=document.getElementById('intro-progress');
+ const fill=document.getElementById('intro-fill');
+ const button=document.getElementById('intro-start');
+ let owner='', callback=null, phase='loading', active=true;
+ function update(id,next,text,current=0,total=0,alpha=1){
+  if(id!==owner||!active)return;
+  phase=next;panel.hidden=false;panel.dataset.phase=phase;panel.style.opacity=String(alpha);
+  if(message.textContent!==text)message.textContent=text;
+  button.disabled=phase!=='ready'&&phase!=='error';
+  button.textContent=phase==='error'?'다시 시도':'PRESS START';
+  if(total>0){
+   const percent=Math.max(0,Math.min(100,current*100/total));
+   fill.style.animation='none';fill.style.transform='none';fill.style.width=`${percent}%`;
+   progress.setAttribute('aria-valuenow',String(Math.floor(percent)));
+  }else{fill.style.animation='';fill.style.transform='';fill.style.width='20%';progress.removeAttribute('aria-valuenow');}
+ }
+ function activate(event){
+  if(event){event.preventDefault();event.stopPropagation();}
+  if(button.disabled)return;
+  // Lock immediately, including repeated pointer/key events in the same frame.
+  button.disabled=true;
+  if(callback)callback();else if(phase==='error')window.location.reload();
+ }
+ panel.addEventListener('click',activate);
+ document.addEventListener('keydown',event=>{
+  if(panel.hidden||event.repeat||!['Enter',' '].includes(event.key))return;
+  event.preventDefault();event.stopImmediatePropagation();activate();
+ },true);
+ window.untamedIntro={
+  show(id,onStart){owner=id;callback=onStart;active=true;panel.classList.remove('live');update(id,'loading','모험을 준비하고 있습니다…');},
+  live(id){if(id===owner)panel.classList.add('live');},
+  update,
+  loading(text,current=0,total=0){update(owner,'loading',text,current,total);},
+  error(text){update(owner,'error',text);},
+  hide(id){if(id!==owner)return;active=false;panel.hidden=true;callback=null;document.getElementById('canvas').focus();},
+ };
+})();
+// END SHARED INTRO
+</script>
+<script src="$GODOT_URL"></script>
+<script>
+const GODOT_CONFIG = $GODOT_CONFIG;
+const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
+const engine = new Engine(GODOT_CONFIG);
+(function () {
+ const missing=Engine.getMissingFeatures({threads:GODOT_THREADS_ENABLED});
+ const failure=error=>{console.error(error);window.untamedIntro.error('게임을 준비하지 못했습니다. 연결과 브라우저를 확인해 주세요.');};
+ if(missing.length){failure(new Error(missing.join(', ')));return;}
+		engine.startGame({
+   onProgress(current,total){window.untamedIntro.loading('게임 자료 준비 중…',current,total);},
+		}).then(() => {
+   // IntroScreen owns readiness. Engine startup alone never shows PRESS START.
+  },failure);
+})();
+</script>
+</body>
+</html>

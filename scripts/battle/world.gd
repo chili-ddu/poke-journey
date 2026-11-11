@@ -4,6 +4,12 @@ extends Node2D
 const BattleContact = preload("res://scripts/battle/battle_contact.gd")
 const FireField = preload("res://scripts/battle/fire_spin_field.gd")
 const KantoMoveFx=preload("res://scripts/battle/kanto_move_fx.gd")
+const AreaAim=preload("res://scripts/battle/aim_assist.gd")
+var area_aim := AreaAim.new()
+const AREA_CHARGE_TIME := .8
+const AREA_MIN_RANGE := float(Arena.TILE)
+var _area_charge: Dictionary = {}
+var _area_suppressed_slots: Dictionary = {}
 
 # 아레나 안의 모든 것을 한 걸음(step)씩 진행시킨다.
 # 엔진의 _process 가 아니라 game.gd 가 step(dt) 을 직접 부른다 —
@@ -353,6 +359,8 @@ func clear_enemy_projectiles() -> void:
 # are spent by checking a press; actual casting and hold-to-fire stay below.
 func skill_input_blocked(slot: int) -> bool:
 	if slot<0 or slot>=Player.SLOT_COUNT or player.dead: return true
+	if not _committed_preparation(player).is_empty():return true
+	if not _area_charge.is_empty() and slot!=int(_area_charge.slot):return true
 	if player.hitstop_t>0.0 or not field_water.fishing.is_empty() or not player.can_act(): return true
 	if not player.burrow.is_empty():
 		return not (float(player.burrow.sink)<=0.0 and slot==int(player.burrow.get("slot",-1)) and float(player.burrow.t)<float(player.burrow.under)-0.2)
@@ -364,8 +372,18 @@ func skill_input_blocked(slot: int) -> bool:
 func _step_player(dt: float) -> void:
 	player.tick_cooldowns(dt)
 	var c = player.controller
+	var preparation:=_committed_preparation(player)
+	if not preparation.is_empty():player.facing=preparation.locked_dir
+	var fresh_skills: Array[int]=[]
+	if not _area_charge.is_empty() and not _area_charge_valid():_cancel_area_charge()
+	if c!=null and c.has_method("skill_is_held"):
+		for slot in _area_suppressed_slots.keys():
+			if not c.skill_is_held(int(slot)):_area_suppressed_slots.erase(slot)
 	if c != null and c.has_method("consume_skill_presses"):
 		for slot in c.consume_skill_presses(self):
+			fresh_skills.append(slot)
+			# A release/repress event can occur between simulation ticks.
+			_area_suppressed_slots.erase(slot)
 			if not player.dead and skill_input_blocked(slot): player.play_skill_denied_feedback()
 	if player.dead:
 		return
@@ -405,11 +423,11 @@ func _step_player(dt: float) -> void:
 	var knocked := player.knock != Vector2.ZERO or player.flinch_t > 0.0
 	var mv: Vector2 = Vector2.ZERO if knocked else c.move_dir(self)
 	player.vel = mv * player.move_speed()
-	if player.attack_anim_t > 0.0:
+	if player.attack_anim_t > 0.0 and _area_charge.is_empty():
 		player.vel *= ATTACK_MOVE_FACTOR
 	if player.attack_anim_t > 0.0:
 		var firing := _ember_direction(player)
-		player.facing = firing if firing != Vector2.ZERO else aim_dir
+		player.facing = player.attack_direction if not player.attack_direction.is_zero_approx() else (firing if firing != Vector2.ZERO else aim_dir)
 	elif mv.length_squared() > 0.01:
 		player.facing = mv.normalized()
 
@@ -423,10 +441,16 @@ func _step_player(dt: float) -> void:
 		for n in Player.HOTBAR:
 			if c.want_hotbar(n, self):
 				_use_hotbar(n, mv.length_squared() > 0.01)
+	# Long preparations commit on press. Walking/items remain available, but
+	# jump/dodge/ledge hops or another skill cannot bypass the commitment.
+	if not preparation.is_empty():
+		player.facing=preparation.locked_dir
+		return
 	# 회피(우클릭): 이동 방향(없으면 조준 방향)으로 내달린다. 잠깐 무적, 쿨타임. 지금은 잠겨 있다(Player.dodge_unlocked).
 	if knocked:
 		pass
 	elif Player.dodge_unlocked and c.want_dodge(self) and player.dodge_cd <= 0.0:
+		_cancel_area_charge()
 		var dd := mv.normalized() if mv.length_squared() > 0.01 else aim_dir
 		_start_dodge(dd)
 		player.eat_t = 0.0
@@ -436,6 +460,7 @@ func _step_player(dt: float) -> void:
 		var d := mv.normalized() if mv.length_squared() > 0.01 else aim_dir
 		var plan := plan_hop(player.position, d)
 		if plan["ok"]:
+			_cancel_area_charge()
 			player.eat_t = 0.0
 			_start_hop(plan["to"])
 			return
@@ -444,6 +469,7 @@ func _step_player(dt: float) -> void:
 	if drop != Vector2.ZERO and player.hop_t <= 0.0:
 		var plan := plan_hop(player.position, drop)
 		if plan["ok"]:
+			_cancel_area_charge()
 			_start_hop(plan["to"])
 			return
 
@@ -451,16 +477,30 @@ func _step_player(dt: float) -> void:
 	# 꽃잎댄스 난동 중에도 다른 기술은 못 쓴다(원작).
 	if player.hop_t > 0.0 or no_skills or player.rampage_t > 0.0 or player.skill_lock_t > 0.0 or player.para_lock_t > 0.0:
 		return                                   # skill_lock_t: 후딜레이(연타 금지), para_lock_t: 마비로 몸이 저린 동안
+	if not _area_charge.is_empty():
+		_step_area_charge(dt)
+		return
 	for i in Player.SLOT_COUNT:
 		var id: String = player.slots[i]
-		if not player.can_use(i) or not c.want_skill(i, self):
-			continue
+		if _area_suppressed_slots.has(i):continue
+		if not player.can_use(i):continue
+		var requested: bool=c.want_skill(i,self)
+		if not requested and fresh_skills.has(i) and c.has_method("skill_is_held") and AreaAim.is_area_move(MoveDB.get_move(id)):requested=true
+		if not requested:continue
 		# 장판·회오리는 하나가 남아 있는 동안 다시 못 쓴다.
 		if MoveDB.get_move(id)["shape"] in ["zone", "ring"] and _has_own_zone(id):
 			continue
+		if AreaAim.is_area_move(MoveDB.get_move(id)) and c.has_method("skill_is_held"):
+			if not c.skill_is_held(i) and not fresh_skills.has(i):continue
+			_begin_area_charge(i,id)
+			if not c.skill_is_held(i):_step_area_charge(0.0)
+			break
 		if full_paralysis(player):               # 마비: 25% 로 기술이 안 나간다
 			player.play_skill_denied_feedback()
 			return
+		aim_point = _player_skill_aim(id)
+		var corrected := aim_point - player.position
+		aim_dir = corrected.normalized() if corrected.length_squared() > 1.0 else player.facing
 		player.facing = aim_dir
 		if c.has_method("stop_move"):
 			c.stop_move()                         # 기술을 쓰면 클릭 이동은 멈춘다(사용자 2026-11-02)
@@ -469,7 +509,11 @@ func _step_player(dt: float) -> void:
 		var charge := float(mdef.get("cast_delay", 0.0))
 		if charge > 0.0:
 			# 힘을 모았다가 쏜다. 조준은 발사 순간에 다시 잡는다.
-			pending_casts.append({"mon": player, "move": id, "t": charge})
+			var pending:={"mon":player,"move":id,"t":charge}
+			if mdef.has("charge_turns"):
+				pending["committed"]=true;pending["locked_dir"]=aim_dir
+				player.attack_direction=aim_dir
+			pending_casts.append(pending)
 			player.play_attack(String(mdef.get("anim", "Charge")), charge + 0.05)
 			# 로케트박치기: 모으는 턴에 방어 +1(원작). 솔라빔: 빛이 모여든다.
 			if mdef.has("charge_stat"):
@@ -490,6 +534,119 @@ func _step_player(dt: float) -> void:
 				player.recover_t = maxf(player.recover_t, player.attack_anim_t)
 				player.vel = Vector2.ZERO
 		break    # 한 프레임에 기술 하나
+
+func _player_skill_aim(move_id: String) -> Vector2:
+	var controller = player.controller
+	if controller != null and controller.has_method("skill_aim"):
+		return controller.skill_aim(self, move_id, controller.aim_point(self))
+	return aim_point
+
+func _committed_preparation(mon: Mon) -> Dictionary:
+	for pending in pending_casts:
+		if pending.get("committed",false) and pending.mon==mon and not mon.dead:return pending
+	return {}
+
+## Read-only path for the selected/committed/active human dash. Width is its
+## body radius; the optional offset projects the existing FRLG feet anchor.
+func dash_aim_preview() -> Dictionary:
+	if player==null or player.dead or not player.controller is Controllers.Human or no_skills:return {}
+	var move_id: String=""
+	var direction:=Vector2.ZERO
+	var distance:=0.0
+	var active:=not player.dash.is_empty() and String(player.dash.get("move",""))!=""
+	if active:
+		move_id=String(player.dash.move);direction=player.dash.dir
+		distance=maxf(0.0,float(player.dash.t))*float(player.dash.speed)
+	else:
+		var preparation:=_committed_preparation(player)
+		if not preparation.is_empty():
+			move_id=String(preparation.move);direction=preparation.locked_dir
+		else:
+			var slot:=player.pp_focus_slot
+			if not player.can_act() or player.hop_t>0.0 or player.skill_lock_t>0.0 or not player.can_use(slot):return {}
+			move_id=String(player.slots[slot])
+			if String(MoveDB.get_move(move_id).shape)!="dash":return {}
+			var controller: Controllers.Human=player.controller
+			var raw: Vector2=controller.peek_aim_point(self)
+			var point: Vector2=controller.peek_skill_aim(self,move_id,raw)
+			direction=(point-player.position).normalized() if point.distance_squared_to(player.position)>1.0 else player.facing
+		var move:=MoveDB.get_move(move_id)
+		if String(move.shape)!="dash":return {}
+		distance=float(move.distance)
+	var sweep:=BattleContact.forward_sweep(self,player,player.position,direction,distance)
+	return {"from":player.position,"to":sweep.point,"width":player.radius,"move_id":move_id,"active":active,
+		"ground_offset":Vector2.ZERO if Arena.native_at(Arena.tile_of(player.position)) else Vector2(0,player.feet_offset())}
+
+func _area_charge_valid() -> bool:
+	if _area_charge.is_empty() or player==null:return false
+	var controller=player.controller
+	if controller==null or controller!=_area_charge.controller or not controller.has_method("skill_is_held"):return false
+	if controller.has_method("skill_input_revision") and controller.skill_input_revision()!=int(_area_charge.revision):return false
+	if controller.get("hold")==true:return false
+	var slot:=int(_area_charge.slot)
+	if player.slots[slot]!=String(_area_charge.move) or not player.can_use(slot):return false
+	if not player.can_act() or no_skills or player.hop_t>0 or player.rampage_t>0 or player.skill_lock_t>0 or player.para_lock_t>0:return false
+	if not field_water.fishing.is_empty() or _has_own_zone(String(_area_charge.move)):return false
+	return true
+
+func _begin_area_charge(slot: int,move_id: String) -> void:
+	var controller=player.controller
+	player.attack_direction=Vector2.ZERO
+	_area_charge={"slot":slot,"move":move_id,"elapsed":0.0,"controller":controller,
+		"revision":controller.skill_input_revision() if controller.has_method("skill_input_revision") else 0,"offset":Vector2.ZERO}
+	player.play_attack("Charge",.1)
+	_update_area_charge_point()
+
+func _update_area_charge_point() -> void:
+	var move:=MoveDB.get_move(String(_area_charge.move))
+	var reach:=lerpf(minf(AREA_MIN_RANGE,float(move.range)),float(move.range),clampf(float(_area_charge.elapsed)/AREA_CHARGE_TIME,0,1))
+	var controller=player.controller
+	var raw: Vector2=controller.aim_point(self)-player.position
+	var direction:=raw.normalized() if raw.length_squared()>1.0 else player.facing
+	var point:=player.position+direction*reach
+	if controller.has_method("skill_aim"):point=controller.skill_aim(self,String(move.id),point)
+	else:point=area_aim.resolve_area(self,player,move,point)
+	_area_charge.offset=point-player.position
+	if not (point-player.position).is_zero_approx():player.facing=(point-player.position).normalized()
+
+## Read-only hit center/radius for the shared 2D/3D range preview.
+func area_charge_preview() -> Dictionary:
+	if not _area_charge_valid():return {}
+	var move:=MoveDB.get_move(String(_area_charge.move))
+	var offset: Vector2=_area_charge.offset
+	return {"center":player.position+offset,"radius":float(move.get("area_radius",move.get("radius",Arena.TILE))),
+		"progress":clampf(float(_area_charge.elapsed)/AREA_CHARGE_TIME,0,1),"range":offset.length(),
+		"ground_offset":Vector2(0,player.feet_offset()) if move.id=="fire_spin" else Vector2.ZERO,"move_id":String(move.id)}
+
+func _cancel_area_charge() -> void:
+	if _area_charge.is_empty():return
+	_area_suppressed_slots[int(_area_charge.slot)]=true
+	_area_charge={}
+	player.attack_anim_t=0.0
+
+func _step_area_charge(dt: float) -> void:
+	_area_charge.elapsed=float(_area_charge.elapsed)+dt
+	_update_area_charge_point()
+	if player.controller.skill_is_held(int(_area_charge.slot)):
+		player.attack_anim_t=maxf(player.attack_anim_t,.1)
+		return
+	var charge: Dictionary=_area_charge
+	_area_charge={}
+	player.attack_anim_t=0.0
+	if full_paralysis(player):player.play_skill_denied_feedback();return
+	var point: Vector2=player.position+Vector2(charge.offset)
+	var move:=MoveDB.get_move(String(charge.move))
+	var wait:=maxf(0,float(move.get("cast_delay",0))-float(charge.elapsed))
+	player.spend(int(charge.slot))
+	if player.controller.has_method("stop_move"):player.controller.stop_move()
+	if wait>0:
+		pending_casts.append({"mon":player,"move":String(charge.move),"t":wait,"locked_point":point})
+		player.play_attack(String(move.get("anim","Charge")),wait+.1)
+		player.skill_lock_t=maxf(player.skill_lock_t,wait+.1+MoveDB.recover_of(String(charge.move)))
+	else:
+		cast(player,String(charge.move),(point-player.position).normalized(),point,{"area_point_locked":true})
+		player.play_attack(String(move.get("anim","Attack")),.1)
+		_player_recover(String(charge.move),.1)
 
 # 후딜레이(사용자 정의 2026-10-30): 스킬 동작(지금 재생 중인 공격 도트, attack_anim_t)이 끝난 뒤 MoveDB.RECOVER 동안 어떤 스킬도 못 쓴다.
 # 움직임·자세는 그대로(동작 중엔 ATTACK_MOVE_FACTOR 로 느릴 뿐). action: 동작 길이(없으면 지금 attack_anim_t).
@@ -559,7 +716,18 @@ func _battle_sound_pan(at: Vector2) -> float:
 func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dictionary = {}) -> void:
 	if confusion_self_hit(mon):
 		return
+	# The direction belongs to one attack; a later shot cannot inherit an
+	# interrupted melee's pose lock. Long committed preparations pass it on.
+	mon.attack_direction=dir.normalized() if opts.get("direction_locked",false) else Vector2.ZERO
 	var m := MoveDB.get_move(move_id)
+	if AreaAim.is_area_move(m) and not opts.get("area_point_locked",false):
+		var assistance: RefCounted=area_aim
+		if mon==player and player.controller is Controllers.Human:
+			assistance=player.controller.aim_assist
+		var precise: bool=player.controller.skill_aim_precise() if mon==player and player.controller is Controllers.Human else false
+		aim_pos=assistance.resolve_area(self,mon,m,aim_pos,precise)
+		if not aim_pos.is_equal_approx(mon.position):dir=(aim_pos-mon.position).normalized()
+		mon.facing=dir
 	if mon == player: player_move_used.emit(move_id)
 	var hit := make_hit(mon, move_id)
 	if hit.has("recoil_state"): hit.recoil_state.direction=dir.normalized()
@@ -582,6 +750,7 @@ func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dicti
 		"counter":
 			WildActions.stance(self,mon,String(m["counter_cat"]))
 		"arc":
+			if float(m.get("arc_deg",360.0))<360.0:mon.attack_direction=dir.normalized()
 			if String(m.get("fx", "")) == "metal":
 				mon.shine_t = 0.45   # 메탈클로우: 원작처럼 먼저 금속 번쩍임(MetallicShine)
 			elif m.get("area_wave",false):
@@ -616,7 +785,7 @@ func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dicti
 			# 불꽃엄니처럼 "살짝 나서며" 무는 기술: step 만큼 앞으로 옮긴다(벽은 막힌다).
 			var step := float(m.get("step", 0.0))
 			if step > 0.0 and String(m.get("fx", "")) != "fang_c":
-				mon.position = resolve_mon(mon,mon.position + dir * step)
+				mon.position = resolve_melee_advance(mon,dir*step)
 			if String(m.get("fx", "")) == "fang_c":
 				var fang := _fire_fang_cast_custom(mon, dir, maxf(delay, 0.01))
 				if combat_clashes:
@@ -635,8 +804,12 @@ func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dicti
 		"gesture":
 			status_message.emit(Lang.t("nothing"))
 		"status_cone":
-			_status_cone(mon, m, dir)
+			if AreaAim.is_area_move(m):_powder_area(mon,m,aim_pos)
+			else:_status_cone(mon, m, dir)
 		"projectile", "cone":
+			if move_id=="rock_throw" and AreaAim.is_area_move(m):
+				_rock_tomb(mon,m,aim_pos,float(m["area_radius"]),1)
+				return
 			if m["shape"]=="cone": hit["contacts"]={}
 			var count: int = m["count"]
 			var spread := deg_to_rad(m["spread_deg"])
@@ -667,7 +840,7 @@ func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dicti
 				add_fx("flare_coat",mon.position,{"follow":mon,"dir":dir,"lifetime":.46})
 			mon.dash = {"dir": dir, "speed": float(m["distance"]) / float(m["duration"]),
 				"t": float(m["duration"]), "move": move_id, "hit_ids": {}, "hit": hit}
-			if mon == player:
+			if mon == player and bool(m.get("dash_invulnerable",false)):
 				mon.invuln_t = maxf(mon.invuln_t, float(m["duration"]) + 0.05)
 		"lob":
 			_lob(mon, m, dir, aim_pos)
@@ -685,8 +858,10 @@ func cast(mon: Mon, move_id: String, dir: Vector2, aim_pos: Vector2, opts: Dicti
 			z.lifetime = life
 			if z is FireField:
 				z.feet_offset=mon.feet_offset()
-				z.direction=dir.normalized() if not dir.is_zero_approx() else mon.facing
-				z.remaining=float(m["range"])
+				z.target_point=aim_pos
+				z.ground_targeted=AreaAim.is_area_move(m)
+				z.direction=(aim_pos-mon.position).normalized() if z.ground_targeted else (dir.normalized() if not dir.is_zero_approx() else mon.facing)
+				z.remaining=mon.position.distance_to(aim_pos) if z.ground_targeted else float(m["range"])
 				z.turns=rng.randi_range(4,5)
 				z.lifetime=z.turns*Mon.TURN
 			else:
@@ -738,9 +913,14 @@ func _step_pending_casts(dt: float) -> void:
 		if pc["t"] <= 0.0:
 			var mon: Mon = pc["mon"]
 			if is_instance_valid(mon) and not mon.dead:
-				var dir := (aim_point - mon.position).normalized() if mon == player else mon.facing
+				var locked: bool = pc.has("locked_point")
+				if locked:aim_point=pc.locked_point
+				elif pc.get("committed",false):aim_point=mon.position+Vector2(pc.locked_dir)*100.0
+				elif mon == player: aim_point = _player_skill_aim(String(pc["move"]))
+				var dir: Vector2 = pc.locked_dir if pc.get("committed",false) else ((aim_point - mon.position).normalized() if mon == player or locked else mon.facing)
 				mon.facing = dir
-				cast(mon, pc["move"], dir, aim_point if mon == player else mon.position + dir * 100.0)
+				cast(mon, pc["move"], dir, aim_point if mon == player or locked else mon.position + dir * 100.0,
+					{"area_point_locked":locked,"direction_locked":bool(pc.get("committed",false))})
 				# 쏘는 동안은 모으던 자세를 그대로 둔다 — 불씨마다 몸이 움직이지 않게(사용자 결정).
 				var mm := MoveDB.get_move(pc["move"])
 				var volley_len := float(mm.get("interval", 0.0)) * float(mm.get("count", 1)) + 0.1
@@ -855,12 +1035,7 @@ func _step_pending_melee(dt: float) -> void:
 				var old_progress := clampf((duration-before-duration*0.6)/(duration*0.4),0.0,1.0)
 				var new_progress := clampf((duration-float(pm["t"])-duration*0.6)/(duration*0.4),0.0,1.0)
 				var distance := float(pm["fang_step"])*(new_progress*new_progress-old_progress*old_progress)
-				var next := resolve_mon(caster,caster.position + Vector2(pm["dir"])*distance)
-				var blocked := false
-				for target in opponents(caster.team):
-					if not target.dead and next.distance_to(target.position) < caster.radius+target.radius:
-						blocked = true
-				if not blocked: caster.position = next
+				caster.position=resolve_melee_advance(caster,Vector2(pm["dir"])*distance)
 		if pm.t <= 0.0: due.append(pm)
 	if due.size() > 1: due.sort_custom(func(a, b): return a.t < b.t)
 	for pm in due:
@@ -888,6 +1063,7 @@ func _interrupt_melee(target: Mon) -> void:
 		target.glide = {}
 		target.attack_anim_t = 0.0
 		target.attack_lunge = false
+		target.attack_direction = Vector2.ZERO
 
 # 변화기(울음소리·무서운얼굴): 앞 부채꼴(몸 가장자리 기준 range) 안의 상대 랭크를 바꾼다. 맞은 쪽은 떨고 원작 능력 변화 연출.
 func _status_cone(mon: Mon, m: Dictionary, dir: Vector2) -> void:
@@ -982,7 +1158,7 @@ func _lob(mon: Mon, m: Dictionary, dir: Vector2, aim_pos: Vector2) -> void:
 	var reach: float = m["range"]
 	var radius: float = m["radius"]
 	var mouth := mon.position + Vector2(0, -mon.radius * 0.6) + dir * (mon.radius+Projectile.RELEASE_GAP)
-	var land := mon.position + (aim_pos - mon.position).limit_length(reach)
+	var land := aim_pos if AreaAim.is_area_move(m) else mon.position + (aim_pos - mon.position).limit_length(reach)
 	var dist := mouth.distance_to(land)
 	var travel := clampf(0.15 + dist / 320.0, 0.15, 0.5)
 	var style := String(m.get("fx", "smoke"))
@@ -1066,12 +1242,12 @@ func _lob_seed(mon: Mon, m: Dictionary, mouth: Vector2, land: Vector2, travel: f
 	pending_calls.append({"t": travel, "call": landed})
 
 # 암석봉인(rock_tomb.spa): 바위 셋이 조준한 자리 위에서 차례로 떨어진다. 마지막 바위가 닿는 순간 둘레 radius 의 상대에게 피해 + 스피드 −1.
-func _rock_tomb(mon: Mon, m: Dictionary, land: Vector2, radius: float) -> void:
+func _rock_tomb(mon: Mon, m: Dictionary, land: Vector2, radius: float, count: int=3) -> void:
 	const FALL := 0.3
 	const DROP_H := 70.0
-	for k in 3:
-		var a := TAU * float(k) / 3.0 + 0.5
-		var spot := land + Vector2.from_angle(a) * radius * 0.45
+	for k in count:
+		var a := TAU * float(k) / float(count) + 0.5
+		var spot := land + Vector2.from_angle(a) * radius * 0.45 if count>1 else land
 		add_fx("sprite", spot + Vector2(0, -DROP_H), {"text": "g4_rock", "color": Color.WHITE, "size": 14.0, "dir": Vector2.DOWN,
 			"speed": DROP_H / FALL, "lifetime": FALL + 0.12 * k + 0.35, "delay": 0.12 * k, "fade_out": 0.15})
 		add_fx("sprite", spot + Vector2(0, 4), {"text": "g4_puff", "color": Color(0.85, 0.8, 0.7, 0.8), "size": 10.0, "grow": 1.8,
@@ -1086,7 +1262,27 @@ func _rock_tomb(mon: Mon, m: Dictionary, land: Vector2, radius: float) -> void:
 			if not t.dead and t.position.distance_to(land) <= radius + t.radius * 0.5:
 				apply_hit(t, hit, land)
 				t.shake_t = 0.3
-	pending_calls.append({"t": FALL + 0.24, "call": landed})
+	pending_calls.append({"t": FALL + 0.12*(count-1), "call": landed})
+
+## Existing powder particles gather around a fixed ground circle, then apply the normal status rules once.
+func _powder_area(mon: Mon,m: Dictionary,land: Vector2) -> void:
+	var radius: float=m["radius"]
+	var color:=Color8(208,72,248,230) if String(m.id)=="poison_powder" else Color8(104,232,176,230)
+	for index in 14:
+		var angle:=TAU*float(index)/14.0
+		var direction:=Vector2.from_angle(angle)
+		var offset:=direction*radius*(.25+.5*float(index%4)/3.0)
+		add_fx("sprite",land+offset+Vector2(0,-6),{"text":"g4_powder","color":color,"size":fx_rng.randf_range(6,10),
+			"dir":direction,"speed":radius*.3,"lifetime":.8,"delay":.02*(index%3),"fade_out":.4})
+	var hit:=make_hit(mon,String(m.id))
+	var caster_ref: WeakRef=weakref(mon)
+	var apply:=func() -> void:
+		var caster: Mon=caster_ref.get_ref()
+		if not is_instance_valid(caster):return
+		for target: Mon in opponents(caster.team):
+			if target.dead or not target.visible or target.appear<1.0:continue
+			if target.position.distance_to(land)<=radius+target.radius*.5:apply_status_move(target,hit)
+	pending_calls.append({"t":.12,"call":apply})
 
 # 피해 없는 변화기(가루·씨뿌리기·고민씨)를 한 상대에게: 방어·명중(회피) 판정 뒤 상태만.
 func apply_status_move(target: Mon, hit: Dictionary) -> void:
@@ -1568,6 +1764,8 @@ func _step_bursts(dt: float) -> void:
 		if b["t"] > 0.0 or b["left"] <= 0:
 			continue
 		var m := MoveDB.get_move(b["move"])
+		if mon == player and (not m.get("volley", false) or not b.has("dir")):
+			aim_point = _player_skill_aim(String(b["move"]))
 		# 연발은 첫 발 방향으로 일자로 나간다(volley). 그 밖의 연사(화염방사)는 조준을 따라간다.
 		var dir: Vector2
 		if m.get("volley", false):
@@ -2024,6 +2222,7 @@ func _move_mons(dt: float) -> void:
 	for mon in all:
 		if mon.dead or mon.hitstop_t > 0.0:
 			continue
+		if mon.attack_anim_t>0.0 and not mon.attack_direction.is_zero_approx():mon.facing=mon.attack_direction
 		if mon.is_dashing():
 			_step_dash(mon, dt)
 			continue
@@ -2040,6 +2239,10 @@ func _move_mons(dt: float) -> void:
 
 const GLIDE_TAIL := 0.06      # 미끄러지기가 맞는 순간 뒤로 더 이어지는 시간(한 번에 멈추면 딱딱했다)
 
+## Includes the final authored lunge displacement, not only the glide timer.
+func resolve_melee_advance(mon: Mon,displacement: Vector2) -> Vector2:
+	return BattleContact.forward_sweep(self,mon,mon.position,displacement,displacement.length()).point
+
 # 근접기 미끄러지기(Mon.glide): 남은 거리만큼 앞으로. 상대 몸에 닿을 자리면 거기서 끝(뚫고 지나가지 않게), 벽은 Arena 가 막는다.
 func _step_glide(mon: Mon, dt: float) -> void:
 	var g: Dictionary = mon.glide
@@ -2048,7 +2251,6 @@ func _step_glide(mon: Mon, dt: float) -> void:
 		g["wait"] = float(g["wait"]) - waiting
 		dt -= waiting
 		if dt <= 0.0: return
-	var elapsed_before := float(g.get("elapsed", 0.0))
 	var st := minf(float(g["speed"]) * dt, float(g["left"]))
 	if g.has("duration"):
 		var before := clampf(float(g["elapsed"]) / float(g["duration"]), 0.0, 1.0)
@@ -2060,36 +2262,10 @@ func _step_glide(mon: Mon, dt: float) -> void:
 			# leaving the low finishing pose stationary instead of drifting.
 			progress = pow(1.0 - before, 3.0) - pow(1.0 - after, 3.0)
 		st = minf(float(g["left"]), float(g["distance"]) * progress)
-	var contact_blocked := false
-	if bool(g.get("stop_at_contact",false)):
-		# Stop at the first body along this step, including diagonal approaches.
-		# Clamping the step lets a short grab reach contact without overshooting.
-		for target in opponents(mon.team):
-			if target.dead:continue
-			var delta: Vector2=target.position-mon.position
-			var along := delta.dot(Vector2(g["dir"]))
-			var radius: float=mon.radius+target.radius
-			var lateral := maxf(0.0,delta.length_squared()-along*along)
-			if along<0.0 or lateral>=radius*radius:continue
-			var limit := maxf(0.0,along-sqrt(radius*radius-lateral)-0.01)
-			if st>limit:
-				st=limit
-				contact_blocked=true
-	var to := resolve_mon(mon,mon.position + Vector2(g["dir"]) * st)
-	for t in opponents(mon.team):
-		if not t.dead and to.distance_to(t.position) < mon.radius + t.radius:
-			if g.has("blocked"):
-				# Keep the unspent step while the hit pushes the target away.
-				# A miss/immovable target times out; never push through its body.
-				g["elapsed"] = elapsed_before
-				g["blocked"] = float(g["blocked"]) + dt
-				if float(g["blocked"]) >= 0.25: mon.glide = {}
-			else:
-				mon.glide = {}
-			return
-	mon.position = to
-	g["left"] = float(g["left"]) - st
-	if float(g["left"]) <= 0.01 or contact_blocked:
+	var sweep:=BattleContact.forward_sweep(self,mon,mon.position,g.dir,st)
+	mon.position=sweep.point
+	g["left"] = float(g["left"]) - float(sweep.distance)
+	if float(g["left"]) <= 0.01 or sweep.blocked:
 		mon.glide = {}
 
 # 점프 계획: 어디에 내려앉는가. {ok, to}.
@@ -2149,8 +2325,11 @@ func _start_dodge(dir: Vector2) -> void:
 
 func _step_dash(mon: Mon, dt: float) -> void:
 	var d: Dictionary = mon.dash
-	if d.get("hit",{}).has("recoil_state"):
-		BattleContact.step_recoil_dash(self,mon,dt)
+	if String(d.get("move",""))!="":
+		if not d.get("hit",{}).has("recoil_state"):
+			mon.trail.append(mon.position)
+			if mon.trail.size()>3:mon.trail.pop_front()
+		BattleContact.step_attack_dash(self,mon,dt)
 		return
 	# 잔상: 지나온 자리를 세 걸음 남긴다.
 	mon.trail.append(mon.position)
@@ -2461,24 +2640,11 @@ func send_out(species_id: String, level: int, moves: Array, pos: Vector2, hidden
 	pop_out(e)
 	return e
 
-func pop_out(e: Mon) -> void:
-	ball_open_fx(e.position + Vector2(0, -e.radius * 0.5), e.radius)
+func pop_out(e: Mon, starter_table := false) -> void:
+	var support := BallRelease.support_of(e,starter_table)
+	e.release_fx = add_fx("ball_release",support,{"owner_mon":e,"starter_table":starter_table,"lifetime":BallRelease.LIFE})
 	Sfx.play("bowa", 1.0, _battle_sound_db(e.position), _battle_sound_pan(e.position), get_instance_id())
 	Sfx.cry(e.species_id, 1.0, _battle_sound_db(e.position), _battle_sound_pan(e.position), get_instance_id())
-
-# 볼이 열리는 빛(원작 pokeballs/open_poke_ball.spa 의 세 이미터, 1프레임 = 1/30초): 노란 빛 덩이가 0.65 → 5.4배로 확 퍼지며 사라지고(28프레임),
-# 흰 → 노란 빛줄기 둘씩이 길게 뻗으며(19프레임), 주황 → 빨강 불티 셋씩이 사방으로 튄다(19프레임). 흰 원(burst)은 원작이 아니었다(사용자 지적 2026-10-30).
-func ball_open_fx(at: Vector2, r: float, starter_table: bool = false) -> void:
-	var u := r * 0.9                       # 원작 단위 1 ≈ 몸 반지름
-	add_fx("sprite", at, {"starter_table": starter_table, "text": "g4_ballopen_glow", "color": Color8(248, 232, 176, 235), "size": u * 1.3, "grow": 5.5, "lifetime": 28.0 / 30.0, "fade_out": 0.5})
-	for k in 6:
-		var a := TAU * float(k) / 6.0 + 0.26
-		add_fx("sprite", at, {"starter_table": starter_table, "text": "g4_ballopen_ray", "color": Color8(248, 240, 160, 230), "size": u * 0.25, "grow": 1.6,     # 8×64 라 size 는 폭
-			"rot": a + PI / 2.0, "dir": Vector2.from_angle(a), "speed": u * 0.6, "lifetime": 19.0 / 30.0, "delay": 0.02 * (k % 2), "fade_out": 0.4})
-	for k in 9:
-		var a := TAU * float(k) / 9.0 + randf_range(-0.2, 0.2)
-		add_fx("sprite", at + Vector2.from_angle(a) * u * 0.7, {"starter_table": starter_table, "text": "g4_ballopen_spark", "color": Color8(248, 120, 72, 240) if k % 3 == 0 else Color8(248, 200, 120, 240),
-			"size": u * 0.7, "grow": 0.3, "dir": Vector2.from_angle(a), "speed": u * 3.0, "lifetime": 19.0 / 30.0, "delay": 0.03 * (k % 3), "fade_out": 0.3})
 
 # ── 기술머신 기술(사용자 결정 2026-10-30, C안) ──
 
@@ -2878,7 +3044,7 @@ func add_fx(kind: String, pos: Vector2, opts: Dictionary = {}) -> Fx:
 	if kind == "sprite" and Look.emissive(f.text, f.color):
 		f.material = Look.additive()            # HD-2D 느낌: 불꽃·번개는 가산 합성으로 빛나게
 	# 글자·섬광·발톱 자국은 포켓몬 위에, 나머지(예고·장판)는 아래에.
-	f.z_index = 0 if kind == "tallgrass" else 5 if kind in ["text", "burst", "impact", "fang", "fang_directional", "fangfire", "sprite", "anim", "spark", "rain", "swipe", "wrap", "pickup_trail", "forward_cut", "clash_chip"] else (-5 if kind == "dim" else -1)
+	f.z_index = 0 if kind == "tallgrass" else 5 if kind in ["ball_release", "text", "burst", "impact", "fang", "fang_directional", "fangfire", "sprite", "anim", "spark", "rain", "swipe", "wrap", "pickup_trail", "forward_cut", "clash_chip"] else (-5 if kind == "dim" else -1)
 	add_child(f)
 	fxs.append(f)
 	return f

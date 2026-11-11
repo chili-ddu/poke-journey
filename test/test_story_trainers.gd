@@ -118,7 +118,7 @@ func test_each_rocket_member_throws_their_own_pokemon() -> void:
 		game._send_next()
 		var ball: ThrownBall=game.sendout.ball
 		assert_eq(game.battle.mon.species_id,fixture[2])
-		assert_eq(ball.from,fixture[0].position+Vector2(0,-Arena.TILE*0.4))
+		assert_eq(ball.from,fixture[0].throw_hand_world())
 		assert_eq(game.sendout.trainer_at,fixture[0].position)
 		assert_eq(game.dialog_text,Lang.t("sent_out",[Lang.t(fixture[1]),game.battle.mon.display_name()]))
 		assert_true(game.world.bystanders.has(game.rocket_meowth),"Meowth keeps waiting during the other two turns")
@@ -156,3 +156,21 @@ func test_meowth_walks_into_battle_without_ball_pop_or_duplicate_actor() -> void
 	assert_true(game.sendout.is_empty())
 	assert_eq(game.battle.mon,meowth)
 	assert_eq(game.world.enemies.count(meowth),1)
+
+func test_trainer_ball_rests_at_the_monsters_feet_before_opening() -> void:
+	var game = open_game("arena_route1","rival_green_squirtle")
+	game._send_next()
+	var ball: ThrownBall = game.sendout.ball
+	var mon: Enemy = game.sendout.mon
+	assert_eq(ball.to,BallRelease.support_of(mon))
+	game._step_sendout(Game.SEND_THROW_AT + Game.SEND_THROW + BallRelease.REST*0.5)
+	assert_eq(ball.k,1.0)
+	assert_false(game.sendout.popped)
+	assert_eq(mon.appear,0.0)
+	game._step_sendout(BallRelease.REST*0.5 + 0.001)
+	assert_true(game.sendout.popped)
+	assert_null(game.sendout.ball)
+	assert_eq(mon.release_fx.position,ball.to)
+	assert_false(mon.release_fx.starter_table)
+	game._step_sendout(BallRelease.GROWN)
+	assert_eq(mon.appear,1.0)

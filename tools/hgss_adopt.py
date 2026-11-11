@@ -117,7 +117,24 @@ def replacement_map(name, directory, catalog, registry):
         x0, x1 = group[0][0], group[-1][0] + 1
         depth = max(c[2][5] for c in group)
         rect = [x0, front - depth, x1, front]
-        door = next((w for w in nav['warps'] if x0 <= w['x'] < x1 and abs(w['y'] + 1 - front) <= 1), None)
+        doors = [w for w in nav['warps'] if x0 <= w['x'] < x1 and abs(w['y'] + 1 - front) <= 1]
+        destinations = {w['to'] for w in doors}
+        # These joined facades contain several independent public entrances.
+        # A single replacement shop/model would remove its neighboring houses.
+        if len(destinations)>1 and destinations & {'cerulean_city_house4','fuchsia_city_pokemon_center_1f'}:
+            continue
+        # The mansion and its low laboratory share a narrow street. The generic
+        # house and Oak's lab obscure the player there. Keep their native facades,
+        # as well as Route 22's two-tile checkpoint entrance.
+        if destinations & {'pokemon_mansion_1f', 'cinnabar_island_pokemon_lab_entrance', 'route22_north_entrance'}:
+            continue
+        door = next(iter(doors),None)
+        if 'celadon_city_restaurant' in destinations and len(destinations) > 1:
+            door = next(w for w in doors if w['to'] == 'celadon_city_restaurant')
+            # Only the four columns around the restaurant door belong to it.
+            # Preserve the other four facades in this contiguous row.
+            rect = [door['x'] - 1, front - depth, door['x'] + 3, front]
+            group = [item for item in group if rect[0] <= item[0] < rect[2]]
         if not door: continue
         target = registry['warps'].get(door['to'], '')
         cfg = registry['maps'].get(target, {})

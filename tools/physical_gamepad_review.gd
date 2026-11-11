@@ -69,8 +69,8 @@ func run() -> void:
 	var primary: Vector2 = game.world.move_override.call(Vector2.RIGHT) if game.world.move_override.is_valid() else Vector2.RIGHT
 	assert((c.aim_point(game.world)-game.world.player.position).normalized().dot(primary.normalized())>0.99)
 	axis(JOY_AXIS_RIGHT_Y,-1.0)
-	assert(c.pad_move.x>0.99 and c.pad_aim.y<-0.99)
-	var expected: Vector2 = game.world.move_override.call(Vector2.UP) if game.world.move_override.is_valid() else Vector2.UP
+	assert(c.pad_move.x>0.99 and c.pad_aim==Vector2.ZERO)
+	var expected: Vector2 = primary
 	assert((c.aim_point(game.world)-game.world.player.position).normalized().dot(expected.normalized())>0.99)
 	var pp: int = game.world.player.pp[2]
 	button(JOY_BUTTON_LEFT_SHOULDER,true);game.world._step_player(1.0/60)
@@ -79,8 +79,8 @@ func run() -> void:
 	assert((c.aim_point(game.world)-game.world.player.position).normalized().dot(primary.normalized())>0.99)
 	axis(JOY_AXIS_LEFT_X,0.0)
 	assert(c.pad_move==Vector2.ZERO and c.pad_aim==Vector2.ZERO)
-	checks.append({"case":"two_analog_sticks_and_shoulder_skill_cast","passed":true})
-	checks.append({"case":"l_stick_default_r_override_and_release","passed":true})
+	checks.append({"case":"l_movement_r_unbound_and_shoulder_skill_cast","passed":true})
+	checks.append({"case":"l_stick_aim_unaffected_by_r_motion_or_release","passed":true})
 	game.world.player.add_item("oran_berry",2);game.world.player.hp = 5
 	button(JOY_BUTTON_DPAD_UP,true);game.world.step(1.0/60)
 	var berries: int = game.world.player.berries
@@ -142,7 +142,7 @@ func run() -> void:
 	tap(JOY_BUTTON_A);assert(game.state in ["fight","town"])
 	game.world._step_player(1.0/60)
 	assert(game.world.player.pp[0]==pp,"A menu confirm in the embedded viewport must not also cast")
-	axis(JOY_AXIS_RIGHT_X,1.0);assert(game.world.player.controller.pad_aim.x>0.99)
+	axis(JOY_AXIS_RIGHT_X,1.0);assert(game.world.player.controller.pad_aim==Vector2.ZERO)
 	axis(JOY_AXIS_RIGHT_X,0.0)
 	checks.append({"case":"physical_events_in_mobile_embedded_viewport_no_double_cast","passed":true})
 	assert(DisplayServer.window_get_size()==Vector2i(384,216))

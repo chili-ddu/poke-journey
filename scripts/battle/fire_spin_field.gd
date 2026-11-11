@@ -9,11 +9,15 @@ var landed := false
 var pulses := 0
 var turns := 4
 var attempted := {}
+var ground_targeted := false
+var target_point := Vector2.ZERO
+var initial_applied := false
 
 func step(dt: float) -> void:
 	if dead: return
 	var world=get_parent()
 	if not landed:
+		if remaining<.0001:landed=true
 		var distance:=minf(remaining,220.0*dt)
 		while distance>.0001 and not landed:
 			var stride:=minf(2.0,distance)
@@ -21,7 +25,7 @@ func step(dt: float) -> void:
 			if Arena.blocks(dest,2):
 				landed=true
 				break
-			var target: Mon=BattleContact.first_contact(world,position,dest,team,2.0,attempted)
+			var target: Mon=null if ground_targeted else BattleContact.first_contact(world,position,dest,team,2.0,attempted)
 			if target!=null:
 				attempted[target.get_instance_id()]=true
 				if world.apply_hit(target,hit,position) and world.last_damage>0:
@@ -34,6 +38,13 @@ func step(dt: float) -> void:
 			dt=maxf(0,dt-stride/220.0)
 			if remaining<.0001: landed=true
 		if not landed: return
+	if ground_targeted and not initial_applied:
+		initial_applied=true
+		# Ground selection is locked at release; all opponents in that footprint
+		# receive one normal initial hit before the unchanged residual pulses.
+		for foe: Mon in world.opponents(team):
+			if foe.dead or not foe.visible or foe.appear<1.0:continue
+			if foe.position.distance_to(position)<=radius+foe.radius*.5:world.apply_hit(foe,hit,position)
 	age+=dt
 	while pulses<turns and age+.00001>=(pulses+1)*Mon.TURN:
 		pulses+=1

@@ -124,7 +124,8 @@ const SEND_PAN := 0.35
 const SEND_THROW_AT := 0.2
 const SEND_THROW := 0.45
 const SEND_ARC := 1.2               # 칸. 볼이 그리는 포물선 높이
-const SEND_READY := 0.95            # 이때부터 대사를 넘길 수 있다(나온 포켓몬을 보고 나서)
+const SEND_OPEN := SEND_THROW_AT + SEND_THROW + BallRelease.REST
+const SEND_READY := SEND_OPEN + 0.31            # 이때부터 대사를 넘길 수 있다(나온 포켓몬을 보고 나서)
 const ARENA_SEND_BACK := 0.7       # Rise into the real-time battle view after the reveal.
 const SEND_BACK := 0.3              # 넘긴 뒤 내 포켓몬 쪽 1배로 돌아오는 시간
 const BACK_OFF_TILES := 2
@@ -548,6 +549,8 @@ func _ready() -> void:
 		rival_leaving = ""
 	quests.arrive()
 	if restored_gym_help or not migrated_hms.is_empty():_save_here()
+	# Place the mainland camera at the actual arrival before the first render.
+	if view3d != null and Arena.is_continent(): view3d._follow_camera(0.0)
 
 # Recover confirmed gym travel assistance before cave/sea helper arrival hooks.
 # Legacy standalone battle flags are intentionally not a source of assistance.
@@ -695,20 +698,22 @@ func _process(dt: float) -> void:
 	if quests!=null:quests.step(dt)
 
 func _unhandled_input(event: InputEvent) -> void:
-	# Spoken dialogue is manual; narration also accepts Space before its timer ends.
+	# A left click and a fresh Space press share dialogue advancement rules.
+	var space_pressed: bool = event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_SPACE
+	var clicked: bool = event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT
 	if state == "talk":
-		if event is InputEventKey and event.pressed and not event.echo and event.physical_keycode == KEY_SPACE:
-			get_viewport().set_input_as_handled()
+		if space_pressed or clicked:
+			_consume_dialogue_press()
 			if can_advance(): _talk_next()
 		return
-	if not (event is InputEventKey and event.pressed and not event.echo):
-		return
-	if event.physical_keycode == KEY_SPACE and bird_event!=null and bird_event.press_space():
+	if space_pressed and bird_event!=null and bird_event.press_space():
 		get_viewport().set_input_as_handled()
 		return
-	if event.physical_keycode == KEY_SPACE and dialog_t > 0.0 and not dialog_text.is_empty() and state in ["fight", "town"]:
-		get_viewport().set_input_as_handled()
+	if (space_pressed or clicked) and dialog_t > 0.0 and not dialog_text.is_empty() and state in ["fight", "town"]:
+		_consume_dialogue_press()
 		_advance_timed_message()
+		return
+	if not (event is InputEventKey and event.pressed and not event.echo):
 		return
 	# 진화 화면: B(원작 B 버튼)·Esc 로 진화를 멈춘다(교대하는 동안만 받음).
 	if state == "evolve":
@@ -1175,7 +1180,24 @@ func _check_warp() -> void:
 		SaveData.store(world.player, cleared)
 	var tw := create_tween()
 	tw.tween_property(fader, "color:a", 1.0, 0.25)
-	tw.tween_callback(func(): get_tree().reload_current_scene())
+	tw.tween_callback(_reload_door_scene.bind(get_tree(), view3d))
+
+# Compatibility releases compiled material variants when their last user goes
+# away. Bridge the gap between the old room and the new room's first actor draw.
+static func _reload_door_scene(tree: SceneTree, old_view: View3D) -> void:
+	var materials := {}
+	if is_instance_valid(old_view) and DungeonDB.is_indoor():
+		for mesh: MeshInstance3D in old_view.root3d.find_children("*", "MeshInstance3D", true, false):
+			if mesh.mesh == null: continue
+			for i in mesh.mesh.get_surface_count():
+				var mat := mesh.get_active_material(i)
+				if mat != null: materials[mat] = true
+	var error := tree.reload_current_scene()
+	if error != OK or materials.is_empty(): return
+	await tree.scene_changed
+	await RenderingServer.frame_post_draw
+	await RenderingServer.frame_post_draw
+	materials.clear()
 
 # 문 칸에서 바깥쪽: 그쪽은 걸을 수 있고 반대쪽(건물)은 막힌 방향. 아래를 먼저 본다. 없으면 제자리.
 func _door_out_dir(t: Vector2i) -> Vector2i:
@@ -1596,9 +1618,9 @@ func _pages(lines: Array, speaker: Npc = null) -> Array:
 # 이야기(사용자 결정 2026-10-29): 볼 안에만 갇혀 있을 수 없는 내 포켓몬이 최강이 되려고 탈출하고, 오박사가 "어디 가냐"며 쫓아와
 # 오박사 연구소 문 앞에서 게임이 시작된다. 대사는 사용자 승인(Lang intro_* / oak_*).
 #   1 검은 화면 독백: 자기소개(종마다) → 바깥세상의 소리 → 결심
-#   2 내 볼에 2배로 다가간 채 밝아짐 + 해설 "조용한 연구소… 그런데 탁자 위 몬스터볼 하나가…"
-#   3 볼이 버둥대듯 세 번 흔들림(볼 밑동 축, 20°·28°·36°), 흔들릴 때마다 카메라가 한 단계씩 더 다가감(3·4·5배)
-#   4 마지막 흔들림 끝에 터지듯 열림(하얀 빛) → 하얀 실루엣으로 커지며 튀어나와 Hop 으로 뛰어 탁자 앞 바닥에 착지,
+#   2 내 볼에 3배로 다가간 채 밝아짐 + 해설 "조용한 연구소… 그런데 탁자 위 몬스터볼 하나가…"
+#   3 볼이 버둥대듯 세 번 흔들림(볼 밑동 축, 20°·28°·36°), 흔들릴 때마다 카메라가 한 단계씩 더 다가감(4·6·8배)
+#   4 마지막 흔들림 뒤 잠시 멈춰 윗껍질이 열림 → 하얀 실루엣으로 커지며 튀어나와 Hop 으로 뛰어 탁자 앞 바닥에 착지,
 #     카메라는 빛과 함께 1배로 빠짐. 오박사(원작 자리 6,3)가 "!" 로 놀라 돌아봄
 #   5 오박사 "아니!? 볼에서 혼자 나오다니…!" → 내 포켓몬이 오박사를 한 번 보고 출구로 달아남 → 오박사 "!" + "어디 가는 게냐!?"(멈추지
 #     않는 글) 하며 뒤쫓음(원작 걷기 속도라 느림) → 출구에 닿으면 태초마을로
@@ -1609,11 +1631,10 @@ const OPENING_WAIT := 0.5
 const WOBBLE_TIMES := [0.5, 0.42, 0.34]      # 흔들림 한 번(좌 → 우) 길이 — 점점 빨라진다
 const WOBBLE_ANGLES := [20.0, 28.0, 36.0]    # 도 — 점점 세진다
 const WOBBLE_GAP := 0.22
-const ZOOM_START := 2.0
-const ZOOMS := [3.0, 4.0, 5.0]               # 흔들림마다 카메라 배율(정수 — 도트가 번지지 않게)
+const ZOOM_START := 3.0
+const ZOOMS := [4.0, 6.0, 8.0]               # 흔들림마다 카메라 배율(정수 — 도트가 번지지 않게)
 const ZOOM_STEP := 0.12
 const ZOOM_OUT := 0.4
-const APPEAR_TIME := 0.18
 const ESCAPE_JUMP := 0.55                    # 볼 자리 → 바닥까지
 const ESCAPE_HEIGHT := 0.9                   # 칸. 꼭대기 높이
 const LANDED_HOLD := 0.45
@@ -1643,9 +1664,14 @@ func _begin_opening() -> void:
 	var pages := [Lang.t("intro_self_" + starter if Lang.S.has("intro_self_" + starter) else "intro_self_charmander"),
 		Lang.t("intro_world"), Lang.t("intro_resolve")]
 	_say_pages(pages, _opening_lab_lights)
+	if view3d != null and view3d.visible:
+		p.preview_reveal = true
+		view3d.prepare_starter_reveal(p)
 
 # 독백이 끝나면: 검은 화면에서 볼에 다가간 연구소가 밝아지며 해설.
 func _opening_lab_lights() -> void:
+	world.player.preview_reveal = false
+	if view3d != null: view3d.hide_starter_preview()
 	monologue = false
 	fader.color.a = 1.0
 	create_tween().tween_property(fader, "color:a", 0.0, 0.5)
@@ -1667,7 +1693,7 @@ func _opening_open_at() -> float:
 	var t := OPENING_WAIT
 	for d in WOBBLE_TIMES:
 		t += float(d) + WOBBLE_GAP
-	return t - WOBBLE_GAP            # 마지막 흔들림이 끝나자마자 열린다
+	return t - WOBBLE_GAP + BallRelease.REST
 
 # 시작 연출의 카메라 배율: 연출 시간(t)으로 정한다 — 흔들림 i 가 시작되면 ZOOM_STEP 동안 ZOOMS[i] 로, 열리면 ZOOM_OUT 동안 1배로(ease out).
 func _opening_zoom(t: float, open_at: float) -> float:
@@ -1718,26 +1744,22 @@ func _step_opening_wobble() -> void:
 	if t >= open_at and not bool(opening["open"]):
 		opening["open"] = true
 		balls.taken = true
-		world.ball_open_fx(from, p.radius, true)
-		Sfx.play("bowa")
-		Sfx.cry(p.species_id)
-		world.add_fx("sprite", from + Vector2(0, -p.radius * 0.5), {"starter_table": true, "text": "g4_shiny", "color": Color(1.0, 0.95, 0.7, 0.9),
-			"size": p.radius * 3.0, "grow": 1.4, "lifetime": 0.4})
-		p.play_hop()
+		world.pop_out(p,true)
 		var oak := _npc("prof_oak")
 		if oak != null:
 			oak.emote_t = Npc.EMOTE_TIME
 			oak.face_toward(from)
 	if bool(opening["open"]):
 		var e := t - open_at
-		p.appear = clampf(e / APPEAR_TIME, 0.0, 1.0)
+		p.appear = BallRelease.growth(e)
 		if p.appear >= 1.0 and not bool(opening["shown"]):
 			opening["shown"] = true
-			p.flash_t = 0.15            # 하얀 실루엣이 제 색으로
-		var u := clampf(e / ESCAPE_JUMP, 0.0, 1.0)
+			if view3d != null: view3d.release_starter_preview()
+			p.play_hop()
+		var u := clampf((e - BallRelease.GROWN) / ESCAPE_JUMP, 0.0, 1.0)
 		p.position = from.lerp(to, u)
 		p.lift = Arena.TILE * ESCAPE_HEIGHT * sin(PI * u)
-		if e >= ESCAPE_JUMP + LANDED_HOLD:
+		if e >= BallRelease.GROWN + ESCAPE_JUMP + LANDED_HOLD:
 			p.appear = 1.0
 			p.lift = 0.0
 			p.position = to
@@ -1809,7 +1831,7 @@ func _opening_leave_lab() -> void:
 	destination = {"map": DungeonDB.WARP_MAPS.get(to_map, "kanto_south"), "warp": {"map": to_map, "index": int(wp.get("to_warp", 2))}}
 	var tw := create_tween()
 	tw.tween_property(fader, "color:a", 1.0, 0.3)
-	tw.tween_callback(func(): get_tree().reload_current_scene())
+	tw.tween_callback(_reload_door_scene.bind(get_tree(), view3d))
 
 # 연구소 문 앞: 문(도착한 칸)에서 두 칸 아래에 서 있고, 잠시 뒤 오박사가 문에서 나와 한 칸 걸어와 말한다.
 func _begin_opening_outside() -> void:
@@ -2251,6 +2273,13 @@ func _save_here() -> void:
 		if seafoam!=null and seafoam.phase!="idle":save_pos=seafoam.safe_at
 		SaveData.store(world.player, cleared, DungeonDB.current, save_pos)
 
+# Consume the dialogue press before the same event can become movement or jump.
+func _consume_dialogue_press() -> void:
+	get_viewport().set_input_as_handled()
+	if world != null and world.player.controller is Controllers.Human:
+		world.player.controller.has_target = false
+		world.player.controller.hold = true
+
 # 대사 여러 쪽을 띄우고 세계를 멈춘다. 다 넘기면 after.
 func _say_pages(pages: Array, after: Callable = Callable()) -> void:
 	if touch_controls != null:touch_controls.cancel_all()
@@ -2393,8 +2422,10 @@ func _send_next() -> void:
 	battle["mon"] = e
 	sender.face_toward(e.position)
 	var ball := ThrownBall.new()
-	ball.setup(sender.position + Vector2(0, -Arena.TILE * 0.4), e.position, SEND_ARC * Arena.TILE)
-	ball.visible = false
+	sender.throw_time = 0.0
+	sender.queue_redraw()
+	ball.sender = sender
+	ball.setup(sender.throw_hand_world(), BallRelease.support_of(e), SEND_ARC*Arena.TILE)
 	world.add_child(ball)
 	sendout = {"mon": e, "ball": ball, "t": 0.0, "phase": "show", "from_pos": cam_at, "from_zoom": cam_z,
 		"trainer_at": sender.position, "focus": e.position, "popped": false}
@@ -2424,15 +2455,19 @@ func _step_sendout(dt: float) -> void:
 		var aim := Vector2(sendout["trainer_at"]).lerp(sendout["focus"], _ease_out(bk)) + Vector2(0, _talk_box_lift(SEND_ZOOM))
 		_set_cam(Vector2(sendout["from_pos"]).lerp(aim, k), z)
 		if ball != null:
-			ball.visible = t >= SEND_THROW_AT
+			ball.sender.throw_time = t
+			ball.sender.queue_redraw()
+			if ball.k <= 0.0:
+				ball.from = ball.sender.throw_hand_world(bk > 0.0)
 			ball.k = bk
 			ball.queue_redraw()
-		if bk >= 1.0 and not bool(sendout["popped"]):
+		if t >= SEND_OPEN and not bool(sendout["popped"]):
 			sendout["popped"] = true
 			_drop_ball()
 			world.pop_out(e)
 		if bool(sendout["popped"]):
-			e.appear = clampf((t - SEND_THROW_AT - SEND_THROW) / APPEAR_TIME, 0.0, 1.0)
+			e.appear = BallRelease.growth(t - SEND_OPEN)
+			e.queue_redraw()
 		return
 	# 돌아오기: 내 포켓몬 쪽(경기장은 나와 상대 사이)으로 1배.
 	var back := _fight_cam_target()
@@ -2474,7 +2509,11 @@ func _sendout_back() -> void:
 
 func _drop_ball() -> void:
 	if sendout["ball"] != null:
-		(sendout["ball"] as Node).queue_free()
+		var ball: ThrownBall = sendout["ball"]
+		ball.sender.throw_time = -1.0
+		ball.sender.queue_redraw()
+		ball.hide()
+		ball.queue_free()
 		sendout["ball"] = null
 
 func _fight_cam_target() -> Vector2:

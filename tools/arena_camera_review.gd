@@ -34,7 +34,7 @@ func run() -> void:
 		assert(ball!=null and ball.visible,"Ball is visible mid-flight")
 		assert(game.view3d._sprites.has(ball.get_instance_id()),"Ball has a 3D sprite")
 		var ball_sprite: Sprite3D=game.view3d._sprites[ball.get_instance_id()].sprite
-		assert(not ball_sprite.region_enabled,"Whole round ball texture is rendered")
+		assert(ball_sprite.region_enabled and ball_sprite.region_rect == BallRelease.BALL_RECT,"Whole round ball texture is rendered")
 		var ball_screen: Vector2 = game.view3d.cam.unproject_position(ball_sprite.position)
 		assert(ball_screen.y>0 and ball_screen.y<float(game.view3d.vp.size.y)*0.68,"Thrown ball stays above dialogue")
 		await shot(fixture[0]+"_02_throw")

@@ -133,10 +133,10 @@ def compose(cfg: dict, lay: dict) -> tuple:
                         out.append(floor if fight else solid(floor))
                 else:
                     out.append(solid(bb[(x % bw) + (y % bh) * bw]))
-    # 필드는 트레이너 자리 아래. 트레이너는 뒤쪽 빈 바닥을 두고 코트에서 두 줄 물러나 선다.
+    # 필드는 트레이너 자리 아래. 트레이너는 뒤쪽 빈 바닥을 두고 코트 바로 바깥 줄에 선다.
     fx0, fy0 = (W - FIELD_W) // 2, top + STRIP
     player = (W // 2, fy0 + FIELD_H // 2 + 3)
-    trainer = (W // 2, top + STRIP - 2)
+    trainer = (W // 2, fy0 - 1)
     return W, H, out, player, trainer, (fx0, fy0)
 
 

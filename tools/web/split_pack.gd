@@ -61,6 +61,10 @@ func _group(path: String) -> String:
 	elif source.begins_with("res://assets/motion_2x/"):
 		if source.ends_with(".json"):dex=int(source.get_file().get_basename())
 		else:dex=int(motion.get(source,0))
+	if dex in [1,4,7]:return "boot"
+	if source.begins_with("res://assets/maps/arena_viridian_forest/"):return "boot"
+	if source.begins_with("res://assets/maps/hgss_render/arena_viridian_forest/"):return "boot"
+	if source=="res://assets/maps/hgss_pallet_sample/models/terrain_0201_018/tree01gs.png":return "boot"
 	if dex>0:return "actors" if startup.has(dex) else "pokemon-%04d"%dex
 	if source.begins_with("res://assets/maps/") and source.get_extension() not in ["json","xml"]:return "world"
 	if source.begins_with("res://assets/audio/"):

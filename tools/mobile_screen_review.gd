@@ -171,7 +171,8 @@ func run() -> void:
 	var aim_drag := InputEventScreenDrag.new();aim_drag.index = 2;aim_drag.position = phone.pad.aim_center+Vector2.UP*phone.pad.aim_radius()
 	surface.push_input(aim_drag,true)
 	var aim_direction: Vector2 = game.world.player.controller.aim_point(game.world)-game.world.player.position
-	var expected_aim: Vector2 = game.world.move_override.call(Vector2.UP) if game.world.move_override.is_valid() else Vector2.UP
+	var expected_aim: Vector2 = primary_aim
+	assert(game.world.player.controller.touch_aim==Vector2.ZERO)
 	assert(aim_direction.normalized().dot(expected_aim.normalized())>0.99)
 	var before_pp: int = game.world.player.pp[2]
 	var attack := InputEventScreenTouch.new();attack.index = 1;attack.pressed = true;attack.position = phone.pad.deck.hits.skill_2.get_center()
@@ -187,8 +188,8 @@ func run() -> void:
 	assert(game.world.player.controller.touch_move==Vector2.ZERO)
 	checks.append({"case":"lower_pad_touch_does_not_reach_game_display","passed":true})
 	checks.append({"case":"two_finger_move_and_skill_cast","passed":true})
-	checks.append({"case":"right_stick_independent_aim_and_shoulder_cast","passed":true})
-	checks.append({"case":"l_stick_default_r_override_and_release","passed":true})
+	checks.append({"case":"r_stick_feedback_preserved_without_aim_and_shoulder_cast","passed":true})
+	checks.append({"case":"l_stick_aim_unaffected_by_r_motion_or_release","passed":true})
 	game.world._step_player(1.0/60)
 	game.world.player.add_item("potion",1)
 	for command in ["bag","summary"]:

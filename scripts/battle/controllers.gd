@@ -42,6 +42,11 @@ static func ensure_input_map() -> void:
 
 class Human:
 	extends RefCounted
+	const AimAssist = preload("res://scripts/battle/aim_assist.gd")
+	var aim_assist := AimAssist.new()
+	var _skill_manual_direction := Vector2.ZERO
+	var _skill_corrected_direction := Vector2.ZERO
+	var _skill_input_revision := 0
 
 	# 왼쪽 클릭 이동: 누른 자리(바닥)로 곧장 걸어간다. 누르고 있으면 커서를 따라간다. 방향키를 누르면 그만둔다.
 	# 벽에 막혀 0.3초 동안 거의 못 가면 그만둔다(길찾기는 없다 — 막히면 다시 찍는다).
@@ -52,14 +57,14 @@ class Human:
 	const ARRIVE := 3.0
 	# Mobile movement and keys are independent of physical keyboard state.
 	var touch_move := Vector2.ZERO
-	var touch_aim := Vector2.ZERO
+	var touch_aim := Vector2.ZERO # Deprecated compatibility field; separate stick aim is ignored.
 	var touch_active := false
 	var touch_owned := false
 	var touch_keys := {}
 	var _touch_pending := {}
 	var _touch_frame := {}
 	var pad_move := Vector2.ZERO
-	var pad_aim := Vector2.ZERO
+	var pad_aim := Vector2.ZERO # Deprecated compatibility field; separate stick aim is ignored.
 	var pad_active := false
 	var pad_keys := {}
 	var _pad_pending := {}
@@ -72,11 +77,14 @@ class Human:
 
 	func release_gamepad_key(code: int, cancelled: bool = false) -> void:
 		pad_keys.erase(code)
-		if cancelled:_pad_pending.erase(code);_pad_frame.erase(code)
+		if cancelled:
+			_pad_pending.erase(code);_pad_frame.erase(code)
+			_clear_skill_aim()
 
 	func clear_gamepad() -> void:
 		pad_move = Vector2.ZERO;pad_aim = Vector2.ZERO;pad_active = false
 		pad_keys.clear();_pad_pending.clear();_pad_frame.clear()
+		_clear_skill_aim()
 
 	func press_touch_key(code: int) -> void:
 		_release_hold()
@@ -90,8 +98,10 @@ class Human:
 		if cancelled:
 			_touch_pending.erase(code)
 			_touch_frame.erase(code)
+			_clear_skill_aim()
 
 	func clear_touch() -> void:
+		_clear_skill_aim()
 		touch_active = false
 		touch_move = Vector2.ZERO
 		touch_aim = Vector2.ZERO
@@ -140,12 +150,13 @@ class Human:
 	const KEY_AIM_REACH := 80.0
 
 	func aim_point(world) -> Vector2:
-		if touch_aim.length_squared()>0.0001:
-			var direction: Vector2 = world.move_override.call(touch_aim) if world.move_override.is_valid() else touch_aim
-			return world.player.position+direction.normalized()*KEY_AIM_REACH
-		if pad_aim.length_squared()>0.0001:
-			var direction: Vector2 = world.move_override.call(pad_aim) if world.move_override.is_valid() else pad_aim
-			return world.player.position+direction.normalized()*KEY_AIM_REACH
+		return _aim_point(world,true)
+
+	## Preview queries observe the same raw direction without changing input mode.
+	func peek_aim_point(world) -> Vector2:
+		return _aim_point(world,false)
+
+	func _aim_point(world,observe: bool) -> Vector2:
 		# Read the current L-stick before World updates facing for this frame.
 		var left: Vector2 = touch_move if touch_owned or touch_move!=Vector2.ZERO else pad_move
 		if left.length_squared()>0.0001:
@@ -155,36 +166,86 @@ class Human:
 			return world.player.position + world.player.facing * KEY_AIM_REACH
 		var mouse: Vector2 = world.aim_override.call() if world.aim_override.is_valid() else world.get_global_mouse_position()
 		var screen: Vector2 = world.get_viewport().get_mouse_position()
-		if pad_active:
-			if Input.is_action_pressed("move_click") or (_last_mouse!=Vector2.INF and screen.distance_to(_last_mouse)>2.0):pad_active = false
+		var using_pad:=pad_active
+		if using_pad:
+			if Input.is_action_pressed("move_click") or (_last_mouse!=Vector2.INF and screen.distance_to(_last_mouse)>2.0):using_pad=false
 			else:
-				_last_mouse = screen
+				if observe:_last_mouse=screen
 				return world.player.position+world.player.facing*KEY_AIM_REACH
+		var using_keys:=key_aim
 		if Input.get_vector("move_left", "move_right", "move_up", "move_down") != Vector2.ZERO:
-			key_aim = true
+			using_keys=true
 		elif Input.is_action_pressed("move_click") or (_last_mouse != Vector2.INF and screen.distance_to(_last_mouse) > 2.0):
-			key_aim = false
-		_last_mouse = screen
-		if key_aim:
+			using_keys=false
+		if observe:
+			pad_active=using_pad;key_aim=using_keys;_last_mouse=screen
+		if using_keys:
 			var f: Vector2 = world.player.facing
 			return world.player.position + (f.normalized() if f.length_squared() > 0.0001 else Vector2.DOWN) * KEY_AIM_REACH
 		return mouse
+
+	func skill_aim_precise() -> bool:
+		return not touch_active and not pad_active and not key_aim
+
+	## A preview owns its assistance copy: no sticky target or manual heading is changed.
+	func peek_skill_aim(world,move_id: String,raw_point: Vector2) -> Vector2:
+		var raw:=raw_point-Vector2(world.player.position)
+		var precise:=_peek_aim_precise(world)
+		var idle:=touch_move==Vector2.ZERO and pad_move==Vector2.ZERO and Input.get_vector("move_left","move_right","move_up","move_down")==Vector2.ZERO
+		if not precise and idle and raw.normalized().is_equal_approx(_skill_corrected_direction) and _skill_manual_direction!=Vector2.ZERO:
+			raw_point=world.player.position+_skill_manual_direction*raw.length()
+		var preview:=AimAssist.new()
+		preview.settings=aim_assist.settings.duplicate()
+		preview._target=aim_assist._target
+		return preview.resolve(world,move_id,raw_point,precise)
+
+	func _peek_aim_precise(world) -> bool:
+		var left: Vector2=touch_move if touch_owned or touch_move!=Vector2.ZERO else pad_move
+		if left.length_squared()>0.0001 or (touch_active and not pad_active):return skill_aim_precise()
+		var screen: Vector2=world.get_viewport().get_mouse_position()
+		var mouse_input:=Input.is_action_pressed("move_click") or (_last_mouse!=Vector2.INF and screen.distance_to(_last_mouse)>2.0)
+		if pad_active and not mouse_input:return false
+		var using_keys:=key_aim
+		if Input.get_vector("move_left","move_right","move_up","move_down")!=Vector2.ZERO:using_keys=true
+		elif mouse_input:using_keys=false
+		return not touch_active and not using_keys
+
+	func skill_aim(world, move_id: String, raw_point: Vector2) -> Vector2:
+		var precise:=skill_aim_precise()
+		var raw := raw_point - Vector2(world.player.position)
+		var idle := touch_move == Vector2.ZERO and pad_move == Vector2.ZERO and Input.get_vector("move_left", "move_right", "move_up", "move_down") == Vector2.ZERO
+		# Neutral-facing aim must not feed assisted turns back into the next correction.
+		if not precise and idle and raw.normalized().is_equal_approx(_skill_corrected_direction) and _skill_manual_direction != Vector2.ZERO:
+			raw_point = world.player.position + _skill_manual_direction * raw.length()
+		else:
+			_skill_manual_direction = raw.normalized()
+		var corrected: Vector2 = aim_assist.resolve(world, move_id, raw_point, precise)
+		_skill_corrected_direction = (corrected - Vector2(world.player.position)).normalized()
+		return corrected
+
+	func _clear_skill_aim() -> void:
+		_skill_input_revision+=1
+		aim_assist.clear()
+		_skill_manual_direction = Vector2.ZERO
+		_skill_corrected_direction = Vector2.ZERO
 
 	# 기술 네 칸: Q·W·E·R 을 누르고 있으면 그 칸(쿨타임마다 연사).
 	# hold: 가방·상태창을 닫은 직후 — 키·마우스를 다 뗄 때까지 기술·이동을 받지 않는다(창 안에서 누른 것이 새지 않게).
 	var _feedback_presses: Array[int] = []
 	var _feedback_down: Array[bool] = [false, false, false, false]
+	var _jump_hold_frame := -1
 	var hold := false:
 		set(value):
 			hold = value
 			if value:
+				_jump_hold_frame = Engine.get_process_frames()
 				_feedback_presses.clear() # No stale input after a modal closes.
 				clear_touch()
 				clear_gamepad()
 	func _release_hold() -> void:
 		if not hold:
 			return
-		for a in ["skill_0", "skill_1", "skill_2", "skill_3", "move_click"]:
+		for a in ["skill_0", "skill_1", "skill_2", "skill_3", "move_click", "jump"]:
 			if a == "move_click" and touch_owned:continue
 			if Input.is_action_pressed(a):
 				return
@@ -234,6 +295,15 @@ class Human:
 			return false
 		return touch_keys.has(SKILL_KEYS[i]) or _touch_frame.has(SKILL_KEYS[i]) or pad_keys.has(SKILL_KEYS[i]) or _pad_frame.has(SKILL_KEYS[i]) or Input.is_action_pressed("skill_%d" % i)
 
+	## Physical hold state excludes one-frame presses retained for quick taps.
+	func skill_is_held(slot: int) -> bool:
+		if hold or slot<0 or slot>=SKILL_KEYS.size():return false
+		return touch_keys.has(SKILL_KEYS[slot]) or pad_keys.has(SKILL_KEYS[slot]) or Input.is_action_pressed("skill_%d"%slot)
+
+	## A normal release fires a charged throw; cancellation/context loss does not.
+	func skill_input_revision() -> int:
+		return _skill_input_revision
+
 	func want_dodge(_world) -> bool:
 		return _touch_frame.has(KEY_SHIFT) or Input.is_action_just_pressed("dodge")
 
@@ -243,6 +313,8 @@ class Human:
 
 	# Space: 앞에 말 걸 사람·오브젝트가 있으면 대화(Game 이 받는다), 없으면 점프(사용자 결정 2026-11-02).
 	func want_jump(world) -> bool:
+		_release_hold()
+		if hold or _jump_hold_frame == Engine.get_process_frames(): return false
 		return (_touch_frame.has(KEY_SPACE) or _pad_frame.has(KEY_SPACE) or Input.is_action_just_pressed("jump")) and not world.talk_ready
 
 	# 도구 편성 1~4: 누른 순간 한 번(이전 상태와 비교 — 누르고 있어도 한 개만).

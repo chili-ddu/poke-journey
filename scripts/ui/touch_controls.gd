@@ -114,6 +114,7 @@ func pointer(id: int, at: Vector2, phase: String) -> bool:
 	if phase=="drag":
 		if contact.kind=="move":_move(at)
 		elif contact.kind=="aim":_aim(at)
+		elif contact.kind=="aim_idle":pass
 		elif not contact.rect.grow(6).has_point(at):
 			router.release(contact.code,true);contact.code = KEY_NONE
 			contact["nav"] = KEY_NONE
@@ -125,7 +126,7 @@ func pointer(id: int, at: Vector2, phase: String) -> bool:
 			if human()!=null:human().touch_move = Vector2.ZERO
 		elif contact.kind=="aim":
 			aim_finger = -1;aim_knob = Vector2.ZERO
-			if human()!=null:human().touch_aim = Vector2.ZERO
+		elif contact.kind=="aim_idle":pass
 		else:router.release(contact.code,phase=="cancel")
 	_ownership();queue_redraw();return true
 
@@ -140,9 +141,12 @@ func _press(id: int, at: Vector2) -> bool:
 		if at.distance_to(stick_center)<=stick_radius() and finger<0:
 			contacts[id] = {"kind":"move"};finger = id
 			_ownership();_move(at);return true
-		if at.distance_to(aim_center)<=aim_radius() and aim_finger<0:
-			contacts[id] = {"kind":"aim"};aim_finger = id
-			_ownership();_aim(at);return true
+		if at.distance_to(aim_center)<=aim_radius():
+			if aim_finger<0:
+				contacts[id] = {"kind":"aim"};aim_finger = id
+				_aim(at)
+			else:contacts[id]={"kind":"aim_idle"}
+			_ownership();return true
 	blocked_fingers[id] = true
 	_ownership();return true
 
@@ -169,8 +173,11 @@ func _summary_held() -> bool:
 
 func _ownership() -> void:
 	if human()==null:return
-	human().touch_owned = not contacts.is_empty() or not blocked_fingers.is_empty()
-	if human().touch_owned:human().has_target = false
+	var owns_input:=not blocked_fingers.is_empty()
+	for contact in contacts.values():
+		if contact.kind not in ["aim","aim_idle"]:owns_input=true
+	human().touch_owned=owns_input
+	if owns_input:human().has_target=false
 
 func _move(at: Vector2) -> void:
 	var delta := at-stick_center
@@ -198,9 +205,7 @@ func _aim(at: Vector2) -> void:
 	var radius := aim_radius()
 	if radius<=0:return
 	aim_knob = delta.limit_length(radius*0.58)
-	if human()!=null:
-		human().touch_aim = delta.normalized() if playing() and delta.length()/radius>float(config.stick_deadzone) else Vector2.ZERO
-		if playing():human().touch_active = true
+	# Preserve the R-stick affordance without giving it an aiming function.
 	queue_redraw()
 
 func _draw() -> void:

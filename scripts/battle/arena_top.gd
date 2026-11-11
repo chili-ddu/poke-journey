@@ -15,10 +15,9 @@ var arena: Arena
 
 func _ready() -> void:
 	y_sort_enabled = true
-	if not Arena.has_map():
+	if not Arena.has_map() or Arena.is_continent() or Arena.is_native():
 		return
 	var b := Arena.bounds()
-	if Arena.is_continent():b=Rect2(Vector2.ZERO,Vector2(Arena.map.width,Arena.map.height)*Arena.TILE)
 	var rows := int(b.size.y / Arena.TILE)
 	for r in rows:
 		if not Arena.cover_cells(r).is_empty():

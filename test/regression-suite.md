@@ -1,5 +1,58 @@
 # 성도 지도 연결 회귀 목록
 
+## 돌진·근접·긴 준비 방향 고정 — 2026-11-11
+
+| 경로 / 재발 방지 | 검증 |
+| --- | --- |
+| 기본 돌진 무적 제거·기존 점프/회피 분리·직선 스윕·벽/첫 상대 앞 정지·근접 시작 방향 고정·긴 준비 시작 고정/취소 없음 | test_combat_commit.gd |
+| 돌진 경로/끝점·2D 투영·메뉴/연출 숨김·시각 발 오프셋·HUD 읽기 전용·기존 범위 충전 보존 | test_combat_commit_ui.gd; test_area_charge_ui.gd |
+| L스틱 조준 유지·모바일 R스틱의 표시/자리/접촉 영역 유지·R축 조준 무효 | test_touch_controls.gd; test_physical_gamepad.gd; test_aim_assist.gd |
+| FRLG/HGSS 실제 돌진 경로와 끝점·벽 정지·근접·솔라빔/로케트박치기 준비와 자동 발사·유한 화염방사 | tools/combat_commit_review.gd |
+
+최종 관련 헤드리스 **24개 스크립트·279/279·6,310개 단언 통과**. 기존 `test_rules.gd`의 Float/Int 비교 경고 3건과 대화/BGM `3 Orphans` 진단은 남아 있다. 첫 통합에서 `test_kanto_contact_fx.gd`의 접촉 앞 2px 전진을 0으로 기대하던 검사 한 곳을 새 요구인 틈 접근·몸 비겹침·후속 드리프트 없음으로 정정한 뒤 통과했다. 최종 네이티브는 **전투 7사례·16장**, 입력은 **모바일 16개·물리 패드 이벤트 11개 묶음** 통과. 모두 384×216 고정 창·격리 저장을 사용했다. [전투 조작 검증](../docs/combat_commit/README.md). 아래의 예전 R스틱 직접 조준 검증은 당시의 기록이며 최신 조작은 이동 방향 조준과 R스틱 표시 유지·조준 무효화이다.
+
+## 인트로 구도·몬스터볼 로딩 — 2026-11-11
+
+| 경로 / 재발 방지 | 검증 |
+| --- | --- |
+| 자료 준비 전 시작 차단·입력 예약 없음·에코/해제 차단·실패 후 재시도·중복 진입 방지 | test_intro_screen.gd; tools/web/test_intro_screen.mjs |
+| 세 스타팅의 실제 기술·NPC 상호 피해·일반 능력치·진행/저장과 분리 | test_intro_screen.gd; tools/intro_screen_review.gd |
+| 인트로 종료 뒤 다운로드가 인트로를 다시 열지 않음·이전 소유자의 늦은 종료 차단·시작 입력과 로딩 분리 | tools/web/test_intro_screen.mjs; test_title_screen.gd |
+| 게임 진입 로더는 별도 전투·지도·시작 버튼을 생성하지 않음·중앙 원근 카메라와 실제 도트 영역으로 화면 맞춤 | test_intro_screen.gd; tools/intro_screen_review.gd |
+| 엔진 시작용 팩만으로 스타팅 도트·보간 자료·전투맵 사용 가능 | tools/web/check_startup_pack.gd --intro; tools/web/check_content_build.py |
+| 선택 입력 누출 없음·새 게임/이어하기 모두 동일한 전환·384×216 고정 창 | tools/intro_screen_review.gd; tools/title_transition_review.gd |
+
+현재 UI 관련 헤드리스 3개 스크립트 **26/26·261개 단언**, 웹 로더/인트로 **11/11** 통과. 처음에는 고정 14초 안에 NPC 상호 피해를 요구하던 항목이 실패했고, 특정 승패 대신 플레이어가 쓰러진 뒤 두 NPC가 실제로 싸우는 경로로 분리해 통과했다. 선택 화면 최초 BGM·SFX 초기화의 기존 `12 Orphans` 진단은 남아 있다. 네이티브 인트로·새 게임·이어하기는 격리 저장과 `CaptureWindow.park()`로 384×216에서 통과했다. 이번 변경 뒤 전체 Web 재내보내기·실물 모바일/패드 검증은 하지 않았다.
+
+## 범위 기술 거리 충전 — 2026-11-11
+
+| 경로 / 재발 방지 | 검증 |
+| --- | --- |
+| 적에게 거리 자동 맞춤 없이 방향만 보정·각도/벽/대상 제한·직접 조준 보존 | test_area_aim.gd; test_aim_assist.gd |
+| 누르는 동안 거리 증가·최대 거리 무기한 유지·놓을 때 PP 한 번·최소 거리 빠른 탭·남은 준비 시간·고정 착지점 | test_area_charge.gd |
+| 취소 비용 0·같은 홀드 재시작 차단·떼고 새로 누르기 허용·이동/점프·다른 기술 중첩과 일반 연사 보존 | test_area_charge.gd; test_controls.gd; test_touch_controls.gd; test_physical_gamepad.gd; test_mobile_gamepad.gd |
+| 원형 가루·기존 면역/독 잠금·돌떨구기 1회·암석봉인 구분·회오리불꽃 고정 지점 초기 1회 및 기존 잔여 피해·공통 능력치 보존 | test_area_casting.gd; test_moves.gd; test_rules.gd |
+| 실제 2D/3D 원 투영·충전 게이지·해제 후 가이드 제거 | test_area_charge_ui.gd |
+| 기존 투사체 충돌/지연·사용 불가 피드백 | test_projectile_hitch.gd; test_projectile_clashes.gd; test_skill_denied_feedback.gd |
+| 실제 사람 조작기 5기술의 짧은/최대 투척·실제 효과·PP·384×216 고정 창 | tools/area_charge_review.gd → docs/area_targeting/native.json |
+
+최종 관련 헤드리스 14개 스크립트 **193/193·3,530개 단언 통과**. 기존 `test_rules.gd`의 Float/Int 비교 경고 3건은 남아 있다. 네이티브 최종 독립 재실행은 **5기술·실제 투척 10회·화면 20장·실패 0**이며 격리 저장과 `CaptureWindow.park()`를 사용했다. 앞선 확장 실행에서 회오리불꽃 최대 충전 가이드 소실이 1회 관찰됐고 같은 소스의 후속 두 실행에서는 재현되지 않았다. 해당 도구에 입력 문맥·충전 유효성 진단을 남겼으며 원인은 미확정이다. [조작·결과·한계](../docs/area_targeting/README.md).
+
+## 대화 클릭·종료 입력 중복 방지 — 2026-11-11
+
+- `test_dialogue_input.gd`: 좌클릭 한 쪽 진행·해제/우클릭/휠/키 반복 제외·등장 연출 잠금·해설/알림 수동 진행·마지막 Space의 점프 유출·같은 프레임 빠른 누름/해제·해제 후 새 점프/이동·콜백의 새 대화 중복 진행 방지.
+- 관련 9개 스크립트 **165/165·5,284개 단언**. 기존 BGM 3 Orphans 진단 유지. 실제 루트 이벤트와 384×216 최소 창 검증 통과. [결과·한계](../docs/dialogue_input/README.md).
+
+## 공격 방향 보정 — 2026-11-11
+
+- `test_aim_assist.gd`: 발사 시 방향 보정, 입력별 각도 제한, 사거리·벽·아군/구경꾼/숨김/등장 제외, 카메라 변환, 대상 유지/해제, 작은 속도 예측, 충전/연사/고정 분산, 일반 피해와 PP, 중립 방향 누적 회전 방지, 이동·점프 보존과 문맥 정리.
+- 최종 관련 7개 스크립트 **99/99·657개 단언**. 실제 네이티브 전후 비교는 384×216 고정 창·격리 저장으로 실행하며 도트·이펙트 자산을 바꾸지 않았다. [수치·검증·한계](../docs/aim_assist/README.md).
+
+## 기기 언어 자동 선택 — 2026-11-11
+
+- `test_language_settings.gd`: 최초 기기 언어 선택, 지역 코드, 미지원 언어의 영어 대체, 수동 선택 우선·유지, 이전 설정 호환, 자동값 비저장, 검증 환경변수 우선, 다른 환경 설정 보존. 테스트 설정 파일만 사용한다.
+- 최종 `test_language_settings.gd`·`test_title_screen.gd`·`test_story_text.gd` **28/28 테스트·325개 단언 통과**. 기존 BGM·SFX 초기화의 `12 Orphans` 진단은 남아 있다. 실제 기기의 언어를 바꾸거나 모바일·웹에서 직접 실행한 검증은 하지 않았다.
+
 ## Web 다운로드 분리 회귀 — 2026-11-11
 
 | 경로 / 재발 방지 | 검증 |

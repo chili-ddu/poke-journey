@@ -347,6 +347,8 @@ func _draw() -> void:
 	if delay > 0.0:
 		t = clampf((age - delay) / maxf(0.001, lifetime - delay), 0.0, 1.0)
 	match kind:
+		"ball_release":
+			if not Look.view3d: BallRelease.draw_flat(self)
 		"forward_cut", "clash_chip":
 			if not Look.view3d and not dead: ClashArt.draw_flat(self)
 		"flare_coat":

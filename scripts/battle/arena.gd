@@ -187,10 +187,13 @@ static func _load_map(dir: String) -> void:
 	for wv in j.get("warps", []):
 		_warps["%d,%d" % [int(wv["x"]), int(wv["y"])]] = wv
 		_warp_tiles["%s:%d" % [String(wv["map"]), int(wv["index"])]] = Vector2i(int(wv["x"]), int(wv["y"]))
-	_bottom = load(dir + "/bottom.png")
 	_pad = int(j.get("pad", 0))
-	_top = load(dir + "/top.png")
-	if dir=="res://assets/maps/kanto_world":_attach_continent()
+	if dir == "res://assets/maps/kanto_world":
+		# The combined continent always renders its terrain in 3D.
+		_attach_continent()
+	else:
+		_bottom = load(dir + "/bottom.png")
+		_top = load(dir + "/top.png")
 
 static func _ensure() -> void:
 	if theme.is_empty():
@@ -453,7 +456,7 @@ static func grass_points_near(pos: Vector2, min_d: float, max_d: float) -> Array
 
 func _draw() -> void:
 	_ensure()
-	if is_native(): return # Native terrain is rendered by View3D.
+	if is_native() or is_continent(): return # These maps always use View3D.
 	if has_map():
 		draw_texture_rect(_bottom, Rect2(Vector2.ZERO,Vector2(map.width,map.height)*TILE).grow(_pad*TILE), false)
 	else:

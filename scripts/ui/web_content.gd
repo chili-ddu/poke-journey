@@ -4,6 +4,8 @@ extends RefCounted
 ## Wait under the title transition before synchronous sprite/map loaders run.
 ## Desktop builds already contain these resources and return immediately.
 static var message := ""
+static var current := 0.0
+static var total := 0.0
 static var mounted: Dictionary = {}
 
 static func prepare(tree: SceneTree, species: String) -> Error:
@@ -16,6 +18,8 @@ static func prepare(tree: SceneTree, species: String) -> Error:
 	while true:
 		var state: Dictionary=JSON.parse_string(String(bridge.status()))
 		message=String(state.get("message",""))
+		current=float(state.get("current",0.0))
+		total=float(state.get("total",0.0))
 		if bool(state.get("done",false)):
 			if not String(state.get("error","")).is_empty():
 				message=""

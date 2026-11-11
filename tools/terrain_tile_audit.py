@@ -57,6 +57,9 @@ def clean_floor(name):
     ledges,turns,_ = topology(j)
     banks = set(ledges)|turns
     restore_bank_floor(j,raw,floor,banks,native_ground,next(iter(donors.values())))
+    if name == 'kanto_world':
+        from kanto_landmarks import restore_ground
+        restore_ground(d, floor, j)
     # An open editor must never import a partially written PNG.
     temporary = d / 'elevation_floor.png.tmp'
     floor.save(temporary, format='PNG')

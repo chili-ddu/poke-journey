@@ -58,7 +58,11 @@ def convert(source, target, kind, atlas=False, regions=None):
         applied += int(np.count_nonzero(mask));a[mask,:3]=tile[mask,:3]
     # Keep the exact original alpha. Never replace object silhouettes.
     target.parent.mkdir(parents=True,exist_ok=True)
-    Image.fromarray(a).save(target)
+    image = Image.fromarray(a)
+    if source.parent.name == 'kanto_world' and source.name in ('hd2d_floor.png','elevation_floor.png'):
+        from kanto_landmarks import restore_ground
+        restore_ground(source.parent,image,json.loads((source.parent/'map.json').read_text()))
+    image.save(target)
     return applied
 
 

@@ -20,7 +20,7 @@
 - **Target Platforms**: [TO BE CONFIGURED — e.g., PC, Console, Mobile, Web]
 - **Input Methods**: Keyboard/mouse, mobile virtual gamepad, standard Godot joypad buttons/axes
 - **Primary Input**: [TO BE CONFIGURED — the dominant input for this game]
-- **Gamepad Support**: Standard input path implemented (A interact, B cancel, X/Y/LB/RB skills, SELECT town map, dual sticks and triggers); engine-event/native verification; physical hardware unverified
+- **Gamepad Support**: Standard input path implemented (A interact, B cancel, X/Y/LB/RB skills, SELECT town map, L-stick movement and aim, triggers); mobile R-stick visuals/position/contact area retained but R input has no aiming effect; engine-event/native verification; physical hardware unverified
 - **Touch Support**: Mobile lower controller with the same active bindings; portrait/landscape offscreen verification; physical phones unverified
 - **Platform Notes**: [TO BE CONFIGURED — any platform-specific UX constraints]
 

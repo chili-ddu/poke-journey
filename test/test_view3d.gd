@@ -1067,8 +1067,8 @@ func test_arena_trainer_space_is_flat_clear_and_outside_combat() -> void:
 		var top := int(arena.wall_rows)
 		var end := int(map.height)-side if arena.style=="border" else int(map.height)-1
 		assert_gte(field.position.y-top,6,"Trainer has a separate waiting area: "+name)
-		assert_gte(trainer.y-top,3,"Clear ground behind the trainer")
-		assert_gte(field.position.y-trainer.y,2,"Trainer stands back from the court")
+		assert_gte(trainer.y-top,5,"Five clear rows separate the trainer from the rear wall")
+		assert_eq(field.position.y-trainer.y,1,"Trainer stands just outside the court")
 		assert_gte(field.position.x-side,2,"Side apron is separate from the ten-tile court")
 		assert_false(field.has_point(trainer))
 		var intrusions: Array=[]

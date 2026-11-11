@@ -11,6 +11,9 @@
         const bar = document.getElementById('status-progress');
         if (bar) { bar.max = total || 1; bar.value = value; }
         state.message = text;
+        state.current = value;
+        state.total = total;
+        window.untamedIntro?.loading(text, value, total);
     };
     const digest = async bytes => Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256', bytes)),
         b => b.toString(16).padStart(2, '0')).join('');
@@ -63,7 +66,7 @@
 
     async function unpack(entry, label) {
         const bytes = await compressed(entry, label);
-        state.message = `${label} 준비 중…`;
+        progress(0, 0, `${label} 준비 중…`);
         const data = await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
         if (data.byteLength !== entry.raw_bytes) throw new Error(`Invalid unpacked content: ${entry.url}`);
         return data;
@@ -73,6 +76,10 @@
         console.error(error);
         state.error = String(error.message || error);
         state.done = true;
+        if (window.untamedIntro) {
+            window.untamedIntro.error('자료를 받지 못했습니다. 연결을 확인한 뒤 다시 시도해 주세요.');
+            return;
+        }
         let notice = document.getElementById('content-error');
         if (!notice) {
             notice = document.createElement('div');

@@ -56,6 +56,9 @@ def main():
         plan.write_text(json.dumps(content_plan()))
         subprocess.run([args.godot, '--headless', '--path', str(host), '--script',
                         str(ROOT / 'tools/web/check_startup_pack.gd'), '--', str(plan),
+                        str(Path(temp) / 'boot.pck'), '--intro'], check=True)
+        subprocess.run([args.godot, '--headless', '--path', str(host), '--script',
+                        str(ROOT / 'tools/web/check_startup_pack.gd'), '--', str(plan),
                         *(str(Path(temp) / (name + '.pck')) for name in ('boot', 'world', 'actors'))], check=True)
         subprocess.run([args.godot, '--headless', '--path', str(host), '--script',
                         str(ROOT / 'tools/check_export_pack.gd'), '--', *packs], check=True)

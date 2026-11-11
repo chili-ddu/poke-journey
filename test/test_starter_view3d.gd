@@ -22,6 +22,7 @@ func test_starter_balls_follow_opening_state_and_table_height() -> void:
 	for id in StarterBalls.TILES:
 		assert_true(entries[id].visible, "세 스타팅 볼이 모두 표시된다")
 		assert_gt(entries[id].position.y, 0.6875, "탁자에 묻히지 않는다")
+	assert_almost_eq(entries.charmander.pixel_size,BallRelease.PIXEL/Arena.TILE,0.00001)
 	var before: Basis = entries.charmander.basis
 	balls.wobble = 0.4
 	view._sync_starter_balls(seen)
@@ -41,26 +42,20 @@ func test_starter_balls_follow_opening_state_and_table_height() -> void:
 	assert_true(entries.squirtle.visible, "나머지 볼은 유지된다")
 	assert_eq(entries.size(), 3, "동기화해도 노드를 중복 생성하지 않는다")
 
-func test_opening_particles_keep_table_height_without_affecting_battle() -> void:
-	var w := World.new()
-	add_child_autofree(w)
+func test_opening_uses_same_ball_size_and_surface_for_shell_and_light() -> void:
 	var view := View3D.new()
 	add_child_autofree(view)
-	view.set_process(false)
 	view.cam = Camera3D.new()
 	view.add_child(view.cam)
+	view.cam.rotation.x = deg_to_rad(-40)
 	view._starter_table_height = 0.6875
-	w.ball_open_fx(Vector2(252, 108), 8, true)
-	assert_eq(w.fxs.size(), 16, "빛 덩이·광선·불티 모두 생성")
-	for f in w.fxs:
-		assert_true(f.starter_table, "지연되는 불티에도 탁자 기준이 유지된다")
-		var tex := Fx.sheet(f.text)
-		var raised: Dictionary = view._fx_sprite_state(f, tex)
-		f.starter_table = false
-		var ground: Dictionary = view._fx_sprite_state(f, tex)
-		assert_almost_eq(raised.position.y-ground.position.y, 0.6875, 0.0001)
-		assert_eq(raised.position.x, ground.position.x)
-		assert_eq(raised.position.z, ground.position.z)
-	w.ball_open_fx(Vector2.ZERO, 8)
-	for f in w.fxs.slice(16):
-		assert_false(f.starter_table, "일반 전투의 볼 효과는 기존 높이 유지")
+	var support := Vector2(252,108)
+	var ground := BallRelease.center_3d(view,support,false)
+	var table := BallRelease.center_3d(view,support,true)
+	assert_almost_eq(table.y-ground.y,0.6875+0.015,0.0001)
+	assert_eq(table.x,ground.x)
+	assert_eq(table.z,ground.z)
+	var bottom := ground-view.cam.global_basis.y*5.0*BallRelease.PIXEL/Arena.TILE
+	assert_lt(bottom.distance_to(View3D.to3d(support)),0.0001)
+	assert_eq(BallRelease.growth(0.0),0.0)
+	assert_eq(BallRelease.growth(BallRelease.GROWN),1.0)

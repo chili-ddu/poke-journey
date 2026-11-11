@@ -46,6 +46,7 @@ func test_xy_shoulders_cast_all_four_slots_without_mutating_keyboard() -> void:
 		var f := fixture()
 		var before: int = f.world.player.pp[slot]
 		button(f,[JOY_BUTTON_X,JOY_BUTTON_Y,JOY_BUTTON_LEFT_SHOULDER,JOY_BUTTON_RIGHT_SHOULDER][slot],true)
+		f.world._step_player(1.0/60)
 		button(f,[JOY_BUTTON_X,JOY_BUTTON_Y,JOY_BUTTON_LEFT_SHOULDER,JOY_BUTTON_RIGHT_SHOULDER][slot],false)
 		f.world._step_player(1.0/60)
 		assert_eq(f.world.player.pp[slot],before-1)
@@ -116,9 +117,10 @@ func test_stick_deadzone_strength_camera_aim_and_release() -> void:
 	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001)
 	axis(f,JOY_AXIS_RIGHT_Y,-1.0)
 	var aim: Vector2 = f.c.aim_point(f.world)-f.world.player.position
-	assert_almost_eq(aim.x,Controllers.Human.KEY_AIM_REACH,0.001)
+	assert_almost_eq(aim.y,Controllers.Human.KEY_AIM_REACH,0.001,"R-stick motion cannot redirect L movement aim")
+	assert_eq(f.c.pad_aim,Vector2.ZERO)
 	axis(f,JOY_AXIS_RIGHT_Y,0.0)
-	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001,"R release restores the current L direction")
+	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001,"R neutral also leaves the current L direction unchanged")
 	axis(f,JOY_AXIS_LEFT_X,0.0)
 	f.world.player.facing = Vector2.DOWN
 	assert_eq(f.c.aim_point(f.world),f.world.player.position+Vector2.DOWN*Controllers.Human.KEY_AIM_REACH)
@@ -221,3 +223,18 @@ func test_second_controller_cannot_steal_live_axes_and_can_take_over_when_idle()
 	assert_eq(f.pad.active_device,8);assert_eq(f.c.pad_move,Vector2.LEFT)
 	f.pad.connection_changed(7,false);assert_eq(f.c.pad_move,Vector2.LEFT)
 	f.pad.connection_changed(8,false);assert_eq(f.c.pad_move,Vector2.ZERO)
+
+func test_r_stick_alone_does_not_claim_input_or_block_another_controller() -> void:
+	var f := fixture()
+	f.c.pad_active=false
+	axis(f,JOY_AXIS_RIGHT_X,1.0,7)
+	assert_eq(f.pad.active_device,-1,"An unused R axis cannot claim a controller")
+	assert_false(f.c.pad_active)
+	assert_true(f.pad._axes.is_empty())
+	axis(f,JOY_AXIS_LEFT_X,-1.0,8)
+	assert_eq(f.pad.active_device,8)
+	assert_eq(f.c.pad_move,Vector2.LEFT)
+	f.c.pad_move=Vector2.ZERO;f.world.player.facing=Vector2.DOWN
+	axis(f,JOY_AXIS_RIGHT_Y,-1.0,8)
+	assert_eq(f.c.aim_point(f.world),f.world.player.position+Vector2.DOWN*Controllers.Human.KEY_AIM_REACH)
+	assert_false(f.c.skill_aim_precise(),"A gamepad remains movement-direction aim")

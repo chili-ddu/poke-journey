@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "cone_degrees": 26.0,
+  "correction_degrees": 18.0,
+  "precise_cone_degrees": 14.0,
+  "precise_correction_degrees": 8.0,
+  "range_cap_tiles": 6.0,
+  "lead_seconds": 0.12,
+  "lead_cap_pixels": 8.0,
+  "sticky_bonus": 0.12,
+  "distance_weight": 0.15,
+  "wall_sample_pixels": 6.0
+}

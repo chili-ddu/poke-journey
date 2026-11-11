@@ -70,7 +70,7 @@ jobs:
           python3 tools/check_web_build.py build/web
 
       - name: Verify download and retry behavior
-        run: node --test tools/web/test_content_loader.mjs
+        run: node --test tools/web/test_content_loader.mjs tools/web/test_intro_screen.mjs
 
       - name: Verify packed raw assets without source-file fallbacks
         run: |

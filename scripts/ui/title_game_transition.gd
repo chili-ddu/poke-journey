@@ -8,24 +8,7 @@ var active := false
 var scene_path := ""
 var overlay: Control
 
-class Cover:
-	extends Control
-	var clock := 0.0
-	func _process(dt: float) -> void:
-		clock+=dt
-		queue_redraw()
-	func _draw() -> void:
-		draw_rect(Rect2(Vector2.ZERO,size),Color("080b10"))
-		var icon := PixelUi.ui_tex("plat/sum_ball")
-		var at := Vector2(size.x-36,size.y-25)
-		if icon!=null:
-			var bounce := floorf(absf(sin(clock*4.0))*2.0)
-			draw_texture_rect(icon,Rect2(at-Vector2(0,bounce),Vector2(16,16)),false)
-		if not WebContent.message.is_empty():
-			PixelUi.text(self,Vector2(size.x*0.5,size.y-45),WebContent.message,true,Color.WHITE,Color.BLACK,HORIZONTAL_ALIGNMENT_CENTER)
-		for i in 3:
-			var alpha := 0.35+0.65*maxf(0.0,sin(clock*5.0-float(i)*0.9))
-			draw_rect(Rect2(at+Vector2(18+i*4,10),Vector2(2,2)),Color(0.9,0.94,1.0,alpha))
+const Cover = preload("res://scripts/ui/loading_cover.gd")
 
 func _ready() -> void:
 	layer=128

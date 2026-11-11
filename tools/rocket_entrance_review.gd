@@ -36,7 +36,7 @@ func run() -> void:
 		assert(game.battle.mon.species_id==member)
 		if member!="meowth":
 			var sender: Npc=game.arena_trainer if member=="ekans" else game.rocket_james
-			assert(game.sendout.ball.from==sender.position+Vector2(0,-Arena.TILE*0.4))
+			assert(game.sendout.ball.from==sender.throw_hand_world())
 			while float(game.sendout.t)<0.4:await frame()
 			await shot("02_"+member+"_owner_throw")
 		else:

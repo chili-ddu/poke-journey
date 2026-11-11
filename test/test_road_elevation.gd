@@ -76,7 +76,7 @@ func test_actual_road_floor_and_vertical_faces_are_built() -> void:
 		assert_lte(foot_depth,0.8751,"The visible earth foot cannot bulge forward on an end ramp")
 		var turf: MeshInstance3D=view.root3d.get_node("RoadLedgeRims")
 		# The environment palette creates an ImageTexture without a resource path.
-		var expected_ground: Texture2D=View3D.MapPalette.texture(load(dir+"/elevation_floor.png"))
+		var expected_ground: Texture2D=View3D.MapPalette.texture(View3D.HgssEnvironment.surface(dir, "elevation_floor.png"))
 		assert_same((turf.material_override as StandardMaterial3D).albedo_texture,expected_ground,"Bank shoulders retain their own native grass/path instead of a repeated lawn tile")
 		var arrays := turf.mesh.surface_get_arrays(0)
 		var points: PackedVector3Array=arrays[Mesh.ARRAY_VERTEX]

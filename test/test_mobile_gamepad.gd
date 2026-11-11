@@ -86,6 +86,7 @@ func test_portrait_and_landscape_keys_stay_below_the_display_without_overlap() -
 			var rect: Rect2 = pad.hits[key]
 			assert_true(screen.controls.grow(0.01).encloses(rect),key)
 			assert_false(rect.intersects(screen.display),key)
+		assert_true(pad.has("aim"),"The R-stick display and region remain in place")
 		for pair in [[pad.stick,pad.radius],[pad.aim,pad.aim_radius]]:
 			var stick := Rect2(pair[0]-Vector2.ONE*float(pair[1]),Vector2.ONE*float(pair[1])*2)
 			assert_true(screen.controls.grow(0.01).encloses(stick))

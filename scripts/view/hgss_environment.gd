@@ -10,6 +10,8 @@ static var _models: Dictionary = {}
 static var _textures: Dictionary = {}
 static var _tree_texture: Texture2D
 const MODEL_CACHE_LIMIT := 48
+# Keep the fitted doorway clear of the ground depth buffer.
+const GROUND_CLEARANCE := 1.0 / 128.0
 
 static func manifest() -> Dictionary:
 	if _manifest.is_empty() and FileAccess.file_exists(BASE + "manifest.json"):
@@ -67,7 +69,16 @@ static func model(path: String) -> PackedScene:
 		push_error("Unable to read HGSS environment model: " + path)
 		return null
 	var node := document.generate_scene(state)
-	materials(node)
+	# DS houses share a painted ground-shadow texture even when their
+	# material names differ. Only the sun should project their silhouette.
+	var shadow_texture: Texture2D
+	if path.get_base_dir().get_file().begins_with("prop_"):
+		var images: Array = state.json.get("images", [])
+		for i in images.size():
+			if String(images[i].get("uri", "")).get_file() == "h_kage.png":
+				shadow_texture = state.get_images()[i]
+				break
+	materials(node, shadow_texture)
 	var packed := PackedScene.new()
 	packed.pack(node)
 	node.free()
@@ -75,20 +86,28 @@ static func model(path: String) -> PackedScene:
 	_models[path] = packed
 	return packed
 
-static func materials(node: Node) -> void:
+static func materials(node: Node, shadow_texture: Texture2D) -> void:
 	if node is MeshInstance3D:
-		for i in node.mesh.get_surface_count():
-			var material: Material = node.mesh.surface_get_material(i)
+		var mesh := node.mesh as ArrayMesh
+		for i in range(mesh.get_surface_count() - 1, -1, -1):
+			var material: Material = mesh.surface_get_material(i)
+			if shadow_texture != null and material is BaseMaterial3D and material.albedo_texture == shadow_texture:
+				mesh.surface_remove(i)
+				mesh.shadow_mesh = null
+				continue
 			if material is BaseMaterial3D:
 				material.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
 				material.shading_mode = BaseMaterial3D.SHADING_MODE_UNSHADED
 				material.cull_mode = BaseMaterial3D.CULL_DISABLED
 				if material.albedo_texture != null: material.albedo_texture = Palette.texture(material.albedo_texture)
-	for child in node.get_children(): materials(child)
+	for child in node.get_children(): materials(child, shadow_texture)
 
 static func build(view: CanvasLayer, map_dir: String) -> int:
+	return build_models(view.root3d, replacements(map_dir).get("buildings", []))
+
+static func build_models(parent: Node3D, specs: Array) -> int:
 	var count := 0
-	for spec in replacements(map_dir).get("buildings",[]):
+	for spec in specs:
 		var packed := model(spec.asset)
 		if packed == null: continue
 		var node := packed.instantiate() as Node3D
@@ -96,8 +115,8 @@ static func build(view: CanvasLayer, map_dir: String) -> int:
 		# inside the existing solid area with its doorway at the actual warp.
 		node.scale = Vector3(spec.scale[0],spec.scale[1],spec.scale[2]) / 16.0
 		node.position = Vector3(spec.position[0],spec.position[1],spec.position[2])
-		node.position.y += Arena.ground_height(Vector2(spec.door[0],spec.door[1])*Arena.TILE)
+		node.position.y += Arena.ground_height(Vector2(spec.door[0],spec.door[1])*Arena.TILE) + GROUND_CLEARANCE
 		node.set_meta("hgss_door",Vector2(spec.door[0],spec.door[1]))
-		view.root3d.add_child(node)
+		parent.add_child(node)
 		count += 1
 	return count

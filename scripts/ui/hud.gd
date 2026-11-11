@@ -128,6 +128,8 @@ func _draw() -> void:
 		return
 	var w: World = game.world
 	var p: Player = w.player
+	_draw_area_charge()
+	_draw_dash_aim()
 	if game.mode == "dungeon" or game.is_event_battle():
 		_draw_progress()          # 던전만: 남은 적 진행 막대(장소 이름은 원작처럼 들어설 때 알림판으로만 — 사용자 결정 2026-10-30)
 	_draw_player_box(p)
@@ -514,3 +516,87 @@ func quest_marker_position(actor: Npc) -> Vector2:
 		if view.cam.is_position_behind(at):return Vector2.INF
 		return (view.cam.unproject_position(at)*view.rect.size/Vector2(view.vp.size)+view.rect.position)/game.ui_scale
 	return (game.world.get_global_transform_with_canvas()*(actor.position+Vector2(0,-36)))/game.ui_scale
+
+## Read-only charge guide, projected through the same ground plane as the move.
+func area_charge_geometry() -> Dictionary:
+	if game==null or game.world==null or game.state!="fight" or game.monologue or game.cinematic:return {}
+	if not game.world.has_method("area_charge_preview"):return {}
+	var preview: Dictionary=game.world.area_charge_preview()
+	if preview.is_empty():return {}
+	var origin: Vector2=preview.center+Vector2(preview.get("ground_offset",Vector2.ZERO))
+	var center:=_area_charge_screen(origin)
+	if not center.is_finite():return {}
+	var ring:=PackedVector2Array()
+	for index in 33:
+		var point:=_area_charge_screen(origin+Vector2.from_angle(TAU*index/32.0)*float(preview.radius))
+		if not point.is_finite():return {}
+		ring.append(point)
+	return {"center":center,"ring":ring,"progress":clampf(float(preview.progress),0.0,1.0)}
+
+func _area_charge_screen(point: Vector2) -> Vector2:
+	if game.view3d!=null and game.view3d.visible and game.view3d.cam!=null:
+		var view: View3D=game.view3d
+		var at:=View3D.to3d(point,0.035)
+		if view.cam.is_position_behind(at):return Vector2.INF
+		return (view.cam.unproject_position(at)*view.rect.size/Vector2(view.vp.size)+view.rect.position)/game.ui_scale
+	return (game.world.get_global_transform_with_canvas()*point)/game.ui_scale
+
+func _draw_area_charge() -> void:
+	var geometry:=area_charge_geometry()
+	if geometry.is_empty():return
+	var ring: PackedVector2Array=geometry.ring
+	var center: Vector2=geometry.center
+	var full: bool=float(geometry.progress)>=0.999
+	var color:=Color("ffe27a") if full else Color("e7f8c6")
+	# A dark outline keeps the thin floor guide readable on both grass and stone.
+	draw_polyline(ring,Color("26352c"),3.0,false)
+	draw_polyline(ring,color,1.0,false)
+	draw_line(center+Vector2(-3,0),center+Vector2(3,0),Color("26352c"),3.0)
+	draw_line(center+Vector2(0,-3),center+Vector2(0,3),Color("26352c"),3.0)
+	draw_line(center+Vector2(-3,0),center+Vector2(3,0),color,1.0)
+	draw_line(center+Vector2(0,-3),center+Vector2(0,3),color,1.0)
+	var top:=center.y
+	for point in ring:top=minf(top,point.y)
+	var meter:=Rect2(center+Vector2(-12,top-center.y-8),Vector2(24,4))
+	draw_rect(meter.grow(1),Color("26352c"))
+	draw_rect(meter,Color("536352"))
+	draw_rect(Rect2(meter.position,Vector2(meter.size.x*float(geometry.progress),meter.size.y)),color)
+
+## The world owns the swept movement path. The HUD only projects its corridor.
+func dash_aim_geometry() -> Dictionary:
+	if game==null or game.world==null or game.state!="fight" or game.monologue or game.cinematic:return {}
+	if not game.world.has_method("dash_aim_preview"):return {}
+	var preview: Dictionary=game.world.dash_aim_preview()
+	if preview.is_empty():return {}
+	var ground_offset: Vector2=preview.get("ground_offset",Vector2.ZERO)
+	var start: Vector2=preview["from"]+ground_offset
+	var finish: Vector2=preview["to"]+ground_offset
+	var width:=maxf(0.0,float(preview.width))
+	var direction:=start.direction_to(finish)
+	var normal:=direction.orthogonal()*width
+	var from_screen:=_area_charge_screen(start)
+	var to_screen:=_area_charge_screen(finish)
+	if not from_screen.is_finite() or not to_screen.is_finite():return {}
+	var left:=PackedVector2Array([_area_charge_screen(start+normal),_area_charge_screen(finish+normal)])
+	var right:=PackedVector2Array([_area_charge_screen(start-normal),_area_charge_screen(finish-normal)])
+	var ring:=PackedVector2Array()
+	for index in 25:ring.append(_area_charge_screen(finish+Vector2.from_angle(TAU*index/24.0)*width))
+	var arrow:=PackedVector2Array()
+	if start.distance_to(finish)>1.0:
+		var back:=finish-direction*minf(8.0,start.distance_to(finish)*.35)
+		arrow=PackedVector2Array([_area_charge_screen(back+direction.orthogonal()*4.0),to_screen,_area_charge_screen(back-direction.orthogonal()*4.0)])
+	for points in [left,right,ring,arrow]:
+		for point in points:
+			if not point.is_finite():return {}
+	return {"from":from_screen,"to":to_screen,"left":left,"right":right,"ring":ring,"arrow":arrow,"active":bool(preview.get("active",false))}
+
+func _draw_dash_aim() -> void:
+	var geometry:=dash_aim_geometry()
+	if geometry.is_empty():return
+	var color:=Color("ffe27a") if geometry.active else Color("e7f8c6")
+	# The corridor, endpoint circle and arrow carry meaning without color alone.
+	for points in [geometry.left,geometry.right,geometry.ring,geometry.arrow]:
+		if points.size()<2:continue
+		draw_polyline(points,Color("26352c"),3.0,false)
+		draw_polyline(points,color,1.0,false)
+	if geometry.active:draw_circle(geometry.to,1.5,color)

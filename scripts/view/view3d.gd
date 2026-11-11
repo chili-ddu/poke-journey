@@ -36,6 +36,13 @@ const HgssEnvironment = preload("res://scripts/view/hgss_environment.gd")
 const NativeRenderer = preload("res://scripts/johto/game_map_renderer.gd")
 var native_renderer: NativeRenderer
 var continent_backdrop: Node3D
+const KantoTerrainStream = preload("res://scripts/view/kanto_terrain_stream.gd")
+var kanto_terrain: KantoTerrainStream
+var _road_materials := {}
+var _scenery_parent: Node3D
+var _card_atlas: Texture2D
+var _fence_image: Image
+var _fence_profiles := {}
 
 var world: World
 var vp: SubViewport
@@ -46,6 +53,7 @@ var _sun: DirectionalLight3D
 # 서 있는 것의 높이 배율(1칸 그림 = 이만큼 m). 물체 단위 카드라 각도와 상관없이 고정 — 낮은 각도일수록 우뚝 서 보이고 뒤를 가린다.
 # 단 tan(높이각)보다 낮으면 카드가 제 발자국을 다 못 가려 바닥에 깔린 원래 그림이 뒤로 비치므로 그보다는 크게.
 const STAND := 1.0
+const CONTACT_SHADOW_HEIGHT := 0.02
 var k := maxf(STAND, tan(deg_to_rad(elev_deg)))
 # 포켓몬·사람 빌보드의 키 배율: 세로로 선 판은 높이각만큼 눌려 보여서(40° 에서 77%) 그만큼 늘려 원래 비율로 보이게
 # (사용자 '파이리가 입체감이 조금 떨어지는데' 2026-11-02 — 납작해 보였다).
@@ -54,6 +62,7 @@ var _cam_target := Vector3.ZERO
 var _cam_ready := false
 var _cam_distance := DIST
 var _starter_table_height := 0.0
+var _opening_warm_glow: Sprite3D
 var _ground_static_geometry := false
 var _terrain_normals := {}
 var _ground_anchor := Vector2.INF
@@ -102,11 +111,18 @@ func build(w: World, map_dir: String) -> void:
 		native_renderer.stream(world.player.position/Arena.TILE)
 		Arena.native_height=native_renderer.height
 	else:
-		_build_floor(map_dir)
+		var scenery: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(map_dir + "/hd2d_cards.json"))
 		_ground_static_geometry = not Arena._elevation.is_empty()
-		_build_cards(map_dir)
-		_build_houses(map_dir)
-		HgssEnvironment.build(self,map_dir)
+		if Arena.is_continent():
+			kanto_terrain = KantoTerrainStream.new()
+			root3d.add_child(kanto_terrain)
+			kanto_terrain.setup(self, map_dir, scenery)
+			kanto_terrain.stream(world.player.position / Arena.TILE)
+		else:
+			_build_floor(map_dir)
+			_build_cards(map_dir, scenery)
+			_build_houses(map_dir, scenery)
+			HgssEnvironment.build(self,map_dir)
 		_ground_static_geometry = false
 		if Arena.is_continent():
 			native_renderer=NativeRenderer.new()
@@ -198,7 +214,7 @@ func _step_overlay() -> void:
 	ov_quad.mesh=st.commit()
 
 # Shared corner heights form walkable ramps; native blocked banks are separate.
-func _build_elevated_road(map_dir: String, source: Dictionary) -> void:
+func _build_elevated_road(map_dir: String, source: Dictionary, bounds := Rect2i(), patch_tiles: Array = [], parent: Node3D = root3d) -> void:
 	_terrain_normals.clear()
 	var w := int(source.width)
 	var h := int(source.height)
@@ -207,9 +223,12 @@ func _build_elevated_road(map_dir: String, source: Dictionary) -> void:
 	var th := float(h+pad*2)
 	var surface := SurfaceTool.new()
 	surface.begin(Mesh.PRIMITIVE_TRIANGLES)
-	for y in range(-pad,h+pad):
-		var x := -pad
-		while x<w+pad:
+	if not bounds.has_area():
+		bounds = Rect2i(-pad, -pad, w+pad*2, h+pad*2)
+		patch_tiles = Arena._ledge_patches.keys()
+	for y in range(bounds.position.y, bounds.end.y):
+		var x := bounds.position.x
+		while x < bounds.end.x:
 			if Arena._ledge_patches.has(Vector2i(x,y)):
 				x+=1
 				continue
@@ -218,7 +237,7 @@ func _build_elevated_road(map_dir: String, source: Dictionary) -> void:
 			# Most of the world is flat. Keep those pixels in long strips instead
 			# of allocating two triangles for every empty forest/border tile.
 			if heights[0]==heights[1] and heights[0]==heights[2] and heights[0]==heights[3]:
-				while end_x<w+pad:
+				while end_x < bounds.end.x:
 					if Arena._ledge_patches.has(Vector2i(end_x,y)):break
 					var next: Array=Arena._elevation[y][end_x] if end_x>=0 and y>=0 and end_x<w and y<h else Arena.ground_corners(Vector2i(end_x,y))
 					if next[0]!=heights[0] or next[1]!=heights[0] or next[2]!=heights[0] or next[3]!=heights[0]:break
@@ -232,23 +251,41 @@ func _build_elevated_road(map_dir: String, source: Dictionary) -> void:
 	var floor := MeshInstance3D.new()
 	floor.name="RoadElevationFloor"
 	floor.mesh=surface.commit()
-	var material := StandardMaterial3D.new()
-	material.albedo_texture=MapPalette.texture(HgssEnvironment.surface(map_dir,"elevation_floor.png"))
-	material.texture_filter=BaseMaterial3D.TEXTURE_FILTER_NEAREST
-	material.roughness=1.0
-	material.specular_mode=BaseMaterial3D.SPECULAR_DISABLED
-	material.cull_mode=BaseMaterial3D.CULL_DISABLED
-	floor.material_override=material
+	floor.material_override = road_material(map_dir, false)
 	floor.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-	root3d.add_child(floor)
-	_build_cliff_banks(map_dir)
+	parent.add_child(floor)
+	_build_cliff_banks(map_dir, source, patch_tiles, parent)
 	_terrain_normals.clear()
+
+func road_material(map_dir: String, rock: bool) -> Material:
+	var file := "ledge_rock.png" if rock else "elevation_floor.png"
+	var key := map_dir.path_join(file)
+	if _road_materials.has(key): return _road_materials[key]
+	var texture := MapPalette.texture(HgssEnvironment.surface(map_dir, file))
+	var result: Material
+	if rock:
+		var shader := ShaderMaterial.new()
+		shader.shader = preload("res://assets/shaders/ledge_rock.gdshader")
+		shader.set_shader_parameter("rock_texture", texture)
+		result = shader
+	else:
+		result = road_ground_material(texture)
+	_road_materials[key] = result
+	return result
+
+static func road_ground_material(texture: Texture2D) -> StandardMaterial3D:
+	var ground := StandardMaterial3D.new()
+	ground.albedo_texture = texture
+	ground.texture_filter = BaseMaterial3D.TEXTURE_FILTER_NEAREST
+	ground.roughness = 1.0
+	ground.specular_mode = BaseMaterial3D.SPECULAR_DISABLED
+	ground.cull_mode = BaseMaterial3D.CULL_DISABLED
+	return ground
 
 # A low bank owns the impassable cell: rounded turf shoulder, earth face, and toe.
 # Patch boundaries are baked once and shared by straight runs, elbows, and ends.
-func _build_cliff_banks(map_dir: String) -> void:
-	if Arena._ledge_patches.is_empty():return
-	var source: Dictionary=JSON.parse_string(FileAccess.get_file_as_string(map_dir+"/map.json"))
+func _build_cliff_banks(map_dir: String, source: Dictionary, patch_tiles: Array, parent: Node3D) -> void:
+	if patch_tiles.is_empty():return
 	var pad := float(source.pad)
 	var texture_size := Vector2(float(source.width)+pad*2.0,float(source.height)+pad*2.0)
 	var rock := SurfaceTool.new()
@@ -259,7 +296,7 @@ func _build_cliff_banks(map_dir: String) -> void:
 	var turf_faces := 0
 	var res := Arena._ledge_resolution
 	var kinds := {}
-	for tile in Arena._ledge_patches:
+	for tile in patch_tiles:
 		var patch: Dictionary=Arena._ledge_patches[tile]
 		var grid: Array=patch.heights
 		kinds[patch.kind]=int(kinds.get(patch.kind,0))+1
@@ -280,27 +317,15 @@ func _build_cliff_banks(map_dir: String) -> void:
 					rock_faces+=_emit_ledge_polygon(rock,face.points,true,high,high-low,pad,texture_size,res)
 					turf_faces+=_emit_ledge_polygon(turf,_clip_ledge_polygon(triangle,upper,false),false,high,high-low,pad,texture_size,res)
 					turf_faces+=_emit_ledge_polygon(turf,_clip_ledge_polygon(triangle,lower,false),false,high,high-low,pad,texture_size,res)
-	for entry in [[rock,"RoadLedgeWalls","ledge_rock.png",rock_faces],[turf,"RoadLedgeRims","elevation_floor.png",turf_faces]]:
-		if int(entry[3])==0:continue
+	for entry in [[rock,"RoadLedgeWalls",rock_faces],[turf,"RoadLedgeRims",turf_faces]]:
+		if int(entry[2])==0:continue
 		var node := MeshInstance3D.new()
 		node.name=entry[1]
 		node.mesh=entry[0].commit()
-		var material := StandardMaterial3D.new()
-		material.albedo_texture=MapPalette.texture(HgssEnvironment.surface(map_dir,String(entry[2])))
-		material.texture_filter=BaseMaterial3D.TEXTURE_FILTER_NEAREST
-		material.texture_repeat=true
-		material.roughness=1.0
-		material.specular_mode=BaseMaterial3D.SPECULAR_DISABLED
-		material.cull_mode=BaseMaterial3D.CULL_DISABLED
-		if String(entry[1])=="RoadLedgeWalls":
-			var rock_material := ShaderMaterial.new()
-			rock_material.shader=load("res://assets/shaders/ledge_rock.gdshader")
-			rock_material.set_shader_parameter("rock_texture",material.albedo_texture)
-			node.material_override=rock_material
-		else:node.material_override=material
-		node.set_meta("faces",entry[3])
+		node.material_override = road_material(map_dir, node.name == &"RoadLedgeWalls")
+		node.set_meta("faces",entry[2])
 		node.set_meta("kinds",kinds)
-		root3d.add_child(node)
+		parent.add_child(node)
 
 static func ledge_face_toe(patch: Dictionary, local_uv: Vector2) -> float:
 	var fixed_foot: Array=patch.get("toe_drop",[])
@@ -506,16 +531,25 @@ func _build_heightfield(map_dir: String, field: Dictionary) -> void:
 	mesh.set_meta("top_faces",field.tiles.size()+padding_faces)
 	root3d.add_child(mesh)
 
-func _build_cards(map_dir: String) -> void:
-	var j: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(map_dir + "/hd2d_cards.json"))
-	j["cards"] = HgssEnvironment.remaining_cards(map_dir,j["cards"])
+func _build_cards(map_dir: String, j: Dictionary = {}) -> void:
+	if j.is_empty(): j = JSON.parse_string(FileAccess.get_file_as_string(map_dir + "/hd2d_cards.json"))
 	if j.has("heightfield"):
 		_build_heightfield(map_dir, j.heightfield)
 		return
+	var cards := HgssEnvironment.remaining_cards(map_dir, j.cards)
+	_draw_cards(map_dir, j, cards, _ledge_card_fragments(cards), root3d)
+
+static func box_profile(card: Array) -> Vector2:
+	var roof := float(card[5])
+	var wall_scale := float(card[6]) if card.size() > 6 else 1.0
+	return Vector2((float(card[2]) - roof) * wall_scale, roof)
+
+func _draw_cards(map_dir: String, j: Dictionary, cards: Array, fragments: Array, parent: Node3D, world_boxes: Dictionary = {}) -> void:
 	var side_surfaces := {}
 	var side_file := map_dir+"/hd2d_side_surfaces.json"
 	if FileAccess.file_exists(side_file): side_surfaces = JSON.parse_string(FileAccess.get_file_as_string(side_file))
-	var atlas: Texture2D = MapPalette.texture(HgssEnvironment.surface(map_dir,"hd2d_atlas.png"))
+	if _card_atlas == null: _card_atlas = MapPalette.texture(HgssEnvironment.surface(map_dir,"hd2d_atlas.png"))
+	var atlas := _card_atlas
 	var tw := float(atlas.get_width())
 	var th := float(atlas.get_height())
 	var t := float(j["tile"])
@@ -529,9 +563,7 @@ func _build_cards(map_dir: String) -> void:
 	var indoor := sky_kind(DungeonDB.current) == "indoor"
 	var px_u := 1.0 / tw                                      # 아틀라스 1px(옆면 줄)
 	var plan: Array = []                                      # [card, 윗면 칸 수 r, 상자?]
-	var box_cols := {}                                        # "x:밑단 z" — 옆 상자와 붙은 쪽은 옆면을 안 그린다
-	var fence_image: Image
-	var fence_profiles: Dictionary={}
+	var box_cols := world_boxes                                        # "x:밑단 z" — 옆 상자와 붙은 쪽은 옆면을 안 그린다
 	# 건물 안 2~3칸 가구가 상자인지(윗면이 꽉 찬 판)는 도구가 정해 지붕 칸 수(c[5])로 준다 — 화분·의자는 0 이라 세운 판.
 	# c[8] = 아래 걸을 수 있는 칸까지 이어 붙인 칸 수(가구 아랫단): 카드는 그만큼 위(막힌 칸 남쪽 끝)에 선다.
 	var corner_columns := {}
@@ -542,7 +574,7 @@ func _build_cards(map_dir: String) -> void:
 		var height := Vector3.UP * float(corner.h) * k
 		var uv: Array = corner.atlas
 		_poly(st, [a, b, b + height, a + height], [Vector2(uv[0]/tw, (uv[1]+uv[3])/th), Vector2((uv[0]+uv[2])/tw, (uv[1]+uv[3])/th), Vector2((uv[0]+uv[2])/tw, uv[1]/th), Vector2(uv[0]/tw, uv[1]/th)])
-	for c in _ledge_card_fragments(j["cards"]):
+	for c in fragments:
 		if c.size()>9 and int(c[9])==1:continue
 		if int(c[1]) == 0 and corner_columns.has(int(c[0])): continue
 		var n := float(c[2])
@@ -551,7 +583,7 @@ func _build_cards(map_dir: String) -> void:
 		var box: bool = r > 0.0 and (n >= 4.0 or indoor or terrain)
 		plan.append([c, r, box])
 		if box:
-			box_cols["%d:%d" % [int(c[0]), int(c[1]) + int(n) - _ovf(c)]] = Vector2(n-r,r)
+			box_cols["%d:%d" % [int(c[0]), int(c[1]) + int(n) - _ovf(c)]] = box_profile(c)
 	for it in plan:
 		var c: Array = it[0]
 		var r: float = it[1]
@@ -565,7 +597,7 @@ func _build_cards(map_dir: String) -> void:
 		var low := float(c[6]) if c.size() > 6 else 1.0
 		var tilt := float(c[7]) if c.size() > 7 else 0.0
 		if c.size()>10 and int(c[9])==5:
-			if fence_image==null:fence_image=atlas.get_image()
+			if _fence_image==null:_fence_image=atlas.get_image()
 			for panel in fence_panels(Vector2i(int(x),int(c[1])),int(c[10])):
 				var a: Vector2=panel.a
 				var b: Vector2=panel.b
@@ -581,8 +613,8 @@ func _build_cards(map_dir: String) -> void:
 				# Close the opaque pixel outline so side rails remain visible
 				# when the camera looks almost directly along their length.
 				var clip:=Rect2i(int(c[3])+roundi(t*panel.uv.x),int(c[4]),roundi(t*(panel.uv.y-panel.uv.x)),int(t))
-				if not fence_profiles.has(clip):fence_profiles[clip]=fence_profile(fence_image,clip)
-				for cap in fence_profiles[clip]:
+				if not _fence_profiles.has(clip):_fence_profiles[clip]=fence_profile(_fence_image,clip)
+				for cap in _fence_profiles[clip]:
 					var p: Vector2=cap[0]
 					var q: Vector2=cap[1]
 					var p3:=origin+edge*(p.x/clip.size.x)+Vector3.UP*k*(1.0-p.y/t)
@@ -607,11 +639,11 @@ func _build_cards(map_dir: String) -> void:
 			_quad(st, Vector3(x, 0.0, z), Vector3(1, 0, 0), Vector3(0, n * k * low, 0), Vector3.BACK, u0, u1, v0, v1)
 			continue
 		var vm := v0 + t * r / th                                 # 윗면과 앞면의 경계
-		var hgt := (n - r) * k
+		var profile := box_profile(c)
+		var hgt := profile.x * k
 		_quad(st, Vector3(x, 0.0, z), Vector3(1, 0, 0), Vector3(0, hgt, 0), Vector3.BACK, u0, u1, vm, v1)        # 앞면
 		var bz := int(z)
 		# A shorter adjoining facade cannot close a tall building's upper side.
-		var profile := Vector2(n-r,r)
 		var left: bool = box_cols.get("%d:%d" % [int(x) - 1, bz],Vector2.ZERO)!=profile
 		var right: bool = box_cols.get("%d:%d" % [int(x) + 1, bz],Vector2.ZERO)!=profile
 		_quad(st, Vector3(x, hgt, z), Vector3(1, 0, 0), Vector3(0, 0, -r), Vector3.UP, u0, u1, v0, vm)           # 윗면(평평한 지붕·가구 윗면)
@@ -625,7 +657,7 @@ func _build_cards(map_dir: String) -> void:
 			if not side_def.is_empty():
 				# Roof art can have transparent rear padding; the wall ends at its visible edge.
 				var depth := maxf(0.0, r - float(side_def.get("rear_inset", 0.0)))
-				_build_card_side(map_dir + "/" + String(side_def["texture"]), Vector3(x, 0, z), Vector3(0, 0, -depth), Vector3(0, hgt, 0), Vector3.LEFT)
+				_build_card_side(map_dir + "/" + String(side_def["texture"]), Vector3(x, 0, z), Vector3(0, 0, -depth), Vector3(0, hgt, 0), Vector3.LEFT, parent)
 			else:
 				_quad(st, Vector3(x, 0.0, z), Vector3(0, 0, -side_depth), Vector3(0, hgt, 0), Vector3.LEFT, side_left_u, side_left_u + px_u, vm, v1)   # 왼쪽 옆면
 		if right and side_depth > 0.0001:
@@ -644,10 +676,10 @@ func _build_cards(map_dir: String) -> void:
 		mat.metallic_specular = 0.0
 		mi.material_override = mat
 		mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
-		root3d.add_child(mi)
-	var tree_mesh := TreeCanopy.build(j["cards"],atlas,k,_ground_static_geometry,tan(deg_to_rad(elev_deg)),HgssEnvironment.tree_texture())
-	if tree_mesh!=null:root3d.add_child(tree_mesh)
-	if j.has("nest_decor"):root3d.add_child(NestBranches.build(j.nest_decor,atlas))
+		parent.add_child(mi)
+	var tree_mesh := TreeCanopy.build(cards,atlas,k,_ground_static_geometry,tan(deg_to_rad(elev_deg)),HgssEnvironment.tree_texture())
+	if tree_mesh!=null:parent.add_child(tree_mesh)
+	if j.has("nest_decor"):parent.add_child(NestBranches.build(j.nest_decor,atlas))
 
 static func fence_panels(tile: Vector2i, metatile: int) -> Array:
 	# White native fence: left/right rails run along the ground, with the same
@@ -741,14 +773,14 @@ func _flora_quad(st: SurfaceTool, frame: Transform3D, origin: Vector3, across: V
 			st.add_vertex(points[index])
 
 # Optional authored side art replaces the one-pixel edge extrusion for selected cards.
-func _build_card_side(texture_path: String, origin: Vector3, across: Vector3, up: Vector3, normal: Vector3) -> void:
+func _build_card_side(texture_path: String, origin: Vector3, across: Vector3, up: Vector3, normal: Vector3, parent: Node3D) -> void:
 	var st := SurfaceTool.new()
 	st.begin(Mesh.PRIMITIVE_TRIANGLES)
 	_quad(st,origin,across,up,normal,0,1,0,1)
 	var side := MeshInstance3D.new()
 	side.mesh = st.commit()
 	side.material_override = _house_mat(texture_path)
-	root3d.add_child(side)
+	parent.add_child(side)
 
 static func _ovf(c: Array) -> int:
 	return int(c[8]) if c.size() > 8 else 0
@@ -760,15 +792,24 @@ static func _ovf(c: Array) -> int:
 const EAVE := 0.0             # 처마가 벽보다 내미는 길이(m). 0 — 내밀면 집 사이 길이 좁아 보였다(사용자 2026-11-02: 위치는 원작과 같게)
 const ROOF_T := 0.14          # 평평한 지붕판 두께(m)
 
-func _build_houses(map_dir: String) -> void:
-	var j: Dictionary = JSON.parse_string(FileAccess.get_file_as_string(map_dir + "/hd2d_cards.json"))
+func _build_houses(map_dir: String, j: Dictionary = {}) -> void:
+	if j.is_empty(): j = JSON.parse_string(FileAccess.get_file_as_string(map_dir + "/hd2d_cards.json"))
+	var houses: Array = []
+	for i in j.get("houses", []).size():
+		if not HgssEnvironment.replaces_house(map_dir, i): houses.append(j.houses[i])
+	_draw_houses(map_dir, j, houses, root3d)
+
+func _add_scenery(node: Node3D) -> void:
+	var parent := _scenery_parent if _scenery_parent != null else root3d
+	parent.add_child(node)
+
+func _draw_houses(map_dir: String, j: Dictionary, houses: Array, parent: Node3D) -> void:
+	_scenery_parent = parent
 	if j.has("museum_stairs"):
 		_build_museum_stairs(j.museum_stairs)
 	for fence in j.get("log_fences", []):
 		_build_log_fence(map_dir,fence)
-	var houses: Array = j.get("houses", [])
-	for i in houses.size():
-		if not HgssEnvironment.replaces_house(map_dir,i): _build_house(map_dir,houses[i])
+	for house in houses: _build_house(map_dir, house)
 	for pdef in j.get("props", []):
 		_build_prop(map_dir, pdef)
 	for tdef in j.get("tables", []):
@@ -777,11 +818,13 @@ func _build_houses(map_dir: String) -> void:
 		if tile.x >= float(tdef["x0"]) and tile.x <= float(tdef["x1"]) and tile.y >= float(tdef["z0"]) and tile.y <= float(tdef["z1"]):
 			_starter_table_height = float(tdef.get("leg", 0.0)) + float(tdef.get("thick", 0.0))
 
+	_scenery_parent = null
+
 # Museum stairs follow the original left-to-right rise and gold/white rails.
 func _build_museum_stairs(spec: Dictionary) -> void:
 	var group := Node3D.new()
 	group.name = "MuseumStairs"
-	root3d.add_child(group)
+	_add_scenery(group)
 	var width := (float(spec.x1)-float(spec.x0))/int(spec.steps)
 	var z0 := float(spec.z0)
 	var depth := float(spec.z1)-z0
@@ -817,7 +860,7 @@ func _build_log_fence(map_dir: String, spec: Dictionary) -> void:
 func _build_log_fence_geometry(map_dir: String, spec: Dictionary) -> void:
 	var group := Node3D.new()
 	group.name = "LogFence_"+String(spec.id)
-	root3d.add_child(group)
+	_add_scenery(group)
 	if spec.has("source_cells"):
 		_build_source_log_cells(map_dir,spec,group)
 		return
@@ -912,7 +955,7 @@ func _build_table_geometry(map_dir: String, t: Dictionary) -> void:
 		mi.material_override = mat
 		if bool(t.get("decal", false)):
 			mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		root3d.add_child(mi)
+		_add_scenery(mi)
 		if float(t.get("thickness", 0.0)) > 0.0:
 			_build_card_body(base, t)
 		return
@@ -965,7 +1008,7 @@ func _build_table_geometry(map_dir: String, t: Dictionary) -> void:
 	var mi := MeshInstance3D.new()
 	mi.mesh = mesh
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
-	root3d.add_child(mi)
+	_add_scenery(mi)
 
 # Gate seats retain the source blue cushion, a side backrest and grounded legs.
 func _build_gate_chair(t: Dictionary) -> void:
@@ -995,7 +1038,7 @@ func _build_gate_chair(t: Dictionary) -> void:
 		mat.albedo_color = part[2]
 		mat.roughness = 1.0
 		node.material_override = mat
-		root3d.add_child(node)
+		_add_scenery(node)
 
 # Small source-colored flower vase rests directly on the counter top.
 func _build_counter_vase(at: Vector3) -> void:
@@ -1017,7 +1060,7 @@ func _build_counter_vase(at: Vector3) -> void:
 		mat.albedo_color = colors[i]
 		mat.roughness = 1.0
 		node.material_override = mat
-		root3d.add_child(node)
+		_add_scenery(node)
 
 # Eight-sided pot with a broad rim and a narrower foot, grounded at y=0.
 func _build_planter(at: Vector3) -> void:
@@ -1039,7 +1082,7 @@ func _build_planter(at: Vector3) -> void:
 		mat.albedo_color = colors[i]
 		mat.roughness = 1.0
 		node.material_override = mat
-		root3d.add_child(node)
+		_add_scenery(node)
 
 	var soil := MeshInstance3D.new()
 	var disk := CylinderMesh.new()
@@ -1053,7 +1096,7 @@ func _build_planter(at: Vector3) -> void:
 	soil_mat.albedo_color = Color8(74,66,58)
 	soil_mat.roughness = 1.0
 	soil.material_override = soil_mat
-	root3d.add_child(soil)
+	_add_scenery(soil)
 
 # Recovery machine: raised housing surrounds a lower horizontal operating bed.
 # UVs keep the original controls on the bed; both end panels share the cross.
@@ -1101,7 +1144,7 @@ func _build_recessed_machine(base: String, t: Dictionary) -> void:
 		mesh.surface_set_material(i + 1, mat)
 	var node := MeshInstance3D.new()
 	node.mesh = mesh
-	root3d.add_child(node)
+	_add_scenery(node)
 
 # 상자 가구(책장, 사용자 2026-11-02 '바닥이 꺾여 이상하다'): 원작 앞면 전체를 세우고 원작 윗단을 평평한 윗면으로, 옆면은 앞면 둘째 열 색.
 # U-shaped counter: transparent top opening and all eight perimeter faces.
@@ -1134,7 +1177,7 @@ func _build_counter(map_dir: String, t: Dictionary) -> void:
 		mesh.surface_set_material(i, mat)
 	var node := MeshInstance3D.new()
 	node.mesh = mesh
-	root3d.add_child(node)
+	_add_scenery(node)
 
 # Merchandise sits on sloping trays beside a narrow raised divider.
 # Extrude only opaque sprite pixels, preserving the register's stepped silhouette.
@@ -1172,14 +1215,14 @@ func _build_card_body(base: String, t: Dictionary) -> void:
 	var body := MeshInstance3D.new()
 	body.mesh = st.commit()
 	body.material_override = material
-	root3d.add_child(body)
+	_add_scenery(body)
 	var plinth := MeshInstance3D.new()
 	var box := BoxMesh.new()
 	box.size = Vector3(float(t.x1)-float(t.x0),0.0625*k,float(t.thickness)+0.125)
 	plinth.mesh = box
 	plinth.material_override = material
 	plinth.position = Vector3((float(t.x0)+float(t.x1))*0.5,(float(t.base)-0.03125)*k,(front+back)*0.5)
-	root3d.add_child(plinth)
+	_add_scenery(plinth)
 
 func _build_display_rack(base: String, t: Dictionary) -> void:
 	var x0 := float(t.x0)
@@ -1210,7 +1253,7 @@ func _build_display_rack(base: String, t: Dictionary) -> void:
 	var node := MeshInstance3D.new()
 	node.name = "DisplayRack"
 	node.mesh = mesh
-	root3d.add_child(node)
+	_add_scenery(node)
 
 func _build_furniture_box(base: String, x0: float, x1: float, z0: float, z1: float, hh: float, base_y: float = 0.0, closed: bool = false) -> void:
 	hh += base_y
@@ -1236,7 +1279,7 @@ func _build_furniture_box(base: String, x0: float, x1: float, z0: float, z1: flo
 	var mi := MeshInstance3D.new()
 	mi.mesh = mesh
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
-	root3d.add_child(mi)
+	_add_scenery(mi)
 
 # 상자의 네 옆면 [앞, 뒤, 왼쪽, 오른쪽] — 바깥에서 볼 때 왼쪽 아래부터 반시계.
 func _box_sides(x0: float, x1: float, y0: float, y1: float, zb: float, zf: float) -> Array:
@@ -1287,7 +1330,7 @@ func _build_prop(map_dir: String, pdef: Dictionary) -> void:
 	var mi := MeshInstance3D.new()
 	mi.mesh = mesh
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
-	root3d.add_child(mi)
+	_add_scenery(mi)
 	_ground_anchor=Vector2.INF
 
 const CenterPalette = preload("res://scripts/view/center_palette.gd")
@@ -1369,7 +1412,7 @@ func _build_house(map_dir: String, hdef: Dictionary) -> void:
 	var mi := MeshInstance3D.new()
 	mi.mesh = mesh
 	mi.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_ON
-	root3d.add_child(mi)
+	_add_scenery(mi)
 	_ground_anchor=Vector2.INF
 
 # 볼록 다각형 하나(부채꼴 삼각형). 점은 바깥에서 볼 때 반시계로 주고, 법선은 앞의 세 점으로(바깥).
@@ -1504,13 +1547,13 @@ func ground_at_screen(screen: Vector2) -> Vector2:
 func _process(dt: float) -> void:
 	if world == null or not is_instance_valid(world) or not visible:
 		return
+	if kanto_terrain != null: kanto_terrain.stream(world.player.position / Arena.TILE)
 	if native_renderer != null: native_renderer.stream(world.player.position/Arena.TILE)
 	if continent_backdrop != null:continent_backdrop.stream(world.player.position/Arena.TILE)
 	_follow_camera(dt)
 	var game=world.get_parent()
 	_texts.clear()
 	var seen := {}
-	_sync_thrown_balls(seen)
 	_sync_starter_balls(seen)
 	_sync_ground_items(seen)
 	_sync_loot_items(seen)
@@ -1524,6 +1567,7 @@ func _process(dt: float) -> void:
 	if game!=null and game.get("pikachu_rescue")!=null:game.pikachu_rescue.update_light()
 	for n in world.npcs:
 		_sync_npc(n, seen)
+	_sync_thrown_balls(seen)
 	var smoke := _batchable_smoke()
 	for f in world.fxs:
 		if not smoke.is_empty() and _is_batch_smoke(f): continue
@@ -1726,8 +1770,12 @@ func _follow_camera(dt: float = 1.0/60.0) -> void:
 		target-=up*distance*tan(deg_to_rad(FOV)*0.5)*0.34
 	elif game != null and game.get("balls") != null and game.balls.intro:
 		zoom = world.cam.zoom.x if world.cam != null else 1.0
+		var ball_at := BallRelease.center_3d(self,StarterBalls.ball_of(game.starter),true)
 		if not game.balls.taken:
-			target = to3d(StarterBalls.ball_of(game.starter), _starter_table_height + 0.3)
+			target = ball_at
+		elif game.opening.get("phase","") == "wobble":
+			var age := float(game.opening.t)-float(game._opening_open_at())
+			target = ball_at.lerp(target,smoothstep(0.045,0.45,age))
 	# At the low trainer close-up, off-screen tree silhouettes read as stray
 	# wedges. Keep contact shadows and fade sun shadows in as the camera rises.
 	if _sun != null:
@@ -1756,15 +1804,51 @@ func _sync_thrown_balls(seen: Dictionary) -> void:
 		if not child is ThrownBall: continue
 		var ball := child as ThrownBall
 		var ent := _entry(ball,seen)
-		if not ent.has("sprite"): ent["sprite"]=_new_sprite(BaseMaterial3D.BILLBOARD_DISABLED)
-		var sprite: Sprite3D=ent.sprite
-		sprite.texture=ball._tex
-		sprite.region_enabled=false
-		sprite.pixel_size=Arena.MAP_SCALE*0.75/Arena.TILE
-		var flight_height := lerpf(0.9,0.35,ball.k)+ball.height/Arena.TILE*4.0*ball.k*(1.0-ball.k)
-		sprite.position=to3d(ball.from.lerp(ball.to,ball.k),flight_height)
-		sprite.basis=cam.global_basis.orthonormalized()*Basis(Vector3.FORWARD,ball.k*ThrownBall.SPIN*0.45)
-		sprite.visible=ball.visible
+		if not ent.has("sprite"):
+			var sprite := _new_sprite(BaseMaterial3D.BILLBOARD_DISABLED)
+			sprite.texture = ball._tex
+			sprite.region_rect = BallRelease.BALL_RECT
+			sprite.pixel_size = BallRelease.PIXEL/Arena.TILE
+			ent.sprite = sprite
+			ent.shadow = _new_blob()
+		var sprite: Sprite3D = ent.sprite
+		var palm := to3d(ball.from,0.65)
+		var body: Sprite3D = _sprites.get(ball.sender.get_instance_id(),{}).get("sprite")
+		if body != null:
+			palm = sprite_pixel_position(body,ball.sender.throw_hand(ball.k > 0.0))+cam.global_basis.z*0.04
+		if ball.k > 0 and ball.release_3d == Vector3.INF: ball.release_3d = palm
+		var origin := ball.release_3d if ball.k > 0 else palm
+		var end := BallRelease.center_3d(self,ball.to,false)
+		sprite.position = origin.lerp(end,ball.k)+Vector3.UP*(ball.height/Arena.TILE*4.0*ball.k*(1.0-ball.k))
+		sprite.basis = cam.global_basis.orthonormalized()*Basis(Vector3.FORWARD,TAU*ball.k)
+		sprite.visible = ball.visible
+		BallRelease.draw_shadow(self,ent.shadow,sprite.position,1.0 if ball.visible and ball.k>0.0 else 0.0)
+
+# Submit the first transparent effect and the starter's lighting pass while the
+# opening monologue covers the lab. Compatibility compiles these on first draw.
+func prepare_starter_reveal(player: Player) -> void:
+	var at := to3d(player.position, _starter_table_height + 0.3)
+	var glow := _new_unlit_sprite(BaseMaterial3D.BILLBOARD_DISABLED, SpriteBase3D.ALPHA_CUT_DISABLED)
+	glow.position = at
+	glow.texture = BallRelease.ATLAS
+	glow.region_enabled = true
+	glow.region_rect = BallRelease.frame(0.10)
+	glow.pixel_size = 1.0 / Arena.TILE
+	# Oak's exclamation uses an unlit cutout billboard, distinct from the glow.
+	var emote := _new_unlit_sprite(BaseMaterial3D.BILLBOARD_FIXED_Y, SpriteBase3D.ALPHA_CUT_DISCARD)
+	emote.texture = Fx.sheet("g4_shiny")
+	emote.pixel_size = glow.pixel_size
+	emote.reparent(glow, false)
+	_opening_warm_glow = glow
+
+# Keep the material variants alive between the monologue and their first live draw.
+func hide_starter_preview() -> void:
+	if _opening_warm_glow != null: _opening_warm_glow.hide()
+
+func release_starter_preview() -> void:
+	if _opening_warm_glow == null: return
+	_opening_warm_glow.queue_free()
+	_opening_warm_glow = null
 
 # StarterBalls owns the opening state; mirror it above the authored tabletop.
 func _sync_starter_balls(seen: Dictionary) -> void:
@@ -1778,7 +1862,7 @@ func _sync_starter_balls(seen: Dictionary) -> void:
 				var sprite := _new_sprite(BaseMaterial3D.BILLBOARD_DISABLED)
 				sprite.texture = balls._tex
 				sprite.region_enabled = false
-				sprite.pixel_size = Arena.MAP_SCALE / Arena.TILE
+				sprite.pixel_size = BallRelease.PIXEL / Arena.TILE
 				sprite.offset = Vector2(0, 7)
 				ent[id] = sprite
 			var s: Sprite3D = ent[id]
@@ -1849,6 +1933,14 @@ func _new_sprite(billboard: int) -> Sprite3D:
 	root3d.add_child(s)
 	return s
 
+func _new_unlit_sprite(billboard: int, alpha_cut: SpriteBase3D.AlphaCutMode) -> Sprite3D:
+	var sprite := _new_sprite(billboard)
+	sprite.shaded = false
+	sprite.region_enabled = false
+	sprite.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
+	sprite.alpha_cut = alpha_cut
+	return sprite
+
 # 빛무리: 카메라를 보는 작은 판에 둥근 빛을 가산 합성으로.
 var _halo_mesh: QuadMesh = null
 const TAIL_HALO_SIZE := 0.17
@@ -1910,11 +2002,11 @@ func _sync_mon(m: Mon, seen: Dictionary) -> void:
 	var b: MeshInstance3D = ent["blob"]
 	if ent.has("front"):ent.front.visible=false
 	var so := m.stat_overlay
-	var hidden := not m.visible or m.appear <= 0.0 or not m.burrow.is_empty() or (m.dead and m.faint_t <= 0.0)
+	var hidden := not m.visible or m.visual_appear() <= 0.0 or not m.burrow.is_empty() or (m.dead and m.faint_t <= 0.0)
 	s.visible = not hidden
 	b.visible = not hidden
 	if hidden:
-		for key in ["light", "halo", "rank_overlay", "flash_lamp", "native_cue"]:
+		for key in ["light", "halo", "rank_overlay", "flash_lamp", "native_cue","release_mask"]:
 			if ent.has(key):
 				ent[key].visible = false
 		if ent.has("twin"):
@@ -1945,7 +2037,9 @@ func _sync_mon(m: Mon, seen: Dictionary) -> void:
 		s.position.y += 0.025+sin(Time.get_ticks_msec()*0.004+float(m.get_instance_id()%11))*0.025
 	s.position += healing_offset
 	var opening_game = _opening_game()
-	if m == world.player and opening_game != null and opening_game.opening.get("phase", "") == "wobble":
+	if m.preview_reveal:
+		s.position.y += _starter_table_height
+	elif m == world.player and opening_game != null and opening_game.opening.get("phase", "") == "wobble":
 		var start := StarterBalls.ball_of(opening_game.starter)
 		var end := StarterBalls.floor_of(opening_game.starter)
 		var progress := clampf((m.position.y - start.y) / (end.y - start.y), 0.0, 1.0)
@@ -1957,19 +2051,51 @@ func _sync_mon(m: Mon, seen: Dictionary) -> void:
 	s.billboard = BaseMaterial3D.BILLBOARD_ENABLED if screen_facing else BaseMaterial3D.BILLBOARD_FIXED_Y
 	var actor_bill := 1.0 if screen_facing else bill
 	s.scale = Vector3(1.0, actor_bill * sy / maxf(0.001, sx), 1.0)
+	# The shared walk anchor comes from the first south-facing frame. Indoor
+	# billboards sit at their true depth, so longer back-facing feet can cross
+	# the floor. Correct only the part of the current pose that penetrates it.
+	if DungeonDB.is_indoor() and m.burrow.is_empty() and not m.dead:
+		var bottom := MonSprite.visual_bottom({"tex":so.tex, "src":so.src}) + 1.0
+		var lowest_y := sprite_pixel_position(s, Vector2(0, bottom)).y
+		s.position.y += maxf(0.0, Arena.ground_height(feet) + CONTACT_SHADOW_HEIGHT + 0.001 - lowest_y)
+
 	s.alpha_cut = SpriteBase3D.ALPHA_CUT_DISABLED if m.dead or m.modulate.a<0.999 else SpriteBase3D.ALPHA_CUT_DISCARD
 	s.modulate = Color(1,1,1,m.faint_alpha()*m.modulate.a)
 	var smoke_shade: float = world.smoke_body_shade(m.position)
 	var hit_tint := Color(4,4,4,1) if m.appear < 1.0 else m.hit_feedback_tint()
 	s.modulate = Color(hit_tint.r*(1.0-smoke_shade),hit_tint.g*(1.0-smoke_shade),hit_tint.b*(1.0-smoke_shade*0.88),s.modulate.a)
+	var releasing := is_instance_valid(m.release_fx)
+	if releasing:
+		s.modulate = Color.WHITE
+		BallRelease.align_body(self,m.release_fx,s)
 	_lift_to_camera(ent, s)
-	if native_feet and m == world.player: _sync_native_player_cue(ent,s)
+	var strength := BallRelease.strength(m.release_fx.age) if releasing else 0.0
+	if strength > 0.0:
+		if not ent.has("release_mask"):
+			ent.release_mask = _new_unlit_sprite(s.billboard,SpriteBase3D.ALPHA_CUT_DISABLED)
+		var overlay: Sprite3D = ent.release_mask
+		overlay.texture = BallRelease.mask(s.texture,Rect2i(s.region_rect))
+		overlay.pixel_size = s.pixel_size
+		overlay.offset = s.offset
+		overlay.scale = s.scale
+		overlay.billboard = s.billboard
+		overlay.position = s.position+cam.global_basis.z*0.008
+		overlay.modulate = Color(BallRelease.CREAM,strength)
+		overlay.visible = true
+	elif ent.has("release_mask"):
+		ent.release_mask.hide()
+	if m == world.player:
+		var indoor_outline := DungeonDB.current in ["pewter_museum_1f", "pokemon_mansion_1f"]
+		if native_feet or indoor_outline:
+			_sync_native_player_cue(ent,s,indoor_outline)
+		elif ent.has("native_cue"):
+			ent.native_cue.hide()
 	(ent["twin"] as Sprite3D).visible = s.visible and not m.dead
 	if m.has_meta("lapras_ride"):m.get_meta("lapras_ride").place_rider_3d(self,ent,s)
 	_sync_rank_overlay(m, ent, s)
 	var r := m.radius * 1.9 / Arena.TILE
 	var shadow := contact_shadow(shadow_height(m), sky_kind(DungeonDB.current) == "indoor")
-	b.position = to3d(m.cam_anchor() + Vector2(0, 0.0 if native_feet else m.feet_offset()), 0.02) + healing_offset
+	b.position = to3d(m.cam_anchor() + Vector2(0, 0.0 if native_feet else m.feet_offset()), CONTACT_SHADOW_HEIGHT) + healing_offset
 	b.scale = Vector3(r * shadow.x, 1.0, r * 0.6 * shadow.x)
 	(b.material_override as StandardMaterial3D).albedo_color = Color(0, 0, 0, shadow.y*m.faint_alpha()*m.modulate.a)
 	if m.travel_terrain>0 and Arena.is_water(Arena.tile_of(m.position)):
@@ -2090,11 +2216,7 @@ func _sync_npc_emote(n: Npc, ent: Dictionary, body: Sprite3D) -> void:
 		if ent.has("emote"):ent.emote.visible=false
 		return
 	if not ent.has("emote"):
-		var bubble:=_new_sprite(body.billboard)
-		bubble.region_enabled=false
-		bubble.shaded=false
-		bubble.cast_shadow=GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		ent.emote=bubble
+		ent.emote = _new_unlit_sprite(body.billboard, SpriteBase3D.ALPHA_CUT_DISCARD)
 	var bubble: Sprite3D=ent.emote
 	bubble.visible=true
 	bubble.texture=n._emote
@@ -2143,7 +2265,7 @@ func _sync_rank_overlay(m: Mon, ent: Dictionary, s: Sprite3D) -> void:
 
 # Native terrain can hide the whole player behind a tall foreground ledge.
 # Reuse the existing depth-masked cue: only occluded pixels become translucent.
-func _sync_native_player_cue(ent: Dictionary, sprite: Sprite3D) -> void:
+func _sync_native_player_cue(ent: Dictionary, sprite: Sprite3D, outline: bool) -> void:
 	if not ent.has("native_cue"):
 		var mesh := MeshInstance3D.new()
 		mesh.mesh=QuadMesh.new()
@@ -2162,6 +2284,7 @@ func _sync_native_player_cue(ent: Dictionary, sprite: Sprite3D) -> void:
 	var size := Vector2(sprite.texture.get_size())
 	var region := sprite.region_rect
 	var material := cue.material_override as ShaderMaterial
+	material.set_shader_parameter("outline",outline)
 	material.set_shader_parameter("sprite_tex",sprite.texture)
 	material.set_shader_parameter("frame_uv",Vector4(region.position.x/size.x,region.position.y/size.y,region.size.x/size.x,region.size.y/size.y))
 
@@ -2211,11 +2334,12 @@ var _layered_grass_meshes := {}
 var _layered_grass_material: StandardMaterial3D
 
 func _sync_fx_grass(f: Fx, seen: Dictionary) -> void:
+	var t: Vector2i = f.tile if f.kind == "tallgrass" else Arena.tile_of(f.position)
+	if kanto_terrain != null and not kanto_terrain.shows_grass_at(t): return
 	if _grass_fx_tex == null:
 		_grass_fx_tex = Fx.grass_cutout_texture()
 	if _grass_fx_tex == null:
 		return
-	var t: Vector2i = f.tile if f.kind == "tallgrass" else Arena.tile_of(f.position)
 	var visual := f.grass_visual()
 	# Rustling foliage uses separate source/subframe sheets from the static atlas.
 	# Apply the same environment palette so stepping into grass cannot brighten it.
@@ -2305,6 +2429,8 @@ func _sync_fx(f: Fx, seen: Dictionary) -> void:
 	if f == null or not is_instance_valid(f) or f.age < f.delay:
 		return
 	match f.kind:
+		"ball_release":
+			BallRelease.draw_3d(self,f,_entry(f,seen))
 		"forward_cut", "clash_chip":
 			if not f.dead: ClashArt.draw_3d(self,f,_entry(f,seen))
 		"flare_coat":
@@ -2611,13 +2737,7 @@ func _sync_fx_sprite(f: Fx, seen: Dictionary) -> void:
 		return
 	var ent := _entry(f, seen)
 	if not ent.has("sprite"):
-		var s0 := _new_sprite(BaseMaterial3D.BILLBOARD_DISABLED)
-		s0.shaded = false
-		s0.cast_shadow = GeometryInstance3D.SHADOW_CASTING_SETTING_OFF
-		s0.alpha_cut = SpriteBase3D.ALPHA_CUT_DISABLED
-		s0.region_enabled = false
-		s0.no_depth_test = false
-		ent["sprite"] = s0
+		ent["sprite"] = _new_unlit_sprite(BaseMaterial3D.BILLBOARD_DISABLED, SpriteBase3D.ALPHA_CUT_DISABLED)
 	var s: Sprite3D = ent["sprite"]
 	var state := _fx_sprite_state(f,tex)
 	s.texture = tex

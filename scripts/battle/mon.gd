@@ -72,6 +72,8 @@ var hit_visual_direction := Vector2.ZERO
 var hit_visual_strength := 0.0
 var hit_visual_squash := 0.0
 var flash_t := 0.0
+var preview_reveal := false # Draw the opening materials behind the opaque monologue.
+var release_fx: Fx
 var appear := 1.0                # 볼에서 나오는 중(0 = 안 보임 → 1). 1 보다 작으면 하얀 실루엣으로 커진다(원작 볼에서 나올 때처럼)
 var lift := 0.0                  # 그림만 위로 띄우는 높이(px). 그림자는 바닥에 남는다(시작 연출의 뛰어내리기)
 var burrow := {}                 # 구멍파기(World._burrow): {t, under, sink, move, hit, m, slot}. 비어 있지 않으면 땅속(sink 가 0 이 된 뒤) — 그림자만 그린다
@@ -91,6 +93,7 @@ var hurt_t := 0.0
 var crouch_t := 0.0        # 준비 동작: 웅크린 그림
 var faint_t := 0.0         # 쓰러진 뒤 남아 있는 시간(World 가 0 이 되면 치운다)
 var glide := {}            # 근접기의 앞으로 미끄러지기 {dir, speed, left}(World._move_mons 가 옮긴다) — 할퀴기·몸통박치기 1칸 전진
+var attack_direction := Vector2.ZERO # A committed directional attack never turns its drawn pose midway.
 var ramp_n := 0            # 구르기: 3초 안에 이어 쓴 횟수(위력 2^n, 최대 4). ramp_t 가 0 이 되면 처음부터
 var ramp_t := 0.0
 var ramp_move := ""
@@ -277,6 +280,7 @@ func hp_ratio() -> float:
 
 # 상태 타이머. 화상 피해량을 돌려준다(World 가 HP 에 반영하고 숫자를 띄운다).
 func tick_status(dt: float) -> int:
+	if attack_anim_t>0.0 and not attack_direction.is_zero_approx():facing=attack_direction
 	if hitstop_t > 0.0:
 		hitstop_t = maxf(0.0, hitstop_t - dt)
 		flash_t = maxf(0.0, flash_t - dt)
@@ -302,8 +306,10 @@ func tick_status(dt: float) -> int:
 		var fwd := facing.normalized() if facing.length_squared() > 0.0001 else Vector2.DOWN
 		var ahead := maxf(0.0, off.dot(fwd))
 		if ahead > 0.5:
-			position = Arena.resolve(position + fwd * ahead, radius)
+			var owner_world:=get_parent()
+			position = owner_world.resolve_melee_advance(self,fwd*ahead) if owner_world!=null and owner_world.has_method("resolve_melee_advance") else Arena.resolve(position + fwd * ahead, radius)
 	attack_anim_t = maxf(0.0, attack_anim_t - dt)
+	if attack_anim_t<=0.0:attack_direction=Vector2.ZERO
 	crouch_t = maxf(0.0, crouch_t - dt)
 	recover_t = maxf(0.0, recover_t - dt)
 	hurt_t = maxf(0.0, hurt_t - dt)
@@ -522,7 +528,7 @@ func _step_tail_light() -> void:
 		add_child(_tail_halo)
 	var so := stat_overlay
 	var flame := Look.flame_point(so.tex, so.src) if so != null else Vector2(-1, -1)
-	var on := Look.hd2d() and not dead and burrow.is_empty() and flame.x >= 0.0
+	var on := Look.hd2d() and visual_appear() > 0.0 and not dead and burrow.is_empty() and flame.x >= 0.0
 	_tail_light.visible = on
 	_tail_halo.visible = on and _tail_halo.texture != null
 	if not on:
@@ -553,12 +559,15 @@ func tick_faint(dt: float) -> void:
 		return
 	faint_t = maxf(0.0, faint_t - dt)
 
+func visual_appear() -> float:
+	return 0.6 if preview_reveal else appear
+
 func _draw() -> void:
 	if get_meta("lapras_carrier",false):return
 	if dead and dying_t <= 0.0:
 		_draw_fainted()
 		return
-	if appear <= 0.0:
+	if visual_appear() <= 0.0:
 		return
 	# 구멍파기로 땅속에 있는 동안은 그림자만(흙 알갱이 연출은 World).
 	if not burrow.is_empty() and float(burrow.get("sink", 0.0)) <= 0.0:
@@ -578,7 +587,7 @@ func _draw() -> void:
 	draw_set_transform(shadow_at, 0.0, Vector2(1.0, 0.4))
 	var height_weight := clampf(visual_shadow_height() / Arena.TILE, 0.0, 1.0)
 	if not has_meta("lapras_ride"):
-		draw_circle(Vector2.ZERO, radius * minf(appear, 1.0) * lerpf(1.0, 0.55, height_weight),
+		draw_circle(Vector2.ZERO, radius * minf(visual_appear(), 1.0) * lerpf(1.0, 0.55, height_weight),
 			Color(0, 0, 0, lerpf(0.28, 0.096, height_weight)))
 	draw_set_transform(Vector2.ZERO)
 	if has_sheet:
@@ -858,7 +867,7 @@ func _draw_sheet(ground: Vector2) -> void:
 		return
 	# 배율은 발밑(ground)을 축으로. 흔들림(shake_t)은 원작 ShakeMon 처럼 좌우 ±shake_px.
 	var shake := Vector2(roundf(sin(anim_t * 60.0) * shake_px), 0.0) if shake_t > 0.0 else Vector2.ZERO
-	var sc := sprite_scale * minf(appear, 1.0)
+	var sc := sprite_scale * minf(visual_appear(), 1.0)
 	var landing := landing_scale() * hit_feedback_scale()
 	if uses_motion_polish() and name in ["Idle", "Charge"] and not has_meta("lapras_ride") and not get_meta("carried", false):
 		var breathing_time := attack_visual_elapsed() if name == "Charge" and attack_anim_t > 0.0 else anim_t - _anim_start
@@ -881,7 +890,17 @@ func _draw_sheet(ground: Vector2) -> void:
 	if w > 0.0 and flash_t <= 0.0:
 		tint = Color(tint.r * (1.0 + (tint_color.r * 1.6 - 1.0) * w), tint.g * (1.0 + (tint_color.g * 1.6 - 1.0) * w),
 			tint.b * (1.0 + (tint_color.b * 1.6 - 1.0) * w), 1)
-	draw_texture_rect_region(visual.tex, dst, src, tint)
+	if is_instance_valid(release_fx) and not Look.view3d:
+		var bounds := MonSprite.release_bounds(visual.tex,Rect2i(src))
+		var sole := body_origin+(dst.position+Vector2(bounds.get_center().x,bounds.end.y))*body_scale
+		var lip := release_fx.position-position-Vector2.DOWN*5.0*BallRelease.PIXEL*(1.0-smoothstep(0.045,BallRelease.OPEN,release_fx.age))
+		draw_set_transform(body_origin+(lip-sole)*(1.0-smoothstep(0.055,0.24,release_fx.age)),0,body_scale)
+		draw_texture_rect_region(visual.tex,dst,src,Color.WHITE)
+		var strength := BallRelease.strength(release_fx.age)
+		if strength > 0.0:
+			draw_texture_rect(BallRelease.mask(visual.tex,Rect2i(src)),dst,false,Color(BallRelease.CREAM,strength))
+	else:
+		draw_texture_rect_region(visual.tex, dst, src, tint)
 	draw_set_transform(Vector2.ZERO)
 	_remember_frame(visual.tex, dst, src, Transform2D(0.0, body_scale, 0.0, body_origin))
 

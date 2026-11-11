@@ -83,32 +83,27 @@ func test_controller_faces_and_direction_cross_follow_menu_context() -> void:
 	assert_eq(f.c.touch_move,Vector2.ZERO)
 	assert_false(f.c.want_hotbar(0,f.world),"Menu directions cannot consume a tool")
 
-func test_two_sticks_move_and_aim_independently_and_release_to_facing() -> void:
+func test_r_stick_keeps_its_display_and_contact_but_only_l_stick_aims() -> void:
 	var f := fixture()
 	f.world.move_override = func(v: Vector2) -> Vector2:return v.rotated(PI/2)
 	var left: Vector2 = f.ui.stick_center
-	var right: Vector2 = f.ui.aim_center
+	# Keep the exact R-stick position and independent finger feedback.
+	var old_right: Vector2 = f.ui.deck.origin+Vector2(446,88)*float(f.ui.deck.scale)
+	assert_true(f.ui.deck.has("aim"),"The R-stick display stays in place")
 	f.ui.pointer(0,left,"press");f.ui.pointer(0,left+Vector2.RIGHT*f.ui.stick_radius(),"drag")
 	f.world.player.facing = Vector2.LEFT
-	var primary: Vector2 = f.c.aim_point(f.world)-f.world.player.position
-	assert_almost_eq(primary.y,Controllers.Human.KEY_AIM_REACH,0.001,"L-stick aim uses current movement before facing catches up")
-	f.ui.pointer(1,right,"press");f.ui.pointer(1,right+Vector2.UP*f.ui.aim_radius(),"drag")
-	assert_almost_eq(f.c.move_dir(f.world).y,1.0,0.001)
-	var aim: Vector2 = f.c.aim_point(f.world)-f.world.player.position
-	assert_almost_eq(aim.x,Controllers.Human.KEY_AIM_REACH,0.001,"Right stick uses camera transform once, independently from movement")
-	f.ui.pointer(2,right,"press");f.ui.pointer(2,right+Vector2.DOWN*50,"drag")
-	assert_eq(f.c.touch_aim,Vector2.UP,"A second finger cannot steal right-stick ownership")
-	f.ui.pointer(2,right,"release")
-	f.ui.pointer(1,right,"release")
+	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001)
+	f.ui.pointer(1,old_right,"press");f.ui.pointer(1,old_right+Vector2.UP*10,"drag")
+	assert_eq(f.c.touch_move,Vector2.RIGHT,"A touch in the removed R area cannot steal L movement")
 	assert_eq(f.c.touch_aim,Vector2.ZERO)
-	assert_eq(f.c.touch_move,Vector2.RIGHT)
-	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001,"R release immediately restores L-stick aim")
+	assert_almost_eq((f.c.aim_point(f.world)-f.world.player.position).y,Controllers.Human.KEY_AIM_REACH,0.001,"R-stick motion cannot redirect a skill")
+	assert_eq(f.ui.aim_finger,1)
+	assert_gt(f.ui.aim_knob.length(),0.0,"R-stick feedback is still visible")
+	f.ui.pointer(1,old_right,"release")
 	f.ui.pointer(0,left,"release")
 	f.world.player.facing = Vector2.DOWN
 	assert_eq(f.c.aim_point(f.world),f.world.player.position+Vector2.DOWN*Controllers.Human.KEY_AIM_REACH)
-	f.ui.pointer(3,right,"press");f.ui.pointer(3,right+Vector2.UP*50,"drag")
 	f.ui.cancel_all()
-	assert_eq(f.c.touch_aim,Vector2.ZERO)
 	assert_eq(f.c.touch_move,Vector2.ZERO)
 
 func test_bag_rt_plus_direction_assigns_hotbar_without_navigating() -> void:
@@ -123,7 +118,7 @@ func test_bag_rt_plus_direction_assigns_hotbar_without_navigating() -> void:
 	f.ui.pointer(3,right,"press");f.ui.pointer(3,right,"release");f.ui.pointer(2,rt,"release")
 	assert_eq(f.game.codes,[KEY_2,KEY_RIGHT],"Dragging off RT cancels the assignment modifier")
 
-func test_touch_l_stick_aims_first_projectile_with_r_idle() -> void:
+func test_touch_l_stick_aims_first_projectile() -> void:
 	var f:=fixture();f.world.player.facing=Vector2.UP
 	f.world.player.slots[2]="poison_sting" # Inspect the initial cast, without Ember's charge.
 	var left: Vector2=f.ui.stick_center
@@ -227,3 +222,25 @@ func test_new_scene_waits_for_old_primary_touch_release() -> void:
 	Input.action_release("move_click")
 	fresh.c.move_dir(fresh.world)
 	assert_false(fresh.c.hold)
+
+func test_r_stick_feedback_does_not_claim_aim_mode_or_cancel_other_input() -> void:
+	var f:=fixture()
+	f.c.pad_active=false;f.c.touch_active=false
+	f.c.target=f.world.player.position+Vector2(25,0);f.c.has_target=true
+	var revision: int=f.c.skill_input_revision()
+	var old_point: Vector2=f.c.aim_point(f.world)
+	var old_mouse: Vector2=f.c._last_mouse
+	f.ui.pointer(3,f.ui.aim_center,"press")
+	f.ui.pointer(3,f.ui.aim_center+Vector2.UP*f.ui.aim_radius(),"drag")
+	assert_false(f.c.touch_active);assert_false(f.c.touch_owned)
+	assert_true(f.c.has_target,"The decorative R stick cannot cancel click movement")
+	assert_eq(f.c.skill_input_revision(),revision)
+	assert_eq(f.c.aim_point(f.world),old_point)
+	assert_eq(f.c._last_mouse,old_mouse)
+	f.ui.pointer(4,f.ui.aim_center,"press")
+	assert_eq(f.ui.aim_finger,3,"The second finger cannot steal R feedback")
+	assert_false(f.c.touch_owned);assert_true(f.c.has_target)
+	f.ui.pointer(4,f.ui.aim_center,"release")
+	f.ui.pointer(3,f.ui.aim_center,"release")
+	assert_eq(f.ui.aim_knob,Vector2.ZERO)
+	assert_eq(f.c.skill_input_revision(),revision)

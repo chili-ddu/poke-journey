@@ -1,19 +1,21 @@
 class_name Lang
 extends RefCounted
 
-# 언어 옵션(사용자 결정 2026-10-27: 영어·한국어, 게임 안에서 바꿀 수 있게. 2026-10-29: 기본은 한국어). L 키로 바꾸고 user://settings.cfg 에 남긴다.
+# 언어 옵션: 처음에는 기기 언어를 따른다(한국어·영어, 미지원 언어는 영어).
+# L 키로 직접 바꾸면 user://settings.cfg 에 저장하고 이후 기기 언어보다 우선한다.
 #   en  플래티넘(미국판) 글꼴·표기. 포켓몬·기술 이름은 pret 데이터(대문자).
 #   ko  갈무리11 글꼴(assets/fonts/Galmuri11.ttf, OFL). 포켓몬·기술·타입·능력치 이름은 assets/data/names_ko.json(PokeAPI, tools/ko_names.py).
 # 문구는 S 에 키마다 두 언어로. 한국어 조사는 "{은/는}" 처럼 적어 두면 t() 가 앞 글자의 받침을 보고 고른다(숫자·영문 끝도 처리).
 # 도구·테스트는 환경변수 LANG_CODE 로 강제한다(저장 안 함).
 
 const SETTINGS := "user://settings.cfg"
+static var settings_path := SETTINGS # Isolated settings files for tools/tests.
 const CODES := ["en", "ko"]
 const NAMES_KO := "res://assets/data/names_ko.json"
 const LABELS := {"en": "English", "ko": "한국어"}
-# 기본은 한국어(사용자 결정 2026-10-29). 예전 저장(기본이 영어이던 때 적힌 code)은 DEFAULT_TAG 가 없으니 한 번 한국어로 옮기고,
-# 그 뒤 L 키로 고른 언어는 그대로 기억한다.
+# Bootstrap before load_saved; the actual initial language comes from the OS.
 const DEFAULT := "ko"
+# Retained for older settings readers; loading no longer resets saved choices by tag.
 const DEFAULT_TAG := "ko-2026-10-29"
 
 static var code := DEFAULT
@@ -327,26 +329,31 @@ const S := {
 static func is_ko() -> bool:
 	return code == "ko"
 
-static func load_saved() -> void:
+## Maps a device language/locale to the translations available in this game.
+static func language_for_locale(locale: String) -> String:
+	var language:=locale.strip_edges().to_lower().replace("-","_").get_slice("_",0).get_slice(".",0).get_slice("@",0)
+	return language if language in CODES else "en"
+
+## An optional locale allows deterministic tools without changing device settings.
+static func load_saved(device_locale: String = "") -> void:
 	var forced := OS.get_environment("LANG_CODE")
 	if forced in CODES:
 		code = forced
 		return
 	var cf := ConfigFile.new()
-	cf.load(SETTINGS)
-	if String(cf.get_value("lang", "default_tag", "")) != DEFAULT_TAG:
-		code = DEFAULT
-		save()
-		return
-	var c := String(cf.get_value("lang", "code", DEFAULT))
-	code = c if c in CODES else DEFAULT
+	cf.load(settings_path)
+	var chosen := String(cf.get_value("lang", "code", ""))
+	var locale := OS.get_locale_language() if device_locale.is_empty() else device_locale
+	code = chosen if chosen in CODES else language_for_locale(locale)
+	# Do not save the automatic choice: a later device language change must apply
+	# until the player explicitly selects a language through set_code/toggle.
 
 static func save() -> void:
 	var cf := ConfigFile.new()
-	cf.load(SETTINGS)
+	cf.load(settings_path)
 	cf.set_value("lang", "code", code)
 	cf.set_value("lang", "default_tag", DEFAULT_TAG)
-	cf.save(SETTINGS)
+	cf.save(settings_path)
 
 static func set_code(c: String, persist: bool = true) -> void:
 	code = c if c in CODES else DEFAULT

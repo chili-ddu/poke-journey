@@ -325,10 +325,17 @@ def compose(s,p):
               areas=areas,warps=warps,source='Audited mainland Kanto; native connections; Saffron through gates',
               native_folders={fm.snake(f):f for f in names},world_parts=p['parts'])
     for key in ['solid','grass','ledge']:data[key]=[''.join(row) for row in rows[key]]
-    write(WORLD,data);write(WORLD,metadata,'hd2d_cards.json');write(WORLD,patches,'collision_patch.json')
+    write(WORLD,data);write(WORLD,patches,'collision_patch.json')
     write(WORLD,dict(water=[''.join(row) for row in rows['water']]),'water.json');write(WORLD,side_surfaces,'hd2d_side_surfaces.json')
-    for key,im in images.items():
+    for key,im in [('bottom',bottom),('top',top)]:
         temporary=out/(key+'.png.tmp');im.save(temporary,format='PNG');temporary.replace(out/(key+'.png'))
+    from kanto_landmarks import configure_scenery, restore_ground
+    configure_scenery(out,metadata,pad)
+    write(WORLD,metadata,'hd2d_cards.json')
+    restore_ground(out,floor,data)
+    temporary=out/'hd2d_floor.png.tmp'
+    floor.save(temporary,format='PNG')
+    temporary.replace(out/'hd2d_floor.png')
     atlas.save(out/'hd2d_atlas.png')
     preview=bottom.copy();preview.alpha_composite(top,(pad*16,pad*16));preview.save(out/'preview.png')
     print('Composed world:',w,h,'areas',len(areas),'native doors',len(warps),'seam cells',len(seams),'cards',len(metadata['cards']),'atlas',atlas.size,flush=True)

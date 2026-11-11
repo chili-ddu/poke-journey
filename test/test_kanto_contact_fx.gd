@@ -76,11 +76,17 @@ func test_contact_step_stops_at_body_and_expires():
 	var target := enemy(w,Vector2.RIGHT*(w.player.radius+8))
 	for id in ["pound","peck","astonish"]:
 		var origin := w.player.position
+		var gap := maxf(0.0,origin.distance_to(target.position)-w.player.radius-target.radius-.01)
 		w.cast(w.player,id,Vector2.RIGHT,target.position)
 		for i in 60:
 			if not w.player.glide.is_empty():w._step_glide(w.player,1.0/60.0)
 		assert_true(w.player.glide.is_empty())
-		assert_almost_eq(w.player.position.distance_to(origin),0.0,0.01)
+		assert_almost_eq(w.player.position.distance_to(origin),gap,0.01,"Approach only the remaining gap")
+		assert_lt(w.player.position.x,target.position.x)
+		assert_gte(w.player.position.distance_to(target.position),w.player.radius+target.radius-.001)
+		var stopped := w.player.position
+		w._move_mons(1.0/60.0)
+		assert_eq(w.player.position,stopped,"Expired contact step cannot keep drifting")
 func test_contact_hold_resets_for_next_move():
 	var w := fixture()
 	w.cast(w.player,"pound",Vector2.RIGHT,w.player.position+Vector2.RIGHT*80)

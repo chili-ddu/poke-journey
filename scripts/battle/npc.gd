@@ -39,6 +39,14 @@ var speed := WALK_SPEED             # px/s. 달려오는 라이벌은 더 빠르
 var _turn_t := 0.0
 var _walk_t := 0.0
 var _tex: Texture2D = null
+const THROW_SHEETS := {"blue":preload("res://assets/npcs/throw/blue.png"),"brock":preload("res://assets/npcs/throw/brock.png")}
+const THROW_TIMES := [0.0,0.035,0.075,0.115,0.175,0.20,0.265,0.34]
+const THROW_HANDS := {
+	"blue":[Vector2(10,25),Vector2(8,24),Vector2(6,22),Vector2(5,20),Vector2(5,22),Vector2(6,24),Vector2(9,25),Vector2(11,25)],
+	"brock":[Vector2(10,24),Vector2(7,23),Vector2(6,21),Vector2(7,19),Vector2(6,21),Vector2(7,24),Vector2(11,25),Vector2(11,25)]
+}
+var sprite_id := ""
+var throw_time := -1.0
 var frame_size := FRAME
 var _emote: Texture2D = null
 var _head := 0.0                    # 첫 프레임에서 머리 끝(불투명한 첫 줄, 원본 px) — "!" 를 머리 바로 위에 띄운다
@@ -61,6 +69,7 @@ func setup(cfg: Dictionary) -> void:
 		talk = "trainer"
 	position = Arena.tile_center(tile)
 	var sprite := String(cfg.get("sprite", TrainerDB.sprite(trainer_id) if trainer_id != "" else id))
+	sprite_id = sprite
 	var dimensions: Array=TrainerDB.RoadData.SPRITE_FRAMES.get(sprite,[16,32])
 	frame_size=Vector2(dimensions[0],dimensions[1])
 	var path := "res://assets/npcs/%s.png" % sprite
@@ -128,7 +137,8 @@ func walking() -> bool:
 
 func _draw() -> void:
 	var s := Arena.MAP_SCALE
-	var w := frame_size.x * s
+	var visual := visual_frame()
+	var w := float(visual.src.size.x) * s
 	var h := frame_size.y * s
 	# 발이 칸 아래쪽(가운데 + 반 칸 − 2px)에 오게.
 	var dst := Rect2(Vector2(-w / 2.0, Arena.TILE / 2.0 - 2.0 * s - h + 2.0 * s), Vector2(w, h))
@@ -138,7 +148,6 @@ func _draw() -> void:
 	if _tex == null:
 		draw_rect(Rect2(-8, -20, 16, 28), Color("f0a0b0"))
 		return
-	var visual := visual_frame()
 	if face == "right":
 		draw_set_transform(Vector2.ZERO, 0.0, Vector2(-1, 1))
 	draw_texture_rect_region(visual.tex, dst, visual.src)
@@ -150,7 +159,25 @@ func _draw() -> void:
 		draw_texture_rect(_emote, Rect2(Vector2(-es / 2.0, dst.position.y + _head * s - es * pop + 2.0), Vector2(es, es)), false)
 
 # Shared by the flat and 3D renderers; facing/step state remains unchanged.
+func throw_pose() -> int:
+	if throw_time < 0.0 or throw_time >= 0.44 or face != "down" or not THROW_SHEETS.has(sprite_id): return -1
+	var index := 0
+	while index+1 < THROW_TIMES.size() and throw_time >= float(THROW_TIMES[index+1]): index += 1
+	return index
+
+func throw_hand(releasing := false) -> Vector2:
+	var pose := throw_pose()
+	if pose >= 0: return Vector2(THROW_HANDS[sprite_id][5 if releasing else pose])+Vector2(0.5,-1)
+	var side := 0.8 if face=="right" else 0.20
+	return Vector2(frame_size.x*side,frame_size.y-9.0)
+
+func throw_hand_world(releasing := false) -> Vector2:
+	var width := 32.0 if throw_pose() >= 0 else frame_size.x
+	return position + Vector2.DOWN*Arena.TILE/2.0 + (throw_hand(releasing)-Vector2(width/2.0,frame_size.y))*Arena.MAP_SCALE
+
 func visual_frame() -> Dictionary:
+	var pose := throw_pose()
+	if pose >= 0: return {"tex":THROW_SHEETS[sprite_id],"src":Rect2(32*pose,0,32,32)}
 	var frame: int = FACE_FRAME.get(face, 0)
 	if walking() and _tex != null and _tex.get_width() >= 9 * frame_size.x:
 		var wf: Array = WALK_FRAMES[face]

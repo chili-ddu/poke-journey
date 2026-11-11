@@ -58,7 +58,7 @@ const SHAPES := {
 		"count": 7, "interval": 0.03, "volley": true, "spread_deg": 12.0, "pierce": false, "grow": 1.6},
 	# 연막(사용자 결정 2026-10-28): 장판이 아니라 검은 공을 사거리 4칸 안의 조준한 자리(클릭)에 던져 터뜨리고,
 	# 떨어진 자리 둘레 1.5칸의 상대 명중률 −1(원작 효과·연출).
-	"smoke_screen": {"anim": "Charge", "cast_delay": 0.3, "shape": "lob", "range": 4 * T, "radius": 1.5 * T, "stat": {"acc": -1}, "fx": "smoke"},
+	"smoke_screen": {"targeting":"charged_area", "anim": "Charge", "cast_delay": 0.3, "shape": "lob", "range": 4 * T, "radius": 1.5 * T, "stat": {"acc": -1}, "fx": "smoke"},
 	# 용의분노: 원작 Move_DRAGON_RAGE — 힘을 모았다가 불씨를 뱉고, 맞은 자리에 불기둥 넷. 항상 40.
 	"dragon_rage": {"fixed": 40, "fx": "dragon", "anim": "Charge", "cast_delay": 0.4, "shape": "burst", "speed": 180.0, "radius": 3.0, "range": 4 * T,
 		"count": 3, "interval": 4.0 / 60.0, "spread_deg": 0.0, "pierce": false, "volley": true, "grow": 1.6, "hit_fx": "dragonfire"},
@@ -73,7 +73,7 @@ const SHAPES := {
 	"flamethrower": {"fx": "flame", "shape": "burst", "speed": 200.0, "radius": 5.0, "range": 4 * T,
 		"count": 10, "interval": 0.04, "spread_deg": 6.0, "pierce": true, "one_hit": true},
 	# 회오리불꽃: 시전 순간만 Charge 동작(0.3초 모은 뒤 고리가 생김), 고리가 도는 동안은 평소 동작(사용자 결정 2026-10-28).
-	"fire_spin": {"anim":"Charge","cast_delay":.3,"shape":"ring","zone_kind":"fire_spin","range":3*T,"radius":23.0,"lifetime":4*Mon.TURN,"tick":Mon.TURN,"bind":false},
+	"fire_spin": {"targeting":"charged_area","anim":"Charge","cast_delay":.3,"shape":"ring","zone_kind":"fire_spin","range":3*T,"radius":23.0,"lifetime":4*Mon.TURN,"tick":Mon.TURN,"bind":false},
 	"flare_blitz": {"shape":"dash","distance":66.0,"duration":.32,"anim":"Attack","cast_delay":.20,"lunge":false},
 	# 메탈클로우(4세대 자력엔 없지만 기술머신·가르침으로 올 수 있어 모양은 둔다): 금속 번쩍임 뒤 발톱 자국 두 번, 10% 자기 공격 ↑.
 	"metal_claw": {"fx": "metal", "anim": "Strike", "hit_delay": 0.13, "shape": "arc", "range": 1 * T, "arc_deg": 110.0, "self_atk_up": 0.1},
@@ -81,12 +81,13 @@ const SHAPES := {
 	# ── 이상해씨 계열(플래티넘 자력기, 사용자 요청 2026-10-28) ──
 	# 씨뿌리기: 씨앗 셋이 포물선으로 조준한 자리에 떨어지고(원작 leech_seed 의 bullet_seed 구슬) 둘레 1칸의 상대에 싹이 튼다.
 	# 4초 동안 초당 최대 HP 1/8 을 빼앗아 쓴 쪽이 회복(풀 타입은 안 걸림).
-	"leech_seed": {"anim": "Shoot", "cast_delay": 0.2, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "leechseed"},
+	"leech_seed": {"targeting":"charged_area", "anim": "Shoot", "cast_delay": 0.2, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "leechseed"},
 	# 덩굴채찍: 앞 1.5칸을 채찍질(Double 동작). 맞은 자리에 초록 채찍 자국 둘(vine_whip.spa 초승달).
 	"vine_whip": {"anim": "Double", "fx": "vine", "hit_delay": 0.15, "shape": "arc", "range": 1.5 * T, "arc_deg": 110.0},
 	# 독가루·수면가루: 앞 2칸 부채꼴에 가루가 흩날리고(원작 가루 5알, 보라 / 청록) 닿은 상대는 독 / 잠(1~4초).
-	"poison_powder": {"anim": "Charge", "cast_delay": 0.3, "shape": "status_cone", "range": 2 * T, "arc_deg": 90.0, "fx": "powder_poison"},
-	"sleep_powder": {"anim": "Charge", "cast_delay": 0.3, "shape": "status_cone", "range": 2 * T, "arc_deg": 90.0, "fx": "powder_sleep"},
+	# Preserve their established cadence/AI class; charged_area changes the actual footprint to a ground circle.
+	"poison_powder": {"targeting":"charged_area", "radius":T, "anim": "Charge", "cast_delay": 0.3, "shape": "status_cone", "range": 2 * T, "arc_deg": 90.0, "fx": "powder_poison"},
+	"sleep_powder": {"targeting":"charged_area", "radius":T, "anim": "Charge", "cast_delay": 0.3, "shape": "status_cone", "range": 2 * T, "arc_deg": 90.0, "fx": "powder_sleep"},
 	# 돌진: 조준 방향으로 3칸 들이받는다. 준 피해의 1/4 반동.
 	"take_down": {"anim": "Attack", "shape": "dash", "distance": 3 * T, "duration": 0.25, "fx": "takedown"},
 	# 잎날가르기: 잎 두 장이 부채꼴로 날아간다(한 묶음 한 타, 급소 1/8).
@@ -101,7 +102,7 @@ const SHAPES := {
 	# 이판사판태클: 4칸 들이받는다. 준 피해의 1/3 반동.
 	"double_edge": {"anim": "Attack", "shape": "dash", "distance": 4 * T, "duration": 0.3, "fx": "doubleedge"},
 	# 고민씨: 씨앗 하나가 포물선으로 떨어져 둘레 1칸 상대의 특성이 불면(잠들지 않고, 자고 있으면 깬다).
-	"worry_seed": {"anim": "Shoot", "cast_delay": 0.2, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "worryseed"},
+	"worry_seed": {"targeting":"charged_area", "anim": "Shoot", "cast_delay": 0.2, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "worryseed"},
 	# 광합성: 빛줄기가 내려와 최대 HP 의 1/2 회복(비가 오면 1/4 — 원작).
 	"low_kick": {"anim":"Attack", "shape":"arc", "range":T, "arc_deg":100.0, "hit_delay":0.15, "cooldown":3.0},
 	"confusion": {"anim":"Shoot", "cast_delay":0.3, "cooldown":3.0, "shape":"projectile", "speed":150.0, "radius":5.0, "range":4*T, "count":1, "spread_deg":0.0, "pierce":false},
@@ -109,7 +110,7 @@ const SHAPES := {
 	"teleport": {"anim":"Charge", "cast_delay":0.35, "cooldown":5.0, "shape":"teleport", "range":3*T},
 	"synthesis": {"anim": "Charge", "cast_delay": 0.4, "shape": "heal", "heal": 0.5, "fx": "synthesis"},
 	# 씨폭탄: 씨앗 구슬이 포물선으로 떨어져 둘레 1칸에 터진다(물리 80).
-	"seed_bomb": {"anim": "Shoot", "cast_delay": 0.15, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "seedbomb"},
+	"seed_bomb": {"targeting":"charged_area", "anim": "Shoot", "cast_delay": 0.15, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "seedbomb"},
 	# 솔라빔: 선딜 0.25초 + 한 턴(Mon.TURN) 빛을 모았다가(사용자 결정 2026-10-29) 6칸 빛줄기. 관통. 비가 오면 위력 절반(원작).
 	"solar_beam": {"anim": "Charge", "cast_delay": 0.25, "charge_turns": 1, "shape": "beam", "range": 6 * T, "width": 6.0, "grow": 0.1, "lifetime": 0.5, "fx": "solar"},
 	# 꽃잎댄스: 2~3초 동안 꽃잎이 몸 둘레를 돌며 닿는 상대를 친다(그동안 다른 기술 못 씀). 끝나면 지쳐서 혼란.
@@ -155,7 +156,7 @@ const SHAPES := {
 	# 원작의 '도망·교체 못 함'은 트레이너 배틀이 이미 그렇다. bind.spa 의 고리가 감긴 몸에서 조여 든다.
 	"bind": {"anim": "Attack", "lunge": true, "fx": "bind", "hit_delay": 0.25, "cooldown": 5.0, "shape": "arc", "range": 1 * T, "arc_deg": 110.0},
 	# 암석봉인: 조준한 자리(4칸 안)에 바위 셋이 위에서 떨어져 둘레 1칸을 친다(위력 50·명중 80). 맞으면 스피드 −1(100%).
-	"rock_tomb": {"anim": "Shoot", "cooldown": 5.0, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "rocktomb"},
+	"rock_tomb": {"targeting":"charged_area", "anim": "Shoot", "cooldown": 5.0, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "rocktomb"},
 
 	# ── 상록숲 적(쿨타임은 적 전용) ──
 	# 몸통박치기: 이동하지 않고 Attack 동작으로 바로 옆 칸을 친다(사용자 결정).
@@ -195,7 +196,7 @@ const SHAPES := {
 	"brine": {"fx": "brine", "anim": "Shoot", "shape": "projectile", "speed": 180.0, "radius": 5.0, "range": 4 * T, "count": 1, "spread_deg": 0.0, "half_double": true},
 	"giga_drain": {"anim": "Charge", "cast_delay": 0.5, "shape": "drain", "range": 4 * T, "drain": 0.5, "fx": "gigadrain"},
 	"brick_break": {"fx": "brick", "anim": "Strike", "hit_delay": 0.15, "lunge": true, "shape": "arc", "range": 1 * T, "arc_deg": 90.0, "ignore_def_up": true},
-	"sludge_bomb": {"anim": "Shoot", "cast_delay": 0.15, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "sludgebomb"},
+	"sludge_bomb": {"targeting":"charged_area", "anim": "Shoot", "cast_delay": 0.15, "shape": "lob", "range": 4 * T, "radius": 1.0 * T, "fx": "sludgebomb"},
 	"facade": {"anim": "Attack", "shape": "dash", "distance": 2 * T, "duration": 0.2, "fx": "facade", "statused_double": true},
 
 	# ── 최신 습득표(사용자 결정 2026-11-02, A안: 데이터는 최신 판, 연출은 플래티넘 파티클)로 데모 구간(Lv5~16)에 들어온 기술 ──
@@ -211,8 +212,8 @@ const SHAPES := {
 	"rollout": {"anim": "Rotate", "shape": "dash", "distance": 2 * T, "duration": 0.25, "fx": "rollout", "ramp": true},
 	#   rock_polish 록커트(꼬마돌 6·롱스톤 8): 스피드 +2. 별빛이 번쩍이고 빛줄기가 솟는다.
 	"rock_polish": {"anim": "Charge", "cooldown": 6.0, "shape": "buff", "stat": "spe", "stages": 2, "fx": "rockpolish"},
-	#   rock_throw 돌떨구기(롱스톤 1): 바위 하나를 던진다(일직선 4칸).
-	"rock_throw": {"anim": "Shoot", "shape": "projectile", "speed": 140.0, "radius": 5.0, "range": 4 * T, "count": 1, "spread_deg": 0.0, "pierce": false, "fx": "rock"},
+	#   rock_throw: one falling rock at the selected ground area; preserve the former projectile cadence.
+	"rock_throw": {"targeting":"charged_area", "area_radius":T, "anim": "Shoot", "shape": "projectile", "speed": 140.0, "radius": 5.0, "range": 4 * T, "count": 1, "spread_deg": 0.0, "pierce": false, "fx": "rock"},
 	#   smack_down 떨어뜨리기(롱스톤 4, 5세대): 작은 바위를 빠르게 던진다. (날던 상대를 떨어뜨리는 효과는 없다.)
 	"smack_down": {"anim": "Shoot", "shape": "projectile", "speed": 180.0, "radius": 4.0, "range": 4 * T, "count": 1, "spread_deg": 0.0, "pierce": false, "fx": "rock"},
 	#   bulldoze 땅고르기(꼬마돌 12·모래두지 18, 5세대): 땅을 밟아 둘레 1.5칸 전부를 치고 스피드 −1(확정).

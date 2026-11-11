@@ -22,6 +22,7 @@ func _adopt_current() -> void:
 	var scene := tree.current_scene
 	if not active or not is_instance_valid(scene) or scene is MobileGameFrame:return
 	if scene.get_parent()!=tree.root or scene.scene_file_path.is_empty():return
+	if scene.scene_file_path.ends_with("/intro.tscn"):return
 	var logical := ViewScale.TITLE_VIEW if scene.scene_file_path.ends_with("/title.tscn") else ViewScale.size()
 	var frame := MobileGameFrame.new()
 	frame.name = "MobileGameFrame"

@@ -43,12 +43,28 @@ jobs:
           key: godot-linux-4.7-imports-${{ github.sha }}
           restore-keys: godot-linux-4.7-imports-
 
+      - name: Skip unused caches and duplicate model imports
+        run: python3 tools/prepare_web_assets.py --apply
+
       - name: Import and export the game for browsers
         run: |
           mkdir -p build/web
+          touch build/.gdignore
           godot --version
-          godot --headless --editor --path . --import > build/import.log 2>&1
-          godot --headless --path . --export-release Web build/web/index.html > build/export.log 2>&1
+          godot --headless --editor --path . --import > build/import.log 2>&1 &
+          import_pid=$!
+          while kill -0 "$import_pid" 2>/dev/null; do
+            sleep 20
+            tail -n 2 build/import.log
+          done
+          wait "$import_pid"
+          godot --headless --path . --export-release Web build/web/index.html > build/export.log 2>&1 &
+          export_pid=$!
+          while kill -0 "$export_pid" 2>/dev/null; do
+            sleep 20
+            tail -n 2 build/export.log
+          done
+          wait "$export_pid"
           cat build/export.log
           python3 tools/check_web_build.py build/web
 

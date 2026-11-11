@@ -15,7 +15,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # Leave room for the first texture import before the cache is populated.
+    timeout-minutes: 60
     permissions:
       contents: read
       pages: read
